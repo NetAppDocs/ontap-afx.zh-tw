@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: administer/view-jobs.html 
+keywords: afx, afx system, view jobs 
+summary: AFX 包含一個內部平台，可根據您的設定和管理作業執行背景作業。這些作業可以是長期運行的 AFX 元件，也可以是回應管理任務或 REST API 請求而執行的短暫進程。您可以根據需要顯示和監控作業。 
+---
+= 查看 AFX 儲存系統作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 包含一個內部平台，可根據您的設定和管理作業執行背景作業。這些作業可以是長期運行的 AFX 元件，也可以是回應管理任務或 REST API 請求而執行的短暫進程。您可以根據需要顯示和監控作業。
+
+.步驟
+. 在系統管理員中，選擇*事件和作業*，然後選擇*作業*。
+. 根據需要自訂顯示以及搜尋和下載工作資訊。
+

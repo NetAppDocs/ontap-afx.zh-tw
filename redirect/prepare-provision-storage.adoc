@@ -1,0 +1,8 @@
+---
+permalink: manage-data/prepare-provision-storage.html 
+redirect: ontap-afx/manage-data/prepare-manage-data.html 
+---
+= 
+:allow-uri-read: 
+
+

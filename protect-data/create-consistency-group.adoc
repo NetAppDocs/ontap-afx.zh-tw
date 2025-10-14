@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: protect-data/create-consistency-group.html 
+keywords: afx, afx system, consistency group, create consistency group 
+summary: 您可以建立一致性群組來簡化應用程式工作負載的儲存管理和資料保護。一致性組可以基於現有磁碟區或新磁碟區。 
+---
+= 在 AFX 儲存系統上建立一致性群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立一致性群組來簡化應用程式工作負載的儲存管理和資料保護。一致性組可以基於現有磁碟區或新磁碟區。
+
+.開始之前
+如果您打算建立多個新磁碟區，則在建立新磁碟區時應該使用設定選項。
+
+.步驟
+. 在系統管理員中，選擇*保護*，然後選擇*一致性群組*。
+. 選擇image:icon_add_blue_bg.png["藍色矩形框內有一個加號，後面跟著白色字母“add”"]並選擇以下其中之一：
++
+** 使用現有捲
+** 使用新的 NAS 卷
+
+
+. 提供配置詳細信息，包括名稱、磁碟區、應用程式類型和保護。
+. 選擇“*新增*”。
+
+
+.相關資訊
+* link:../protect-data/manage-consistency-groups.html["管理一致性組"]
+* link:../manage-data/create-configure-volume.html["建立和配置 AFX 卷"]
+

@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: get-started/ontap-afx-storage.html 
+keywords: afx, afx system, learn, workloads, hardware, afx 1k, nx224, cisco 
+summary: NetApp AFX 儲存系統基於下一代儲存架構，將ONTAP儲存模型發展為分解的高效能 NAS 解決方案。  AFX 採用先進的技術和處理技巧來支援文件和物件工作負載，從而提供極高的效能。 
+---
+= 了解 AFX 儲存系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp AFX 儲存系統基於下一代儲存架構，將ONTAP儲存模型發展為分解的高效能 NAS 解決方案。  AFX 採用先進的技術和處理技巧來支援文件和物件工作負載，從而提供極高的效能。
+
+
+
+== 典型的應用程式工作負載
+
+AFX 儲存滿足 AI/ML 環境和其他相關以資料為中心的應用程式的典型獨特需求。  AFX 儲存系統非常適合管理多種不同工作負載的組織，包括：
+
+* 與深度學習相關的訓練和迭代模型細化，需要持續的高頻寬和對海量資料集的存取。
+* 處理包括文字、圖像和影片在內的多種資料類型。
+* 需要嚴格響應時間視窗的低延遲即時推理應用程式。
+* 資料科學和機器學習流程可以從資料工程師和資料科學家的自助資料管理中受益。
+* 需要高並發性和平行 I/O 的工作負載，例如具有 RDMA 傳輸的多 GPU 系統。
+
+
+
+
+== 硬體基礎設施
+
+NetApp AFX 儲存系統提供統一的硬體和軟體解決方案，可根據高效能 NAS 客戶的需求建立簡化的體驗。
+
+以下硬體組件與 AFX 叢集一起使用：
+
+* AFX 1K 控制器
+* NX224貨架
+* Cisco Nexus 9332D-GX2B 或 Nexus 9364D-GX2A 交換機
+

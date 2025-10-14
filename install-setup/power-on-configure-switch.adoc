@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: install-setup/power-on-configure-switch.html 
+keywords: afx, afx 1k, cable controllers, Cisco Nexus 9332D-GX2B, Cisco Nexus 9364D-GX2A, switches, switch, power on, configure switches, 
+summary: 了解如何啟動和設定 AFX 1K 儲存系統的交換器。 
+---
+= 開啟並配置 AFX 1K 儲存系統的交換機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+連接 AFX 1K 儲存系統後，您需要啟動並設定Cisco Nexus 9332D-GX2B 或 9364D-GX2A 交換器。
+
+.步驟
+. 將交換器的電源線插入電源。
+. 打開每個交換器的電源。
+. 配置交換器以支援 AFX 1K 儲存系統。
++
+** 對於Cisco Nexus 9332D-GX2B 交換機，請參閱叢集和儲存交換器文檔link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9332d-gx2b/configure-software-overview-9332d-cluster.html["設定Cisco Nexus 9332D-GX2B 交換機"^]。
+** 對於Cisco Nexus 9364D-GX2A 交換機，請參閱叢集和儲存交換器文檔link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9364d-gx2a/configure-software-overview-9364d-cluster.html["設定Cisco Nexus 9364D-GX2A 交換機"^]。
+
+
+
+
+.下一步是什麼？
+為 AFX 1K 儲存系統配置交換器後，link:power-on-hardware.html["開啟 AFX 1K 儲存系統"] 。

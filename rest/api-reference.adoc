@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: rest/api-reference.html 
+keywords: afx, afx system, rest api, rest api reference, swagger 
+summary: AFX REST API 參考包含有關所有 API 呼叫的詳細資訊。該文件在開發自動化應用程式時很有用。 
+---
+= AFX 儲存系統的 REST API 參考
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX REST API 參考包含有關所有 API 呼叫的詳細資訊。該文件在開發自動化應用程式時很有用。
+
+.開始之前
+您需要以下物品：
+
+* AFX 叢集管理 LIF 的 IP 位址或 FQDN
+* 叢集管理員帳戶的憑證
+
+
+.步驟
+. 將您的 Web 瀏覽器連接到叢集管理 IP 位址或網域名稱：
++
+`\https://$FQDN_IP_PORT/docs/api`
+
++
+*例子*
+
++
+`\https://10.61.25.33/docs/api`
+
+. 如果出現提示，請提供使用者名稱和密碼。
+. 向下捲動至 *Cluster* 類別並選擇端點旁的 *GET* `/cluster`單一 API 呼叫的範例。
+
+
+.相關資訊
+* https://docs.netapp.com/us-en/ontap-restapi/index.html["ONTAP REST API 參考"^]
+

@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: get-started/compare-unified-ontap.html 
+keywords: afx, afx system, compare afx, compare unified ontap 
+summary: NetApp AFX 系統運行客製化的ONTAP特性，它與在AFF和FAS儲存上運行的ONTAP特性（稱為統一ONTAP ）不同。您應該了解 AFX 系統與FAS和AFF系統有何相似之處和不同之處。這提供了寶貴的視角，並且在您的環境中部署 AFX 時會很有幫助。 
+---
+= 將 AFX 儲存系統與AFF和FAS系統進行比較
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp AFX 系統運行客製化的ONTAP特性，它與在AFF和FAS儲存上運行的ONTAP特性（稱為統一ONTAP ）不同。您應該了解 AFX 系統與FAS和AFF系統有何相似之處和不同之處。這提供了寶貴的視角，並且在您的環境中部署 AFX 時會很有幫助。
+
+
+TIP: 此 AFX 文件包含 Unified ONTAP文件網站上各個主題的連結。附加內容提供了更深入的深度和不同的視角，可以幫助您管理 AFX 儲存系統。
+
+
+
+== 配置差異
+
+AFX 配置與AFF和FAS系統在某些方面有所不同。
+
+高級容量平衡:: 進階容量平衡功能，使用 `-gdd`CLI 參數，預設對所有FlexGroup磁碟區啟用。
+
+
+
+
+== 不受支援或受限制的 Unified ONTAP功能
+
+雖然 AFX、 AFF和FAS儲存系統非常相似，但 AFX 不支援一些功能。您應該查看 AFX 的更新和更改link:../release-notes/whats-new-9171.html["什麼是新的"]根據您的發布版本。
+
+以下功能分為幾個類別，在 AFX 中不可用或已發生變更。
+
+
+
+=== 一般特徵
+
+* FabricPool
+* MetroCluster
+* 基於人工智慧的反勒索軟體保護
+* ONTAPI API（ZAPI）
+
+
+
+
+=== SAN 相關功能
+
+* SAN 管理和客戶端訪問
+* 厚置備卷
+
+
+
+
+=== 聚合相關功能
+
+AFX 系統不提供以下與聚合相關的功能：
+
+* 直接存取磁碟聚合
+* NetApp聚合加密 (NAE)
+* 聚合級重複資料刪除
+* SyncMirror （聚合鏡像）
+* RAID 管理
+
+
+
+
+=== 資料複製
+
+* 不複製包含 LUN 的AFF或FAS系統的捲
+* AFX FlexGroup磁碟區只能複製到 Unified ONTAP 9.16.1 或更高版本
+
+
+
+
+== 命令列介面的更改
+
+AFX 提供的ONTAP CLI 通常與AFF和FAS系統提供的 CLI 相同。但存在一些差異，包括：
+
+* 與以下相關的新 AFX 指令：
++
+** 顯示儲存可用區域的容量
+** 啟動媒體
+
+
+* 沒有與 SAN 相關的命令
+* 不再需要聚合管理命令
+* FlexAggr 指令只能顯示或展示 FlexAggrs
+
+
+
+
+== 相關資訊
+
+* link:../get-started/system-design.html["AFX系統特性"]
+* link:../get-started/software-architecture.html["AFX 架構細節"]
+* link:../faq-ontap-afx.html["AFX 儲存系統常見問題解答"]
+* link:../administer/additional-ontap-cluster.html["額外的 AFX 叢集管理"]
+* link:../administer/additional-ontap-svm.html["額外的 AFX SVM 管理"]
+

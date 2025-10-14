@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: administer/view-insights.html 
+keywords: afx, afx system, insights, view insights 
+summary: 您可以使用ONTAP System Manager 的 Insights 功能來顯示符合NetApp最佳實務的建議設定更新。這些變化可以優化 AFX 叢集的安全性和效能以及其他領域。 
+---
+= 查看 Insights 以優化您的 AFX 儲存系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用ONTAP System Manager 的 _Insights_ 功能來顯示符合NetApp最佳實務的建議設定更新。這些變更可以優化 AFX 叢集的安全性和效能。
+
+例如，AFX 提供自主勒索軟體保護 (ARP) 功能，可提供反勒索軟體保護。如果未設定 ARP，Insights 將會通知您。
+
+.關於此任務
+每個見解都以單獨的圖塊或卡片形式呈現在頁面上，您可以選擇實施或忽略。您也可以選擇相關的文件連結來了解有關特定技術的更多資訊。
+
+.步驟
+. 在系統管理員中，選擇*分析*，然後選擇*洞察*。
+. 查看可用的建議。
+
+
+.下一步
+執行任何建議的操作來實現 AFX 配置最佳實務。

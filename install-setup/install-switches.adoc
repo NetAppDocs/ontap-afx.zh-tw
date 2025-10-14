@@ -1,0 +1,174 @@
+---
+sidebar: sidebar 
+permalink: install-setup/install-switches.html 
+keywords: afx, afx 1k, install, setup, switches, cisco 9332, cisco 9336, switches, 
+summary: 了解如何安裝 AFX 1K 儲存系統和儲存架的開關。 
+---
+= 安裝 AFX 1K 儲存系統的交換機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+完成 AFX 1K 儲存系統安裝的準備工作後，您應該在機櫃或電信機架中安裝交換器。
+
+在機櫃或機架中安裝Cisco Nexus 9332D-GX2B 或 9364D-GX2A 交換器。如果使用Cisco Nexus 9364D-GX2A 交換機，請安裝直通面板套件。
+
+.開始之前
+確保您擁有以下可用組件：
+
+* 直通面板套件，可從NetApp取得（零件編號 X8784-R6）。
++
+NetApp直通面板套件包含以下硬體：
+
++
+** 一個直通盲板
+** 四個 10-32 x .75 螺絲
+** 四個 10-32 夾緊螺母
+
+
+* 對於每個交換機，使用八個 10-32 或 12-24 螺絲和夾緊螺母將支架和滑軌安裝到前後櫃柱上。
+* 用於在NetApp機櫃中安裝交換器的Cisco標準導軌套件。
+
+
+
+NOTE: 直通套件中不包含跳線。如果您的交換器未附帶跳線，請聯絡NetApp訂購正確的跳線。
+
+
+NOTE: Cisco 9332D-GX2B 和 9364D-GX2A 是連接埠側進氣交換器。交換器的網路連接埠必須安裝在機櫃的前面，排氣扇必須安裝在機櫃的後方。對於這種配置，您必須確保使用足夠長的電纜從機櫃前部的網路連接埠延伸到機櫃後部的儲存連接埠。  + 有關這些交換器的更多詳細信息，請訪問Cisco網站： https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9332D-GX2B NX-OS 模式交換器硬體安裝指南"^]和 https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide.html["Cisco Nexus 9364D-GX2A NX-OS 模式交換器硬體安裝指南"^]。
+
+.步驟
+. 安裝直通盲板。
++
+.. 確定機櫃或機架中交換器和盲板的垂直位置。
+.. 在前櫃導軌兩側的相應方孔中安裝兩個夾緊螺帽。
+.. 將面板垂直置於中央，以防止侵入相鄰的機架空間，然後鎖緊螺絲。
+.. 將兩根跳線的母連接器從面板後方插入並穿過刷子組件。
++
+image::../media/cisco_9148_jumper_cords.gif[跳線母接頭]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[標註編號 1]
+ a| 
+跳線的母連接器。
+
+|===
+
+
+. 將機架安裝支架安裝到交換器底盤上。
++
+.. 將前機架安裝支架放置在交換器機殼的一側，使安裝耳與機殼面板（在 PSU 或風扇側）對齊，然後使用四顆 M4 螺絲將支架固定到機殼上。
++
+image::../media/3132q_front_bracket.gif[前支架]
+
+.. 對交換器另一側的另一個前機架安裝支架重複步驟 2a。
+.. 將後機架安裝支架安裝在交換器機箱上。
+.. 對交換器另一側的另一個後機架安裝支架重複步驟 2c。
+
+
+. 將夾緊螺母安裝在所有四個 IEA 柱的方孔位置。
++
+image::../media/ru_locations_for_3132q_v.gif[夾緊螺帽位置]
+
++
+將兩個 9332D-GX2B 交換器安裝在可有效存取控制器和機架的機櫃位置，例如中間排。
+
+. 將滑動導軌安裝在機櫃或機架中。
++
+.. 將第一個滑軌放置在左後柱背面的所需位置，插入具有匹配螺紋類型的螺絲，然後用手指擰緊螺絲。
++
+image::../media/drw_3132q_v_slider_rails_ieops-2494.svg[滑軌安裝]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[標註編號 1]
+ a| 
+輕輕滑動滑軌，將其與機架上的螺絲孔對齊。
+
+
+
+ a| 
+image::../media/icon_round_2.png[標註編號 2]
+ a| 
+將滑軌的螺絲鎖緊到機櫃立柱上。
+
+|===
+.. 對右側後柱重複步驟 4a。
+.. 在櫥櫃上的所需位置重複步驟 4a 和 4b。
+
+
+. 將交換器安裝在機櫃或機架中。
++
+
+NOTE: 此步驟需要兩個人：一個人從前面支撐交換機，另一個人將交換機引導到後部滑動導軌中。
+
++
+.. 將開關的背面放置在機櫃上的所需位置。
++
+image::../media/drw_switch_cabinet_position_generic_ieops-2348.svg[3232C 定位於 U39-40]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[標註編號 1]
+ a| 
+當機殼推向後柱時，將兩個後機架安裝導軌與滑動導軌對齊
+
+
+
+ a| 
+image::../media/icon_round_2.png[標註編號 2]
+ a| 
+輕輕滑動交換機，直到前機架安裝支架與前柱齊平。
+
+|===
+.. 將交換器安裝到機櫃或機架上。
++
+image::../media/3132q_attaching.gif[開關附件]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[標註編號 1]
+ a| 
+一個人將機殼前部保持水平，另一個人將後部的四個螺絲完全擰緊到機櫃柱上。
+
+|===
+.. 現在底盤無需任何輔助即可得到支撐，將前螺絲完全擰緊到柱子上。
+.. 對機櫃上所需位置的第二個開關重複步驟 5a 至 5c。
++
+
+NOTE: 透過使用完全安裝的開關作為支撐，在安裝過程中無需握住第二個開關的前部。
+
+
+
+. 安裝開關後，將跳線連接到開關電源入口。
+. 將兩條跳線的公插頭連接到最近可用的 PDU 插座。
++
+
+NOTE: 為了保持冗餘，兩根電線必須連接到不同的 PDU。
+
+. 將每個交換器上的管理連接埠連接到任一管理交換器（如果訂購）或將其直接連接到管理網路。
++
+管理網路連接埠是右側 PSU 附近的下方 RJ-45 連接埠。安裝交換器後，將每個交換器的 CAT6 電纜穿過直通面板，以連接到管理交換器或網路。
+
+
+
+.下一步是什麼？
+在機櫃或機架中安裝交換器後，您link:deploy-hardware.html["在機櫃或機架中安裝 AFX 1K 儲存系統和層架"]。

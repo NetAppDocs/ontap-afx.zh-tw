@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: administer/display-svms.html 
+keywords: afx, afx system, svm, display svm 
+summary: 您可以顯示 AFX 叢集中定義的資料儲存虛擬機器。每個 SVM 都提供一個獨立的環境來組織您的資料並提供用戶端存取。 
+---
+= 顯示 AFX 儲存系統 SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以顯示 AFX 叢集中定義的資料儲存虛擬機器。每個 SVM 都提供一個獨立的環境來組織您的資料並提供用戶端存取。
+
+.步驟
+. 在系統管理員中，選擇*叢集*，然後選擇*儲存虛擬機器*。
+. 將滑鼠懸停在所需的 SVM 上並選擇image:icon_kabob.gif["三個垂直的藍點"]查看主要管理選項，包括啟動和停止 SVM。
+. （可選）選擇特定的 SVM 以查看更多詳細信息，包括概覽、設定、複製和檔案系統。
+
+
+.相關資訊
+* link:../administer/configure-svm.html["配置 AFX 系統 SVM"]
+* link:../get-started/prepare-cluster-admin.html["了解儲存虛擬機"]
+

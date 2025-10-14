@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: install-setup/install-setup-requirements.html 
+keywords: afx, afx 1k, install, setup, requirements, cautions 
+summary: 查看 AFX 1K 儲存控制器和儲存架所需的設備和提升預防措施。 
+---
+= AFX 1K 儲存系統的安裝要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+查看 AFX 1K 儲存控制器和儲存架所需的設備以及提升預防措施。
+
+
+
+== 安裝所需的設備
+
+要安裝 AFX 1K 儲存系統，您需要以下裝置和工具。
+
+* 存取 Web 瀏覽器來設定您的儲存系統
+* 靜電放電 (ESD) 腕帶
+* 手電筒
+* 具有 USB/串行連接的筆記型電腦或控制台
+* 用於設定存放架 ID 的迴紋針或細頭原子筆
+* 2 號十字螺絲刀
+
+
+
+
+== 起重註意事項
+
+AFX 儲存控制器和儲存架很重。抬起和移動這些物品時要小心。
+
+
+
+=== 儲存控制器權重
+
+移動或抬起 AFX 1K 儲存控制器時請採取必要的預防措施。
+
+AFX 1K 儲存控制器的重量可達 62.83 磅（28.5 公斤）。要抬起儲存控制器，需要兩個人或使用液壓升降機。
+
+image::../media/drw_a1k_weight_caution_ieops-1698.svg[ASA A1K 解除警告圖標]
+
+
+
+=== 倉儲貨架重量
+
+移動或抬起架子時請採取必要的預防措施。
+
+.NX224貨架
+--
+NX224 架子的重量最多可達 60.1 磅（27.3 公斤）。要抬起架子，需要兩個人或使用液壓升降機。將所有組件放在架子上（前部和後部），以防止架子重量不平衡。
+
+image::../media/drw_nx224_lifting_weight_ieops-2437.svg[NX224 NSM100 起吊注意事項]
+
+.相關資訊
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["安全資訊和監管通知"^]
+
+
+.下一步是什麼？
+了解硬體需求後，link:prepare-hardware.html["準備安裝您的 AFX 1K 儲存系統"] 。
+
+--

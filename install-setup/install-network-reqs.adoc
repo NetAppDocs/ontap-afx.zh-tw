@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: install-setup/install-network-reqs.html 
+keywords: shared storage cluster switch 
+summary: 從ONTAP 9.9.1 開始，您可以使用Cisco Nexus 9364d-gx2a 交換器將儲存和叢集功能組合到共用交換器場景。 
+---
+= AFX 1K 儲存系統的網路需求
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+記錄連接到 AFX 1K 儲存系統的每個網路所需的資訊。
+
+
+
+== 收集網路資訊
+
+在開始安裝 AFX 1K 儲存系統之前，請收集所需的網路資訊
+
+* 每個儲存系統控制器和所有適用交換器的主機名稱和 IP 位址。
++
+大多數儲存系統控制器透過連接到乙太網路服務連接埠（扳手圖示）透過 e0M 介面進行管理。
+
++
+請參閱 https://hwu.netapp.com["Hardware Universe"^]了解最新資訊。
+
+* 叢集管理IP位址
++
+叢集管理IP位址是叢集管理員用來存取管理儲存VM和管理叢集的叢集管理介面的唯一IP位址。您可以從組織中負責指派 IP 位址的管理員處取得此 IP 位址。
+
+* 網路子網路遮罩
++
+在叢集設定期間， ONTAP會建議一組適合您的配置的網路介面。如果需要的話，您可以調整建議。
+
+* 網路閘道 IP 位址
+* 節點管理 IP 位址（每個節點一個）
+* DNS 網域
+* DNS 名稱伺服器 IP 位址
+* NTP 伺服器 IP 位址
+* 資料子網路遮罩
+* 用於管理網路流量的 IP 子網路。
+
+
+
+
+== Cisco交換器的網路需求
+
+對於Cisco Nexus 9332D-GX2B 和 9364D-GX2A 交換器的安裝和維護，請務必檢查佈線和網路需求。
+
+
+
+=== 網路需求
+
+所有交換器配置都需要以下網路資訊。
+
+* 管理網路流量的 IP 子網
+* 每個儲存系統控制器和所有適用交換器的主機名稱和 IP 位址
+* 請參閱 https://hwu.netapp.com["Hardware Universe"^]了解最新資訊。
+
+
+
+
+=== 佈線要求
+
+* 您擁有適合您的交換器的數量和類型的電纜和電纜連接器。查看 https://hwu.netapp.com["Hardware Universe"^]。
+* 根據您最初設定的交換器類型，您需要使用隨附的控制台連接線連接到交換器控制台連接埠。
+
+
+.下一步是什麼？
+查看網路要求後，您link:cable-hardware.html["為 AFX 1K 儲存系統連接控制器和儲存架"]。

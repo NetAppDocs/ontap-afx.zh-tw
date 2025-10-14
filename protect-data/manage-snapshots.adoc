@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: protect-data/manage-snapshots.html 
+keywords: afx, afx system, snapshots, manage snapshots 
+summary: 您可以管理 AFX 系統上的快照。有關詳細信息，請參閱 Unified ONTAP文件。 
+---
+= 管理 AFX 儲存系統上的快照
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以管理 AFX 系統上的快照。有關詳細信息，請參閱 Unified ONTAP文件。
+
+.相關資訊
+* https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["建立ONTAP快照策略"^]
+* https://docs.netapp.com/us-en/ontap/flexgroup/protect-snapshot-copies-task.html["使用快照保護ONTAP FlexGroup卷"^]
+

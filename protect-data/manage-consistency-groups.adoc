@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: protect-data/manage-consistency-groups.html 
+keywords: afx, afx system, consistency group, manage consistency group 
+summary: 您可以管理 AFX 系統上的一致性群組。這可以簡化您的儲存管理。 
+---
+= 管理 AFX 儲存系統上的一致性群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以管理 AFX 系統上的一致性群組。這可以簡化您的儲存管理。
+
+
+
+== 為一致性群組新增快照資料保護
+
+當您為一致性群組新增快照資料保護時，可以根據預先定義的計畫定期拍攝一致性群組的本機快照。
+
+.步驟
+. 在系統管理員中，選擇*保護*，然後選擇*一致性群組*。
+. 將滑鼠懸停在您想要保護的一致性群組上。
+. 選擇image:icon_kabob.gif["三個垂直的藍點"]；然後選擇*編輯*。
+. 在*本機保護*下，選擇*計劃快照*。
+. 選擇快照策略。
++
+接受預設快照策略，選擇現有策略，或建立新策略。
+
++
+[cols="2,6a"]
+|===
+| 選項 | 步驟 
+
+
+| 選擇現有的快照策略  a| 
+選擇image:icon_dropdown_arrow.gif["向下的藍色箭頭"]預設策略旁邊的；然後選擇要使用的現有策略。
+
+
+
+| 建立新的快照策略  a| 
+.. 選擇image:icon_add.gif["藍色加號，後面跟著單字“add”"]；然後輸入新的策略名稱。
+.. 選擇策略範圍。
+.. 在*時間表*下選擇image:icon_add.gif["藍色加號，後面跟著單字“add”"]。
+.. 選擇出現在*時間表名稱*下的名稱；
++
+然後選擇image:icon_dropdown_arrow.gif["指向下方的藍色箭頭"]。
+
+.. 選擇策略計劃。
+.. 在*最大快照*下，輸入您想要保留的一致性群組的最大快照數。
+.. 或者，在 * SnapMirror標籤* 下輸入SnapMirror標籤。
+.. 選擇*儲存*。
+
+
+|===
+. 選擇*編輯*。
+
+
+
+
+== 相關資訊
+
+* https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["了解ONTAP一致性組"^]
+

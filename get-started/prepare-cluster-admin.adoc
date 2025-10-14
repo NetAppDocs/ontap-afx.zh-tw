@@ -1,0 +1,194 @@
+---
+sidebar: sidebar 
+permalink: get-started/prepare-cluster-admin.html 
+keywords: afx, afx system, prepare, administration 
+summary: 在生產環境中部署 AFX 之前，必須了解管理結構和配置選項。這可確保您的 AFX 叢集管理安全、高效且有效。 
+---
+= 準備管理您的 AFX 儲存系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在生產環境中部署 AFX 之前，必須了解管理結構和配置選項。這可確保您的 AFX 叢集管理安全、高效且有效。
+
+
+
+== 了解儲存虛擬機
+
+儲存虛擬機器 (SVM) 是ONTAP叢集內的隔離伺服器或租用戶環境。您可以設定 SVM 來向連線的客戶端提供資料。您應該熟悉 AFX SVM 的功能和特性。
+
+
+NOTE: 當您設定並初始部署 AFX 叢集時，會建立一個資料 SVM。如果需要，您可以建立額外的資料 SVM。
+
+行政控制:: 資料 SVM 可用於建立和強制執行資料和應用程式的隔離。當一個較大的組織中有許多不同的團體時，這會很有用。可以將管理控制委託給 SVM 來制定與資料存取、安全性和保護相關的策略。
+帳戶和 RBAC 角色:: AFX 有兩個層級的身份驗證和授權：叢集層級和 SVM 層級。除了叢集帳戶之外，每個 SVM 都有自己獨特的一組使用者和角色。在大多數情況下，使用叢集等級帳戶就足夠了。但根據您的環境，您可能還需要配置和使用限制性更強的 SVM 帳戶和角色。看link:../administer/additional-ontap-svm.html["額外的 AFX SVM 管理"]了解更多。
+SVM 範圍的資源:: AFX 資源和可設定實體與叢集或特定 SVM 相關聯。  SVM 範圍內有許多資源，包括磁碟區和儲存桶以及 SVM 使用者帳戶和 RBAC 角色。
+專用網路介面:: 每個 SVM 都有自己專用的一組網路介面。例如，將單獨的 LIF 指派給 SVM 以用於管理和客戶端資料存取。
+
+
+
+
+== 兩個AFX管理層級
+
+使用 AFX 執行的管理ONTAP任務通常分為兩類。某些任務適用於整個ONTAP集群，而其他任務適用於特定的 SVM。這就導致了兩級管理模式。
+
+值得注意的是，這些層級描述如何組織和指派管理任務，而不一定描述如何配置相關的安全性。例如，雖然需要叢集管理員帳戶來執行叢集層級管理，但它也可以用於 SVM 管理。
+
+集群管理員:: 集群管理員可以完全控制 AFX 集群，包括所有資料 SVM。 AFX 叢集管理層級僅包含叢集管理員可以執行的任務，而不包括任何特定於 SVM 的管理任務。看link:../administer/view-dashboard.html["管理您的集群"]了解更多。
+SVM 管理員:: SVM 管理員角色可以控制特定的資料 SVM，因此與叢集管理員相比受到的限制更嚴格。 SVM 管理涉及對具有 SVM 範圍的物件和資源執行任務，例如建立磁碟區。看link:../manage-data/prepare-manage-data.html["管理您的儲存虛擬機器和數據"]了解更多。
+
+
+
+
+== 三個管理介面
+
+與AFF和FAS系統一樣，AFX 有三個管理介面。您需要使用的 LIF（或 IP 位址）會根據管理介面和您的環境而有所不同。
+
+
+NOTE: 對於大多數管理任務來說，系統管理器使用者介面是首選。除非另有說明，否則您應該使用管理員帳戶。
+
+[cols="25,75"]
+|===
+| 介面 | 描述 
+
+
+| 系統管理員 | 這是一個可透過網頁瀏覽器存取的圖形使用者介面。它易於使用，並能提供客戶所需的大部分功能。透過系統管理器存取 AFX 可為大多數ONTAP叢集和 SVM 管理需求提供最簡單的體驗。 
+
+
+| 命令列介面 | 可以使用 SSH 存取ONTAP CLI。根據您的帳戶，您可以存取叢集管理 LIF 或 SVM 管理 LIF。 CLI 更難使用，但更強大。對於高階管理任務來說，它是首選，有時也是必要的。 
+
+
+| REST API | AFX 包含一個 REST API，您可以使用它來自動管理您的 AFX 叢集。該 API 與 Unified ONTAP個性 REST API 共享許多相同的調用，但經過修改以支援獨特的 AFX 功能。 
+|===
+
+
+== 學習在系統管理員中搜尋、過濾和排序訊息
+
+系統管理器使用者介麵包括一組強大的功能，使您能夠存取和顯示所需的資訊。學習使用這些功能將幫助您更好地管理 AFX 儲存系統。看 https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html["在系統管理員中搜尋、過濾和排序訊息"^]了解更多。
+
+
+
+== 造訪ONTAP CLI
+
+雖然您可以使用系統管理員進行大多數 AFX 管理，但有些任務只能使用ONTAP命令列介面執行。
+
+.關於此任務
+您可以透過安全外殼 (SSH) 存取ONTAP CLI。 CLI 具有多個權限級別，決定您可用的命令和命令參數。這 `admin`等級是最低權限，也是您登入時的預設等級。您可以將會話權限提升至 `advanced`如果需要使用 `set`命令。
+
+.開始之前
+您需要以下物品：
+
+* 叢集或 SVM 管理 LIF 的 IP 位址或域名
+* 帳戶憑證
+* 本地工作站上的 SSH 用戶端
+
+
+.步驟
+. 使用 SSH 連接到您的 AFX 集群，例如：
++
+`ssh admin@10.69.117.24`
+
+. 提供帳戶密碼。
+. 顯示層次結構頂部的命令目錄：
++
+`?`
+
+. 提升會話的權限級別 `admin`到 `advanced`：
++
+`set -privilege advanced`
+
+
+
+
+
+== 使用ONTAP HA 對
+
+與 Unified ONTAP一樣，AFX 叢集節點配置為高可用性 (HA) 對，以實現容錯和無中斷運行。 HA 配對使得儲存操作能夠在發生節點故障（例如儲存故障轉移）時保持在線。每個節點都與另一個節點配對，形成一對。這通常是透過兩個節點的NVRAM模組之間的直接連接來完成的。
+
+使用 AFX，新的 HA VLAN 被加入到後端叢集交換機，以使NVRAM模組能夠在 HA 夥伴節點之間保持連接。  HA 對仍然與 AFX 系統一起使用，但不再需要直接連接合作夥伴節點。
+
+
+
+== AFX 系統部署限制
+
+在配置和使用叢集時，AFX 會強制執行多項限制，包括最小值和最大值。這些限制分為幾個不同的類別，包括：
+
+每個叢集的控制器節點:: 每個 AFX 叢集必須至少有四個節點。最大節點數根據ONTAP版本的不同而不同。
+儲存容量:: 這是叢集儲存可用區 (SAZ) 中所有 SSD 磁碟的總容量。最大儲存容量根據ONTAP版本而有所不同。您應該查看互通性矩陣工具 (IMT) 中提供的資訊來確定叢集的功能。
+
+
+
+
+== 確認 AFX 系統健康狀況
+
+在執行任何 AFX 管理任務之前，您應該檢查叢集的健康狀況。
+
+
+TIP: 您可以隨時檢查 AFX 叢集的健康狀況，包括當您懷疑有操作或效能問題時。
+
+.開始之前
+您需要以下物品：
+
+* 叢集管理 IP 位址或 FQDN
+* 叢集的管理員帳戶（使用者名稱和密碼）
+
+
+.步驟
+. 使用瀏覽器連接到系統管理員：
++
+`\https://$FQDN_IPADDR/`
+
++
+*例子*
+
++
+`\https://10.61.25.33/`
+
+. 提供管理員使用者名稱和密碼，然後選擇*Sign in*。
+. 檢查系統儀表板和叢集狀態，包括佈線。也請注意左側的_導覽窗格_。
++
+link:../administer/view-dashboard.html["查看儀表板和叢集狀態"]
+
+. 顯示系統事件和稽核日誌訊息。
++
+link:../administer/view-events-log.html["查看 AFX 事件和稽核日誌"]
+
+. 顯示並記錄任何*Insight*建議。
++
+link:../administer/view-insights.html["使用 Insights 優化 AFX 叢集效能和安全性"]
+
+
+
+
+
+== 建立和使用資料 SVM 的快速入門
+
+安裝並設定 AFX 叢集後，您可以開始執行大多數 AFX 部署的典型管理任務。以下是開始與客戶分享資料所需的進階步驟。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"]顯示可用資料 SVM
+[role="quick-margin-para"]
+link:../administer/display-svms.html["展示"]資料 SVM 清單並確定是否有一個可以使用。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"]（可選）建立資料 SVM
+[role="quick-margin-para"]
+link:../administer/create-svm.html["創造"]如果現有 SVM 不可用，則可以使用 SVM 來隔離和保護您的應用程式工作負載和資料。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]配置您的 SVM
+[role="quick-margin-para"]
+link:../administer/configure-svm.html["配置"]您的 SVM 並準備好供客戶端存取。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"]準備配置儲存
+[role="quick-margin-para"]
+link:../manage-data/prepare-manage-data.html["準備"]分配和管理您的資料。
+
+
+
+== 相關資訊
+
+* https://docs.netapp.com/us-en/ontap/concepts/introducing-ontap-interfaces-concept.html["ONTAP使用者介面"^]
+* https://docs.netapp.com/us-en/ontap/system-admin/set-privilege-level-task.html["在ONTAP CLI 中設定權限級別"^]
+* https://docs.netapp.com/us-en/ontap/system-admin/index.html["了解如何使用ONTAP CLI 進行叢集管理"^]
+* link:../faq-ontap-afx.html["AFX 儲存系統常見問題解答"]
+

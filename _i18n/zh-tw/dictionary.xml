@@ -1,0 +1,1701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="9300fda436a5cc421811b04dc04badf8" category="summary">除了典型的 AFX 叢集管理之外，您可能還需要根據您的環境執行其他任務。大多數附加任務都可以使用系統管理員執行，但在某些情況下您可能需要使用 CLI。</block>
+  <block id="faede213fca7a18a345d45f0d29088a6" category="doc">AFX 儲存系統叢集的附加管理</block>
+  <block id="7d36f828619651b0ec19095f0f25dfc8" category="admonition">所描述的ONTAP功能和管理對於運行 Unified ONTAP 的AFX 儲存系統和AFF或FAS系統來說是通用的。其中包含相關 Unified ONTAP文件的連結（視情況而定）。</block>
+  <block id="0b9c6eef4e3d3a222eb04e910d252339" category="section-title">授權</block>
+  <block id="92ff5239ce1b1631936446319c85a178" category="paragraph">AFX 系統的授權方式與 Unified ONTAP AFF和FAS系統類似。  AFX 叢集預設包含所支援協定的大多數功能。</block>
+  <block id="b378946fe8453b6639548e16e14e8d27" category="section-title">ONTAP許可證管理</block>
+  <block id="d9374af96a68f98b2e73d35fada43a6f" category="inline-link">ONTAP許可概述</block>
+  <block id="92365377fc1cd0d16664e4887bf3147a" category="paragraph">ONTAP許可證是一個或多個軟體授權的記錄。所有許可證均使用NetApp許可證文件 (NLF) 定義和提供。參考<block ref="499b499098dbf5a2a34239c516c597ca" category="inline-link-rx"></block>了解更多。</block>
+  <block id="82450d07346d4d57349ac3dc1e7ce2ee" category="section-title">在 AFX 系統上安裝許可證</block>
+  <block id="2f263209e49c251db33dcc81c19ba107" category="paragraph">您可以安裝許可證檔案來根據需要啟動 AFX 儲存系統的附加功能。</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步驟</block>
+  <block id="fdea97941538733664c372bd63868459" category="list-text">在系統管理員中，選擇*集群*，然後選擇*設定*。</block>
+  <block id="09ef944219bc98d60bb63812176764b8" category="inline-image-macro">指向右側的藍色箭頭</block>
+  <block id="3c9826d26cc8beca4db8d4b66f0309ef" category="list-text">在「許可證」旁邊，選擇<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="49f3984eec75f1ed8be9c63752692ca3" category="list-text">選擇“*功能*”標籤以顯示可用的ONTAP功能。</block>
+  <block id="dd789ef28f33d935f543e2dc13c70cef" category="list-text">若要選擇性地安裝許可證，請選擇「*已安裝的許可證*」標籤。</block>
+  <block id="c3e430848a72c379bf1f417e27a1c536" category="inline-image-macro">藍色矩形框內有一個加號，後面跟著白色字母“add”</block>
+  <block id="6bf05f35bf2d6a8946407440da2938fd" category="list-text">選擇<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="dcb1e15a471e7d9f223fbcd7e6878ac1" category="list-text">選擇本機授權檔案並選擇*新增*。</block>
+  <block id="2fae32629d4ef4fc6341f1751b405e45" category="section-title">安全</block>
+  <block id="1799f678c5b93a701cfee6c9b21586d7" category="paragraph">您可以在 AFX 部署中設定和使用多種可選的安全功能。</block>
+  <block id="b0c4a88dd72cd3fbda5a208cb1a3144d" category="section-title">ONTAP安全性與資料加密</block>
+  <block id="70e13d4c7cf86628120bf15bf7b67fc7" category="inline-link">安全性和資料加密</block>
+  <block id="5056fb58219c5b6f1733b9bdd9164e2b" category="paragraph">保護 AFX 儲存系統的安全性和隱私性非常重要。請參閱<block ref="d35c02f8e5fe11769c6928b050332946" category="inline-link-rx"></block></block>
+  <block id="fe36d3e4ff83f7ad4063d30bb5fe6195" category="section-title">ONTAP身份驗證和存取控制</block>
+  <block id="baa83a768688e3785f50b4d38ccb6de2" category="inline-link">身份驗證和存取控制</block>
+  <block id="a74df8d27cc194a68b45bd48bd2b7171" category="paragraph">AFX 儲存系統提供了多種設定驗證和存取控制服務的選項。參考<block ref="fa5d8cb74a13d3ab267000ae8a5fd752" category="inline-link-rx"></block>了解更多。</block>
+  <block id="8663c22fbed6128f44af1bb3e26612b9" category="section-title">在 AFX 系統上管理 OAuth 2.0</block>
+  <block id="9771fa04e8c6fb7041483a3594addec4" category="paragraph">OAuth 2.0 是業界標準授權框架，用於使用簽署的存取權杖來限制和控制對受保護資源的存取。</block>
+  <block id="75165315c049605311ea0086f98e96b5" category="list-text">在「安全」部分中，在「OAuth 2.0 授權」旁邊，選擇<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="fe3efc5b4695c4a10e453b02de3d29c4" category="list-text">啟用 OAuth 2.0</block>
+  <block id="4ce4aa2a1152319e940845ef83298c03" category="list-text">選擇*新增配置*並提供配置詳細資訊。</block>
+  <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">選擇*儲存*。</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="section-title">相關資訊</block>
+  <block id="2d58596c3a86beb93acc70750cd5cba4" category="inline-link-macro">AFX 儲存系統常見問題解答</block>
+  <block id="7605095791d77a2a1e3fa2bb7965cf64" category="list-text"><block ref="7605095791d77a2a1e3fa2bb7965cf64" category="inline-link-macro-rx"></block></block>
+  <block id="71c946f737aae822b9ee4169f06b784f" category="inline-link">ONTAP OAuth 2.0 實作概述</block>
+  <block id="30b8440106110bb0fa5f8d9be31abae5" category="list-text"><block ref="30b8440106110bb0fa5f8d9be31abae5" category="inline-link-rx"></block></block>
+  <block id="45aece67860606b385eb0fc9af9b1dda" category="inline-link-macro">AFX SVM 的額外管理</block>
+  <block id="7e87aa590e2332b7b175f8df6232ab81" category="list-text"><block ref="7e87aa590e2332b7b175f8df6232ab81" category="inline-link-macro-rx"></block></block>
+  <block id="4011f488168e6678c5110b92cd9f4077" category="summary">除了典型的 AFX SVM 管理之外，您可能還需要根據您的環境執行其他任務。大多數附加任務都可以使用系統管理員執行，但在某些情況下您可能需要使用 CLI。</block>
+  <block id="a2b07f7aaaf5bddcfe9e2e2b9580d157" category="doc">AFX 儲存系統 SVM 的附加管理</block>
+  <block id="e421f2eac84a4d509e113ef28c3d2cb9" category="section-title">儲存管理和效能</block>
+  <block id="49d90ebf58826726d312cf6ef4c4a365" category="paragraph">您可以在 AFX 部署中設定和使用多種可選的儲存管理和效能功能。</block>
+  <block id="057b0a61093f8c5a3fd2cb091c2487ed" category="section-title">ONTAP NAS 儲存管理</block>
+  <block id="9a7a0f1104963c42c2710b02915c3716" category="inline-link">NAS儲存管理</block>
+  <block id="96d4d0a4d3683684386667f3537301b0" category="paragraph">網路附加儲存 (NAS) 提供專用文件存儲，可供網路中的多個用戶端存取。 ONTAP支援多種 NAS 協定。參考<block ref="5a12468a094b7ac3a6242787d7d649a9" category="inline-link-rx"></block>了解更多。</block>
+  <block id="2f6306c1dbddc5160b5cb0ca2b5c9ac5" category="section-title">ONTAP FlexCache卷</block>
+  <block id="4e59e775225da37265a8902119d82992" category="inline-link">了解ONTAP FlexCache卷</block>
+  <block id="779755990ca58135bf4cfa4707ddbd6c" category="paragraph">FlexCache是​​ONTAP 的遠端快取功能。它使數據更接近客戶端，從而提高存取效能並降低成本。建立FlexCache磁碟區（最初僅從原始檔案系統複製元資料）可簡化檔案散佈並減少 WAN 流量。參考<block ref="8586d1d402de18023c61e6177e30172a" category="inline-link-rx"></block>了解更多。</block>
+  <block id="be11a39b915644a1e65c81e32c070b68" category="section-title">ONTAP FlexGroup卷</block>
+  <block id="2ad76da4da3aa0cbabd66aeb0f1572ae" category="inline-link">FlexGroup卷設定</block>
+  <block id="02ddf5b25cc6ef3a72b0ad352ff66521" category="paragraph">FlexGroup磁碟區由多個成員磁碟區組成，這些成員磁碟區會自動且透明地共用流量。 FlexGroup卷具有多種優勢，包括高效能和簡化的管理。參考<block ref="63895c5e62230764dd21746cff7332a8" category="inline-link-rx"></block>了解更多。</block>
+  <block id="7e7397a7b79323762c61941fc0e6b5f9" category="section-title">資料保護</block>
+  <block id="5a03d27c72cc0c41eec3cb2eb030cdd6" category="paragraph">您可以在 AFX 部署中設定和使用多種可選的資料保護功能。</block>
+  <block id="6165c4352e1504dbaeef34d0cc50c187" category="section-title">一致性組</block>
+  <block id="c787098ec77629691b918cef145e8e2b" category="inline-link">了解ONTAP一致性組</block>
+  <block id="553d5c04d3b6848d5d2c375027218fb2" category="paragraph">一致性組是作為單一單元進行管理的磁碟區的集合。參考<block ref="1d797ba417ec088935d1e276649d9717" category="inline-link-rx"></block>了解更多。</block>
+  <block id="acdc6b4f6edd40f37bce01247a32ff86" category="section-title">SnapLock</block>
+  <block id="5641890857d855addbaf3e3074d37f96" category="inline-link">了解ONTAP SnapLock</block>
+  <block id="b9476488ba06770e5c543d441ead26ab" category="paragraph">您可以透過在磁碟區層級將檔案轉換為一次寫入多次讀取 (WORM) 狀態來保護檔案。 SnapLock支援兩種模式。合規模式確保文件在保留期到期之前不能被刪除，這滿足了政府或行業特定的要求。企業模式允許特權使用者在保留期到期之前刪除檔案。參考<block ref="961426c728ee82adbe3a73025990fea9" category="inline-link-rx"></block>了解更多。</block>
+  <block id="d4ebca245013c8e11a21200cf7abd53f" category="section-title">ONTAP事件和效能監控</block>
+  <block id="c19e19aadc6d75262a0f85886dc5deb3" category="inline-link">事件、效能和健康監控</block>
+  <block id="f374f4f413ce58f29a5db8436a4f29ad" category="paragraph">您可以監控叢集的健康和效能。這包括設定事件警報和管理系統健康警報通知。參考<block ref="a6cdc1834b78b8b89ee92bbe49904c07" category="inline-link-rx"></block>了解更多信息</block>
+  <block id="e5037510086003d93a3daf34030bf4c4" category="inline-link-macro">AFX 叢集的附加管理</block>
+  <block id="cba9c10f96b3122132057453ba39d735" category="list-text"><block ref="cba9c10f96b3122132057453ba39d735" category="inline-link-macro-rx"></block></block>
+  <block id="bbdeadb34080fe84fcd07f7ec44186ec" category="summary">建立資料 SVM 後，您可以根據您的要求和客戶需求更新配置。</block>
+  <block id="cca25dd2421f27456e2c8857f143bcc2" category="doc">配置 AFX 儲存系統 SVM</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">關於此任務</block>
+  <block id="d94881bcfe4d50e96c6c145dd72caead" category="paragraph">有四種存取 SVM 配置的路徑，如特定資料 SVM 的登入頁面上的標籤所示。這些包括：</block>
+  <block id="3b878279a04dc47d60932cb294d96259" category="list-text">概況</block>
+  <block id="edbe21b71cfdb0ef81d44c4b10f0b4dd" category="paragraph">這提供了與網路介面和服務、協定、儲存和保護相關的當前配置詳細資訊的快速儀表板概覽。</block>
+  <block id="f4f70727dc34561dfde1a3c529b6205c" category="list-text">設定</block>
+  <block id="18e5f7761a9ef97f436dae4231d609b4" category="paragraph">您可以存取和更新整個 SVM 配置，該配置會按多個區域組織，例如協定、服務、策略和安全性。</block>
+  <block id="8c340dc334134096f68b880b42a8692c" category="list-text">複製</block>
+  <block id="711e87f42c6f4da34f425159a7869571" category="paragraph">此頁面提供了為 SVM 定義的目前複製關係的清單。</block>
+  <block id="53b936091a984a22f4042eeb94499891" category="list-text">檔案系統</block>
+  <block id="211cc64e3c0b9bdd618488bfbb0f7274" category="paragraph">您可以追蹤 SVM 的活動和分析</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">開始之前</block>
+  <block id="db0e7e7efdd3818fccf9822e59670824" category="paragraph">您需要決定要顯示和更新哪個 SVM。</block>
+  <block id="ea918e6012e90cf1ef8548ab37a5f82a" category="list-text">在系統管理員中，選擇*叢集*，然後選擇*儲存虛擬機器*。</block>
+  <block id="22eefd39539d39d6bceae93125de3f6d" category="list-text">選擇所需的 SVM，然後選擇“*設定*”標籤。</block>
+  <block id="c0bf64ce930338ba17b55f1ada7a8332" category="list-text">查看頁面上的配置選項；根據需要選擇並更新設定。</block>
+  <block id="b39bbd3b71a9a887c1d46ccbc4ed140f" category="summary">您可以建立 SVM 來提供隔離並提高安全性。您可以針對組織內的不同團體或專案執行此操作。</block>
+  <block id="a56afe1d40212ed71a36c0c00043c59c" category="doc">建立 AFX 儲存系統 SVM</block>
+  <block id="6f935ad494333d5776ebfa942f889bb9" category="paragraph">建立 SVM 時，您必須提供名稱並配置至少一個用於用戶端存取的協定。選擇客戶端協定後，系統也會提示您進行網路設定。建立 SVM 配置後，您可以根據需要變更它。</block>
+  <block id="d51d6441a5239b5c7a5c693501413e3c" category="paragraph">您需要以下物品：</block>
+  <block id="cb743b110c796f2e81e05e6d9adcc46c" category="list-text">至少四個 IP 位址</block>
+  <block id="057e4e8936fd7e47490f6661d5a59df3" category="list-text">IP空間名稱</block>
+  <block id="2350f48fa022e63c31e40900368eb5a5" category="list-text">為 SVM 提供一個名稱。</block>
+  <block id="749d6686ef93ee26ed48288d63e13fe2" category="list-text">選擇客戶端存取的協定並提供適當的配置詳細資訊。</block>
+  <block id="db46f7deb628b1db1b6618ef56339dee" category="list-text">為 SVM 新增網路接口，包括 IP 位址和子網路遮罩。</block>
+  <block id="cff2b9d8d3768b2bf7b0d7ed16253f25" category="list-text">在*儲存虛擬機器管理*下，可選：</block>
+  <block id="5e08e4c35e8928f175cf78ccfb98cee9" category="list-text">啟用最大容量並選擇一個值</block>
+  <block id="0cb086147105740b218571942aea6a4c" category="list-text">管理 SVM 的管理員帳戶</block>
+  <block id="e7bf0c9a72eafd501147fd96b324b9d2" category="inline-link-macro">配置 AFX 系統 SVM</block>
+  <block id="3d021893af4157caac7f9c22ae1bc378" category="list-text"><block ref="3d021893af4157caac7f9c22ae1bc378" category="inline-link-macro-rx"></block></block>
+  <block id="859505efff7fe52ce823422ead23cd6f" category="inline-link-macro">管理 AFX 系統集群網絡</block>
+  <block id="e9c561ad5ec17e81c2e719f7be3863e6" category="list-text"><block ref="e9c561ad5ec17e81c2e719f7be3863e6" category="inline-link-macro-rx"></block></block>
+  <block id="71988a2463d0516b1671c61fc5e9c8c3" category="summary">您可以顯示 AFX 叢集中定義的資料儲存虛擬機器。每個 SVM 都提供一個獨立的環境來組織您的資料並提供用戶端存取。</block>
+  <block id="22df4b5d95ecf35dc6f177af84bc769a" category="doc">顯示 AFX 儲存系統 SVM</block>
+  <block id="f68a3e6f71e355a9835562cab8f0851b" category="inline-image-macro">三個垂直的藍點</block>
+  <block id="50fa16080e62b6f65ea07ecf6843fee9" category="list-text">將滑鼠懸停在所需的 SVM 上並選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>查看主要管理選項，包括啟動和停止 SVM。</block>
+  <block id="b1023bd1ff9bd721effa4848f19233a5" category="list-text">（可選）選擇特定的 SVM 以查看更多詳細信息，包括概覽、設定、複製和檔案系統。</block>
+  <block id="18a00962e74838b84850d414749e226a" category="inline-link-macro">了解儲存虛擬機</block>
+  <block id="2ad843365c7a2d52f81efeb284575050" category="list-text"><block ref="2ad843365c7a2d52f81efeb284575050" category="inline-link-macro-rx"></block></block>
+  <block id="b4f66f369a93b0fad808fcb814a4ce14" category="summary">您可以獨立於儲存容量擴充 AFX 叢集的運算容量。擴展過程不會中斷，隨著磁碟區在節點之間重新平衡，效能會線性提高。當您適應 AFX 使用者的持續需求時，此功能是一項顯著的優勢。</block>
+  <block id="a3dcced3a280b769fdc17c9499297617" category="doc">擴展 AFX 儲存系統集群</block>
+  <block id="3e0952f16af18bae10ddd0a4280d73e5" category="paragraph">您可以獨立於儲存容量擴充 AFX 叢集的運算容量。擴展過程不會中斷，隨著磁碟區在節點之間重新平衡，效能會線性提高。當您適應 AFX 系統使用者的持續需求時，此功能是一項顯著的優勢。</block>
+  <block id="4dec4def612864b7678a1edec7244b50" category="section-title">準備擴展集群</block>
+  <block id="6439df7bd52d9014af20f97004f87b83" category="paragraph">在擴展 AFX 叢集之前，您應該熟悉基本要求和一般故障排除方法。</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="section-title">要求</block>
+  <block id="e8020d76113d3c2c5955515d0af7ff6f" category="paragraph">您需要叢集管理員帳戶的憑證，並且能夠使用 SSH 連線到ONTAP CLI。擴展叢集時，必須新增偶數節點，並遵守基於版本的 AFX 系統的大小限制。</block>
+  <block id="231cf4c70d866b616c21baddaeed0696" category="section-title">故障排除</block>
+  <block id="5d1c49970f380eae74db63bcd153e2b5" category="paragraph">在執行叢集擴充時，您應該了解一些概念和故障排除場景。</block>
+  <block id="6f3f95b05f991965fce992543425274c" category="section-title">自動重新平衡卷</block>
+  <block id="abc82ec6445f264d1c992e06827e08a4" category="paragraph">自動拓撲管理 (ATM) 是內部 AFX 系統元件，可偵測分配不平衡並重新平衡叢集節點之間的磁碟區。它依靠零複製卷移動 (ZCVM) 技術使用元資料更新而不是複製資料來重新定位磁碟區。  ZCVM 是 AFX 儲存系統可用的預設磁碟區移動技術。</block>
+  <block id="fad4d88dad501944690bb6abbeaa83df" category="section-title">可能的故障排除場景</block>
+  <block id="d236017d0676b36a8174e3c18f65e7b0" category="paragraph">在與 AFX 叢集擴展相關的捲移動期間，您可能需要調查幾種情況。</block>
+  <block id="72244b9590ea645dea2845bb232e0b2b" category="list-text">ATM 未移動卷</block>
+  <block id="ba69b8e28e52bb182d091548ebb2a366" category="list-text">當集群已經處於平衡狀態或沒有符合條件的捲可以移動時，就會發生這種情況。</block>
+  <block id="1ca86a41893fc202a77b8e5266b32b1e" category="list-text">關於 ATM 應如何或何時啟動的困惑</block>
+  <block id="156daaeb34d02557970c6178e540c462" category="list-text">看起來，卷的分配速度似乎沒有像預期的那麼快。 ATM 每五分鐘嘗試偵測並回應硬體事件。在最壞的情況下，重新平衡操作會在上一次操作完成 40 分鐘後啟動。</block>
+  <block id="c539ceffff768f401decb5a53cadfacb" category="section-title">CLI 指令</block>
+  <block id="0404d1c709d6003d84dc515fc6235663" category="paragraph">您可以使用多個命令來監視叢集擴展操作。</block>
+  <block id="0cedfc9bda3ba416be03f74ba30b974d" category="list-text"><block ref="d49fd39f851c023584dd0dc5f7165617" prefix="" category="inline-code"></block></block>
+  <block id="783e71099f39b879ba73fd189ed60e88" category="list-text"><block ref="2c1526aba469d4f898baef1556b82c29" prefix="" category="inline-code"></block></block>
+  <block id="3e295397f02994acd053104b88424251" category="paragraph">您應該根據需要聯絡NetApp支援以取得更多協助。</block>
+  <block id="56aa709defb883ba51abb3ce34754418" category="section-title">新增節點以擴展集群</block>
+  <block id="afe3919bbf3ae20baadab74ae95b715d" category="paragraph">此程序說明如何為現有叢集新增一對節點，並且可以適應其他部署環境。您需要同時使用ONTAP CLI 和系統管理器管理介面。</block>
+  <block id="7a9cf747a7c3f3906f8a54e1bc0a8229" category="list-text">連接到ONTAP CLI 並設定進階權限等級：</block>
+  <block id="88b26732b98b849762883ab6b6019f51" category="paragraph"><block ref="b3978bc37ec211e854d8c5ace3fd868d" prefix="" category="inline-code"></block></block>
+  <block id="a6013f86fd974f864e87ac4173f9fbbf" category="list-text">顯示目前節點的捲位置；注意每個節點的捲數：</block>
+  <block id="73a027a93b7e04e952dc693708720f3f" category="paragraph"><block ref="c256f6588fd6b2a7cde1f4bf78a4dae7" prefix="" category="inline-code"></block></block>
+  <block id="1861c1532c39e7cd277517ff455c0600" category="list-text">顯示群集互連 IP 位址並保存以供後續步驟使用：</block>
+  <block id="b1d04bf148bf44516449704e73984e75" category="paragraph"><block ref="f9ca70262686ef3da0986dacc7b067a8" prefix="" category="inline-code"></block></block>
+  <block id="f384471fde7b72144dd62a1448fdf7c7" category="list-text">登入要新增至叢集的每個節點的服務處理器。</block>
+  <block id="f77ba807195f70447de42f4b9dd96731" category="list-text">在提示下，鍵入 *system console* 以存取節點的控制台。</block>
+  <block id="c3b7bfb50fd29c92d8e4f8a6c6a6c07a" category="list-text">啟動節點顯示啟動選單提示：</block>
+  <block id="a0c89c7f9eddb57bbf77129aeb1df2d7" category="paragraph"><block ref="16c75f7ad51c79b1cf539c94cd168367" prefix="" category="inline-code"></block></block>
+  <block id="966610ba29a75d2e0367bd09a2910e3b" category="paragraph">如果選單未加載，請使用 *Ctrl+C* 技術存取啟動選單。</block>
+  <block id="0f0c9c3767c4c01c8878964f018d629a" category="list-text">從選單中選擇適當的啟動選項之一；如果出現提示，請輸入 *yes* 繼續。</block>
+  <block id="8391881252171d4c626ecd7652470230" category="paragraph">如果您從這裡返回 LOADER，請在 LOADER 提示字元下輸入 *boot_ontap*。</block>
+  <block id="a686799b22ae48d7d81e7494d1a62d19" category="list-text">使用叢集設定精靈配置節點管理 LIF、子網路和網關。</block>
+  <block id="a07b2825d1e229ccbb534ecf399a62ec" category="paragraph">系統管理器將使用此配置來偵測要新增至叢集的節點。根據提示輸入連接埠、IP位址、網路遮罩、預設閘道等值。</block>
+  <block id="8abe25bcc7e726919ec6ef26d1491384" category="list-text">按 *CTL+C* 存取 CLI。</block>
+  <block id="451b047b9812254fabf0394bc93a2261" category="list-text">修改叢集互連位址，以便它們在您的網路中可路由；使用適合您環境的配置：</block>
+  <block id="4276d791ff250092cdd5e022d7a33ff2" category="paragraph"><block ref="e82c3a0de70f9748a8fd013120bc7b37" prefix="" category="inline-code"></block></block>
+  <block id="cb8e6092353c6810186b255fd820fd9e" category="paragraph"><block ref="de296a7b413a0a66bdbb3cc88cbd5d40" prefix="" category="inline-code"></block></block>
+  <block id="a87226305c8725717903abfb312a6e45" category="paragraph">僅當其他介面不使用ONTAP自動建立的 169.254.xx 位址時才需要執行此步驟。</block>
+  <block id="ddf27ac60914087309d6178caf78b299" category="list-text">在另一個 AFX 節點控制器上重複上述步驟。</block>
+  <block id="6294e0f990372822fffecab9221b75d6" category="list-text">使用群集管理 IP 位址存取系統管理員。</block>
+  <block id="726bf364b31a51b424c5330097432cd4" category="list-text">在系統管理員中，選擇*叢集*，然後選擇*概覽*；選擇*節點*標籤。</block>
+  <block id="61b56f79520f1e3319efe4e05c805c02" category="list-text">找到“不屬於此集群”部分；選擇<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="a4fbd7ae404984dd28d37474da6091a7" category="list-text">如果在叢集互連 IP 位址變更之前發現了節點，則需要退出視窗並返回以重新發現節點。</block>
+  <block id="1ee512b1f29fc61508cb92d9b946b316" category="list-text">您可以選擇使用 CLI 而不是系統管理員來新增節點；請參閱命令<block ref="5fc60967dddffb3c388156e897d54aad" prefix=" " category="inline-code"></block>。</block>
+  <block id="07c6c8e409bf98a663406b3f8484d948" category="list-text">在*新增節點*選單中提供設定詳細資訊；您可以手動新增管理 IP 位址或使用子網路。</block>
+  <block id="ef489670f2d172cd8df54563f509be72" category="list-text">連接到ONTAP CLI 以監控節點新增操作的狀態：</block>
+  <block id="f0528056b72e32af5446d09c8143f949" category="paragraph"><block ref="725ab4247edcd4ee17f89101ac3a700e" prefix="" category="inline-code"></block></block>
+  <block id="b0452a1565d5b6be350e10f781fa41bc" category="list-text">操作完成後，確認所有節點上的磁碟區位置；使用適當的節點名稱對每個節點發出一次命令：</block>
+  <block id="e6f0508330612b3164a37e2700e4e636" category="paragraph"><block ref="3ea083de06b52634cc0dc73daf23adb0" prefix="" category="inline-code"></block></block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="list-title">結果</block>
+  <block id="7c19a1d19e19518955ee27453053fda1" category="list-text">向叢集新增節點不會造成中斷。</block>
+  <block id="4a68daa16c7a67245fd5cacef62544b7" category="list-text">音量移動應該會自動發生。</block>
+  <block id="9bf10273a8ffef7efd1cf9bf82e42c37" category="list-text">性能將線性擴展。</block>
+  <block id="b85a7e2e330f4b7644c3ac9177d0624a" category="inline-link-macro">準備管理您的 AFX 系統</block>
+  <block id="193bf254d46cf929fd5f1fad7b6ad95f" category="list-text"><block ref="193bf254d46cf929fd5f1fad7b6ad95f" category="inline-link-macro-rx"></block></block>
+  <block id="96905de898270655681935d33b697206" category="inline-link-macro">ONTAP AFX 儲存系統常見問題解答</block>
+  <block id="b3cdda09b08a8fb6221e23d4cc3d09cd" category="list-text"><block ref="b3cdda09b08a8fb6221e23d4cc3d09cd" category="inline-link-macro-rx"></block></block>
+  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp支援站點</block>
+  <block id="df9f9e9d2170bb250eb3337384525b86" category="list-text"><block ref="df9f9e9d2170bb250eb3337384525b86" category="inline-link-rx"></block></block>
+  <block id="17a895f8d3d1beeab404731a3c97152b" category="summary">導覽至 AFX 維護文件以了解如何對 AFX 儲存系統執行維護程序。</block>
+  <block id="b1b3a5c834310b8e9f3f4a9fc2b1fbee" category="doc">維護 AFX 儲存系統硬體</block>
+  <block id="8fc25464806d710dd101709462b70f9d" category="inline-link">AFX 維護文檔</block>
+  <block id="6ff32f20de58e8fc525adbe5eb94fe8b" category="paragraph">導航至<block ref="3004db64edf910359fb50909d4b55c48" category="inline-link-rx"></block>了解如何對 AFX 儲存系統執行維護程序。</block>
+  <block id="b262ef0f58c60c2533ecc86c930519c7" category="summary">AutoSupport是一項NetApp技術，您可以使用它來主動監控 AFX 儲存系統的健康狀況。它可以自動向NetApp技術支援、您的內部支援組織或支援合作夥伴發送訊息。</block>
+  <block id="8bcae37496f9df38207c2694b6290eda" category="doc">管理 AFX 儲存系統叢集的AutoSupport</block>
+  <block id="ce12bd9cbb9cee6b951d43ea2bef1b23" category="paragraph">當您設定 AFX 叢集時， AutoSupport預設為啟用，並且訊息將傳送給NetApp技術支援。若要向您的內部支援組織發送訊息，您需要正確配置您的叢集並提供有效的電子郵件主機。  AFX 在啟動 24 小時後開始傳送AutoSupport訊息。</block>
+  <block id="41d788e722ac979d47012a08e3008dfa" category="admonition">您需要使用叢集管理員帳戶登入系統管理員來管理AutoSupport。</block>
+  <block id="a1a978a0ef405a79f3b2c5f89d50b536" category="section-title">測試AutoSupport連接</block>
+  <block id="4ba13c64c5ad4be085f50731505878a1" category="paragraph">設定叢集後，您應該測試AutoSupport連線以驗證技術支援是否可以接收AutoSupport產生的訊息。</block>
+  <block id="920c062428ab9cca7a5b966e846980b6" category="list-text">在“* AutoSupport*”旁邊選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>然後*測試連線*。</block>
+  <block id="2a748b4b8f91d73b5198ef6eb3be8892" category="list-text">輸入AutoSupport訊息的主題並選擇 *發送測試AutoSupport訊息*。</block>
+  <block id="825777dd1ed1433192f80c9ec3cc95ab" category="section-title">新增AutoSupport收件人</block>
+  <block id="00805255e9f3cca1c0ae0bd64ea1db81" category="paragraph">您可以選擇將內部支援組織的成員新增至接收AutoSupport訊息的電子郵件地址清單。</block>
+  <block id="271a19ebd9a10e179fe7eb42cd5627de" category="list-text">在“* AutoSupport*”旁邊選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>然後是*更多選項*。</block>
+  <block id="0f86fcaaecd18bb5b840cecfe55df6dc" category="inline-image-macro">鉛筆圖示</block>
+  <block id="3c442f0ec8d0ee98ccd9181e6322ae19" category="inline-image-macro">藍色加號，後面跟著單字 Add</block>
+  <block id="c2c349c7f4ae67c97fe62255b985527a" category="list-text">在「*電子郵件*」旁邊，選擇<block ref="64bf6947f7152489b534c7e3d9281ba8" category="inline-image-macro-rx" type="image"></block>進而<block ref="97e24a86610c75905260004f34de6d47" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="44d00cfcbc8e3d1f5e0c7c95c7916bbd" category="list-text">提供收件者的電子郵件地址；對於收件者類別，選擇：</block>
+  <block id="8c347be164bcbd65e21587bafd21337f" category="list-text">為您的合作夥伴提供*合作夥伴*</block>
+  <block id="672b8fdc52a5573c9c639bb8b8fd4094" category="list-text">*一般*適用於您的內部支持組織的成員</block>
+  <block id="0d683993ce85ab22516524e528e88ccb" category="paragraph">您新增的電子郵件地址將收到針對其特定收件者類別的新AutoSupport訊息。</block>
+  <block id="9c737282667df23d96526973f5d83281" category="section-title">發送AutoSupport數據</block>
+  <block id="3ad0d225caaa93f74aea04998c79e681" category="paragraph">如果您的 AFX 系統出現問題，您應該手動傳送AutoSupport資料。這可以顯著減少識別和解決問題所需的時間。</block>
+  <block id="d550aaee243e62f3c0ef67151eee7a35" category="list-text">在“* AutoSupport*”旁邊選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>然後*生成並發送*。</block>
+  <block id="c809e2374c27a01d4f2dd65c14a38632" category="list-text">提供AutoSupport訊息的主題。</block>
+  <block id="94f66866107911bd36ca9497f33cdf55" category="list-text">選擇*發送*。</block>
+  <block id="3f403887deb910b843fbdd5061624985" category="paragraph">您的AutoSupport資料已傳送至技術支援。</block>
+  <block id="727c52c787d0a406c89aeafe82127809" category="section-title">抑制支持案例生成</block>
+  <block id="236bb2624d1394fa67c7d434aacc5889" category="paragraph">如果您正在對 AFX 系統執行升級或維護，您可能想要抑制AutoSupport支援案例的生成，直到升級或維護完成。</block>
+  <block id="df02ed525a98bdb39ba51a8c371c5a56" category="list-text">在“* AutoSupport*”旁邊選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>然後*抑制支持案例生成*。</block>
+  <block id="237369812d1a7c8c1e6a9261c86ef05d" category="list-text">指定抑制支援案例產生的小時數以及您不想為其產生案例的節點。</block>
+  <block id="fc9a5b8a8957163965bd3096ac6e9441" category="paragraph">在您指定的時間內不會產生AutoSupport案例。如果您在指定時間之前完成升級或維護，則應立即恢復支援案例產生。</block>
+  <block id="0fdbfde385dfda36f515e38c6d0f7ac5" category="section-title">恢復支援案例生成</block>
+  <block id="d84e06a7320bba7c7163b7715bd082fa" category="paragraph">如果您在升級或維護期間抑制了支援案例的生成，則應在升級或維護完成後立即恢復支援案例的生成。</block>
+  <block id="ad951114d942ed65a489375fe14c89e6" category="list-text">在“* AutoSupport*”旁邊選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>然後*恢復支援案例生成*。</block>
+  <block id="e56224754b5cdd000bf30be7fbc74e39" category="list-text">選擇要恢復AutoSupport案例產生的節點。</block>
+  <block id="8bec61026065bfc27e69eecda60a1a49" category="paragraph">AutoSupport案例將根據需要為您的 AFX 系統自動產生。</block>
+  <block id="e5313761fc7c374dd88c99065038c4ac" category="inline-link">了解ONTAP AutoSupport</block>
+  <block id="8a9e633c50c84a061d365c6524bf71f8" category="list-text"><block ref="8a9e633c50c84a061d365c6524bf71f8" category="inline-link-rx"></block></block>
+  <block id="b201dc421ab51db9860c38fb68e15ab6" category="inline-link">準備使用ONTAP AutoSupport</block>
+  <block id="8437171ab5fd902f307581ab72fb34b9" category="list-text"><block ref="8437171ab5fd902f307581ab72fb34b9" category="inline-link-rx"></block></block>
+  <block id="c0b9d09c7df4d952394628b3078afd5a" category="summary">根據您的環境，您需要在管理 AFX 的過程中建立和管理數位憑證。您可以執行幾個相關任務。</block>
+  <block id="ea9f33f8a4e04a2f55e3b919e7f4029c" category="doc">管理 AFX 儲存系統上的證書</block>
+  <block id="14f2e941537be0af0ffcf0eb92638474" category="section-title">產生憑證簽署請求</block>
+  <block id="3f9465e00700362ca6d5228f3cb2ec11" category="paragraph">要開始使用數位證書，您需要產生證書簽名請求 (CSR)。  CSR 用於從憑證授權單位 (CA) 要求簽署的憑證。作為此過程的一部分， ONTAP會建立公鑰/私鑰對並將公鑰包含在 CSR 中。</block>
+  <block id="e20faa726662fa07e5a55a6190d37754" category="list-text">在「*安全*」下，在「*憑證*」旁邊，選擇<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="036b8359968029867c0f53398c973b67" category="inline-image-macro">藍色矩形框內有一個加號，後面跟著「生成 csr」字樣</block>
+  <block id="83e52f7b9fe9fdb6d21e0fccb68ae32c" category="list-text">選擇<block ref="98f8645ac2524866a7d14024818586c1" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="a5939167511c7099a9d36452b7ac32f7" category="list-text">提供主題的通用名稱和國家/地區；可選地提供組織和組織單位。</block>
+  <block id="763c4b735ed893cd16a51bd04983ace0" category="inline-image-macro">兩個指向對角線方向的箭頭，後面跟著「更多選項」字樣</block>
+  <block id="9b3ac04660d9046f93f1e90d8b9cb07e" category="list-text">若要變更定義憑證的預設值，請選擇<block ref="ca3389cd4e212742391c26eb7cfeb92f" category="inline-image-macro-rx" type="image"></block>並進行所需的更新。</block>
+  <block id="c67e909aabe72e49f90ee7cbe67386f3" category="list-text">選擇*生成*。</block>
+  <block id="8225c64d5aeb2fbfd561380ac9e9556e" category="paragraph">您已產生可用於請求公鑰憑證的 CSR。</block>
+  <block id="d2239394e4657f1d0e7710610d913ea0" category="section-title">新增受信任的憑證授權單位</block>
+  <block id="a550512b342e5852daa8a378363a621d" category="paragraph">ONTAP提供了一組預設的可信任根證書，可用於傳輸層安全性 (TLS) 和其他協定。您可以根據需要新增其他受信任的憑證授權單位。</block>
+  <block id="45dd1d7ccd9fcbdd68fca915bd105f04" category="list-text">在「*安全*」下，在「*憑證*」旁邊，選擇<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="94f7e420e9c35918069a5605aac1302f" category="list-text">選擇選項卡 *受信任的憑證授權單位*，然後選擇<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="0be4a8e57684c81110a33d492883b407" category="list-text">提供配置信息，包括名稱、範圍、通用名稱、類型和證書詳細信息；您可以透過選擇*導入*來導入證書。</block>
+  <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">選擇“*新增*”。</block>
+  <block id="5d47bfeb93791a5bec08baa375b96bdf" category="paragraph">您已將受信任的憑證授權單位新增至您的 AFX 系統。</block>
+  <block id="4d9d4efe062f0dfb4b9fb363303ccde7" category="section-title">續訂或刪除受信任的憑證授權單位</block>
+  <block id="752c3bde22d3e32e3d58a63e896456e5" category="paragraph">受信任的憑證授權單位必須每年更新。如果您不想更新過期的證書，您應該將其刪除。</block>
+  <block id="2d509ad28f5a72b363b8cbdab787517b" category="list-text">選擇“*集群*”，然後選擇“*設定*”。</block>
+  <block id="a0d6466381062e25838e24461eb0b4c3" category="list-text">選擇選項卡「*受信任的憑證授權單位*」。</block>
+  <block id="c222bab7c055dc9c80c22cac62d053ec" category="list-text">選擇您想要續約或刪除的信任憑證授權單位。</block>
+  <block id="59c982eff32f42adfa29c968a5c566b6" category="list-text">更新或刪除憑證授權單位。</block>
+  <block id="f839acbb2e0a9aeac0a86f04daea19d1" category="cell">若要更新憑證授權機構，請執行下列操作：</block>
+  <block id="4feaa31a8a4b4d2936d0db51a6207261" category="cell">若要刪除憑證授權機構，請執行下列操作：</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="doc"></block>
+  <block id="d4af7f561236e41fe14c694da84707c6" category="list-text">選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>然後選擇*續訂*。</block>
+  <block id="20acf35156a01c830c63e25e017055dc" category="list-text">輸入或匯入憑證資訊並選擇*更新*。</block>
+  <block id="9e75c299f015480707d747ef3909150b" category="list-text">選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>然後選擇*刪除*。</block>
+  <block id="86ccc7a49ab3a8cfb74c8170764d8b78" category="list-text">確認您要刪除並選擇*刪除*。</block>
+  <block id="4ec2ae9e3b82f8e2d9e886e00f964c1d" category="paragraph">您已更新或刪除 AFX 系統上現有的受信任憑證授權單位。</block>
+  <block id="79008e75f84a4b31be7a29ab89551138" category="section-title">新增客戶端/伺服器憑證或本機憑證授權單位</block>
+  <block id="1f14cb0a79256800ccda95719894225c" category="paragraph">您可以新增用戶端/伺服器憑證或本機憑證授權單位作為啟用安全 Web 服務的一部分。</block>
+  <block id="73a01040ae6c78b9df9260dd41690d37" category="list-text">根據需要選擇*用戶端/伺服器憑證*或*本機憑證授權單位*。</block>
+  <block id="b100cd33713580c98b4ae162c499578a" category="list-text">新增證書資訊並選擇*儲存*。</block>
+  <block id="aa6e22c6ae2fcd86e8694f90f6270277" category="paragraph">您已為 AFX 系統新增了新的用戶端/伺服器憑證或本機權限。</block>
+  <block id="b591bafeccaa94a694d3723221e9d5b3" category="section-title">續訂或刪除客戶端/伺服器憑證或本機憑證授權單位</block>
+  <block id="e8043bb715c74eec31d20d5a3ab64e27" category="paragraph">客戶端/伺服器憑證和本地憑證授權單位必須每年更新。如果您不想更新過期的憑證或本機憑證授權機構，您應該刪除它們。</block>
+  <block id="905f142be60260a2a0d189d1d9307391" category="list-text">在「*安全*」下，在「憑證」旁邊，選擇<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="d593b3417192fbc0105a1cb4d0666e38" category="list-text">選擇您要續約或刪除的憑證。</block>
+  <block id="cf14dec476f5bd069ed9edc7c1032245" category="paragraph">您已更新或刪除 AFX 系統上現有的用戶端/伺服器憑證或本機憑證授權單位。</block>
+  <block id="7d2851cca28635a1e83630f7d2e3fc63" category="inline-link">使用 System Manager 管理ONTAP證書</block>
+  <block id="b825a93e15e70a1b2c15ef179feb7bf2" category="list-text"><block ref="b825a93e15e70a1b2c15ef179feb7bf2" category="inline-link-rx"></block></block>
+  <block id="488947f8cac1633574747ba3fcb10fa4" category="summary">您需要配置 AFX 儲存系統的網路。網路環境支援多種連線場景，包括用戶端存取 SVM 上的資料和叢集間通訊。</block>
+  <block id="fadb4a5b78f5fdb6422e514ab22a5ff1" category="doc">管理 AFX 儲存系統叢集網絡</block>
+  <block id="3022a0af50b8a6d58d3b05f51004a69a" category="paragraph">您需要配置 AFX 儲存系統的網路。網路環境支援多種場景，包括客戶端存取 SVM 上的資料和叢集間通訊。</block>
+  <block id="4e78fab1a8bc3163101f913e9fb77306" category="admonition">建立網路資源是重要的第一步。您還需要根據需要執行其他管理操作，例如編輯或刪除網路定義。</block>
+  <block id="d1a010b74605f30c0544d20437ffc0ac" category="section-title">建立廣播域</block>
+  <block id="eac71098ec9f90a36a86a42478468a50" category="paragraph">廣播域透過將屬於同一第二層網路的連接埠進行分組來簡化叢集網路的管理。然後可以為儲存虛擬機 (SVM) 分配群組中的端口，用於資料或管理流量。</block>
+  <block id="3dd76cdf81cd2a4bf4514e07e5857b84" category="paragraph">集群設定期間會建立多個廣播域，包括：</block>
+  <block id="7a1920d61156abc05a60135aefe8bc67" category="list-text">預設</block>
+  <block id="b3a6bdca629924c9d83f0d8ddc61c2fc" category="list-text">此廣播域包含「預設」IP空間中的連接埠。這些連接埠主要用於提供資料。還包括叢集管理和節點管理連接埠。</block>
+  <block id="249694a485fc5d3289c38986b4f8e887" category="list-text">簇</block>
+  <block id="c39360a08b05139e416f6f71cf77c74f" category="list-text">此廣播域包含「集群」IP空間中的連接埠。這些連接埠用於集群通信，包括集群中所有節點的所有集群連接埠。</block>
+  <block id="0da0f1023702944e9c530cb0e4d0540c" category="paragraph">您可以在叢集初始化後建立其他廣播域。建立廣播網域時，將自動建立包含相同連接埠的故障轉移群組。</block>
+  <block id="e9cf1653be1cc84f37e5ef5a6169cee3" category="paragraph">為廣播域定義的連接埠的最大傳輸單元 (MTU) 值將更新為廣播域中設定的 MTU 值。</block>
+  <block id="6c51f7dd9803ef8061ef5dddabf95379" category="list-text">在系統管理員中，選擇*網路*，然後選擇*概覽*。</block>
+  <block id="4c9161b5b04e4f44758b481b92ec02ca" category="list-text">在「廣播域」下，選擇<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="e3e10be3619ff54ca81c795c8381dc75" category="list-text">提供廣播域的名稱或接受預設值。</block>
+  <block id="2da0403e9693c05aeecf9502d0349c34" category="paragraph">所有廣播網域在 IP 空間內必須是唯一的。</block>
+  <block id="47383fdcf4fac83d7cecd8e28a8acdb4" category="list-text">提供最大傳輸單元（MTU）。</block>
+  <block id="50a03f6e0981625b09c5a94740e2c7fb" category="paragraph">MTU是廣播域內可接受的最大資料包。</block>
+  <block id="4e093b345278fdf76275f120cfec95a1" category="list-text">選擇所需的連接埠並選擇*儲存*。</block>
+  <block id="fd4d32620f335810cd19047d474c2d2f" category="section-title">建立 IP 空間</block>
+  <block id="647cf2cafaafd20f124348e1dfcfc334" category="paragraph">IP空間是IP位址和相關網路配置的管理域。這些空間可用於透過隔離管理和路由來支援您的 SVM。例如，當用戶端具有來自相同 IP 位址和子網路範圍的重疊 IP 位址時，它們很有用。</block>
+  <block id="8130257a61434a13b78a6f7f613c067a" category="admonition">您必須先擁有一個 IP 空間，然後才能建立子網路。</block>
+  <block id="b5638b0fef11bce786230cdaa3303377" category="list-text">在「IP 空間」下，選擇<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="c1fc40c177d23b74ebebd664c424e8dc" category="list-text">提供 IP 空間的名稱或接受預設值。</block>
+  <block id="77ebb0ca5b2909013c2e6779468388d6" category="paragraph">所有 IP 空間名稱在叢集內必須是唯一的。</block>
+  <block id="01e12de62fa77fda2815719aed8ff892" category="paragraph-title">下一步</block>
+  <block id="f305aa0255c66fd490de7374a900c508" category="paragraph">您可以使用 IP 空間來建立​​子網路。</block>
+  <block id="ffae5d6089597acdf7c65a5a7c0c7005" category="section-title">建立子網路</block>
+  <block id="88b595871e6cc479464352bc6f7452d9" category="paragraph">子網路或子網路強制對網路中的 IP 位址空間進行邏輯劃分。它使您能夠指派專用的 IP 位址區塊來建立網路介面 (LIF)。子網路允許您使用子網路名稱而不是特定的 IP 位址和網路遮罩組合，從而簡化了 LIF 的建立。</block>
+  <block id="8735d38874936eb44d3e2ed044f5b26a" category="paragraph">您必須有一個廣播域和將定義子網路的 IP 空間。另請注意：</block>
+  <block id="470782b10ea25bba8f6daf4bca4ab5be" category="list-text">所有子網路名稱在特定 IP 空間內必須是唯一的。</block>
+  <block id="a6f5d8b21602363dbd09e565c5067d89" category="list-text">子網路使用的 IP 位址範圍不能與其他子網路的 IP 位址重疊。</block>
+  <block id="a714fb1e0f19fbd79886cd3755f87f50" category="list-text">在「子網路」標籤下，選擇<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="53ffd4bb823340414f078bd5193aa413" category="list-text">提供設定詳細信息，包括子網路名稱、IP 位址詳細資訊和廣播網域。</block>
+  <block id="6168f2fceee4b9225e7c403918018b5d" category="paragraph">新的子網路將簡化網路介面的建立。</block>
+  <block id="55b87fb229cd744bb780ffe4fb82383a" category="section-title">建立網路介面</block>
+  <block id="b2d0b6efe92df3eb1948c90766805068" category="paragraph">邏輯網路介面 (LIF) 由 IP 位址和相關網路設定參數組成。它可以與實體或邏輯連接埠相關聯，通常由客戶端用來存取 SVM 提供的資料。  LIF 在發生故障時提供彈性，並且可以在節點連接埠之間遷移，因此通訊不會中斷。</block>
+  <block id="4fad4c47b312bb7d0f22915d60b69a15" category="list-text">在「網路介面」標籤下，選擇<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="46b501ffecf93af6157c0b68ee7be8e4" category="list-text">提供配置詳細信息，包括介面名稱、介面類型、允許的協定和 IP 位址詳細資訊。</block>
+  <block id="dbdd36cacf42441673250ac579b58ba0" category="inline-link-macro">管理 AFX 乙太網路端口</block>
+  <block id="c870955554d08dc281bfc48be976de2a" category="list-text"><block ref="c870955554d08dc281bfc48be976de2a" category="inline-link-macro-rx"></block></block>
+  <block id="44c983b2eab46dbd417f47d5bd835344" category="inline-link">了解ONTAP廣播域</block>
+  <block id="4625c0cf3fad5766ed84296758fa73bf" category="list-text"><block ref="4625c0cf3fad5766ed84296758fa73bf" category="inline-link-rx"></block></block>
+  <block id="689c03b87021159cef4746ef2add403e" category="inline-link">了解ONTAP IP 空間配置</block>
+  <block id="450a0167ac1a88e40cfd00e4edf332c9" category="list-text"><block ref="450a0167ac1a88e40cfd00e4edf332c9" category="inline-link-rx"></block></block>
+  <block id="21fd77d055cd6c4ecdf5a1530656f96c" category="inline-link">了解ONTAP網路的子網</block>
+  <block id="25721945f50e00dc937a84dfa9317830" category="list-text"><block ref="25721945f50e00dc937a84dfa9317830" category="inline-link-rx"></block></block>
+  <block id="a2943dba41a4b6851395d9e2d12ad6ee" category="inline-link">網路架構概述</block>
+  <block id="05e87b1fba493eacaa396c1cd511a357" category="list-text"><block ref="05e87b1fba493eacaa396c1cd511a357" category="inline-link-rx"></block></block>
+  <block id="0ad993906f370ebec8ca031580412849" category="summary">AFX 系統使用的連接埠為網路連接和通訊提供了基礎。有多種設定選項可用於客製化網路的第二層方面。</block>
+  <block id="b392e2cfc22f84d2bc6a7a8d4f093e98" category="doc">管理 AFX 儲存系統乙太網路連接埠</block>
+  <block id="ff513a31c3fb592c189cd0d4bb24edf1" category="paragraph">AFX 系統使用的連接埠為網路連接和通訊提供了基礎。有多種選項可用於客製化網路的第二層配置。</block>
+  <block id="afbd27ae71fcfac624980e215bb4ae35" category="section-title">創建 VLAN</block>
+  <block id="4e4e9f4c57e44f3fbca42423b92e042a" category="paragraph">VLAN 由分組到廣播域的交換器連接埠組成。  VLAN 可讓您提高安全性、隔離潛在問題並限制 IP 網路基礎架構內的可用路徑。</block>
+  <block id="95ec85f4f754ff1c4737e3daf82e2a5f" category="paragraph">網路中部署的交換器必須符合 IEEE 802.1Q 標準或具有特定於供應商的 VLAN 實作。</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">請注意以下事項：</block>
+  <block id="1280babcb42cad2b39c1a2304d117aab" category="list-text">您無法在沒有任何成員連接埠的介面群組連接埠上建立 VLAN。</block>
+  <block id="6c7577eb4fed58aa2f71ec659459053a" category="list-text">當您第一次在連接埠上設定 VLAN 時，連接埠可能會關閉，導致網路暫時中斷。後續向相同連接埠新增 VLAN 不會影響連接埠狀態。</block>
+  <block id="a14138582e52afe474d6f2c9d603b59c" category="list-text">您不應在網路介面上建立與交換器的本機 VLAN 具有相同識別碼的 VLAN。例如，如果網路介面 e0b 位於本機 VLAN 10 上，則不應在該介面上建立 VLAN e0b-10。</block>
+  <block id="05b70cdef692dddec207c589d206a45c" category="list-text">在系統管理員中，選擇*網路*，然後選擇*乙太網路連接埠*。</block>
+  <block id="46eb33b2ea8d70f5aa28bc0928927131" category="inline-image-macro">藍色加號，後面跟著單字 vlan</block>
+  <block id="128c2e21e728db9e99db1f2ef1d1a0ef" category="list-text">選擇<block ref="70fd934cd65ca7e12c29e61a94c9ee96" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="8b98ff619da87947e5cf709575cb8e8f" category="list-text">提供配置詳細信息，包括所需節點的 ID、廣播域和連接埠。</block>
+  <block id="068327f3791c8917947738aa16c8e996" category="paragraph">VLAN 無法連接到託管叢集 LIF 的連接埠或指派給叢集 IP 空間的連接埠。</block>
+  <block id="4b43fcb8416640ec9fab44fa28ba7990" category="paragraph">您已建立 VLAN 來提高安全性、隔離問題並限制 IP 網路基礎架構內的可用路徑。</block>
+  <block id="73b5037c874e96e137e728a4b0d5f872" category="section-title">創建 LAG</block>
+  <block id="8c6ca61ecac2ecbe6a4da7559a1f9e18" category="paragraph">鏈路聚合組 (LAG) 是一種將多個實體網路連接組合成單一邏輯連接的技術。您可以使用它來增加頻寬並在節點之間提供冗餘。</block>
+  <block id="ae255d265344b40bff2af48806f93029" category="list-text">選擇*連結聚合組*。</block>
+  <block id="ae6a69878190da0ab77ce787a9430453" category="list-text">提供配置詳細信息，包括節點、廣播域、連接埠、模式和負載分佈。</block>
+  <block id="f0bbd3d8e64b9572de0aa127a0902825" category="inline-link-macro">管理 AFX 群集網絡</block>
+  <block id="dc7d4b650f94e3d36c012539425caedb" category="list-text"><block ref="dc7d4b650f94e3d36c012539425caedb" category="inline-link-macro-rx"></block></block>
+  <block id="2379f006c7634c9a3930eb53207e352b" category="inline-link">了解ONTAP網路連接埠配置</block>
+  <block id="44fb57d12fa3c6fbdb117b2c4a1299f5" category="list-text"><block ref="44fb57d12fa3c6fbdb117b2c4a1299f5" category="inline-link-rx"></block></block>
+  <block id="7e2388a20aef8baa12c86febcb6c7f22" category="inline-link">組合實體連接埠以建立ONTAP介面組</block>
+  <block id="334386c125bcb0bc6ecfcff769b951b2" category="list-text"><block ref="334386c125bcb0bc6ecfcff769b951b2" category="inline-link-rx"></block></block>
+  <block id="e256fb906db46bb8c2e879dc08034a93" category="summary">您可以根據 AFX 提供的身份驗證和授權服務定義使用者帳戶和角色。</block>
+  <block id="b9832fdaa9f4d01f5f54555764a34158" category="doc">管理 AFX 儲存系統叢集使用者和角色</block>
+  <block id="f17f8d2a79451ea925df425fc79ea87d" category="admonition">每個ONTAP用戶都需要分配一個角色。角色包括權限並決定使用者能夠執行的操作。</block>
+  <block id="0ec67ee1cc8f51f7e02e0cd2b380815f" category="section-title">建立帳戶角色</block>
+  <block id="4ba85fcdbbd08c31ad55a4a916e04d45" category="paragraph">當您的 AFX 叢集設定並初始化時，會自動建立叢集管理員和儲存 VM 管理員的角色。您可以建立其他使用者帳戶角色來定義指派了這些角色的使用者可以在您的叢集上執行的特定功能。</block>
+  <block id="2a42a02e0c80896d2cadfc33dac030f9" category="list-text">在「*安全*」部分中，在「*使用者和角色*」旁邊，選擇<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="6f6e38f1b0974281d315186f96880854" category="list-text">在「*角色*」下，選擇<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="39d5452dca2958e0d1d4d899233f4041" category="list-text">提供角色的名稱和屬性。</block>
+  <block id="6fff75ea67cb2e8f1480f256a80b9455" category="section-title">建立集群帳戶</block>
+  <block id="df272b962b69a6756ce1463f2d0d2d59" category="paragraph">您可以建立一個叢集級帳戶，以便在執行叢集或 SVM 管理時使用。</block>
+  <block id="561628f9ab252b319add349a5a2eeac5" category="list-text">在“*安全*”部分中，選擇<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block>在*使用者和角色*旁邊。</block>
+  <block id="695e5c204c3f8e7c176b6e5adb1eec84" category="list-text">選擇<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>. 在 *用戶* 下。</block>
+  <block id="d8e9a2ad096a59f95664ed1c91a8dd70" category="list-text">輸入使用者名，然後選擇使用者的角色。</block>
+  <block id="a8a343fa8f8a3fd45028869b1ce748c7" category="paragraph">該角色應該適合使用者。例如，*admin* 角色能夠在您的叢集上執行所有設定任務。</block>
+  <block id="d7a575ebff7ea34bcb88ea2c954c89ee" category="list-text">選擇使用者登入方法和身份驗證方法；通常是*密碼*。</block>
+  <block id="a684b58dd7cbb3dc60e9390e6971aad8" category="list-text">輸入用戶的密碼。</block>
+  <block id="a81bea8e23a2cc7f6fe7b9312a0f8e8b" category="paragraph">已建立新帳戶並可供您的 AFX 叢集使用。</block>
+  <block id="76b4383ae0c0f7efd33ba42bed41f3c9" category="inline-link-macro">準備身份驗證服務</block>
+  <block id="226bdb0cdd6382fa3ea10612ab014c8a" category="list-text"><block ref="226bdb0cdd6382fa3ea10612ab014c8a" category="inline-link-macro-rx"></block></block>
+  <block id="0528feee79911ff26eb24a5427d6c691" category="inline-link-macro">額外的 AFX SVM 管理</block>
+  <block id="22d8bf1361fa729ce722097e36befda5" category="list-text"><block ref="22d8bf1361fa729ce722097e36befda5" category="inline-link-macro-rx"></block></block>
+  <block id="1dd03c00c4e2e3c911f9c5e1ca60a786" category="summary">您可以將資料 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱 Unified ONTAP文件。</block>
+  <block id="a820521ec80cdaaa7daf1f44b4d156bb" category="doc">遷移 AFX 儲存系統 SVM</block>
+  <block id="f32d86a462e8b74e0cbb626b1a9ccacb" category="paragraph">您可以將資料 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱提供的 Unified ONTAP文件。</block>
+  <block id="d1c1098f48087357ac90227a16c8ce05" category="section-title">互通性注意事項</block>
+  <block id="003431cd9bfaf71ce41b593a52eef029" category="paragraph">在規劃和執行 SVM 遷移之前，您應該了解互通性注意事項，包括功能和限制。</block>
+  <block id="2a3b399798aa16ecfbc1425cc560bfad" category="section-title">用例</block>
+  <block id="aec776d00ac0b2ac01caca7839a38a2e" category="paragraph">叢集管理員可以將 SVM 從來源叢集重新定位到目標叢集。您可以將其作為容量管理和負載平衡的一部分，或允許設備升級或資料中心整合。</block>
+  <block id="70358fd17892e7eef43751c5c6946eb0" category="paragraph">由於 AFX 儲存系統不支援從 Unified ONTAP進行就地升級，因此 SVM 遷移是一個重要的用例。您可以將應用程式工作負載從 Unified ONTAP9 叢集遷移到 AFX 叢集，而不會造成中斷。此外，SVM 還可以透過其他方式遷移，包括從 AFX 叢集遷移到 Unified ONTAP叢集以及在 AFX 叢集之間遷移。</block>
+  <block id="768b0db9b2b3020606a863a7304f2bb6" category="section-title">版本互通性</block>
+  <block id="4c07b9a244d0b610dffd3f95dfe2141c" category="paragraph">下表根據來源叢集和目標叢集的ONTAP特性和版本描述了允許的 SVM 遷移。</block>
+  <block id="02674a4ef33e11c879283629996c8ff8" category="cell">方向</block>
+  <block id="c5438d07e70a936ccf59c3fc14f678fa" category="cell">來源版本</block>
+  <block id="2fbf6776e0fa3dcdba7925ce2902ec4b" category="cell">目標版本</block>
+  <block id="4b16ae3483eef33b016891b170eb93d6" category="cell">統一到 AFX</block>
+  <block id="b0d4426cc773a23c74dde6403be898c3" category="cell">9.15.1 - 9.17.1</block>
+  <block id="81e76ca235a16e1d875f94529d326de0" category="cell">9.17.1</block>
+  <block id="e88539f3ff6e59fd308675687f0a0ffc" category="cell">AFX 到統一</block>
+  <block id="57090d89d6f94c40e5f407e5438da479" category="cell">AFX 到 AFX</block>
+  <block id="f26030f67d859fd14d798e747c93562a" category="section-title">預檢</block>
+  <block id="d8bd2d70caa6398163e6e179a358d2db" category="paragraph">Unified ONTAP包含幾項預檢查，這些預檢查也是透過 AFX 實現的。此外，還添加了幾個新的預檢查來標記 AFX 不支援的功能，包括：</block>
+  <block id="9f6385211c0120de98d15e76448a065c" category="list-text">FabricPool （駐留在複合聚合上的磁碟區）</block>
+  <block id="74a419556785700d1cff50e71e2c6f66" category="list-text">厚置備卷</block>
+  <block id="be1b9ef68f31ecee991e2282c1f24f0f" category="section-title">卷配置</block>
+  <block id="03ee3c2dee1a91ecfb0e9091c6ad64ae" category="paragraph">配置 AFX 磁碟區是為了平衡叢集的儲存可用區 (SAZ) 中 AFX 磁碟區的放置。</block>
+  <block id="7420b76eb6276efbe1211f3a42108fa9" category="list-text">艙位保證</block>
+  <block id="e42ca8050871a475bf759240b1011c5e" category="list-text">AFX 不支援厚配置。如果正在遷移的 SVM 中的任何磁碟區是厚置備的，則使用預檢查來導致遷移失敗。</block>
+  <block id="d7f2615c71a1567cc13cf3a7f7de0aea" category="list-text">加密</block>
+  <block id="53206b27f006da5653e3e09a68725132" category="list-text">AFX 系統支援NetApp磁碟區加密 (NVE)，但不支援NetApp聚合加密 (NAE)。因此，Unified ONTAP叢集中的任何 NAE 磁碟區在遷移到 AFX 時都會轉換為 NVE 磁碟區。下表總結了相容性和轉換。</block>
+  <block id="a1565efa58a4379112baa6f6c81b89b5" category="cell">來源磁碟區</block>
+  <block id="69039c520478dc06b38a5008795769e3" category="cell">目標卷</block>
+  <block id="f39a0720a929097afa9db4505cdf9669" category="cell">純文字</block>
+  <block id="c085c078c3cb5c6994fc0b961d09117c" category="cell">北威州</block>
+  <block id="6fa90eb25d717d7b1a1bc2c10f746086" category="cell">國家工程院</block>
+  <block id="8c10cb2ce36c4290ea15f00c954019c9" category="inline-link">ONTAP SVM 資料移動性</block>
+  <block id="b229244f98d8e9c60a6847468959dcc3" category="list-text"><block ref="b229244f98d8e9c60a6847468959dcc3" category="inline-link-rx"></block></block>
+  <block id="56491087e809d9c88a6bbada6750e79d" category="summary">您可以顯示 AFX 叢集效能的進階概覽。</block>
+  <block id="a650528b859ac27025201a1a9b9a5691" category="doc">監控 AFX 儲存系統叢集效能</block>
+  <block id="83f73443b8e5ae5f7dc3654ef7bffac3" category="section-title">儲存容量</block>
+  <block id="fb744f68867236e6e6e1bbc5b1d4cc74" category="paragraph">系統管理器儀表板包括叢集儲存利用率的進階顯示。</block>
+  <block id="e44852debac5a9e5a6473708a4fa03d6" category="list-text">在系統管理員中，選擇導覽窗格中的「*儀表板*」。</block>
+  <block id="d35f807031be514353c155302f3cc5ed" category="list-text">找到*容量*圖塊並查看可用和已使用的實體儲存。</block>
+  <block id="acbaa01efa8b6508857616a630c8b0cc" category="list-text">選擇*歷史記錄*存取Active IQ查看歷史資料。</block>
+  <block id="e4b3ba4cc2976d5d2c21b446db787620" category="section-title">集群性能</block>
+  <block id="e2548ae449ab53250c19b481a98f3db3" category="paragraph">系統管理器提供了 AFX 叢集效能的詳細概述。</block>
+  <block id="d6679d4173961abd9a6e867f838fe9b1" category="list-text">在系統管理員中，選擇*分析*，然後選擇*效能*。</block>
+  <block id="fe8873141f5c1613d5fad633f3e1aea2" category="list-text">查看頂部的叢集效能摘要，包括延遲和吞吐量。</block>
+  <block id="abab851fdc364b48eb78dab70e0a6576" category="list-text">在「*頂級參與者*」標籤下，選擇所需的 SVM，然後根據需要「啟用活動追蹤*」。</block>
+  <block id="53471c8744939b33ede4b0795c4a1571" category="list-text">在「磁碟區效能」標籤下，查看特定磁碟區的效能詳細資料。</block>
+  <block id="9ba64af5b5d13f4568811015f6a93947" category="inline-link-macro">額外的 AFX 叢集管理</block>
+  <block id="b79c271dd8b67df35414b7d7ff0b117a" category="list-text"><block ref="b79c271dd8b67df35414b7d7ff0b117a" category="inline-link-macro-rx"></block></block>
+  <block id="f4bc85e26b7bf6f75c07a6778f78075f" category="summary">您需要準備AFX系統使用的身份驗證和授權服務，以定義使用者帳戶和角色。</block>
+  <block id="8d51bb6befa38b0d65ba9cbfc5c721aa" category="doc">準備 AFX 儲存系統驗證服務</block>
+  <block id="2b52cf10735cf1e40cdf87e03817265f" category="paragraph">您需要準備AFX系統對使用者帳戶和角色定義的身份驗證和授權服務。</block>
+  <block id="f4577450199e9b0c070ffd7727b8b7db" category="section-title">配置 LDAP</block>
+  <block id="565f32ccccb77cd0037ba154b29a8781" category="paragraph">您可以設定輕量級目錄存取協定 (LDAP) 伺服器以在中心位置維護驗證資訊。</block>
+  <block id="28f4e2e345ae192c477030352db45744" category="paragraph">您必須產生憑證簽署請求並新增 CA 簽署的伺服器數位憑證。</block>
+  <block id="9318939e830eeac5660efe38cc3ace9e" category="inline-image-macro">藍色機械齒輪的輪廓</block>
+  <block id="1600b7149168615127f8df805e183338" category="list-text">選擇<block ref="b2be2652612d1190175919fee8760c1b" category="inline-image-macro-rx" type="image"></block>在 *LDAP* 旁邊。</block>
+  <block id="8fc443f3248167a143afa895335d7459" category="inline-image-macro">藍色加白背景</block>
+  <block id="a6cd90cfecf34a2f6040ce25b018525e" category="list-text">選擇<block ref="c9e78f0624e2077eb0c947858dc05182" category="inline-image-macro-rx" type="image"></block>並提供 LDAP 伺服器的名稱或 IP 位址。</block>
+  <block id="c88e6485c3fa6a2daea4be486efdd326" category="list-text">提供必要的配置信息，包括架構、基本 DN、端口和綁定。</block>
+  <block id="ee4f9ba4818273504bf6ff2e0c342ad8" category="section-title">設定 SAML 身份驗證</block>
+  <block id="8ae699da168b23436dda0d4e08d90f5f" category="paragraph">安全性斷言標記語言 (SAML) 驗證使用戶能夠透過安全性身分提供者 (IdP) 而不是使用其他協定（如 LDAP）的提供者進行身份驗證。</block>
+  <block id="4f613d40fa00a4a609dd0e3bd111511e" category="list-text">必須配置您計劃用於遠端身份驗證的身份提供者。有關配置詳細信息，請參閱提供者文件。</block>
+  <block id="f8c9df493527eafcb98834da61017b50" category="list-text">您必須擁有身分提供者的 URI。</block>
+  <block id="ee70ca4f30627d772db092c5816654fa" category="inline-image-macro">機械齒輪的藍色輪廓</block>
+  <block id="9d0067e90fe941ab2bc1923d0056f2d5" category="list-text">選擇<block ref="a9be0719b387789238ea22451afbb122" category="inline-image-macro-rx" type="image"></block>在 *安全* 下，*SAML 驗證* 旁。</block>
+  <block id="7db9109baea64861f13be96391d9b81d" category="list-text">選擇*啟用 SAML 身份驗證*。</block>
+  <block id="5227c34f05d6afb205889d8522ebfc96" category="list-text">提供 *IdP URL* 和 *主機系統* IP 位址並選擇 *儲存*。</block>
+  <block id="cb4c43c9c7ec8689cc5b6b9004feb80d" category="paragraph">確認視窗顯示元資料訊息，該資訊已自動複製到您的剪貼簿。</block>
+  <block id="94e70fd9340fce60557e0ec53caeae05" category="list-text">導覽至您指定的 IdP 系統並從剪貼簿複製元資料以更新系統元資料。</block>
+  <block id="9d7acdfd6c6b9dac2094b47b521d1d88" category="list-text">返回系統管理員中的確認視窗並選擇*我已使用主機 URI 或元資料配置了 IdP*。</block>
+  <block id="1b15428800637bbda165a70162ae4a38" category="list-text">選擇*登出*以啟用基於 SAML 的身份驗證。</block>
+  <block id="46a104f98e1224c5718cc97c759b2595" category="paragraph">IdP 系統將顯示身份驗證畫面。</block>
+  <block id="201a110a96445e20c77fcf88cd9a8882" category="inline-link-macro">管理 AFX 叢集使用者和角色</block>
+  <block id="2214246055e5151c9b4653f3fa272332" category="list-text"><block ref="2214246055e5151c9b4653f3fa272332" category="inline-link-macro-rx"></block></block>
+  <block id="e085c1f20d65093bc2d0d450f33db0f7" category="inline-link">為遠端ONTAP用戶設定 SAML 身份驗證</block>
+  <block id="0280869cafeab532a88af45b2c372c3e" category="list-text"><block ref="0280869cafeab532a88af45b2c372c3e" category="inline-link-rx"></block></block>
+  <block id="afe020dd99f8e3d6106fe01c8e050b05" category="list-text"><block ref="afe020dd99f8e3d6106fe01c8e050b05" category="inline-link-rx"></block></block>
+  <block id="4055b90edcf8367b0be79455a8964e81" category="summary">如果您遇到需要協助的問題，您可以使用ONTAP系統管理員向技術支援提交案例。您也可以使用ONTAP系統管理員查看正在進行或已結案的案件。</block>
+  <block id="a2a08c78c39c0331b20a09ccf8b5d575" category="doc">提交並查看 AFX 儲存系統的支援案例</block>
+  <block id="ce04aba89455a6f59cf366030c2056ab" category="inline-link-macro">在Active IQ上註冊</block>
+  <block id="e6ee091e1551dbaebb3930d8b9e8e015" category="paragraph">你需要<block ref="2d57bedaf7449221ca7cf6e2da6e5236" category="inline-link-macro-rx"></block>查看您的 AFX 儲存系統的支援案例。</block>
+  <block id="bf9301cc7cabf6c0205682a5a87e28fe" category="list-text">若要建立並提交新的支援案例，請在系統管理員中選擇：</block>
+  <block id="202c0d9b8eff70e1f4091ced1ec07cb6" category="list-text">*集群* 然後 *支援*</block>
+  <block id="e0d0047bf0cde501b570159421a6a868" category="list-text">*前往NetApp支援*</block>
+  <block id="5053cf2f08cf03620bff269d15af6376" category="list-text">若要查看先前提交的案例，請在系統管理員中選擇：</block>
+  <block id="33191b3ec1d438f92da8b9d47adb461a" category="list-text">*查看我的案例*</block>
+  <block id="72593ba2f8e886b13af989f743ad178d" category="inline-link">使用ONTAP系統管理員檢視和提交支援案例</block>
+  <block id="6074423cdc3b19a26e64b6e494726b3e" category="list-text"><block ref="6074423cdc3b19a26e64b6e494726b3e" category="inline-link-rx"></block></block>
+  <block id="c0b2bac9571665d749c8e24469fcbfe9" category="summary">ONTAP預設會自動下載並更新 AFX 儲存系統上的韌體和系統檔案。如果您想在下載和安裝建議的更新之前查看它們，您可以停用自動更新。您也可以編輯更新參數，以便在執行任何操作之前顯示可用更新的通知。</block>
+  <block id="143f3944ea86248640d2a453bbb26619" category="doc">更新 AFX 儲存系統上的韌體</block>
+  <block id="9543e3c5ee671be608b8d7358d2905b4" category="section-title">啟用自動更新</block>
+  <block id="09f687042650f3d2925be4882b4ca934" category="paragraph">當您為 AFX 叢集啟用自動更新時，預設會自動下載並安裝儲存韌體、 SP/ BMC韌體和系統檔案的建議更新。</block>
+  <block id="e4da6f8a9528e5466f61ffad4b47d153" category="list-text">在*軟體更新*下選擇*啟用*。</block>
+  <block id="c06b2149bbe3e94f6eac8a64039cc025" category="list-text">閱讀 EULA。</block>
+  <block id="d6aeb9cf91111f522e0f1901518a3836" category="list-text">接受預設設定以*顯示建議更新的通知*。或者，選擇*自動更新*或*自動忽略*建議的更新。</block>
+  <block id="17ac6cdd9934a4f4aca00f5228a64555" category="list-text">選擇確認您的更新修改將套用於所有目前和未來的更新。</block>
+  <block id="09190524572cf4f2b42ddf32f3f54ce7" category="paragraph">根據您的更新選擇，建議的更新將自動下載並安裝在您的 OTAP AFX 系統上。</block>
+  <block id="5de0adb95551ff3c1458ae6247a4959f" category="section-title">停用自動更新</block>
+  <block id="6141cdc0ba26479d87d6b8c24af9fc18" category="paragraph">如果您希望在安裝之前靈活地查看建議的更新，請停用自動更新。如果停用自動更新，則需要手動執行韌體和系統檔案更新。</block>
+  <block id="9c2cdad0235d8d361f21c8343ef95363" category="list-text">在系統管理員中，選擇“集群”&gt;“設定”。</block>
+  <block id="03e58722e5fd35b95b0154a42ee279d7" category="list-text">在「*軟體更新*」下，選擇「*停用*」。</block>
+  <block id="3a73131e5e1a3a498c8e055e84a30f60" category="paragraph">自動更新已停用。您應該定期檢查建議的更新並決定是否要執行手動安裝。</block>
+  <block id="e8b8aa5f70e0a4459ca2284f8da3b813" category="section-title">查看自動更新</block>
+  <block id="6edf33a55c81d08e5aac13aae918832c" category="paragraph">查看已下載到叢集並規劃自動安裝的韌體和系統檔案更新清單。也可以查看之前自動安裝的更新。</block>
+  <block id="e087c576f536a1cc1b027d2338ddf55d" category="list-text">在「軟體更新」旁選擇<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block>，然後選擇*查看所有自動更新*。</block>
+  <block id="c5f5044ff24461ba8a4e4a6bc2887bd0" category="section-title">編輯自動更新</block>
+  <block id="aa32761812c5105416e1c8de6901bbf8" category="paragraph">您可以選擇自動下載並安裝儲存韌體、 SP/ BMC韌體和系統檔案的建議更新到您的叢集上，或者您可以選擇自動忽略建議更新。如果您想手動控制更新的安裝或關閉，請選擇在建議的更新可用時收到通知；然後您可以手動選擇安裝或關閉它。</block>
+  <block id="3ad84aabb3a381ac71b7cc6e46c21f67" category="list-text">在「軟體更新」旁選擇<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block>然後選擇*所有其他更新*。</block>
+  <block id="820669251a6d9aa8a265e4aa20459cdf" category="list-text">更新自動更新的選擇。</block>
+  <block id="aed3f23a5ce94e81514a2da9dce9b2ef" category="paragraph">自動更新將根據您的選擇進行修改。</block>
+  <block id="d51f54f2a9182b10cea278ae35000b46" category="section-title">手動更新韌體</block>
+  <block id="bc1104446ea3d0b83abd00c11e939335" category="paragraph">如果您希望在下載和安裝建議的更新之前靈活地查看它們，您可以停用自動更新並手動更新韌體。</block>
+  <block id="bf48a37237272ddc300e21b45b8971dc" category="list-text">將您的韌體更新檔案下載到伺服器或本機用戶端。</block>
+  <block id="97edade986fff30cbc58d1915b7fc92b" category="list-text">在系統管理員中，選擇*叢集 &gt; 概覽*，然後選擇*所有其他更新*。</block>
+  <block id="7d089e6b0cd0c4c6a9cc9f51d3933449" category="list-text">在*手動更新*下，選擇*新增韌體檔案*；然後選擇*從伺服器下載*或*從本機用戶端上傳*。</block>
+  <block id="a8e89726f0704bd34a60f163989365a7" category="list-text">安裝韌體更新檔案。</block>
+  <block id="70bd8d7d7e01ac7ceebd8e8ba2be8da6" category="paragraph">您的韌體已更新。</block>
+  <block id="8b05155a612af2bbc06ccad421832bee" category="summary">當您在 AFX 系統上升級ONTAP軟體時，您可以利用新的和增強的ONTAP功能，這些功能可以幫助您降低成本、加速關鍵工作負載、提高安全性並擴大組織可用的資料保護範圍。</block>
+  <block id="41b7d5103efebc562b6302f09c3de377" category="doc">在 AFX 儲存系統上升級ONTAP</block>
+  <block id="1609fb0c876b70bfae98d1cafa399784" category="inline-link-macro">使用升級顧問準備升級</block>
+  <block id="e4b24f4689bdc8358c4d409b6a9d4103" category="inline-link-macro">準備在沒有升級顧問的情況下升級</block>
+  <block id="2f2cefa625a02e913ba94e04b8450776" category="paragraph">AFX 儲存系統的ONTAP軟體升級遵循與其他ONTAP系統升級相同的流程。如果您擁有Active IQ Digital Advisor （也稱為Digital Advisor ）的有效SupportEdge合同，您應該<block ref="1117d34674fd91a6ee3c7506ddc3a8f0" category="inline-link-macro-rx"></block>。升級顧問透過評估您的叢集並創建特定於您的配置的升級計劃，提供智慧訊息，幫助您最大限度地減少不確定性和風險。如果您沒有Active IQ Digital Advisor的有效SupportEdge合同，您應該<block ref="66ecb4b248d940ec34981282ad334ce1" category="inline-link-macro-rx"></block>。</block>
+  <block id="46629b819dff531a5a2a49fcda5443dd" category="inline-link-macro">透過系統管理員進行自動無中斷升級 (ANDU)</block>
+  <block id="d351531ad851e21d1ccbc812e54540ff" category="paragraph">準備升級後，建議您使用<block ref="a93595527d1144b0b27a701c939efa63" category="inline-link-macro-rx"></block>。  ANDU 利用 ONTAP 的高可用性 (HA) 故障轉移技術來確保叢集在升級期間繼續不間斷地提供資料。</block>
+  <block id="dda1bbfa666151e43e0b34b2795cb4d3" category="inline-link">了解ONTAP升級</block>
+  <block id="6b81483e10b68c18c719d67a23f89107" category="list-text"><block ref="35ce960e356c914994b09071728fb9c7" category="inline-link-rx"></block> 。</block>
+  <block id="f50c43bd45b1dfc3f247f199b0f8518c" category="summary">您可以登入系統管理員來存取 AFX 儀表板並顯示叢集狀態。在開始 AFX 管理任務之前或懷疑有操作問題時，這是一個很好的第一步。</block>
+  <block id="77f1b0adf587fa759de92138b1d0008a" category="doc">查看 AFX 儲存系統儀表板</block>
+  <block id="524ef010ad31f0bc4f40d76a89a06a22" category="list-text">叢集管理 LIF 的 IP 位址或域名</block>
+  <block id="58e87dbeb1837c8c86206911af8fb5b1" category="list-text">管理員帳戶憑證</block>
+  <block id="fb3dcfd80a899ed804c012c8c622e911" category="list-text">使用瀏覽器和叢集管理 IP 位址連線到系統管理員：</block>
+  <block id="d004d6d95325f3677e98370b1087ad16" category="paragraph"><block ref="21851b20905fa40a45fd13d8988004df" prefix="" category="inline-code"></block></block>
+  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">*例子*</block>
+  <block id="3ba2f761143b248da9c103d9dc05c374" category="paragraph"><block ref="9a3dff025b4d27cd9965da6f25369884" prefix="" category="inline-code"></block></block>
+  <block id="bb991d93f7623073aafd57496ab6421a" category="list-text">提供管理員帳戶的使用者名稱和密碼，然後選擇*Sign in*。</block>
+  <block id="9c7ea8c422cf245b4a6b0d565e9a0ae0" category="list-text">在左側導覽窗格中選擇“*儀表板*”，並查看頁面上的圖塊，包括群集“*運行狀況*”。</block>
+  <block id="693c6bbf05e8c49259d8e63dd61abac3" category="list-text">在導覽窗格中，選擇“*Cluster*”，然後選擇“*Overview*”。</block>
+  <block id="bda7e56711bfbb2af5ce4423711fe23a" category="list-text">查看叢集名稱、版本、 ONTAP特性和其他詳細資訊。</block>
+  <block id="4827f0cc39043069ab023aa03ad3b4ce" category="list-text">在概覽頁面的頂部，選擇*佈線*以直觀顯示叢集硬體和連線。</block>
+  <block id="f274d05f59ad65057bb21068ab0d1b56" category="list-text">在導覽窗格中，選擇*事件和作業*，然後選擇*系統警報*以顯示和檢視系統警報。</block>
+  <block id="56706c32c559564fb322d1f3834b54e9" category="summary">您可以查看 AFX 產生的事件和審計日誌訊息，以追蹤內部處理並診斷潛在問題。  AFX 系統可以配置為轉發此資訊以及其他相關數據，以進行進一步處理和存檔。</block>
+  <block id="af2e0e82fcae455bc377c49a4eb92cc9" category="doc">查看 AFX 儲存系統事件和稽核日誌</block>
+  <block id="87f9f735a1d36793ceaecd4e47124b63" category="section-title">活動</block>
+  <block id="bb9af464696acf49572624aabd873990" category="paragraph">事件訊息提供了系統活動的寶貴記錄。每個事件都包含描述和唯一識別碼以及建議的操作。</block>
+  <block id="01fb0715428c68a05ac0615146087b10" category="list-text">在系統管理員中，選擇*事件和作業*，然後選擇*事件*。</block>
+  <block id="4be5c1953534673e5779c572950ba587" category="list-text">查看並回應頁面頂部的建議操作，例如啟用自動更新。</block>
+  <block id="79088654782b0fa95897b9e242003688" category="list-text">選擇“事件日誌”標籤來顯示訊息清單。</block>
+  <block id="62ff4ea4c8140c9dc4f3b3dfa6613fa7" category="list-text">選擇一則事件訊息以進行更詳細的檢查，包括序號、描述、事件和建議的操作。</block>
+  <block id="6bcfb396c1ce43fb7361ee9cbf84d7d4" category="list-text">（可選）選擇 * Active IQ建議* 選項卡並向Active IQ註冊以取得叢集的詳細風險資訊。</block>
+  <block id="9a0fd8208acdc142faf1e8499e5086ce" category="section-title">審計日誌</block>
+  <block id="49e880c3d68aa17da034d0b4a8e834ae" category="paragraph">審計日誌包括基於使用 HTTP 等存取協定的系統活動記錄。</block>
+  <block id="278dfce63b72761de811e9dbdee38efe" category="list-text">在系統管理員中，選擇*事件和作業*，然後選擇*稽核日誌*。</block>
+  <block id="a9a1e4a9a653ce2c5ae946526d0fc689" category="list-text">選擇*設定*來啟用或停用被追蹤的操作。</block>
+  <block id="1b364eee0daa285d8c174fbb8b92f1a3" category="list-text">（可選）選擇*管理審計目標*；審查<block ref="356d45b2e6d4927ca72018d9087a1580" category="inline-xref-macro-rx"></block>了解更多。</block>
+  <block id="1b799238211a6924f3bc70f0d21bb243" category="section-title">管理通知</block>
+  <block id="c7d176acca7638467b3ea720e4d575a6" category="paragraph">AFX 支援多種類型的通知供您轉發。</block>
+  <block id="44d48c8a0eb920ab0fb3c5f5d91b5347" category="list-text">導覽至*通知管理*並選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="d8a736d7a3524cbfeee270562aaacc49" category="list-text">選擇適當的動作來檢視或設定 AFX 使用的目的地。例如，配置：</block>
+  <block id="b102f96a40a5fdf95110653136e0fd91" category="list-text">_活動目的地：_選擇*查看活動目的地*</block>
+  <block id="45fb7c1dd0b19b2e6e2043c852493243" category="list-text">_稽核日誌目標：_選擇*查看稽核目標*</block>
+  <block id="1f45e164acca6b9b83e2ddf1d5e1f9e2" category="list-text">選擇<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>並提供目的地資訊。</block>
+  <block id="8505fbdc75289c59744757d2ea89ede9" category="inline-link">ONTAP事件、效能和運作狀況監控</block>
+  <block id="68d58707832c3c8d5f78484ef0d75df7" category="list-text"><block ref="68d58707832c3c8d5f78484ef0d75df7" category="inline-link-rx"></block></block>
+  <block id="c362166a64ef92c6d73dcadcb3f2d31b" category="summary">您可以使用ONTAP System Manager 的 Insights 功能來顯示符合NetApp最佳實務的建議設定更新。這些變化可以優化 AFX 叢集的安全性和效能以及其他領域。</block>
+  <block id="243c61c17207eed8dad58941eb2cffa1" category="doc">查看 Insights 以優化您的 AFX 儲存系統</block>
+  <block id="dbc92c288501704e37ec77d13b5e902c" category="paragraph">您可以使用ONTAP System Manager 的 _Insights_ 功能來顯示符合NetApp最佳實務的建議設定更新。這些變更可以優化 AFX 叢集的安全性和效能。</block>
+  <block id="c70c9e678766d9f4546fed8ed96f0d29" category="paragraph">例如，AFX 提供自主勒索軟體保護 (ARP) 功能，可提供反勒索軟體保護。如果未設定 ARP，Insights 將會通知您。</block>
+  <block id="c74364673a60e8775445f2b1199452c4" category="paragraph">每個見解都以單獨的圖塊或卡片形式呈現在頁面上，您可以選擇實施或忽略。您也可以選擇相關的文件連結來了解有關特定技術的更多資訊。</block>
+  <block id="80d816cf7d322b17e77a91ebe5beb590" category="list-text">在系統管理員中，選擇*分析*，然後選擇*洞察*。</block>
+  <block id="b667ea0097f8bd52ff6309e232fb3500" category="list-text">查看可用的建議。</block>
+  <block id="595c88cf8a853d80d7a8eca66952816b" category="paragraph">執行任何建議的操作來實現 AFX 配置最佳實務。</block>
+  <block id="f42f2e30edd99d3dc33d09e740715ef6" category="summary">AFX 包含一個內部平台，可根據您的設定和管理作業執行背景作業。這些作業可以是長期運行的 AFX 元件，也可以是回應管理任務或 REST API 請求而執行的短暫進程。您可以根據需要顯示和監控作業。</block>
+  <block id="127acfc54f224551bad8bcd94a934da6" category="doc">查看 AFX 儲存系統作業</block>
+  <block id="51c3d406179b00c1eafcad79478f77a6" category="paragraph">AFX 包含一個內部平台，可根據您的設定和管理作業執行背景作業。這些作業可以是長期運行的 AFX 元件，也可以是回應管理任務或 REST API 請求而執行的短暫進程。您可以根據需要顯示和監控作業。</block>
+  <block id="7e926716e4ef94532f809a7cd15541e4" category="list-text">在系統管理員中，選擇*事件和作業*，然後選擇*作業*。</block>
+  <block id="869e42effed2d05cd41f753687a3785d" category="list-text">根據需要自訂顯示以及搜尋和下載工作資訊。</block>
+  <block id="e321d3f5b15633ff9753a19985968c94" category="summary">此常見問題解答清單提供了客戶通常對其 AFX 儲存系統提出的問題的答案。它包含的概念和術語在更詳細地探索 AFX 或執行高階管理任務時很有用。</block>
+  <block id="75fa803d18cf6d70b0b6eeddea03ff3b" category="paragraph">此常見問題解答清單提供了有關 AFX 儲存系統的問題的答案。它包含的概念和術語在更詳細地探索 AFX 或執行高階管理任務時很有用。</block>
+  <block id="0db377921f4ce762c62526131097968f" category="section-title">一般的</block>
+  <block id="2484576329a80f129b84f3fe5a63ac32" category="paragraph-title">什麼是ONTAP個性？</block>
+  <block id="d9e933a0183aa036605a2650b119960c" category="paragraph">ONTAP是一個強大且多功能的儲存平台，以其全面的功能集和對各種儲存需求的適應性而聞名。雖然這種靈活性使其成為具有多樣化工作負載的組織的絕佳選擇，但一些客戶可以從針對其特定環境需求進行最佳化的更客製化的儲存解決方案中受益。</block>
+  <block id="6823723f3d129ef57f6bcfbcd86bd04e" category="paragraph">為了滿足這些特殊需求，一些NetApp儲存系統提供了獨特的ONTAP特性，每種特性都包含一組旨在支援獨特客戶需求的功能。  ONTAP特性通常是硬體和軟體功能的組合，專門用於為目標用例提供最佳化的體驗。  NetApp提供三種ONTAP特性：</block>
+  <block id="b33eab3f59e19afa3da64a7838372c21" category="list-text">統一ONTAP</block>
+  <block id="0ad35f334baf990d3a31bf6cfa0709f5" category="list-text">Unified ONTAP特性提供了廣泛的資料管理功能，支援 NAS、SAN 和 S3 協議，以實現最大的靈活性。這是NetApp 的旗艦產品，可在AFF和FAS系統以及ONTAP Select和Cloud Volumes ONTAP等虛擬化部署上使用。</block>
+  <block id="e9d7397e9772df2e11071d57657f4b22" category="list-text">AFX</block>
+  <block id="adf18a62ba91568ae4c17ed21c595973" category="list-text">AFX ONTAP特性提供了一種分解的解決方案，旨在滿足高效能 NAS 和 S3 工作負載（包括 AI/ML 應用程式）的嚴格要求。  AFX 系統為需要可擴充、高吞吐量檔案和物件儲存的客戶提供專門的功能。</block>
+  <block id="df5b8332c344a8d1a2ca6124ea06defe" category="list-text">ASA r2</block>
+  <block id="fde1abb5537b55c34521d414267b3f70" category="inline-link">ASA r2 系統</block>
+  <block id="fc33e2bbed08316e89f0df10590d22cc" category="list-text">ASA r2 ONTAP特性提供了專為僅 SAN 環境設計的分解解決方案。<block ref="e4ca437dd887d2a61be13c7ee5ecdac0" category="inline-link-rx"></block>  簡化區塊工作負載的儲存體驗，為 SAN 客戶提供簡化的管理和最佳化的效能。</block>
+  <block id="6d1fe0d9c2d18d3c107ffcb493bdacf4" category="paragraph">透過提供這些獨特的ONTAP特性， NetApp使組織能夠選擇符合其營運要求和應用程式工作負載的儲存解決方案。</block>
+  <block id="255bf722ae2f40f567ba6f42a03ffeee" category="paragraph-title">我可以更改NetApp儲存系統的ONTAP特性嗎？</block>
+  <block id="6adee2606f39ed8126ea7419135e040d" category="paragraph">不可以。您的ONTAP儲存系統的特性是不可變的，無法變更。例如，您無法將FAS或AFF儲存系統（執行 Unified ONTAP特性）轉換或升級為 AFX 儲存系統。</block>
+  <block id="612c3d63acc2bd58fcb48d8c282ba49c" category="paragraph-title">不同ONTAP特性的系統管理器介面看起來都非常相似。我如何確定特定係統的個性？</block>
+  <block id="237b1a7e5fa6a884370678bfd03f1514" category="inline-link-macro">您的第一個 AFX 系統 REST API 呼叫</block>
+  <block id="3bb43a6da4f4608c1e23bbfbd711a8ac" category="paragraph">在系統管理員中，選擇左側導覽窗格中的“*叢集*”，然後選擇“*概覽*”。您將看到頁面上顯示的個性。或者，您可以在 CLI 中發出指令「system node show」。您也可以使用 REST API 確定ONTAP叢集的特性；請參閱<block ref="384cf30c2d68075b2f7fc2dafc9d8ced" category="inline-link-macro-rx"></block>了解詳情。</block>
+  <block id="588444ca724f7363b9693aa486a144d7" category="paragraph-title">在 AFX 儲存系統中，「分解」是什麼意思？</block>
+  <block id="fa14e554a900f1ffefde275cd99fcfd3" category="paragraph">根據上下文，「分解」一詞與 AFX 可以有兩種不同但相關的含義。</block>
+  <block id="cfbf641c15d2a6864d16495219a19944" category="paragraph">首先要考慮的一個重要概念是將控制器節點的運算能力與儲存架分開。借助 AFX，叢集運算和儲存元件不再像運行 Unified ONTAP特性的FAS和AFF系統那樣緊密耦合。相反，它們是透過集群交換機連接的。每個 AFX 節點控制器都擁有整個叢集儲存池的完整視圖。</block>
+  <block id="0fd83bea6e8889a6410f4ad7c356b1c6" category="paragraph">與分解儲存相關的第二個概念是聚合和 RAID 管理被移除為可管理實體。 AFX 內的儲存抽象層自動配置和管理儲存的低階方面，包括實體磁碟和 RAID 群組。這使得 AFX 管理員可以專注於基於磁碟區和儲存桶的高級儲存配置。</block>
+  <block id="67a915151759ecc737f698391f7cfd08" category="section-title">互通性</block>
+  <block id="8fbc7f1351a3e90b34e2d50e0c07adcf" category="paragraph-title">我可以在同一個ONTAP叢集中將 AFX 系統節點與AFF、 ASA或FAS系統節點混合使用嗎？</block>
+  <block id="490ad830d699742950ceeaf58c8e893c" category="paragraph">不，每個ONTAP 的個性都是不同的。例如，您無法在同一個叢集中混合使用 AFX 和 Unified ONTAP節點。</block>
+  <block id="6855bc632a4fb3c6b7b6e30b99fd4b1c" category="paragraph-title">如果我想使用運行統一ONTAP （FAS、 AFF、 ASA）的系統和用於SnapMirror或FlexCache 的AFX 系統，我需要哪個ONTAP版本？</block>
+  <block id="b3c2db23091a0f69d5a98f7aa85c5999" category="inline-link">TR-4743</block>
+  <block id="e41e8ba406c753a1f299483cef4ae186" category="paragraph">AFX 的SnapMirror版本規則與 Unified ONTAP相同。這意味著要從 Unified ONTAP複製，來源系統必須在支援的版本範圍內。若要從 AFX 複製，Unified ONTAP系統必須是ONTAP 9.16.1 或更高版本（支援進階容量平衡功能的最早版本）。對於FlexCache，來源系統和目標系統適用相同的規則，如<block ref="21d9cc15452a0fa353089141a3f02dce" category="inline-link-rx"></block>。</block>
+  <block id="ed403710028c21becee46d02ed8f44c0" category="paragraph">對FlexGroup磁碟區的支援存在一些差異。  AFX 上的FlexGroup磁碟區不能成為使用寫回模式的FlexCache磁碟區的原始磁碟區。</block>
+  <block id="8708a9d2c137a59027465de500bfd069" category="paragraph-title">我可以對 AFX 叢集進行 ONTAPI（ZAPI）API 呼叫嗎？</block>
+  <block id="f54dc2ac5861fdbadd26691d76c517a0" category="paragraph">不可以。 AFX 僅支援ONTAP REST API。任何使用 ZAPI 的自動化程式碼都需要轉換為 REST API 才能與 AFX 一起使用。</block>
+  <block id="85a92250c4c0abd493c68275cb1ef47b" category="section-title">進階概念</block>
+  <block id="fb54b542d927c8e7059703b5e6683a32" category="paragraph-title">AFX 儲存系統支援哪些資料協定？</block>
+  <block id="b726dc313b88ec515132108511a72596" category="paragraph">AFX 支援的數據協定包括：</block>
+  <block id="160e9966199353bc28183c218dcc9243" category="list-text">NFSv3、NFSv4.0、NFSv4.1、NFSv4.2</block>
+  <block id="1964a6ce724a3981abd5c0aed1861dde" category="list-text">SMB2.x、SMB3.x</block>
+  <block id="e2ab7c65b21ed8cc1c3b642b5e36429e" category="list-text">S3</block>
+  <block id="aae155889087fca42368d9fab8b54ee6" category="list-text">NDMP</block>
+  <block id="e591526ebf298591265038da4c3cad1a" category="paragraph-title">數據協定在 AFX 中的運作方式是否不同？</block>
+  <block id="652c6ccc124f6a3b6160cc1d33fdf829" category="paragraph">否。 AFX 中的資料協定的運作方式與AFF和FAS系統相同。</block>
+  <block id="ba49ccff7b34f35787d4c3a5a03c27ab" category="paragraph-title">AFX 中是否使用高階磁碟分割 (ADP)？</block>
+  <block id="2e71120f5cf48a4101afcce566d9eb76" category="paragraph">不可以。 ADP 不會與 AFX 一起使用。由於 AFX 沒有根聚合，因此不需要 ADP 功能來最大限度地提高磁碟空間效率。</block>
+  <block id="96daca265fc7c3ad4031d8a0f60de302" category="paragraph-title">我可以為 AFX 儲存系統的後端網路使用不同類型的交換器嗎？</block>
+  <block id="c72efc6aac77bfb00478e553ab39b09e" category="paragraph">不可以。只有經過專門批准並隨 AFX 儲存平台提供的交換器才支援後端網路。</block>
+  <block id="5f23273522ab6b5896afbea443e4b0e5" category="paragraph-title">AFX 叢集中的儲存是如何組織的？</block>
+  <block id="d37066fb090f24f4a9c3a6f25f61165b" category="paragraph">連接到 AFX 叢集的所有磁碟和儲存架都是儲存可用區 (SAZ) 的一部分。每個 AFX 叢集僅支援一個 SAZ，且不能在 AFX 叢集之間共用（ SnapMirror複製和FlexCache操作除外）。</block>
+  <block id="515a19ff656ef4e9a76499b11053c88b" category="paragraph">每個節點都可以看到 SAZ 中的所有儲存。當儲存架新增至叢集時， ONTAP會自動新增磁碟。</block>
+  <block id="bcb2406e546535bc5fbcf8b07e9027a3" category="paragraph-title">與 AFX 相比，Unified ONTAP中的捲移動操作如何運作？</block>
+  <block id="32b3ece0de9314e482a31fd5700a67ec" category="paragraph">借助 Unified ONTAP，可以無中斷地將磁碟區從叢集中的一個節點或聚合重新定位到另一個節點或聚合。這是使用採用SnapMirror技術的後台複製作業來執行的，其中在新位置建立一個新的目標磁碟區。根據磁碟區的大小和叢集資源的利用率，磁碟區移動完成所需的時間可能會有所不同。</block>
+  <block id="25241163c37737db44029ed2218be089" category="paragraph">使用 AFX 時，不存在聚合。所有儲存都包含在單一儲存可用區內，叢集中的每個節點都可以存取該可用區。因此，卷移動實際上不需要複製資料。相反，所有磁碟區移動都是透過節點之間的指標更新來執行的。這被稱為零複製卷移動 (ZCVM)，並且是瞬間發生的，因為實際上沒有資料被複製或移動。這本質上與 Unified ONTAP使用的捲移動過程相同，但不使用SnapMirror副本。</block>
+  <block id="4c304f523f7e6755249f3a56088bb451" category="paragraph">請注意，在初始版本中，磁碟區只會在儲存故障轉移場景中以及在叢集中新增或刪除節點時移動。這些移動僅透過ONTAP進行控制。</block>
+  <block id="504c7335601a5530da6d79c69af25d23" category="paragraph-title">AFX 如何確定在 SAZ 中放置資料的位置？</block>
+  <block id="0dffaaac24629ec57e41901c2c49b5e9" category="paragraph">AFX 包含一項稱為自動拓撲管理 (ATM) 的功能，可回應系統和使用者物件的不平衡。 ATM 的主要目標是平衡 AFX 叢集中的磁碟區。當偵測到不平衡時，會觸發內部作業以在活動節點之間均勻分佈資料。使用 ZCVM 重新分配數據，只需複製和更新物件元數據。</block>
+  <block id="1bce74755c5e5305616eddc17873d185" category="summary">NetApp AFX 系統運行客製化的ONTAP特性，它與在AFF和FAS儲存上運行的ONTAP特性（稱為統一ONTAP ）不同。您應該了解 AFX 系統與FAS和AFF系統有何相似之處和不同之處。這提供了寶貴的視角，並且在您的環境中部署 AFX 時會很有幫助。</block>
+  <block id="9f2c66d4e6da8c9b288f3ecdc75c974a" category="doc">將 AFX 儲存系統與AFF和FAS系統進行比較</block>
+  <block id="12527f37b5a726348a974e1ebe9a0c75" category="admonition">此 AFX 文件包含 Unified ONTAP文件網站上各個主題的連結。附加內容提供了更深入的深度和不同的視角，可以幫助您管理 AFX 儲存系統。</block>
+  <block id="99d6ed6b3347c27373da6da2f7b952a7" category="section-title">配置差異</block>
+  <block id="00ee6ecb3fb7eed883369282913b6d76" category="paragraph">AFX 配置與AFF和FAS系統在某些方面有所不同。</block>
+  <block id="51d20ad0622a1bf32203f0fd69eff8ee" category="list-text">高級容量平衡</block>
+  <block id="566c652f2e6af843af67f40ec0204464" category="list-text">進階容量平衡功能，使用<block ref="7617fb157efcfcd230d531be7d153280" prefix=" " category="inline-code"></block>CLI 參數，預設對所有FlexGroup磁碟區啟用。</block>
+  <block id="9754d771ba2a8ed846d729e396e82783" category="section-title">不受支援或受限制的 Unified ONTAP功能</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="inline-link-macro">什麼是新的</block>
+  <block id="7b4782deb376294d92e8953f8d14855a" category="paragraph">雖然 AFX、 AFF和FAS儲存系統非常相似，但 AFX 不支援一些功能。您應該查看 AFX 的更新和更改<block ref="e4ac4a7dd877729340e2b0880473ea1b" category="inline-link-macro-rx"></block>根據您的發布版本。</block>
+  <block id="7e5420bd0c8a1984076f52885dda77eb" category="paragraph">以下功能分為幾個類別，在 AFX 中不可用或已發生變更。</block>
+  <block id="c019c7d7df190a17c6a7c8ae73d2e948" category="section-title">一般特徵</block>
+  <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
+  <block id="1749d12df3df2319d3eee218a277ff83" category="list-text">MetroCluster</block>
+  <block id="b85613bdef7890eb0e7b102e18d6b27e" category="list-text">基於人工智慧的反勒索軟體保護</block>
+  <block id="15169cb3273453f9de28b0eb0c7c34b0" category="list-text">ONTAPI API（ZAPI）</block>
+  <block id="447c75e67fae69491fa1ab2dd2fdeb78" category="section-title">SAN 相關功能</block>
+  <block id="b21d10ebb4dc1d3fa9cab52510e6e840" category="list-text">SAN 管理和客戶端訪問</block>
+  <block id="cfae0238b4919617857b6a1108b796ae" category="section-title">聚合相關功能</block>
+  <block id="2e0d41fbc34c75b0698a9f38cb988125" category="paragraph">AFX 系統不提供以下與聚合相關的功能：</block>
+  <block id="c800d2b73bbcd99c7c3ec3ee0739dda1" category="list-text">直接存取磁碟聚合</block>
+  <block id="a809a3f67f68e189b93c920155d8f362" category="list-text">NetApp聚合加密 (NAE)</block>
+  <block id="7b8bac56c28696d13bf861ef5b905715" category="list-text">聚合級重複資料刪除</block>
+  <block id="bf474f5b27943f46dddafa6903a3aca0" category="list-text">SyncMirror （聚合鏡像）</block>
+  <block id="542dbb009e960ad2ab0d38ef4a2c5f99" category="list-text">RAID 管理</block>
+  <block id="0a9e63106b5735d38d5bf5377346f3ed" category="section-title">資料複製</block>
+  <block id="d3e592d24d461a69505c06ca342a0fbd" category="list-text">不複製包含 LUN 的AFF或FAS系統的捲</block>
+  <block id="52f9bbffe0c0eb37d5f0fee8efec6d05" category="list-text">AFX FlexGroup磁碟區只能複製到 Unified ONTAP 9.16.1 或更高版本</block>
+  <block id="1ac02e30a31e8e8a271f79d995edae6b" category="section-title">命令列介面的更改</block>
+  <block id="f0fbad4010250530a02ebeee997be99b" category="paragraph">AFX 提供的ONTAP CLI 通常與AFF和FAS系統提供的 CLI 相同。但存在一些差異，包括：</block>
+  <block id="6ad554038f01b36139932064b15f012f" category="list-text">與以下相關的新 AFX 指令：</block>
+  <block id="e121d06c72052cde292e377ad259a457" category="list-text">顯示儲存可用區域的容量</block>
+  <block id="c6a69d731488373ecdb2d591b1a85654" category="list-text">啟動媒體</block>
+  <block id="f130631d40cc171d52dc63501045c8da" category="list-text">沒有與 SAN 相關的命令</block>
+  <block id="863a16df67e2ceabb787910e2b537e42" category="list-text">不再需要聚合管理命令</block>
+  <block id="43e46fcef487eab4c976633bb3771ac5" category="list-text">FlexAggr 指令只能顯示或展示 FlexAggrs</block>
+  <block id="f716c6e3202ed7d92fc8348d46cf91c0" category="inline-link-macro">AFX系統特性</block>
+  <block id="ddd733c8c3891b4ecfcd87a0c6163694" category="list-text"><block ref="ddd733c8c3891b4ecfcd87a0c6163694" category="inline-link-macro-rx"></block></block>
+  <block id="82a5887f8adb06bd19d86cf8996f4769" category="inline-link-macro">AFX 架構細節</block>
+  <block id="ce3c74e16eea034f818cc30b0eea56e3" category="list-text"><block ref="ce3c74e16eea034f818cc30b0eea56e3" category="inline-link-macro-rx"></block></block>
+  <block id="fc123d34fbcca975f8c6b4bcc69de12b" category="summary">NetApp AFX 儲存系統基於下一代儲存架構，將ONTAP儲存模型發展為分解的高效能 NAS 解決方案。  AFX 採用先進的技術和處理技巧來支援文件和物件工作負載，從而提供極高的效能。</block>
+  <block id="eb945734dba0e6e93fb79ddc0d55d4bf" category="doc">了解 AFX 儲存系統</block>
+  <block id="b03a11c36ac9c614434dc119668e67f2" category="section-title">典型的應用程式工作負載</block>
+  <block id="236c00235f30a5a8d87f94383158d92d" category="paragraph">AFX 儲存滿足 AI/ML 環境和其他相關以資料為中心的應用程式的典型獨特需求。  AFX 儲存系統非常適合管理多種不同工作負載的組織，包括：</block>
+  <block id="3701ed1cc007561983bcf6db678215bd" category="list-text">與深度學習相關的訓練和迭代模型細化，需要持續的高頻寬和對海量資料集的存取。</block>
+  <block id="d86fdbf9ebe98514661e8642bcee1f8c" category="list-text">處理包括文字、圖像和影片在內的多種資料類型。</block>
+  <block id="7c780abd9bdd1f2a63614e10e5038ab8" category="list-text">需要嚴格響應時間視窗的低延遲即時推理應用程式。</block>
+  <block id="9eb56258e895facbc7db3fd59e0bb9d0" category="list-text">資料科學和機器學習流程可以從資料工程師和資料科學家的自助資料管理中受益。</block>
+  <block id="382ba90445ad355e4d0640a736b4ae10" category="list-text">需要高並發性和平行 I/O 的工作負載，例如具有 RDMA 傳輸的多 GPU 系統。</block>
+  <block id="5bd59b49924352b734854b619f72ae71" category="section-title">硬體基礎設施</block>
+  <block id="1d61c0e2cf63f7bf0195212c9846c849" category="paragraph">NetApp AFX 儲存系統提供統一的硬體和軟體解決方案，可根據高效能 NAS 客戶的需求建立簡化的體驗。</block>
+  <block id="66d537e06ce64167a2a89717123fb13a" category="paragraph">以下硬體組件與 AFX 叢集一起使用：</block>
+  <block id="95f44be3500aa9aeb45f0071ca7649b2" category="list-text">AFX 1K 控制器</block>
+  <block id="a43cc36cba3c97642118a8f1e1411d2a" category="list-text">NX224貨架</block>
+  <block id="e89680076a38528b667f845c37798fcc" category="list-text">Cisco Nexus 9332D-GX2B 或 Nexus 9364D-GX2A 交換機</block>
+  <block id="e4b73aea5fedcc9f4eb9b804ebd249aa" category="summary">在生產環境中部署 AFX 之前，必須了解管理結構和配置選項。這可確保您的 AFX 叢集管理安全、高效且有效。</block>
+  <block id="982e02e3abfea4e77a8d9e6cb357ccc0" category="doc">準備管理您的 AFX 儲存系統</block>
+  <block id="1e793b1e0f039cf758071c91b073a4f1" category="paragraph">儲存虛擬機器 (SVM) 是ONTAP叢集內的隔離伺服器或租用戶環境。您可以設定 SVM 來向連線的客戶端提供資料。您應該熟悉 AFX SVM 的功能和特性。</block>
+  <block id="4e7376ecff75f0273e4afa234b99e80b" category="admonition">當您設定並初始部署 AFX 叢集時，會建立一個資料 SVM。如果需要，您可以建立額外的資料 SVM。</block>
+  <block id="0214ea3e9ff4c3369ca3a5d938ad05f8" category="list-text">行政控制</block>
+  <block id="2aa945ebbfea0af7ca1c227cf6663c02" category="list-text">資料 SVM 可用於建立和強制執行資料和應用程式的隔離。當一個較大的組織中有許多不同的團體時，這會很有用。可以將管理控制委託給 SVM 來制定與資料存取、安全性和保護相關的策略。</block>
+  <block id="73b02dba7a7033396cb6431429a56244" category="list-text">帳戶和 RBAC 角色</block>
+  <block id="704843e96039f91b3b08cfaa04e6080d" category="list-text">AFX 有兩個層級的身份驗證和授權：叢集層級和 SVM 層級。除了叢集帳戶之外，每個 SVM 都有自己獨特的一組使用者和角色。在大多數情況下，使用叢集等級帳戶就足夠了。但根據您的環境，您可能還需要配置和使用限制性更強的 SVM 帳戶和角色。看<block ref="22d8bf1361fa729ce722097e36befda5" category="inline-link-macro-rx"></block>了解更多。</block>
+  <block id="555cc37af7c0ac7518efde480ebc56bf" category="list-text">SVM 範圍的資源</block>
+  <block id="5a9ae7f64107703302087b450d59e140" category="list-text">AFX 資源和可設定實體與叢集或特定 SVM 相關聯。  SVM 範圍內有許多資源，包括磁碟區和儲存桶以及 SVM 使用者帳戶和 RBAC 角色。</block>
+  <block id="77fae90ec5b51b6cfe6791871adf5d26" category="list-text">專用網路介面</block>
+  <block id="43da3632eeafb9b99a3a65623dac7b06" category="list-text">每個 SVM 都有自己專用的一組網路介面。例如，將單獨的 LIF 指派給 SVM 以用於管理和客戶端資料存取。</block>
+  <block id="f7f2bc8f16d6d8ce1388be712d241676" category="section-title">兩個AFX管理層級</block>
+  <block id="2bbd9436630a6f6f1efcfaaea0a91596" category="paragraph">使用 AFX 執行的管理ONTAP任務通常分為兩類。某些任務適用於整個ONTAP集群，而其他任務適用於特定的 SVM。這就導致了兩級管理模式。</block>
+  <block id="cceb3e82a6e3f7c69cdc1370590bd84d" category="paragraph">值得注意的是，這些層級描述如何組織和指派管理任務，而不一定描述如何配置相關的安全性。例如，雖然需要叢集管理員帳戶來執行叢集層級管理，但它也可以用於 SVM 管理。</block>
+  <block id="0c495a02b1e7c6804ca0b6bb25a76070" category="list-text">集群管理員</block>
+  <block id="90a6e9fb8ccc1124ac3c5f0933e7d6b1" category="inline-link-macro">管理您的集群</block>
+  <block id="975be2c51c1b50ce9df0371c891347a9" category="list-text">集群管理員可以完全控制 AFX 集群，包括所有資料 SVM。 AFX 叢集管理層級僅包含叢集管理員可以執行的任務，而不包括任何特定於 SVM 的管理任務。看<block ref="b7c6f4e89f282d3743609571d8ac253f" category="inline-link-macro-rx"></block>了解更多。</block>
+  <block id="689ac3e21fde025488f91fe6b2d49bcc" category="list-text">SVM 管理員</block>
+  <block id="df8f29ef891c5c3d811dd49253e8d408" category="inline-link-macro">管理您的儲存虛擬機器和數據</block>
+  <block id="569a9ca41985fd85eecbdd04c017c2ec" category="list-text">SVM 管理員角色可以控制特定的資料 SVM，因此與叢集管理員相比受到的限制更嚴格。 SVM 管理涉及對具有 SVM 範圍的物件和資源執行任務，例如建立磁碟區。看<block ref="ebfee1a77bcca45a20260db66aedfa55" category="inline-link-macro-rx"></block>了解更多。</block>
+  <block id="bb3210ed29005c8ea476bca6aa6c4223" category="section-title">三個管理介面</block>
+  <block id="8e3788e1e670292489b1aa44ebe90cf3" category="paragraph">與AFF和FAS系統一樣，AFX 有三個管理介面。您需要使用的 LIF（或 IP 位址）會根據管理介面和您的環境而有所不同。</block>
+  <block id="dd02da233490bf471fd104c24bc9b3b5" category="admonition">對於大多數管理任務來說，系統管理器使用者介面是首選。除非另有說明，否則您應該使用管理員帳戶。</block>
+  <block id="3c1aac82863ed9e5a9aca8ce687f711d" category="cell">介面</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">描述</block>
+  <block id="26ed02718973e705cd69ee6e109400e0" category="cell">系統管理員</block>
+  <block id="c53edd7a2a7766ef763e963f2ef8bb8f" category="cell">這是一個可透過網頁瀏覽器存取的圖形使用者介面。它易於使用，並能提供客戶所需的大部分功能。透過系統管理器存取 AFX 可為大多數ONTAP叢集和 SVM 管理需求提供最簡單的體驗。</block>
+  <block id="31581907c3d44270d8d9879f8e2de965" category="cell">命令列介面</block>
+  <block id="56610cc1ba9974635c921dcde78c963c" category="cell">可以使用 SSH 存取ONTAP CLI。根據您的帳戶，您可以存取叢集管理 LIF 或 SVM 管理 LIF。 CLI 更難使用，但更強大。對於高階管理任務來說，它是首選，有時也是必要的。</block>
+  <block id="aba3d4b49c454e1974970e7b5514b001" category="cell">REST API</block>
+  <block id="fb9bfd9eff5c4b5947e2c5bb5baef84e" category="cell">AFX 包含一個 REST API，您可以使用它來自動管理您的 AFX 叢集。該 API 與 Unified ONTAP個性 REST API 共享許多相同的調用，但經過修改以支援獨特的 AFX 功能。</block>
+  <block id="cb9261bd772edb49ae37962d39aa55cb" category="section-title">學習在系統管理員中搜尋、過濾和排序訊息</block>
+  <block id="034d58e34d0553a54eb33d3dd79053df" category="inline-link">在系統管理員中搜尋、過濾和排序訊息</block>
+  <block id="1023830e1059f9e03bfb8db377e49d64" category="paragraph">系統管理器使用者介麵包括一組強大的功能，使您能夠存取和顯示所需的資訊。學習使用這些功能將幫助您更好地管理 AFX 儲存系統。看<block ref="6c6b08444a89b0ed2033bb05b5ea5c79" category="inline-link-rx"></block>了解更多。</block>
+  <block id="a9fc82c0b447e076647e2d844f9a70f3" category="section-title">造訪ONTAP CLI</block>
+  <block id="69084fa67f30f4e6d7da4937a80f087b" category="paragraph">雖然您可以使用系統管理員進行大多數 AFX 管理，但有些任務只能使用ONTAP命令列介面執行。</block>
+  <block id="bdead8745710ded13e4c63d4d0aba57e" category="paragraph">您可以透過安全外殼 (SSH) 存取ONTAP CLI。 CLI 具有多個權限級別，決定您可用的命令和命令參數。這<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block>等級是最低權限，也是您登入時的預設等級。您可以將會話權限提升至<block ref="37c3450b6618a349e4890dcafff6b505" prefix=" " category="inline-code"></block>如果需要使用<block ref="cdaeeeba9b4a4c5ebf042c0215a7bb0e" prefix=" " category="inline-code"></block>命令。</block>
+  <block id="e2d6d521cfc93a8bd2363791b02feba4" category="list-text">叢集或 SVM 管理 LIF 的 IP 位址或域名</block>
+  <block id="f3ea7cc430e08d531aa3f311bd72d3ea" category="list-text">帳戶憑證</block>
+  <block id="8ccfe9dfc0ef2a909a0ccfb240b78aa8" category="list-text">本地工作站上的 SSH 用戶端</block>
+  <block id="94e46937af1921cb4d33c5036c1a3e38" category="list-text">使用 SSH 連接到您的 AFX 集群，例如：</block>
+  <block id="de227a9eaef8e12e007545357490838e" category="paragraph"><block ref="fa9bcdcdbb060586c9fdb741b5c76379" prefix="" category="inline-code"></block></block>
+  <block id="62feadbc3ac9bcfb1473f2fd4ddbb7dc" category="list-text">提供帳戶密碼。</block>
+  <block id="1d6fc77aa1a3fbfe22e08dbe0beffa49" category="list-text">顯示層次結構頂部的命令目錄：</block>
+  <block id="636384f85cb2c2efe1750651cbe2de9a" category="paragraph"><block ref="d1457b72c3fb323a2671125aef3eab5d" prefix="" category="inline-code"></block></block>
+  <block id="b8976d3f524eb1a41bb981900fc017e4" category="list-text">提升會話的權限級別<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block>到<block ref="37c3450b6618a349e4890dcafff6b505" prefix=" " category="inline-code"></block>：</block>
+  <block id="5fd1bcc8472b38442961eb87ca3f844a" category="paragraph"><block ref="0581d0d071ad835f74bf419081ce5d75" prefix="" category="inline-code"></block></block>
+  <block id="ea7c1af5f0c16b4f7fadf9fe7aa9bd4b" category="section-title">使用ONTAP HA 對</block>
+  <block id="44abd47dc22d8944944122617fadf4fe" category="paragraph">與 Unified ONTAP一樣，AFX 叢集節點配置為高可用性 (HA) 對，以實現容錯和無中斷運行。 HA 配對使得儲存操作能夠在發生節點故障（例如儲存故障轉移）時保持在線。每個節點都與另一個節點配對，形成一對。這通常是透過兩個節點的NVRAM模組之間的直接連接來完成的。</block>
+  <block id="f1fda245e68667d714e981e6aef06611" category="paragraph">使用 AFX，新的 HA VLAN 被加入到後端叢集交換機，以使NVRAM模組能夠在 HA 夥伴節點之間保持連接。  HA 對仍然與 AFX 系統一起使用，但不再需要直接連接合作夥伴節點。</block>
+  <block id="67c232c91fe284ec9b1946d4112dfec0" category="section-title">AFX 系統部署限制</block>
+  <block id="9f663c4191836dca7619153a5977feb9" category="paragraph">在配置和使用叢集時，AFX 會強制執行多項限制，包括最小值和最大值。這些限制分為幾個不同的類別，包括：</block>
+  <block id="4f153ef27e03f77db56acbf6b56a9003" category="list-text">每個叢集的控制器節點</block>
+  <block id="e9f7ded0687b255de1c10debe9fb0f7d" category="list-text">每個 AFX 叢集必須至少有四個節點。最大節點數根據ONTAP版本的不同而不同。</block>
+  <block id="ec2bdf0a3ea1b056843de1d3ae912a78" category="list-text">這是叢集儲存可用區 (SAZ) 中所有 SSD 磁碟的總容量。最大儲存容量根據ONTAP版本而有所不同。您應該查看互通性矩陣工具 (IMT) 中提供的資訊來確定叢集的功能。</block>
+  <block id="20940568e8a8df65f4ded7552f91cb5a" category="section-title">確認 AFX 系統健康狀況</block>
+  <block id="32b20b465c25cf57c303655ae17c2681" category="paragraph">在執行任何 AFX 管理任務之前，您應該檢查叢集的健康狀況。</block>
+  <block id="9d7934850e239388cf4ca1ba33e75b38" category="admonition">您可以隨時檢查 AFX 叢集的健康狀況，包括當您懷疑有操作或效能問題時。</block>
+  <block id="35a3b3321404b873f71e2570121dd874" category="list-text">叢集管理 IP 位址或 FQDN</block>
+  <block id="c9c4d6340273953cc6272207fb83e285" category="list-text">叢集的管理員帳戶（使用者名稱和密碼）</block>
+  <block id="dd0adc9febd9ca8aee67adbf818b5646" category="list-text">使用瀏覽器連接到系統管理員：</block>
+  <block id="84fca6a4508fd1be70043a07afefeec1" category="list-text">提供管理員使用者名稱和密碼，然後選擇*Sign in*。</block>
+  <block id="426ef08300e0605bf64f74116701308a" category="list-text">檢查系統儀表板和叢集狀態，包括佈線。也請注意左側的_導覽窗格_。</block>
+  <block id="54785a252ac38bc32e469f79d275dc94" category="inline-link-macro">查看儀表板和叢集狀態</block>
+  <block id="f2d7f955e1e5d9bd63469a2af78be75f" category="paragraph"><block ref="f2d7f955e1e5d9bd63469a2af78be75f" category="inline-link-macro-rx"></block></block>
+  <block id="0361bfaa1743137c0c68a6ae23eb1218" category="list-text">顯示系統事件和稽核日誌訊息。</block>
+  <block id="6f90dd378195dedc6af942838f3caa15" category="inline-link-macro">查看 AFX 事件和稽核日誌</block>
+  <block id="db1a4761a9044f81044ccd76999df572" category="paragraph"><block ref="db1a4761a9044f81044ccd76999df572" category="inline-link-macro-rx"></block></block>
+  <block id="a9503c68529f59e753c7812cca97590c" category="list-text">顯示並記錄任何*Insight*建議。</block>
+  <block id="c19f5b6b588c116922ff371fc32e4d81" category="inline-link-macro">使用 Insights 優化 AFX 叢集效能和安全性</block>
+  <block id="974140d8603adf73843c167ac7d9cfb7" category="paragraph"><block ref="974140d8603adf73843c167ac7d9cfb7" category="inline-link-macro-rx"></block></block>
+  <block id="2aaf297d31d383472b54739f6376d5ac" category="section-title">建立和使用資料 SVM 的快速入門</block>
+  <block id="39eac0c34fdfab35e0497a8da8e783c8" category="paragraph">安裝並設定 AFX 叢集後，您可以開始執行大多數 AFX 部署的典型管理任務。以下是開始與客戶分享資料所需的進階步驟。</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一</block>
+  <block id="28cdc83438b53f2b504a5d18cea557f7" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>顯示可用資料 SVM</block>
+  <block id="b9987a246a537f4fe86f1f2e3d10dbdb" category="inline-link-macro">展示</block>
+  <block id="ee6a3e42cdd55c7cc62eafd9a1181292" category="paragraph"><block ref="fc233a35ea84021cc2134d6c4801b6e5" category="inline-link-macro-rx"></block>資料 SVM 清單並確定是否有一個可以使用。</block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">二</block>
+  <block id="09f33f46e10efd1bbda8634f9024786f" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>（可選）建立資料 SVM</block>
+  <block id="686e697538050e4664636337cc3b834f" category="inline-link-macro">創造</block>
+  <block id="c0533f1f19802c560277a0111c780c39" category="paragraph"><block ref="2df885e22cba09efe84582dd2eeab4dc" category="inline-link-macro-rx"></block>如果現有 SVM 不可用，則可以使用 SVM 來隔離和保護您的應用程式工作負載和資料。</block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三</block>
+  <block id="2d0e1c0b8779324d0800b6e153245043" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>配置您的 SVM</block>
+  <block id="f1206f9fadc5ce41694f69129aecac26" category="inline-link-macro">配置</block>
+  <block id="1aca6959ef670b5a946757a0117230ee" category="paragraph"><block ref="fe9b2d6f5a6cf348fa49e2a953d7b0d2" category="inline-link-macro-rx"></block>您的 SVM 並準備好供客戶端存取。</block>
+  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">四</block>
+  <block id="936082d58f304cff8610f521e8a8a1e3" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>準備配置儲存</block>
+  <block id="f8199556cf6a62ca9268aa50c99b34a1" category="inline-link-macro">準備</block>
+  <block id="e8fbd858d63572a894b1075aba6ab7dd" category="paragraph"><block ref="d3b8d8c6b55c809793106c1117afe08b" category="inline-link-macro-rx"></block>分配和管理您的資料。</block>
+  <block id="a528cd4fb99c67fb43b94a2be7b0439c" category="inline-link">ONTAP使用者介面</block>
+  <block id="34d994908d9ce9f8d015ffb010843c3b" category="list-text"><block ref="34d994908d9ce9f8d015ffb010843c3b" category="inline-link-rx"></block></block>
+  <block id="c073672481e123a75d33f515f4a55c14" category="inline-link">在ONTAP CLI 中設定權限級別</block>
+  <block id="67901f429b628d99fcc5a2d234be3c16" category="list-text"><block ref="67901f429b628d99fcc5a2d234be3c16" category="inline-link-rx"></block></block>
+  <block id="be295ac553513eb5e74d13f03267efb7" category="inline-link">了解如何使用ONTAP CLI 進行叢集管理</block>
+  <block id="b1ca62b8e216e4c4af0bae762b5c33bf" category="list-text"><block ref="b1ca62b8e216e4c4af0bae762b5c33bf" category="inline-link-rx"></block></block>
+  <block id="6496e25d87d450f75eeeac2307f5d601" category="summary">要初始啟動並執行您的 AFX 系統，您需要安裝硬體元件、設定叢集並準備管理叢集和 SVM。</block>
+  <block id="22735d3e264cefb0543000862e7f0904" category="doc">快速啟動設定 AFX 儲存系統</block>
+  <block id="40a0d9b63d17cd9ee40121b195ad7812" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>安裝並設定您的硬體</block>
+  <block id="349838fb1d851d3e2014b9fe39203275" category="inline-link-macro">安裝</block>
+  <block id="a89571e2a58d58d092c115e8476ed9e9" category="paragraph"><block ref="956a819b10989cd1b828400e2784a3e3" category="inline-link-macro-rx"></block>您的 AFX 儲存系統並準備設定叢集。</block>
+  <block id="d950f0cc340509cac6299d8daed8cf0a" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>設定集群</block>
+  <block id="d5158c215f75d40b3dc3a9efd519b60a" category="inline-link-macro">設定</block>
+  <block id="952715d9fa928d1059a800473c5469c0" category="paragraph">按照快速簡便的流程<block ref="5f55a5e0ef0b631e2040a3d854a6456f" category="inline-link-macro-rx"></block>使用系統管理員的ONTAP集群。</block>
+  <block id="373a0502633d2333dd8b952009c2d1ad" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>準備管理您的集群</block>
+  <block id="0ee63ccea22773b7b711a299adc32792" category="inline-link-macro">準備</block>
+  <block id="862b23ef0c9f5a6e409d8a2a17fe80e2" category="paragraph">在生產環境部署 AFX 之前，必須<block ref="8b4d8002fc8012c25c048b6e7a24771f" category="inline-link-macro-rx"></block>透過了解管理結構（包括儲存虛擬機器 (SVM)、使用者、角色和管理介面），確保安全、高效和有效的叢集管理。</block>
+  <block id="0a6e83c5c4575b7e80d6da08f9735aa2" category="summary">AFX 架構由多個硬體和軟體元件組成。這些系統組件被組織成不同的類別。</block>
+  <block id="5f22b34c52ed9e5684053416c7412701" category="doc">AFX儲存系統架構細節</block>
+  <block id="ff33f3d250bf1c214d487036a93cec89" category="section-title">實體組件</block>
+  <block id="bcd4325c773021c3146f76c78bf5c14d" category="paragraph">首次開始使用 AFX 時，首先從資料中心安裝的實體元件的高階視圖開始會很有幫助。</block>
+  <block id="96e16c6817f708a3a1c07d37d2e0d140" category="section-title">控制節點</block>
+  <block id="93dc53147183aa25468b9d7d85352a24" category="paragraph">AFX 控制器節點運行ONTAP軟體的專用功能，旨在支援 AFX 環境的要求。客戶端透過多種協定存取節點，包括 NFS、SMB 和 S3。每個節點都有儲存的完整視圖，並可根據客戶端請求進行存取。這些節點具有狀態，並採用非揮發性記憶體來保存關鍵狀態信息，並包含針對目標工作負載的額外增強功能。</block>
+  <block id="14b30e6d154aad2e029567044ae8a61a" category="section-title">存儲架和磁碟</block>
+  <block id="1dfd85e455154207aa07cd748f9bc92f" category="paragraph">AFX 儲存架使用非揮發性記憶體快速架構 (NVMe-oF) 連接高密度 SSD。磁碟使用融合乙太網路上的 RDMA (RoCE) 透過超低延遲結構進行通訊。儲存架（包括 I/O 模組、NIC、風扇和電源供應器）完全冗餘，沒有單點故障。自管理技術用於管理和控制 RAID 配置和磁碟佈局的各個方面。</block>
+  <block id="6317551ab02377b3cd4eb9e5779378da" category="section-title">叢集儲存交換器網絡</block>
+  <block id="6218626fad6e0cdcb5165f784004276f" category="paragraph">冗餘和高效能交換器將 AFX 控制器節點與儲存架連接。使用先進的協定來優化效能。此設計基於具有多個網路路徑的 VLAN 標記以及技術更新配置，以確保持續運行和輕鬆升級。</block>
+  <block id="499f032626af933608ddf76711536e1d" category="section-title">客戶培訓環境</block>
+  <block id="aefe27fae235c88aec02f6ee12e96ebe" category="paragraph">客戶端訓練環境是一個實驗室環境，具有客戶提供的硬件，例如GPU叢集和AI工作站。它通常被設計用於支援模型訓練、推理和其他 AI/ML 相關工作。客戶端使用 NFS、SMB 和 S3 等行業標準協定存取 AFX。</block>
+  <block id="84d57907c6e9a50e44689206ecac3384" category="section-title">客戶網路</block>
+  <block id="5c62c280967201137ee1b6de2f3307e6" category="paragraph">此內部網路將客戶端訓練環境連接到 AFX 儲存叢集。儘管NetApp希望針對需求和設計提供現場建議，但網路由客戶提供和管理。</block>
+  <block id="3680a461b7da6c652dacd37e78790a59" category="section-title">邏輯元件</block>
+  <block id="c59d0be08da9503ec5fe235ae0fd48e8" category="paragraph">AFX 包含多個邏輯元件。它們與集群的物理組件一起在軟體中實現。邏輯組件強制執行決定 AFX 系統的使用和配置的結構。</block>
+  <block id="65b9c79f6fc3fe829a50473cb293f46d" category="section-title">公共儲存池</block>
+  <block id="98e10503c863685716dd8a6af0655051" category="paragraph">儲存可用區 (SAZ) 是整個叢集的公共儲存池。它是儲存架中的磁碟集合，為所有控制器節點提供單一統一的命名空間。 SAZ 提供一種配置模型，對於節點使用哪些儲存架沒有固定的限制。客戶可以將可用空間和儲存使用情況視為整個 AFX 叢集的屬性。</block>
+  <block id="68c82055f30da4852b6ba323555b088b" category="section-title">FlexVolume、FlexGroup 和 bucket</block>
+  <block id="2e9f820f533beec53162d9fa6fc87cae" category="paragraph">FlexVolumes、FlexGroups 和 S3 buckets 是基於用戶端存取協定向 AFX 管理員公開的_資料容器_。這些可擴展的容器旨在抽象化許多複雜的內部儲存細節。</block>
+  <block id="4888f5f13a5d3e3be2bd58117e84381a" category="section-title">數據佈局和訪問</block>
+  <block id="f26f912146dbd8ebbf1d5a486eafdd3e" category="paragraph">資料佈局和存取經過調整，可實現無縫存取和 GPU 的有效利用。這對於消除瓶頸和保持一致的性能起著至關重要的作用。</block>
+  <block id="7a37d7fa7abad6b7c1f982d285ab2c47" category="section-title">SVM 和多租戶</block>
+  <block id="5f6ca18e64633c41b7ce8db58e842a58" category="paragraph">AFX 提供了一個租用戶模型，建立在AFF和FAS系統可用的 SVM 模型之上。  AFX 租戶模型已簡化，以簡化管理。</block>
+  <block id="789523490b5432d306149df5c01d2946" category="section-title">AFX 叢集部署</block>
+  <block id="7f118dd9288c3fe39cf47e1f8c466b6e" category="paragraph">下圖說明了典型的 AFX 叢集部署。控制器節點與儲存架分離並透過共享網路連接。</block>
+  <block id="54dc0ff6a5d6a080c896de05ec31762c" category="inline-image-macro">AFX 叢集架構</block>
+  <block id="9d406ef56e35fceeceb777198c3bf02c" category="paragraph"><block ref="9d406ef56e35fceeceb777198c3bf02c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9645c20c52f9891775e274f2d93f03b3" category="summary">NetApp AFX 儲存系統具有多種特性，使其能夠作為高效能 NAS 平台運作。</block>
+  <block id="f71d632154995b6966d93b074e6b0972" category="doc">AFX儲存系統特點</block>
+  <block id="146bce7e5064a390cf7d24e569ded6b6" category="list-text">分離儲存和運算能力</block>
+  <block id="488ac6d8b0b2f8a57a54112ba3e640c5" category="list-text">與AFF和FAS儲存系統不同，叢集的 AFX 儲存和運算元素是分開的。  AFX 控制器不限於存取有限的一組本機磁碟。</block>
+  <block id="3e6ddd52fc2d6199e3bca227606a1e01" category="list-text">刪除聚合和 RAID 管理</block>
+  <block id="6746bcab662db05438ad593c8ce3db25" category="list-text">儲存管理員不再需要管理聚合和 RAID 群組。  AFX 處理這些任務，從而簡化管理並為非專業人員提供管理其資料的機會。</block>
+  <block id="da5d30cbf87a14e17de4115fc37e0f37" category="list-text">叢集的單一儲存池</block>
+  <block id="aea305bce3a1dfab3f4b85842e812dc4" category="list-text">將 AFX 運算和儲存分離，並簡化儲存管理，從而形成單一儲存池。此儲存可用區 (SAZ) 可供 AFX 叢集中的所有控制器節點使用。看<block ref="7605095791d77a2a1e3fa2bb7965cf64" category="inline-link-macro-rx"></block>了解更多詳情。</block>
+  <block id="f07bcd2df9fddb686c563d2c1be9a9ab" category="list-text">高效能</block>
+  <block id="13a40123f8b31b169fc2edd20f3c4842" category="list-text">AFX 專為滿足專業 AI/ML 應用程式所需的高效能而建置。它可以更有效地利用現代硬體來提供具有超低延遲的高且持續的頻寬。</block>
+  <block id="a0eb69a0317da37cc67f0894aa50b023" category="list-text">操作簡便</block>
+  <block id="eb4ceb32a48f8a193f7ade2f4c27c70a" category="list-text">單一儲存池以及包括自動儲存管理在內的其他功能提供了更簡單的管理和操作模型。</block>
+  <block id="2d215ebfc0280f8163d071454ec7ce01" category="list-text">可擴展性</block>
+  <block id="d873ab9d45206d09cab7051400112531" category="list-text">叢集中的控制節點和儲存架組可以根據應用需求獨立擴充。添加控制器或機架時，管理要求和中斷有限。</block>
+  <block id="a28e19685ed26ba7cb421f419ad1ccd3" category="list-text">提高資料移動性</block>
+  <block id="cbddb588d113a3d7c3587214ed253bda" category="list-text">磁碟區可以在叢集控制器節點之間無中斷地移動，而無需實際複製資料。而是更新元資料目錄和索引指標。這大大提高了典型管理程序以及故障情況下的復原效能。</block>
+  <block id="6c0cd4de34dd2ec788634d8318964a80" category="summary">了解如何將控制器節點連接到網路、交換器和儲存架。</block>
+  <block id="adfec3799d67c625e4ec00b0811cd65d" category="doc">AFX 1K 儲存系統支援的配置</block>
+  <block id="9f6b3b511e97827d6204aae870f4b619" category="paragraph">了解 AFX 1K 儲存系統支援的硬體組件和佈線選項，包括相容的儲存磁碟架、交換器以及正確設定係統所需的電纜類型。</block>
+  <block id="cef2cef14135fa0a7f8a1a1b12d33005" category="section-title">支援的 AFX 1K 佈線配置</block>
+  <block id="d68caa870c599c4f4feda00ea05204ad" category="paragraph">AFX 1K 儲存系統的初始設定支援至少四個控制器節點透過雙交換器連接到儲存磁碟架。</block>
+  <block id="8204ac96f4db60a13314fdddc8e9d0b9" category="paragraph">額外的控制器節點和磁碟架擴展了初始 AFX 1K 儲存系統配置。擴展的 AFX 1K 配置遵循與下圖所示的相同的基於交換器的佈線方法。</block>
+  <block id="325fb005ba5ff6b41fa0892905611f15" category="inline-image-macro">AFK 1K 儲存系統範例佈線</block>
+  <block id="3fbfe926ceca9a55d625df8be8f9ee1b" category="paragraph"><block ref="3fbfe926ceca9a55d625df8be8f9ee1b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cf0b851cf65a2b38aa358691f2054eb4" category="section-title">支援的硬體組件</block>
+  <block id="1614dfbda42baa4bbc5a3a16bcf72202" category="paragraph">查看 AFX 1K 儲存系統的相容儲存磁碟架、交換器和電纜類型。</block>
+  <block id="bd5c641408f65aa18580861a6ce2400c" category="cell">*控制器架*</block>
+  <block id="e55e587f6b1d17f654c1a312dc755a0b" category="cell">*磁碟架*</block>
+  <block id="8c64f9689a704b2988400d455c2f479f" category="cell">*支援的交換器*</block>
+  <block id="bf354bd94707871c479fe03e89aa650a" category="cell">*支援的電纜*</block>
+  <block id="03a70507b7d040ed5990e474d0b55688" category="paragraph">AFX 1K</block>
+  <block id="ce10d24d102f61248a1ca7225202165a" category="paragraph">NX224</block>
+  <block id="2dba2a62d77ad15231f182c614bf648e" category="list-text">CiscoNexus 9332D-GX2B（400GbE）</block>
+  <block id="fa92c432433be25e058163ac4b273419" category="list-text">CiscoNexus 9364D-GX2A（400GbE）</block>
+  <block id="ccadf3c1142f54eaa3a58ead074f4ecb" category="list-text">400GbE QSFP-DD 分支至 4x100GbE QSFP 分支電纜</block>
+  <block id="d3e87e629a2d6d0a59d0066afa306439" category="admonition">分支電纜用於交換器、控制器和磁碟架之間的 100GbE 連接。</block>
+  <block id="0e1a964c29c6fbf1fce3f6841c762780" category="list-text">100GbE 電纜連接至控制器集群和 HA 端口</block>
+  <block id="a7216aff820483f78263ac9acccead71" category="list-text">100GbE 電纜連接至磁碟架</block>
+  <block id="72b83fe9cdc93dbdeaba7e0c0344aee2" category="list-text">2 條 400GbE 電纜，用於交換器 A 和交換器 B 之間的 ISL 連接</block>
+  <block id="55e7a2908623cd1f3c58ce873aeede6c" category="list-text">用於管理連接的 RJ-45 電纜</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">下一步是什麼？</block>
+  <block id="da8b31c2c4f85f88823b1cc763e39e4b" category="inline-link-macro">查看 AFX 1K 儲存系統的網路需求</block>
+  <block id="79b36c4d5568e07584e6eb0d0d9e5b2d" category="paragraph">在查看了支援的系統配置和硬體組件後，<block ref="50887fcc3b8d9850bb8c58c172e2280d" category="inline-link-macro-rx"></block> 。</block>
+  <block id="a2fd2a2b1acaf71495b078102f282cee" category="summary">了解如何將 AFX 1K 控制器電纜連接到網路以及如何將控制器連接到架子。</block>
+  <block id="dfb19dca13edc7bd8094f87b7c8d4814" category="doc">連接 AFX 1K 儲存系統的硬體</block>
+  <block id="77ef8fff5a1fa500fdc464eab34fe80d" category="paragraph">安裝 AFX 1K 儲存系統的機架硬體後，安裝控制器的網路電纜，並連接控制器和儲存架之間的電纜。</block>
+  <block id="b3a1e3cfc607694cb423d46b8b23fa54" category="paragraph">有關將儲存系統連接到網路交換器的信息，請聯絡您的網路管理員。</block>
+  <block id="e5e09031843479ef9ef8cbbd4c2f404c" category="inline-link-macro">NetAppHardware Universe</block>
+  <block id="a28718801e1a1879bc4c740387a935cd" category="list-text">這些程式顯示了常見的配置。具體的佈線取決於您為儲存系統訂購的組件。有關全面的配置詳細資訊和插槽優先級，請參閱<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="8b616691f1b58b17694d04e243c5c779" category="list-text">AFX 控制器上的 I/O 插槽編號為 1 到 11。</block>
+  <block id="5390d39973e9480af34cac751728216c" category="image-alt">AFX 控制器上的插槽編號</block>
+  <block id="b628d1d1422e1e304f2a41441b77ee61" category="list-text">佈線圖形顯示箭頭圖標，指示將連接器插入連接埠時電纜連接器拉片的正確方向（向上或向下）。</block>
+  <block id="fd2cb99acafb4f0144bfb5e0e4c31373" category="paragraph">插入連接器時，您應該感覺到它咔噠一聲到位；如果沒有感覺到咔噠一聲，請將其取出，翻轉並重試。</block>
+  <block id="416f5908ffc86e7abf276c4f75904ee7" category="inline-image-macro">電纜拉片方向</block>
+  <block id="c486d43df45ffe41cde84a1b0fa45aa0" category="paragraph"><block ref="c486d43df45ffe41cde84a1b0fa45aa0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9374c5e802bf6b1ff92af59f8a647e03" category="paragraph">連接器組件很精密，安裝到位時要小心。</block>
+  <block id="db2d996135c18f3292b7becd924f6ce2" category="list-text">當佈線到光纖連接時，先將光纖收發器插入控制器端口，然後再佈線到交換器端口。</block>
+  <block id="5f229a9a6914f36d0c7f990c5dd979ca" category="list-text">AFX 1K 儲存系統在叢集和儲存網路上使用 4x100GbE 分支電纜。 400GbE 連接與交換器連接埠相連，100GbE 連接與控制器和驅動器架連接埠相連。儲存和 HA/叢集連線可以與交換器上的任何非 ISL 連接埠建立。</block>
+  <block id="a39cbdf3556d2247e7f4fa382a8e5e35" category="paragraph">對於給定的 4x100GbE 分支電纜連接到特定的交換器端口，您可以透過這條分支電纜將所有 4 個連接埠連接到交換器。</block>
+  <block id="6d89bbfd2411c00390171fa4620a2783" category="list-text">1 個 HA 連接埠（插槽 1）</block>
+  <block id="b6d8c74111c188910bdefcd2adcda931" category="list-text">1 x 叢集連接埠（插槽 7）</block>
+  <block id="c4d3d45d793eb993ca03dfa39259404c" category="list-text">2 個儲存連接埠（插槽 10、11）</block>
+  <block id="df4996cbb1f5814efce564f5014e7310" category="paragraph">所有「a」連接埠連接到交換器 A，所有「b」連接埠連接到交換器 B。</block>
+  <block id="298a50f0b4f9da25188462848d528731" category="admonition">Cisco Nexus 9332D-GX2B 和 9364D-GX2A 交換器設定到 AFX 1K 儲存系統需要 4x100GbE 分支電纜連接。</block>
+  <block id="0b47086f2d53dbb9632d279e9918b4da" category="section-title">步驟 1：將控制器連接到管理網絡</block>
+  <block id="682701dba15c7c4c75458bb51c17becf" category="paragraph">將每個交換器上的管理連接埠連接到任一管理交換器（如果訂購）或將其直接連接到管理網路。</block>
+  <block id="d48270c5683eeae465518dbbfacf48fe" category="paragraph">管理連接埠是位於交換器 PSU 側的右上方連接埠。每個交換器的CAT6電纜在安裝完成後都需要穿過直通面板，以連接到管理交換器或管理網路。</block>
+  <block id="c7900e3ee1f4eb935f449465b57ad5c1" category="paragraph">使用 1000BASE-T RJ-45 電纜將每個控制器上的管理（扳手）連接埠連接到管理網路交換器。</block>
+  <block id="1107155d6b0c900a6485f06681854862" category="image-alt">RJ-45 電纜</block>
+  <block id="9c29eb35e98929529d99ca71cd855f4e" category="paragraph">*1000BASE-T RJ-45 電纜*</block>
+  <block id="a8536d671676b42d7c49328e04123a96" category="image-alt">連接到您的管理網絡</block>
+  <block id="38821947dff053760f4c97b648ca454a" category="admonition">請勿插入電源線。</block>
+  <block id="ac2fabc072fe49d88bd9fcf7672bd47e" category="list-text">連接到主機網路。</block>
+  <block id="48c5a2b11b9c73812d202a16a21ac758" category="section-title">步驟 2：將控制器連接到主機網絡</block>
+  <block id="8637ca13eb3c1a10bb4383130268c950" category="paragraph">將乙太網路模組連接埠連接到您的主機網路。</block>
+  <block id="7b528e83c1ae7816f8ec31c6295ac578" category="paragraph">此過程可能會因您的 I/O 模組配置而異。以下是一些典型的主機網路佈線範例。看<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>適合您的特定係統配置。</block>
+  <block id="effd554ec19ebcab6d3a374ac9b51cd1" category="list-text">將下列連接埠連接到乙太網路資料網路交換器 A。</block>
+  <block id="a5c5fdf5a84c0bc3e0ec5da0813516da" category="list-text">控制器A（範例）</block>
+  <block id="e166f18e211001ff8f47f5d71bd5c254" category="list-text">e2a</block>
+  <block id="577e6b9899e57c4e54e43cf79c919f83" category="list-text">e3a</block>
+  <block id="b91a4a6a419923eeb8f97338fc34936b" category="list-text">控制器 B（範例）</block>
+  <block id="11db4a2b68c8f1aeb97f773a0dce8ecc" category="paragraph">*100GbE 電纜*</block>
+  <block id="c6dd9fad40f1c30f08c8f34623f8ed7d" category="image-alt">100 Gb 乙太網路電纜</block>
+  <block id="50f69b736cea52c0f9b7cc77b698390c" category="image-alt">乙太網路電纜</block>
+  <block id="808f3fa88e6266b2beb8f1153dd991ec" category="list-text">將下列連接埠連接至乙太網路資料網路交換器 B。</block>
+  <block id="53c535a8b8a2c8bb670d136b82e73f99" category="list-text">e2b</block>
+  <block id="969d430598a257671bdf944480e4d46b" category="list-text">e3b</block>
+  <block id="4015e00b406d10c628519f953d69e086" category="section-title">步驟 3：連接集群和 HA</block>
+  <block id="093fe9dff1e5370d0b97313cefba5acd" category="paragraph">使用群集和 HA 互連電纜將 e1a 和 e7a 連接埠到交換器 A，將 e1b 和 e7b 連接到交換器 B。 e1a/e1b 連接埠用於 HA 連接，e7a/e7b 連接埠用於叢集連接。</block>
+  <block id="7d1e8fb2f50320f7b5004ba0fd39055b" category="list-text">將下列控制器連接埠連接到叢集網路交換器 A 上的任何非 ISL 連接埠。</block>
+  <block id="595df28a8a4a9361a6231a9d84e8cd08" category="list-text">控制器A</block>
+  <block id="9cb7b36b3f2bccc776862e6f2f494077" category="list-text">e1a</block>
+  <block id="9a031538991c9e151341376dfd687bec" category="list-text">e7a</block>
+  <block id="a9e70fa35de61f4ac25cc4bcd706a55d" category="list-text">控制器B</block>
+  <block id="29b62d617481485649ea2d5b54fca512" category="image-alt">集群 HA 電纜</block>
+  <block id="f1d133e33e29362e931a34312a961d0b" category="image-alt">將集群連接線連接至集群網絡</block>
+  <block id="ac32cb5bd4dc17916ab1ece800d39226" category="list-text">將下列控制器連接埠連接到叢集網路交換器 B 上的任何非 ISL 連接埠。</block>
+  <block id="e737b5ac24a63afc00e81377a906728d" category="list-text">e1b</block>
+  <block id="ef552e9c89303b51a8bdce9d5298edba" category="list-text">e7b</block>
+  <block id="c61349783073807f1993874d0e3a4a8c" category="section-title">步驟 4：連接控制器到交換器的儲存連接</block>
+  <block id="da160308e3b4b4a80bf1b72b5bdbedb8" category="inline-link">Hardware Universe</block>
+  <block id="7bebd570400c9d8d9796caad43fdcebd" category="paragraph">將控制器儲存連接埠連接到交換器。確保您的交換器具有正確的電纜和連接器。看<block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block>了解更多。</block>
+  <block id="d7434100057b78673eee73421ad29942" category="list-text">將下列儲存連接埠連接到交換器 A 上的任何非 ISL 連接埠。</block>
+  <block id="405e469b4aa3065616ee04f4a4b2b35e" category="list-text">e10a</block>
+  <block id="2772fdc65a945771c18178a5b650c575" category="list-text">e11a</block>
+  <block id="b222cca23840b6a495e76b8c300b08f2" category="image-alt">100 Gb 電纜</block>
+  <block id="56812cf9e76eb2dfaa41475474798d4b" category="image-alt">將控制器記憶體以電纜連接至交換器 A</block>
+  <block id="dc1921771bb6c193442045d9a99b8c9d" category="list-text">將下列儲存連接埠連接到交換器 B 上的任何非 ISL 連接埠。</block>
+  <block id="d5dec99b9c0f6ad0c56335c85d42e40b" category="list-text">e10b</block>
+  <block id="6dfe0149eb6951bd7c7e5c94c1713869" category="list-text">e11b</block>
+  <block id="73b33ccdc5c989a11800499004721836" category="image-alt">將控制器記憶體以電纜連接至交換器 B</block>
+  <block id="18154dcfffa2547c8d59ed9df65fb3ac" category="section-title">步驟 5：架設機架到交換器的連接線</block>
+  <block id="b1ea5415ee8f031dcace291f9c98e0be" category="paragraph">將 NX224 儲存擴充架連接到交換器。</block>
+  <block id="5a684badbec5242d1800f819ca49559e" category="paragraph">有關儲存系統支援的最大架數量以及所有佈線選項，請參閱<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="3475b7662b91f1346d1ce7d600b69e33" category="list-text">將下列機架連接埠連接至模組 A 的交換器 A 和交換器 B 上的任何非 ISL 連接埠。</block>
+  <block id="b99d29d68b80ff4709bbca5e44c2ea8a" category="list-text">模組 A 到交換器 A 的連接</block>
+  <block id="204a3eeab2a68f6bd87db22983749c42" category="list-text">e4a</block>
+  <block id="a1fcae101b353ddec02aba4e96eea111" category="list-text">模組 A 到交換器 B 的連接</block>
+  <block id="0b4fd578fa85b9d3ad197fb3a5fbf4db" category="list-text">e4b</block>
+  <block id="bc0b36758c307df8bd97da5553feb240" category="image-alt">電纜架至交換器 A 和交換器 B</block>
+  <block id="9eac7785dfc0bbab62557f03b9557166" category="list-text">將下列機架連接埠連接至交換器 A 和交換器 B 上用於模組 B 的任意非 ISL 連接埠。</block>
+  <block id="731e52d31bb62f854d2ec0c37b0ddf7e" category="list-text">模組 B 到交換器 A 的連接</block>
+  <block id="4a7ee7fbba5bc8a1a276d9ee6a63ed38" category="list-text">模組 B 到交換器 B 的連接</block>
+  <block id="fd237566ec57d5c7d07a07d2de3f5da4" category="inline-link-macro">打開電源並配置交換機</block>
+  <block id="f5a20b01e4e92799bd754e081d26baa2" category="paragraph">連接硬體後，<block ref="ea78b4766c5f2cc6aaf348a949513439" category="inline-link-macro-rx"></block> 。</block>
+  <block id="61aa41645e90edf222517c80068cc2c5" category="summary">安裝 AFX 硬體後，您可以完成叢集設定。此過程涉及兩個相關的配置階段，您需要按順序執行。</block>
+  <block id="555d2f7366ee48937103a84c2e34ab15" category="doc">設定 AFX 儲存系統ONTAP集群</block>
+  <block id="1a03950a8b042e50b4fa0a4ba5ebf056" category="paragraph">安裝 AFX 硬體後，您可以完成ONTAP叢集設定。此過程涉及兩個相關的配置階段，您需要按順序執行。</block>
+  <block id="4a10c4c51ce8042f23d8552dbd29c615" category="section-title">執行初始叢集設定</block>
+  <block id="d67e08295ddac36d182423f29b6d953e" category="paragraph">您可以將筆記型電腦設備連接到 AFX 叢集並設定幾個全域設定值。</block>
+  <block id="a357a6dc879fb21456a023174999f986" category="paragraph">AFX 叢集有四個區域必須進行初始設定。前三個是必需的，最後一個是可選的。</block>
+  <block id="56195cb547375d9e9c0ef1d9cb2cb668" category="paragraph">您需要掌握以下資訊：</block>
+  <block id="17f9763b5928eb7d43b4432194b9abfd" category="list-text">叢集管理IP位址</block>
+  <block id="98120899673f27e9689b61d6b3870732" category="paragraph">叢集管理 IP 位址是叢集管理員用來存取管理 SVM 和管理叢集的叢集管理介面的唯一 IPv4 位址。您可以從組織中負責指派 IP 位址的管理員處取得此 IP 位址。</block>
+  <block id="cbb81dee4f5c03c21f392a86f157336d" category="list-text">網路子網路遮罩</block>
+  <block id="c434bb8b0d4ff4f8c72a02f79eb9224a" category="paragraph">在叢集設定期間， ONTAP需要一組適合您的配置的網路介面。如有必要，您可以調整建議。</block>
+  <block id="04a28563d9cca86ff33d1886c922c8d7" category="paragraph">您還需要以下物品：</block>
+  <block id="e62d1b7c016fb6f9a0829b685c2ab1ea" category="list-text">網路閘道 IP 位址</block>
+  <block id="4f003881b79490db2f8b01b7c398fce1" category="list-text">DNS 網域</block>
+  <block id="e28af899651d52d4e958ed29e85f0c9c" category="list-text">DNS 名稱伺服器 IP 位址</block>
+  <block id="178e188a7017b433a79efd35d6037e4c" category="list-text">NTP 伺服器 IP 位址</block>
+  <block id="2676562cc6b0cf6c0163b1086bb1c6c9" category="list-text">資料子網路遮罩</block>
+  <block id="ca50e512fa1de6da048c2a1c77d5f66e" category="list-text">發現您的集群網路。</block>
+  <block id="13a5c797fb82f415ef3d13e5c012faf4" category="list-text">將您的筆記型電腦連接到管理交換器並存取網路電腦和裝置。</block>
+  <block id="098bbae74bb948e3ff3baff0a28b2546" category="list-text">開啟檔案總管。</block>
+  <block id="b43b6fc30d6fa5fad81a00f958b516dc" category="list-text">選擇*網路*；然後右鍵並選擇*刷新*。</block>
+  <block id="f3758175c2afcd3da425644e9af65b6b" category="list-text">選擇任一ONTAP圖示；然後接受螢幕上顯示的任何證書。</block>
+  <block id="59b375f59423995965c5949c469b768e" category="paragraph">將顯示系統管理器使用者介面。</block>
+  <block id="e041869cafad45776d41ace1eaf57baf" category="list-text">設定管理員密碼。</block>
+  <block id="1a3fdad9d641133a1e19c5fdbfe21255" category="paragraph">提供並驗證<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block>帳戶。選擇*繼續*。</block>
+  <block id="65dc37fafad28c1a8a9c109af3d8d976" category="list-text">配置叢集和控制節點的IP位址。</block>
+  <block id="35c7fe01157254d80eb6615358234c6a" category="paragraph">提供 IP 位址和子網路遮罩。</block>
+  <block id="8165f1d7607b0e72446c39d17955414b" category="list-text">設定網路服務。選擇*繼續*。</block>
+  <block id="2d044c807325a8c22321174a6d18dbd9" category="paragraph">定義您的 DNS 和 NTP 伺服器的詳細資訊。</block>
+  <block id="083faa6cc4d08f602b1c409c9b142a4c" category="list-text">可選擇設定加密。</block>
+  <block id="29c706988d6c18477050ac049bc0a43a" category="paragraph">您可以定義集群加密的詳細資訊。選擇*繼續*。</block>
+  <block id="65de5f3624a9299057db534bf49be81d" category="paragraph">您將被重新導向到系統管理員登入頁面。執行中所述的步驟<block ref="8eaf26416011ed48324cd88218ee5f69" category="inline-xref-macro-rx"></block>。</block>
+  <block id="df7193f7e4e76c31b0471a4a926da28d" category="section-title">完成集群設定</block>
+  <block id="ed5a420a3b36f2a74c60bfd3701a8273" category="paragraph">完成初始設定後，您可以使用系統管理員完成ONTAP叢集設定。</block>
+  <block id="7152209da49e2fa72ddfb905640c378b" category="paragraph">在設定過程中配置了 AFX 系統ONTAP叢集的三個區域。如果可能的話，請完成所有三個，但只需要第一個。</block>
+  <block id="e677e165081d0460f5259963ef94fb16" category="list-text">VLAN 配置詳細資訊。</block>
+  <block id="2105150042d35f96d203134af0ccb810" category="list-text">NAS 和/或 S3 配置詳細資訊。</block>
+  <block id="29cc1adfb6ebe583d0b3b87045f1cd02" category="list-text">使用您在初始叢集設定期間提供的管理員帳戶Sign in系統管理員。請注意右上角的彈出窗口，其中有三個配置選項。</block>
+  <block id="2b92f46816829470f85a9a3248277e01" category="list-text">選擇*VLAN 和標記*並選擇適合您環境的網路選項。</block>
+  <block id="b4c4651bb6eec6014a4544133f1379b8" category="list-text">選擇*網路服務*並配置預設資料 SVM 的客戶端存取協定。</block>
+  <block id="fa0d00eba52004814f9e675e8b363e21" category="list-text">選擇*資料容器*並建立磁碟區或 S3 儲存桶。</block>
+  <block id="7d4cccfbf4982cf98dfcc8ab84353542" category="inline-link-macro">準備管理 AFX</block>
+  <block id="467c52b97e48b31eaae92b849c44d932" category="paragraph">你應該<block ref="ccf85198082f902f2e1613b287967043" category="inline-link-macro-rx"></block>在生產環境中使用 AFX 叢集之前。</block>
+  <block id="ba666587c9cf6e1e8d11bc6e10e937a6" category="inline-link-macro">配置 AFX 資料 SVM</block>
+  <block id="72322876bb564ee9e800d6d21ca838fc" category="list-text"><block ref="72322876bb564ee9e800d6d21ca838fc" category="inline-link-macro-rx"></block></block>
+  <block id="ccf85198082f902f2e1613b287967043" category="list-text"><block ref="ccf85198082f902f2e1613b287967043" category="inline-link-macro-rx"></block></block>
+  <block id="c38bd8923cd9d703f6afe0fbef452f80" category="summary">了解如何安裝 AFX 1K 儲存系統和儲存架的導軌套件，以及如何將 AFX 硬體固定在機櫃或電信機架中。</block>
+  <block id="f15992b3ead5729a349b745d488997b1" category="doc">安裝 AFX 1K 儲存系統</block>
+  <block id="bcc80e56e3768496ebb6201488ace470" category="paragraph">安裝交換器後，您應該安裝 AFX 1K 儲存系統的硬體。首先，安裝導軌套件。然後將儲存系統安裝並固定在機櫃或電信機架中。</block>
+  <block id="25e29897c37b7e5f9f9f0d8aac2e8c21" category="list-text">確保您擁有導軌套件隨附的說明書。</block>
+  <block id="a532ca2743f35f80d73027d3118f83f6" category="list-text">了解與儲存系統和儲存架的重量相關的安全問題。</block>
+  <block id="cd5270ea2c99376e2e028058d02bfa65" category="list-text">了解通過儲存系統的氣流從安裝擋板或端蓋的前部進入，並從連接埠所在的後部排出。</block>
+  <block id="a23c8df519f5dec5dcc76f5989d937c4" category="list-text">根據需要，請按照套件中包含的說明安裝儲存系統和儲存架的導軌套件。</block>
+  <block id="ffeb9eeaf13c24dfa3fa496e3cdbc9f3" category="list-text">在機櫃或電信機架中安裝並固定控制器：</block>
+  <block id="bdb39b5926a304a8f387b036b6fd9445" category="list-text">將儲存系統放置到機櫃或電信機架中間的導軌上，然後從底部支撐儲存系統並將其滑入到位。</block>
+  <block id="0a508c750e66a219b3bc9449125a4672" category="list-text">使用隨附的安裝螺絲將儲存系統固定到機櫃或電信機架上。</block>
+  <block id="089b970da193b89b95bca533b31b7b24" category="list-text">將邊框安裝到控制器的前面。</block>
+  <block id="ee9f28f087f8a823b0a1001069fd40ee" category="list-text">如果您的 AFX 1K 儲存系統隨附電纜管理設備，請將其連接至儲存系統的後方。</block>
+  <block id="6b7aa880220c7f598440de8d8a0f944b" category="image-alt">安裝電纜管理裝置</block>
+  <block id="952805fa15e6e1f3af7524361380c893" category="list-text">安裝並固定存放架：</block>
+  <block id="76f6a6a53ead4da24271bca7a9b976e0" category="list-text">將儲存架的背面放置在導軌上，然後從底部支撐架子並將其滑入機櫃或電信機架中。</block>
+  <block id="1c0d24f2c7d27c1d893a72e1365466a5" category="paragraph">一般來說，儲存架和控制器應安裝在靠近交換器的地方。如果要安裝多個儲存架，請將第一個儲存架直接放置在控制器上方。將第二個儲存架直接放置在控制器下方。對任何額外的儲存架重複此模式。</block>
+  <block id="871681e86e80556b261166721e0bbe3b" category="list-text">使用隨附的安裝螺絲將儲存架固定到機櫃或電信機架上。</block>
+  <block id="a13adae3e077cee7d03770c7ed317c14" category="inline-link-macro">您的 AFX 1K 儲存系統支援的佈線配置</block>
+  <block id="9ff57c4ad4002b91b180bb9be693adb7" category="paragraph">安裝 AFX 系統的硬體後，請查看<block ref="da343cdfc631756167662f2d4b8cf843" category="inline-link-macro-rx"></block>。</block>
+  <block id="c0c8f19e1caa03ae66089f6734ad6427" category="summary">從ONTAP 9.9.1 開始，您可以使用Cisco Nexus 9364d-gx2a 交換器將儲存和叢集功能組合到共用交換器場景。</block>
+  <block id="215b6a4f33e7f8bef0742d3c0e4ebc2e" category="doc">AFX 1K 儲存系統的網路需求</block>
+  <block id="a3c476a13c3cdb50fb0c59adf2fd3abf" category="paragraph">記錄連接到 AFX 1K 儲存系統的每個網路所需的資訊。</block>
+  <block id="5b3bc2041b779a6eb06cd20122f89cea" category="section-title">收集網路資訊</block>
+  <block id="9eea5f60857e8088be59ae7efe88a7f5" category="paragraph">在開始安裝 AFX 1K 儲存系統之前，請收集所需的網路資訊</block>
+  <block id="becb2a794e73682397182ea70e8c3723" category="list-text">每個儲存系統控制器和所有適用交換器的主機名稱和 IP 位址。</block>
+  <block id="0c8374c87ef91b0dd751ef764fd68300" category="paragraph">大多數儲存系統控制器透過連接到乙太網路服務連接埠（扳手圖示）透過 e0M 介面進行管理。</block>
+  <block id="541fb7ba8b8b8df9c175d1695f706597" category="paragraph">請參閱<block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block>了解最新資訊。</block>
+  <block id="b1c41bdc695ad97165325d962251cadc" category="paragraph">叢集管理IP位址是叢集管理員用來存取管理儲存VM和管理叢集的叢集管理介面的唯一IP位址。您可以從組織中負責指派 IP 位址的管理員處取得此 IP 位址。</block>
+  <block id="5fac073ccc456e10f426a9a26a9e425e" category="paragraph">在叢集設定期間， ONTAP會建議一組適合您的配置的網路介面。如果需要的話，您可以調整建議。</block>
+  <block id="2571c536c5583fb579d56c26dc1bdcad" category="list-text">節點管理 IP 位址（每個節點一個）</block>
+  <block id="928578e16a90196fc9a03ee550b28e6a" category="list-text">用於管理網路流量的 IP 子網路。</block>
+  <block id="5124f340185337b3889cad30707fcbec" category="section-title">Cisco交換器的網路需求</block>
+  <block id="df4cd8fac1edb1c835436e48cce2b948" category="paragraph">對於Cisco Nexus 9332D-GX2B 和 9364D-GX2A 交換器的安裝和維護，請務必檢查佈線和網路需求。</block>
+  <block id="bdd8837c5f5666c1f37ec05326aa385f" category="section-title">網路需求</block>
+  <block id="3eb36d6d74c43353c4b5b101aa777feb" category="paragraph">所有交換器配置都需要以下網路資訊。</block>
+  <block id="31ecd7552867bf00e0a88fbcbfd147a0" category="list-text">管理網路流量的 IP 子網</block>
+  <block id="77918707dd3c6ba610a21dee1c40ef85" category="list-text">每個儲存系統控制器和所有適用交換器的主機名稱和 IP 位址</block>
+  <block id="118d935cca54466f59122caecfde09ad" category="section-title">佈線要求</block>
+  <block id="1494bf11d6b40d5359db0275de9e3954" category="list-text">您擁有適合您的交換器的數量和類型的電纜和電纜連接器。查看<block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block>。</block>
+  <block id="922e0472f9731d915fa1e9d3a596e9cf" category="list-text">根據您最初設定的交換器類型，您需要使用隨附的控制台連接線連接到交換器控制台連接埠。</block>
+  <block id="eaacee864136a168dbc829d9aea195e8" category="inline-link-macro">為 AFX 1K 儲存系統連接控制器和儲存架</block>
+  <block id="befda060a8d4a11755e7bf5aea99643a" category="paragraph">查看網路要求後，您<block ref="3f55b179868ab0e8664ab8e060f45bc6" category="inline-link-macro-rx"></block>。</block>
+  <block id="43103b8653178ac7b19bda3b0bf8248c" category="summary">查看 AFX 1K 儲存控制器和儲存架所需的設備和提升預防措施。</block>
+  <block id="e9a5ee2e899e9db799e6d1b54279737c" category="doc">AFX 1K 儲存系統的安裝要求</block>
+  <block id="763c3e1a03605d1dee78831f7e378acd" category="paragraph">查看 AFX 1K 儲存控制器和儲存架所需的設備以及提升預防措施。</block>
+  <block id="38342a608d29c610e381db6c1bfd532c" category="section-title">安裝所需的設備</block>
+  <block id="0282bb68e3db68fe17958503718636ba" category="paragraph">要安裝 AFX 1K 儲存系統，您需要以下裝置和工具。</block>
+  <block id="5c454c254f4e346b0d54dac30e743b57" category="list-text">存取 Web 瀏覽器來設定您的儲存系統</block>
+  <block id="8dd75d4e14815a2e3e3154ea67cd841e" category="list-text">靜電放電 (ESD) 腕帶</block>
+  <block id="75b0ae11d26c806413ef6e8aed1ece4f" category="list-text">手電筒</block>
+  <block id="32271edc7814b81370e65a0b9ea22010" category="list-text">具有 USB/串行連接的筆記型電腦或控制台</block>
+  <block id="3777a3900b9b89fbcd4b8c1883e94552" category="list-text">用於設定存放架 ID 的迴紋針或細頭原子筆</block>
+  <block id="f0ae587f290f3d775f2ea5aa1a8a00ea" category="list-text">2 號十字螺絲刀</block>
+  <block id="8170c4932dac7ac5a018213e28744cab" category="section-title">起重註意事項</block>
+  <block id="e3eb7077125dbf096d560da8b3939c79" category="paragraph">AFX 儲存控制器和儲存架很重。抬起和移動這些物品時要小心。</block>
+  <block id="8426a795d3bdc2e3b917313eb942f86a" category="section-title">儲存控制器權重</block>
+  <block id="7d83ce9fcec155b754d28f26c44bb2c0" category="paragraph">移動或抬起 AFX 1K 儲存控制器時請採取必要的預防措施。</block>
+  <block id="ce697af2e18af53f8cb875724d64de00" category="paragraph">AFX 1K 儲存控制器的重量可達 62.83 磅（28.5 公斤）。要抬起儲存控制器，需要兩個人或使用液壓升降機。</block>
+  <block id="ea2b428ae3132b5aa1f8abadc2dac0ec" category="image-alt">ASA A1K 解除警告圖標</block>
+  <block id="336e0262f6402efd45d8cf9d7ae13e8c" category="section-title">倉儲貨架重量</block>
+  <block id="fe464b77547b113c26b6c4a663f8d99c" category="paragraph">移動或抬起架子時請採取必要的預防措施。</block>
+  <block id="95431e07be1f7b49eef0ce6156cca6e1" category="open-title">NX224貨架</block>
+  <block id="1e9ac948c22c380faef83bb8dfbfecd1" category="paragraph">NX224 架子的重量最多可達 60.1 磅（27.3 公斤）。要抬起架子，需要兩個人或使用液壓升降機。將所有組件放在架子上（前部和後部），以防止架子重量不平衡。</block>
+  <block id="6eb6b5d3bd8847e6deb32e696bd6b006" category="image-alt">NX224 NSM100 起吊注意事項</block>
+  <block id="35c124f455f44a154eb3b514029ee58a" category="inline-link">安全資訊和監管通知</block>
+  <block id="fa81f583d8b6c7dcaf8e26a5fcf5de52" category="list-text"><block ref="fa81f583d8b6c7dcaf8e26a5fcf5de52" category="inline-link-rx"></block></block>
+  <block id="c0826d53de67f282837812ce41bd3659" category="inline-link-macro">準備安裝您的 AFX 1K 儲存系統</block>
+  <block id="643859f429a00be13677543de63e3928" category="paragraph">了解硬體需求後，<block ref="f97c0772c5c2ad31772b2c18320fc49b" category="inline-link-macro-rx"></block> 。</block>
+  <block id="5d60d2cd45b93ce9df46fa9dd3ca75a9" category="summary">開始安裝和設定 AFX 1K 儲存系統並將其部署到您的ONTAP環境中。</block>
+  <block id="6d8186efdc7990d46814a4a59d07b6d6" category="doc">AFX 1K 儲存系統的安裝與設定工作流程</block>
+  <block id="24f551a714c32e5e3f353f08d2b9972b" category="paragraph">要安裝和設定 AFX 1K 儲存系統，您需要查看硬體需求、準備站點、安裝交換器、安裝和連接硬體組件、啟動系統並設定ONTAP AFX 叢集。</block>
+  <block id="7ccd978bf0dbca0a0746f98d09b99f7f" category="inline-link-macro">查看硬體安裝需求</block>
+  <block id="6889512d643df7fa8ccfb7e52dd1181c" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="90572de4b12061d10d3adbe91dd02ace" category="inline-link-macro-rx"></block></block>
+  <block id="ad49d9a0b14af21cfd27b44c9da641c6" category="paragraph">查看安裝 AFX 1K 儲存系統的硬體需求。</block>
+  <block id="cc125c642728e6c444d1fe6e50739c09" category="inline-link-macro">準備安裝 AFX 1K 儲存系統</block>
+  <block id="92eae7b346dd281cc7271798fe3b556a" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="b9441425d695bb975cb61cabfd95aa14" category="inline-link-macro-rx"></block></block>
+  <block id="3f01b6d2b8f3ab1ccf60eedfe4a21533" category="paragraph">準備安裝 AFX 1K 儲存系統，包括準備場地、檢查環境和電氣要求、確保有足夠的機架空間、拆開設備包裝、根據裝箱單驗證內容以及註冊硬體以獲得支援。</block>
+  <block id="ac1423cec22e7de4d16590a0f3160112" category="inline-link-macro">安裝 AFX 1K 儲存系統的交換機</block>
+  <block id="2d65f80ec2ea43fb241121254becff69" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block><block ref="9e00fe2029bbc9ee86caa431ba44d4ef" category="inline-link-macro-rx"></block></block>
+  <block id="25dd51ab5dd989fc30a5a826d6ccac7c" category="paragraph">在機櫃或機架中安裝Cisco Nexus 9332D-GX2B 或 9364D-GX2A 交換器。如果使用Cisco Nexus 9364D-GX2A 交換機，請安裝直通面板套件。</block>
+  <block id="ded126a1b2fe1ee8123ed259c5458632" category="inline-link-macro">安裝 AFX 1K 儲存系統的硬體</block>
+  <block id="d84220684fde6f9927b830b2f2efdb5d" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="bb9a6691ed01c02293a445db8a07837a" category="inline-link-macro-rx"></block></block>
+  <block id="eab9447e6da5b97ee0d0ce217f4c4aa1" category="paragraph">安裝儲存系統和架子的導軌套件。將儲存系統固定在機櫃或電信機架中。接下來，將架子滑到安裝好的導軌上。最後，將電纜管理設備連接到儲存系統的後部，以便有組織地佈線。</block>
+  <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">五</block>
+  <block id="00b11a355e5f27cfc8f84ce912f2891c" category="inline-link-macro">為 AFX 1K 儲存系統連接控制器和儲存架</block>
+  <block id="89f9333704cd1b4b7f134947ea74e0c7" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="79b22cd73334ff6782f95f5fb64d8b7a" category="inline-link-macro-rx"></block></block>
+  <block id="669695567dba824d75d1603f456dba15" category="paragraph">要連接硬件，首先將儲存控制器節點連接到網絡，然後將控制器節點和儲存架連接到叢集交換器。</block>
+  <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">六</block>
+  <block id="7b9a9a7549790b50475b56d9b39dc68f" category="inline-link-macro">開啟並配置 AFX 1K 儲存系統的交換機</block>
+  <block id="e551e06867be928301482aab87c08582" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block><block ref="09da0474a59ad654fb754ad7bbde7f68" category="inline-link-macro-rx"></block></block>
+  <block id="bebe65813b650bdf3d778647d14a0688" category="paragraph">連接硬體，然後開啟電源並設定 AFX 1K 儲存系統的交換器。查看Cisco Nexus 9332D-GX2B 和 9364D-GX2A 交換器的設定說明。</block>
+  <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">七</block>
+  <block id="a4a96858f15187365b823c95ef3aac29" category="inline-link-macro">啟動 AFX 1K 儲存系統</block>
+  <block id="cbb1397b994794bc834e4756d51fbe3d" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block><block ref="503ba949b3c1a01f18fab3ec12f16cc9" category="inline-link-macro-rx"></block></block>
+  <block id="b7801902d597d602530f871bcf9fb6f1" category="paragraph">在開啟控制器節點的電源之前，請開啟每個儲存架的電源並指派唯一的儲存架 ID，以清楚辨識設定中的每個儲存架。</block>
+  <block id="873467d5d9052f0bee719bef01481a9a" category="summary">了解如何安裝 AFX 1K 儲存系統和儲存架的開關。</block>
+  <block id="08b5b70efc706ca464e4f996235f018d" category="paragraph">完成 AFX 1K 儲存系統安裝的準備工作後，您應該在機櫃或電信機架中安裝交換器。</block>
+  <block id="4440b74517460b8a0d480e8688689e6f" category="paragraph">確保您擁有以下可用組件：</block>
+  <block id="7a298dae32d29d6d4880c0d03618ae87" category="list-text">直通面板套件，可從NetApp取得（零件編號 X8784-R6）。</block>
+  <block id="435b7bb94e711c7db7d6bfecc9ea9488" category="paragraph">NetApp直通面板套件包含以下硬體：</block>
+  <block id="98cf694f0d51150fa06e5495a43d17ac" category="list-text">一個直通盲板</block>
+  <block id="43dd4edc6ef307f439d9c4b698795cce" category="list-text">四個 10-32 x .75 螺絲</block>
+  <block id="27f307aa652006efb1ea027d2035885d" category="list-text">四個 10-32 夾緊螺母</block>
+  <block id="828eeccf398aa5a5516c86cf77b98e41" category="list-text">對於每個交換機，使用八個 10-32 或 12-24 螺絲和夾緊螺母將支架和滑軌安裝到前後櫃柱上。</block>
+  <block id="19a356d6227c782e9f5da9f11a646795" category="list-text">用於在NetApp機櫃中安裝交換器的Cisco標準導軌套件。</block>
+  <block id="784c55256af328db72b621f19722713c" category="admonition">直通套件中不包含跳線。如果您的交換器未附帶跳線，請聯絡NetApp訂購正確的跳線。</block>
+  <block id="290d336236260cd4a5246beda2a977d5" category="inline-link">Cisco Nexus 9332D-GX2B NX-OS 模式交換器硬體安裝指南</block>
+  <block id="b1ec8c60f31cf5056d372b5933be8b0b" category="inline-link">Cisco Nexus 9364D-GX2A NX-OS 模式交換器硬體安裝指南</block>
+  <block id="66bae34306cc0c72e7058ee11822a847" category="admonition">Cisco 9332D-GX2B 和 9364D-GX2A 是連接埠側進氣交換器。交換器的網路連接埠必須安裝在機櫃的前面，排氣扇必須安裝在機櫃的後方。對於這種配置，您必須確保使用足夠長的電纜從機櫃前部的網路連接埠延伸到機櫃後部的儲存連接埠。  + 有關這些交換器的更多詳細信息，請訪問Cisco網站：<block ref="41dd90940bbf956b1a1bc9743b5329d8" category="inline-link-rx"></block>和<block ref="0684e00763f44490e4a966ecd9b6db00" category="inline-link-rx"></block>。</block>
+  <block id="233f5d43fe68130332533db747eb58bf" category="list-text">安裝直通盲板。</block>
+  <block id="f6a7153bd6774aa611c605474f2c556a" category="list-text">確定機櫃或機架中交換器和盲板的垂直位置。</block>
+  <block id="eca4fd64fa30887cca883fb2a8f5e9b3" category="list-text">在前櫃導軌兩側的相應方孔中安裝兩個夾緊螺帽。</block>
+  <block id="f830cc225c24ec543abaed8a0e1cd6e1" category="list-text">將面板垂直置於中央，以防止侵入相鄰的機架空間，然後鎖緊螺絲。</block>
+  <block id="ba26ab2737962b428c8c4c190fc4b611" category="list-text">將兩根跳線的母連接器從面板後方插入並穿過刷子組件。</block>
+  <block id="6bf1cd7d6280795378a41200d05f8abf" category="image-alt">跳線母接頭</block>
+  <block id="eff9a2b0e485ca3fb80f96fc9995fb62" category="image-alt">標註編號 1</block>
+  <block id="84951fe8f41956ced68bbcb457bb6396" category="paragraph">跳線的母連接器。</block>
+  <block id="fa947419fda89b500ddc1eb9c9566aac" category="list-text">將機架安裝支架安裝到交換器底盤上。</block>
+  <block id="9d192644baefaa9cadbacfe7cb846df1" category="list-text">將前機架安裝支架放置在交換器機殼的一側，使安裝耳與機殼面板（在 PSU 或風扇側）對齊，然後使用四顆 M4 螺絲將支架固定到機殼上。</block>
+  <block id="51b28b720325af79c61b562d18bc47b8" category="image-alt">前支架</block>
+  <block id="cb5d7fc87f5f11235e261bd3eb5a7274" category="list-text">對交換器另一側的另一個前機架安裝支架重複步驟 2a。</block>
+  <block id="d3a2f82f1368d3b2401cf3b32d391773" category="list-text">將後機架安裝支架安裝在交換器機箱上。</block>
+  <block id="8fc6bd7c64a7bf0e8ca93ce43c3b4773" category="list-text">對交換器另一側的另一個後機架安裝支架重複步驟 2c。</block>
+  <block id="a12951a873ab60e04d9e47e350c35048" category="list-text">將夾緊螺母安裝在所有四個 IEA 柱的方孔位置。</block>
+  <block id="3a3c5df96d2d575ca736cbf286962453" category="image-alt">夾緊螺帽位置</block>
+  <block id="e31a262c6006bc370171973986179dbf" category="paragraph">將兩個 9332D-GX2B 交換器安裝在可有效存取控制器和機架的機櫃位置，例如中間排。</block>
+  <block id="d17b8947c5f1c956ee8da30c8c9a2387" category="list-text">將滑動導軌安裝在機櫃或機架中。</block>
+  <block id="4d8420d40dce75f313c01601a674a6b0" category="list-text">將第一個滑軌放置在左後柱背面的所需位置，插入具有匹配螺紋類型的螺絲，然後用手指擰緊螺絲。</block>
+  <block id="d1e54755430bb6a8e7fa7d4df4ea67d0" category="image-alt">滑軌安裝</block>
+  <block id="22e1c69a3ad98dad67ca1a8bf0897f0e" category="paragraph">輕輕滑動滑軌，將其與機架上的螺絲孔對齊。</block>
+  <block id="746fda156f20e053f2c0e3b0e0ecab0e" category="image-alt">標註編號 2</block>
+  <block id="26c2cdf5bccddf982be0ed70c7bcbe40" category="paragraph">將滑軌的螺絲鎖緊到機櫃立柱上。</block>
+  <block id="40cc057209365f27735929c8c7ed6f54" category="list-text">對右側後柱重複步驟 4a。</block>
+  <block id="680ccd7258d4b8cabe00b8cf6976aedb" category="list-text">在櫥櫃上的所需位置重複步驟 4a 和 4b。</block>
+  <block id="03a03cd2731e761493665ef67eb16a3f" category="list-text">將交換器安裝在機櫃或機架中。</block>
+  <block id="35e2967b726b2b764ae51eb8fb8d97da" category="admonition">此步驟需要兩個人：一個人從前面支撐交換機，另一個人將交換機引導到後部滑動導軌中。</block>
+  <block id="19033a23393599d3606612c53c8ac0bf" category="list-text">將開關的背面放置在機櫃上的所需位置。</block>
+  <block id="f53f5bbbe67439bcece95c9404163dcc" category="image-alt">3232C 定位於 U39-40</block>
+  <block id="39dae41c6589b3dc99272e69be00af57" category="paragraph">當機殼推向後柱時，將兩個後機架安裝導軌與滑動導軌對齊</block>
+  <block id="aa90adfeda3a60d8328ffeaac901520a" category="paragraph">輕輕滑動交換機，直到前機架安裝支架與前柱齊平。</block>
+  <block id="ded5d66ae1d0da0a8c675319f3fa1f3c" category="list-text">將交換器安裝到機櫃或機架上。</block>
+  <block id="37f673a1cb8569d73c616bee67907b59" category="image-alt">開關附件</block>
+  <block id="3f902887e5aba19624297e6d23b9333e" category="paragraph">一個人將機殼前部保持水平，另一個人將後部的四個螺絲完全擰緊到機櫃柱上。</block>
+  <block id="dbcac8d4f8b58a195ce24afb90c0ad01" category="list-text">現在底盤無需任何輔助即可得到支撐，將前螺絲完全擰緊到柱子上。</block>
+  <block id="02fe11e658f1a9d42ee221974ed161d2" category="list-text">對機櫃上所需位置的第二個開關重複步驟 5a 至 5c。</block>
+  <block id="20362364ab0f48851bcdd8691308a0c8" category="admonition">透過使用完全安裝的開關作為支撐，在安裝過程中無需握住第二個開關的前部。</block>
+  <block id="ca589ad9339bfdf9d2dc1fe44ff86218" category="list-text">安裝開關後，將跳線連接到開關電源入口。</block>
+  <block id="366d17f9687ce050cd62ffe75f240a26" category="list-text">將兩條跳線的公插頭連接到最近可用的 PDU 插座。</block>
+  <block id="c63b648198b1570092cf4baa70e5437a" category="admonition">為了保持冗餘，兩根電線必須連接到不同的 PDU。</block>
+  <block id="df6317cae22ae51698dff6542e2ee804" category="paragraph">管理網路連接埠是右側 PSU 附近的下方 RJ-45 連接埠。安裝交換器後，將每個交換器的 CAT6 電纜穿過直通面板，以連接到管理交換器或網路。</block>
+  <block id="11427b70369259caa57418362864687c" category="inline-link-macro">在機櫃或機架中安裝 AFX 1K 儲存系統和層架</block>
+  <block id="13cd7c1f91224d06e47b94cf60f0a1c8" category="paragraph">在機櫃或機架中安裝交換器後，您<block ref="f395e282d4f58e17177d45194ca326fc" category="inline-link-macro-rx"></block>。</block>
+  <block id="4cf6834bd07138fbd32dfbdf144412b8" category="summary">了解如何啟動和設定 AFX 1K 儲存系統的交換器。</block>
+  <block id="9ad5dbdc39b4d55e4a2a3f4bd6758d73" category="paragraph">連接 AFX 1K 儲存系統後，您需要啟動並設定Cisco Nexus 9332D-GX2B 或 9364D-GX2A 交換器。</block>
+  <block id="4c2c05c322af82afd9af525902514b5c" category="list-text">將交換器的電源線插入電源。</block>
+  <block id="c62737cdd3f658b2c080ea393539da49" category="list-text">打開每個交換器的電源。</block>
+  <block id="74d427d525eaaf37db5bbbb57657cb0c" category="list-text">配置交換器以支援 AFX 1K 儲存系統。</block>
+  <block id="72295557ee935de6dcaaa496e9ffac7b" category="inline-link-macro">設定Cisco Nexus 9332D-GX2B 交換機</block>
+  <block id="ee580ea5ba41decce9294581c1bf8a36" category="list-text">對於Cisco Nexus 9332D-GX2B 交換機，請參閱叢集和儲存交換器文檔<block ref="ebd0953e922f25f223b8dff6a58fb84a" category="inline-link-macro-rx"></block>。</block>
+  <block id="1817109031f229042672af151b53e20f" category="inline-link-macro">設定Cisco Nexus 9364D-GX2A 交換機</block>
+  <block id="addfd44612da2038c3e3649fc9c115c5" category="list-text">對於Cisco Nexus 9364D-GX2A 交換機，請參閱叢集和儲存交換器文檔<block ref="d5fe58e0155150b259ce0bf656e34478" category="inline-link-macro-rx"></block>。</block>
+  <block id="20dca0630adbb0d8f903778442041063" category="inline-link-macro">開啟 AFX 1K 儲存系統</block>
+  <block id="daf056bef029d58c97e3fcabf3ff8cc1" category="paragraph">為 AFX 1K 儲存系統配置交換器後，<block ref="cae83d99a1d1cc2243a2d6bbc5469664" category="inline-link-macro-rx"></block> 。</block>
+  <block id="337e9239544f1891a09a6b9c13192533" category="summary">開啟每個機架的電源以分配唯一的機架 ID，開啟 AFX 控制器節點的電源，並固定電源線。</block>
+  <block id="c65f2d804ad34936850b57ca99d900bf" category="paragraph">安裝 AFX 1K 儲存系統的機架硬體並安裝控制器節點和儲存架的電纜後，應開啟儲存架和控制器節點的電源。</block>
+  <block id="0b5c1681fb8f009a141f0c7d0f2d8f64" category="section-title">步驟 1：開啟機架電源並分配機架 ID</block>
+  <block id="be3d2079d41d046da9a1c2292e45c947" category="paragraph">每個貨架都有一個獨特的貨架 ID，確保其在您的儲存系統設定中具有區別性。</block>
+  <block id="f4e530e07769045ad933874fca013307" category="list-text">有效的貨架 ID 為 01 至 99。</block>
+  <block id="e221e287474a256e692332baaa54b4e7" category="list-text">您必須對機架進行電源循環（拔掉兩條電源線，等待至少 10 秒鐘，然後重新插入）才能使機架 ID 生效。</block>
+  <block id="90b5c3b3e8b76a473c431858d638eccb" category="list-text">首先將電源線連接到架子上，用電源線固定器將其固定到位，然後將電源線連接到不同電路的電源上，從而為架子供電。</block>
+  <block id="dd7440caeb4e81877f46b6638ced0d7c" category="paragraph">插入電源後，架子會自動通電並啟動。</block>
+  <block id="67cfcbdbfb87a54aadf338e218c38216" category="list-text">取下左端蓋即可看到面板後方的架子 ID 按鈕。</block>
+  <block id="0d9cb84ca4d1b976611c703d55106b16" category="image-alt">更改NX224貨架ID</block>
+  <block id="48fb10beb7e1cd15b9bdbab40aac9532" category="paragraph">擱板端蓋</block>
+  <block id="d8147b4a0f272144c59f006b412b8290" category="image-alt">[標註 2</block>
+  <block id="22f4a2aa68e94fdf29e1fc7d0f30d571" category="paragraph">貨架面板</block>
+  <block id="8c5529e435c4992332c3afef54410f4e" category="image-alt">[標註 3</block>
+  <block id="40e6ceebb2eb1677b588bd7f52f95206" category="paragraph">貨架編號</block>
+  <block id="1e7068fa54071c2235730ac32aea59df" category="image-alt">[標註編號 4</block>
+  <block id="d99e56a0fc1270d6ad52dad4e860e03b" category="paragraph">貨架ID按鈕</block>
+  <block id="208e81853e4dca831b5edd6d17516137" category="list-text">更改貨架ID的第一個數字：</block>
+  <block id="a3b87846aaa315468824dd9c0e00c3e7" category="list-text">將迴紋針或細頭原子筆的拉直端插入小孔，輕輕按下貨架 ID 按鈕。</block>
+  <block id="1437cec285592fb2c5ceb7e806c74aa6" category="list-text">輕輕按住貨架 ID 按鈕，直到數位顯示器上的第一個數字閃爍，然後放開按鈕。</block>
+  <block id="3ff6d70b6e58b1ee2123348b53c6874b" category="paragraph">數字在 15 秒內閃爍，啟動貨架 ID 編程模式。</block>
+  <block id="d82a10aaede074fc250a2dc7ef372dca" category="admonition">如果 ID 閃爍的時間超過 15 秒，請再次按住貨架 ID 按鈕，確保將其完全按下。</block>
+  <block id="1e6aa1713a8e26a3cecae4cd918e20a0" category="list-text">按下並釋放貨架 ID 按鈕以增加數字，直到達到所需的數字（從 0 到 9）。</block>
+  <block id="9ae44f0bc1687521dee9858246cd5a9f" category="paragraph">每次按下和釋放的時間可以短至一秒鐘。</block>
+  <block id="1b0ebfdfcf370caa9ec32325934a52ca" category="paragraph">第一個數字繼續閃爍。</block>
+  <block id="c539e06786951f3062af110033f30a2e" category="list-text">更改貨架ID的第二個數字：</block>
+  <block id="6bdc58776501a466691cbaa9d0a857ae" category="list-text">按住按鈕直到數位顯示器上的第二個數字閃爍。</block>
+  <block id="b29901922763acb17e18f872ab1e2679" category="paragraph">數字閃爍最多可能需要三秒鐘。</block>
+  <block id="e7082f29431b847aed08cb5f1ed03619" category="paragraph">數位顯示器上的第一個數字停止閃爍。</block>
+  <block id="220344f33d58e5df2e69bb2dbb12a688" category="paragraph">第二個數字繼續閃爍。</block>
+  <block id="fbfc6fb88e89fa9fd421347ccdc222c8" category="list-text">鎖定所需的號碼並按住貨架 ID 按鈕直到第二個號碼停止閃爍，然後退出編程模式。</block>
+  <block id="c2dca9d3a8a74a90e1c390b10134c3b9" category="paragraph">數字停止閃爍最多可能需要三秒鐘。</block>
+  <block id="3a7f97a4c78b33a1c47a571494b17709" category="paragraph">大約五秒鐘後，數位顯示器上的兩個數字開始閃爍，琥珀色 LED 亮起，提醒您要處理的貨架 ID 尚未生效。</block>
+  <block id="6344f7fd68670da7ea2e25f860ab47c7" category="list-text">將架子進行電源循環至少 10 秒，以使架子 ID 生效。</block>
+  <block id="8dd5b39a083288c66f9b37e4b47571ed" category="list-text">拔掉架子上兩個電源的電源線。</block>
+  <block id="2fd334af24d7f85b4be7ae87f6cc3fd5" category="list-text">等待 10 秒鐘。</block>
+  <block id="f4eba532dc9721310c35cdad2e0831ac" category="list-text">將電源線重新插入機架電源以完成電源循環。</block>
+  <block id="2f3177ed0349a9000fbf243a6fbc164c" category="paragraph">只要插入電源線，電源就會開啟。其雙色 LED 應亮起綠色。</block>
+  <block id="5a6ec3ac63a7fb05de2686f31f690298" category="list-text">更換左端蓋。</block>
+  <block id="0c3ca35f9b2106a499e8518939261f8c" category="section-title">步驟 2：啟動控制節點</block>
+  <block id="76543d25c837c81eae4b25954e192b99" category="paragraph">打開儲存架並為其分配唯一 ID 後，開啟儲存控制器節點的電源。</block>
+  <block id="33c36f62f977a295a9a93ec48a27223b" category="list-text">將您的筆記型電腦連接到序列控制台連接埠。這使您可以監控控制器通電時的啟動順序。</block>
+  <block id="943e3a7c8a0476b63130b5a3dfab2ef1" category="list-text">使用 N-8-1 將筆記型電腦上的序列控制台連接埠設定為 115,200 波特。</block>
+  <block id="04112f6af1c35028ff6da3640556c14c" category="paragraph">有關如何設定序列控制台連接埠的說明，請參閱筆記型電腦的線上說明。</block>
+  <block id="637d6f599c1184d1c5de273700d7924f" category="list-text">將控制台連接線連接到筆記型電腦，然後使用儲存系統隨附的控制台連接線連接控制器上的序列控制台連接埠。</block>
+  <block id="dc4cb3e8c6b9abe025aa10b2d8d4b6f5" category="list-text">將筆記型電腦連接到管理子網路上的交換器。</block>
+  <block id="5dc15886a7be0b02974c471249fd2702" category="image-alt">控制台連接</block>
+  <block id="9e7e8b48adc159107d0baf9021253c61" category="list-text">使用管理子網路上的 TCP/IP 位址為筆記型電腦指派一個 TCP/IP 位址。</block>
+  <block id="a2e521b7ad497537c9e544a50086c51b" category="list-text">將電源線插入控制器電源，然後將其連接到不同電路的電源。</block>
+  <block id="5d181ca91be1af691d1f01654691cc7b" category="image-alt">A1K儲存系統與A70或A90電源連接圖</block>
+  <block id="e477637685baafe9bbd353f71ef51283" category="list-text">系統開始啟動。初始啟動可能需要長達八分鐘。</block>
+  <block id="eccb4d5293fe0dd408e74aab9093fb9b" category="list-text">LED 閃爍且風扇啟動，表示控制器正在通電。</block>
+  <block id="2a15831b428ec92914dd2d9b9c14a463" category="list-text">風扇在啟動時可能會有噪音，這是正常現象。</block>
+  <block id="d420064a5f4919f9be16d853c6d1997c" category="list-text">使用每個電源上的固定裝置固定電源線。</block>
+  <block id="d86c8f4fff3fb2feed3ee9c6ab6626ed" category="inline-link-macro">設定 AFX 集群</block>
+  <block id="4eb20ef06f12f582d4ebd27eaee89115" category="paragraph">開啟 AFX 1K 儲存系統後，您<block ref="a4e3e0c950d1563a6f1d32259f274df6" category="inline-link-macro-rx"></block>。</block>
+  <block id="4037f9dba9d587023878b63255863f7d" category="summary">準備在您的ONTAP環境中安裝 AFX 1K 儲存系統並註冊硬體以獲得支援權益。</block>
+  <block id="b81fa34f137f3d44fa104594a5caaef5" category="paragraph">準備安裝您的 AFX 1K 儲存系統，準備好場地、拆開包裝箱並將包裝箱內物品與裝箱單進行比較，然後註冊系統以取得支援權益。</block>
+  <block id="92c8397408f55d9526d554c55cde3d22" category="section-title">步驟 1：準備場地</block>
+  <block id="b6e21ce861fb28172c64aa34ddcebcb8" category="paragraph">若要安裝 AFX 1K 儲存系統，請確保您計劃使用的場地和機櫃或機架符合您的配置規格。</block>
+  <block id="784289434de2772034240714a84f80a9" category="list-text">使用<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>確認您的網站符合儲存系統的環境和電氣要求。</block>
+  <block id="d23c9ee502601b8ece6365625b468c81" category="list-text">確保您的儲存系統、架子和交換器有足夠的機櫃或機架空間：</block>
+  <block id="51b2cb2a88f665faafc5bfdd80f7a070" category="list-text">每個 AFX 控制器節點和 NX224 機架為 2U</block>
+  <block id="b5c19055e31ebc9f041e841ce43dfaf2" category="list-text">每個交換器 1U 或 2U，取決於交換器型號。</block>
+  <block id="6630a85163683d2127a4b50c91d77093" category="section-title">第 2 步：拆開包裝箱</block>
+  <block id="6f1603d815b9f09a290e176530f984f2" category="paragraph">確保場地和櫥櫃符合規格後，打開包裝箱並將內容物與包裝清單進行比較。</block>
+  <block id="82174a976e9a37564a41e6138a110eb6" category="list-text">小心地打開所有箱子，並將裡面的東西有序地擺放好。</block>
+  <block id="7f7073d6f8415311c1dea8097e262d41" category="list-text">將您拆開的物品與裝箱單上的清單進行比較。如果發現任何差異，請記錄下來以便採取進一步措施。</block>
+  <block id="6056345394434bf38ce0cd6fc7155a3e" category="paragraph">您可以透過掃描運輸箱側面的二維碼來取得裝箱清單。</block>
+  <block id="1726196375cd4d9085528facd587a31e" category="paragraph">以下是您可能會在盒子中看到的一些內容。</block>
+  <block id="958c530ea1ae0e18b942f8784148734c" category="cell">*硬體*</block>
+  <block id="09ff86ce1246a36d79f5d417bc9fb6be" category="cell">*電纜*</block>
+  <block id="efb4c0c41cf8767bf0f9361a8c61a50a" category="list-text">錶圈</block>
+  <block id="f31303ddb8ada38aed08c2bb8f9d8e6c" category="list-text">儲存系統</block>
+  <block id="bcd424683b470e732b13657ff3fc6a33" category="list-text">導軌套件及說明書</block>
+  <block id="2a6f49472befe7fd3e056a4a6fedfe00" category="list-text">置物架</block>
+  <block id="bf41057d8aa51e6bc6ceaf91a3c3a181" category="list-text">Cisco Nexus 9332D-GX2B 或 9364D-GX2A 交換機</block>
+  <block id="06d2646a8077631818b55a12dc3c58ac" category="list-text">管理乙太網路電纜（RJ-45電纜）</block>
+  <block id="b2cdf9589096f203f816541f43a15f6c" category="list-text">網路線</block>
+  <block id="7ceeb9e2de47574891152d45e033aea1" category="list-text">電源線</block>
+  <block id="281185cd949a8653026473441b33c69c" category="list-text">儲存電纜</block>
+  <block id="3ad4852daca6060d9a43783d0d67578c" category="list-text">USB-C 串口線</block>
+  <block id="9bea2d1b752b83d2f602c5b85b99a901" category="section-title">步驟 3：註冊您的儲存系統</block>
+  <block id="4371a1387991d53474fdd9d10e2316e2" category="paragraph">在您確保您的網站符合 AFX 1K 儲存系統規格的要求，並且確認您擁有所訂購的所有零件後，請註冊您的儲存系統。</block>
+  <block id="06492da17f061f2a9e0458d0fb9a15f7" category="list-text">找到您的儲存系統的序號。</block>
+  <block id="3db53907b5ca9a298d8e8517cdd30a44" category="paragraph">您可以在以下位置找到序號：</block>
+  <block id="3fc885acbf9f3f66cb5fefc99c0d76c6" category="list-text">在裝箱單上</block>
+  <block id="cf163ceac39b37fd1108b3cf9ff2b719" category="list-text">在您的確認電子郵件中</block>
+  <block id="676b7066692787a119854c062d5f6c05" category="list-text">在每個控制器上，或對於某些系統，在每個控制器的系統管理模組上</block>
+  <block id="3b2136486adac3ad66275a45c07c6ebf" category="image-alt">系統序號範例</block>
+  <block id="f5c45bcc73f02c7f2b1398ee78576a7a" category="list-text">前往<block ref="1850de052c61829b534b07ba1a2ca402" category="inline-link-rx"></block>。</block>
+  <block id="8c2bffdc0e0e5b75b9652e5cd56fe64e" category="list-text">決定是否需要註冊您的儲存系統：</block>
+  <block id="8f45a9f1fcb944bee42c078bdeacd8ac" category="cell">如果您是...</block>
+  <block id="e3df4624e4d36502b5d044730eab97cc" category="cell">請依照以下步驟操作...</block>
+  <block id="d3f2dc7623074c370346f082b621f2db" category="paragraph">現有NetApp客戶</block>
+  <block id="8a55a5b89690f6046e6de8dd649ff837" category="list-text">使用您的使用者名稱和密碼Sign in。</block>
+  <block id="5c83cedabfd78baf337988a092bcf317" category="list-text">選擇“*系統*”&gt;“*我的系統*”。</block>
+  <block id="8cc04c4151dd22af84b31cd55d6c5f57" category="list-text">確認列出了新的序號。</block>
+  <block id="6b127ae60215df1a5f77bc62deb0fa41" category="list-text">如果未列出序號，請依照NetApp新客戶的說明進行操作。</block>
+  <block id="daee797d0bf63a91fe069e1df88d7923" category="paragraph">NetApp新客戶</block>
+  <block id="12dc2a66a130388ec482398caa6ce95b" category="list-text">點擊“立即註冊”，然後建立帳戶。</block>
+  <block id="89cc8de091278e0fb0686833ac6a7982" category="list-text">選擇*系統* &gt; *註冊系統*。</block>
+  <block id="616ce92e68107b272305803b0da3016e" category="list-text">輸入儲存系統的序號和所需的詳細資訊。</block>
+  <block id="2fbc2bdcd9b44345629827ee822cf2cf" category="paragraph">一旦NetApp批准您的註冊，您就可以下載所需的軟體。批准最多需要 24 小時。</block>
+  <block id="7888406c80d6af465990b2996c95a79b" category="inline-link-macro">安裝 AFX 1K 儲存系統的交換機</block>
+  <block id="4c639e0c1a7f75680639cf501309e55e" category="paragraph">準備好安裝 AFX 1K 硬體後，您<block ref="a031a69a8067a81fbd23d6093628eca5" category="inline-link-macro-rx"></block>。</block>
+  <block id="8678b86953dad468747321629dd6ae26" category="summary">您可以存取其他資源來協助管理和支援 AFX，以及了解有關ONTAP和相關NetApp產品和服務的更多資訊。</block>
+  <block id="aa82f6fc0b58602b4071d428baeb1023" category="doc">AFX 儲存系統的其他資源</block>
+  <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="section-title">ONTAP 文件</block>
+  <block id="8cba816055afe0aa04b7fa2e9b1ba364" category="list-text"><block ref="8cba816055afe0aa04b7fa2e9b1ba364" category="inline-link-rx"></block></block>
+  <block id="419c1482f6cc63984c67f7fdaf13bd01" category="list-text"><block ref="419c1482f6cc63984c67f7fdaf13bd01" category="inline-link-rx"></block></block>
+  <block id="3a77755c4eaf7897cda1f7db8e722428" category="inline-link">ONTAP自動化</block>
+  <block id="486f6a4f906831713aed8c2567b3d906" category="list-text"><block ref="486f6a4f906831713aed8c2567b3d906" category="inline-link-rx"></block></block>
+  <block id="39b7c7792d43f9ad6b45d8bf594c6d5f" category="inline-link">ONTAP系列</block>
+  <block id="a583b1996b4842ce79d2bb2448839e4f" category="list-text"><block ref="a583b1996b4842ce79d2bb2448839e4f" category="inline-link-rx"></block></block>
+  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="section-title">NetApp支援</block>
+  <block id="668e2078ef1b1722c77cdb5c523a4463" category="inline-link">NetApp知識庫</block>
+  <block id="47fcd25afe772010f3d079e237ae3a90" category="list-text"><block ref="47fcd25afe772010f3d079e237ae3a90" category="inline-link-rx"></block></block>
+  <block id="95ef25aa47e9457c9ecb60dba8cacdf3" category="doc">AFX 儲存系統的法律聲明</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律聲明提供對版權聲明、商標、專利等的存取。</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版權</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP、NETAPP 標誌和NetApp商標頁面上列出的標誌是NetApp, Inc. 的商標。其他公司和產品名稱可能是其各自所有者的商標。</block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">專利</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">NetApp擁有的專利的最新清單可在以下位置找到：</block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隱私權政策</block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">開源</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有關NetApp軟體中使用的第三方版權和許可的資訊。</block>
+  <block id="7082fda89054b04f297465b55674c8c3" category="summary">您可以建立一個儲存桶並將其附加到資料 SVM。每個儲存桶都可以使用 AFX 支援的 S3 存取協定向客戶端公開。</block>
+  <block id="5265e6c84f77a7188dc8cd5ff3c641a3" category="doc">在 AFX 儲存系統上建立並配置 S3 儲存桶</block>
+  <block id="648df5a81ff3f4cd88bbe0b3e860f754" category="paragraph">建立儲存桶時，您需要提供最少量的配置詳細資訊。可以在建立期間或之後透過編輯儲存桶來提供其他詳細資訊。如果您已建立其他資料 SVM，則需要為儲存桶選擇 SVM。</block>
+  <block id="a5590d86ed283872e0cc7fda42aa3bce" category="paragraph">您需要為 SVM 配置 S3 服務，以便用戶端能夠存取儲存桶。</block>
+  <block id="bf52e174f6ac4c5b6733ee2f2e65a8d5" category="list-text">在系統管理員中，選擇*儲存*，然後選擇*儲存桶*。</block>
+  <block id="394342912380849041084ca6817e0908" category="inline-image-macro">新增藍色背景</block>
+  <block id="c271225decbfd89189eb197f3188942f" category="list-text">選擇<block ref="9516e19ff09cda1665b431e9c6bddb77" category="inline-image-macro-rx" type="image"></block>並提供名稱、容量等基本配置。</block>
+  <block id="b3f73832919ff203d0655477eb0a71d0" category="list-text">可選擇「更多選項」來取得與資料保護、鎖定和權限相關的其他配置。</block>
+  <block id="67a0c2052a77821404e56241e4d45c4b" category="list-text">選擇“*儲存*”以新增儲存桶。</block>
+  <block id="96585b7d26434028471fdf031b5e4b94" category="summary">您可以建立一個磁碟區並將其附加到資料 SVM。每個磁碟區都可以使用 AFX 支援的存取協定之一向客戶端公開。</block>
+  <block id="49d5bccae6c50bd251abe0dd4f6c6034" category="doc">在 AFX 儲存系統上建立和設定卷</block>
+  <block id="3cb60b9646911b23017534f96c6d39c9" category="paragraph">建立磁碟區時，您需要提供最少量的配置詳細資訊。可以在建立期間或之後透過編輯磁碟區來提供其他詳細資訊。如果您已建立其他資料 SVM，則需要為磁碟區選擇 SVM。</block>
+  <block id="ba1585e4781d7032cd012b5e13d7ad9d" category="list-text">在系統管理員中，選擇*儲存*，然後選擇*磁碟區*。</block>
+  <block id="49eb259f6822bfd3981a55650426e8a6" category="list-text">選擇<block ref="9516e19ff09cda1665b431e9c6bddb77" category="inline-image-macro-rx" type="image"></block>並提供名稱、容量、最佳化等基本配置。</block>
+  <block id="c0ad6ca34d6a77f33624e2424a78336e" category="list-text">（可選）選擇「更多選項」以獲得與資料保護、 SnapLock和 NFS 存取相關的其他配置。</block>
+  <block id="5a7bc8a48a64e64a6b4c71451a3aa5e0" category="list-text">選擇“*儲存*”以新增磁碟區。</block>
+  <block id="0729bef2f8d87d8a4c8753a9ca263c2b" category="summary">在管理 AFX S3 儲存桶和用戶端存取時，您可以執行多項管理任務。 AFX 中的 S3 設定和支援與 Unified ONTAP提供的相同。有關詳細信息，請參閱 Unified ONTAP文件。</block>
+  <block id="599b638335f53305189045685f55fc82" category="doc">管理 AFX 儲存系統儲存桶</block>
+  <block id="1671448a75b3c116c61a1ac925267b0b" category="inline-link">了解ONTAP S3 配置</block>
+  <block id="d069fa6dd31a3aef2df140929b862381" category="paragraph"><block ref="d069fa6dd31a3aef2df140929b862381" category="inline-link-rx"></block></block>
+  <block id="afde41cb0ec8e9973db0fa2633a64941" category="summary">在管理 AFX 叢集中定義的磁碟區時，您可以執行多項管理任務。</block>
+  <block id="b599c339a7cd92794785fe57216ae0d5" category="doc">管理 AFX 儲存系統卷</block>
+  <block id="dca9dbeac2fa64d8fb2fd385a1f3cf9f" category="section-title">創建 qtree</block>
+  <block id="62b73cdbdf69c986cce1dddbb10c0023" category="paragraph">qtree 是磁碟區內的邏輯細分，您可以建立它來組織和管理資料。</block>
+  <block id="e8d5a4abfee06c4cb70dbda63b0c659b" category="list-text">在系統管理員中，選擇“*儲存*”，然後選擇“*Qtrees*”。</block>
+  <block id="3371347960b873ce3a876781fb55e7a5" category="list-text">選擇<block ref="9516e19ff09cda1665b431e9c6bddb77" category="inline-image-macro-rx" type="image"></block>並提供包括名稱、磁碟區和安全樣式在內的基本配置；可選擇性地配置配額。</block>
+  <block id="778a0c009cd152670e61c76adf94c8fe" category="list-text">選擇“*儲存*”以新增 qtree。</block>
+  <block id="20a6c10a52430c512920e009f4dc21d9" category="section-title">建立配額</block>
+  <block id="0f6c34c5dbc9a59112cede5c133cba15" category="paragraph">配額是對使用者、群組或 qtree 可使用的儲存空間量或檔案數量設定的限制。配額用於管理和控制 AFX 系統內的資源使用情況。</block>
+  <block id="a343c98ed4f31c4829ac3ba0d2f58067" category="list-text">在系統管理員中，選擇*儲存*，然後選擇*配額*。</block>
+  <block id="334cf0a459b2bd66e9cc4f7fcd54aa87" category="list-text">選擇“*使用情況*”標籤以顯示所有磁碟區中的活動配額清單。</block>
+  <block id="30fc3b3306fb12e38c0e3cdb3465279c" category="list-text">選擇「*Volumes*」標籤可顯示 AFX 叢集中定義的磁碟區清單；選擇特定磁碟區可顯示其他資訊。</block>
+  <block id="4f4531208b58eb59db008f5357531a5d" category="list-text">若要定義配額，請選擇「*規則*」標籤。</block>
+  <block id="2197318e8d9fac97c58f94f1ddc55340" category="list-text">提供配置詳細信息，包括配額目標、類型和限制。</block>
+  <block id="b8f4735dc72c26dc40b47df7e35b8152" category="list-text">選擇*儲存*以新增配額。</block>
+  <block id="51442df7fcf6a6286ae61802a7fd6190" category="doc">監控和排除 AFX 儲存系統的故障</block>
+  <block id="f80dae8a67e87a35461badd07b87227a" category="paragraph">AFX 系統包括幾個選項來監控每個叢集管理的儲存。</block>
+  <block id="4cb41b1061f066b51edd371266c0e0d1" category="section-title">顯示 NAS 用戶端</block>
+  <block id="e1ee1a5de99aaa8517dc825c757a5a5b" category="paragraph">您可以顯示目前連接到 AFX 叢集的 NFS 和 SMB/CIFS 用戶端清單。</block>
+  <block id="4241e43245c2ea62cb9a6040f719be9d" category="list-text">在系統管理員中，在導覽窗格中選擇「*客戶端*」。</block>
+  <block id="d4b4cf4a48504cccf2726d3500764f4e" category="list-text">根據需要選擇選項卡 *NFS* 或 *SMB/CIFS*。</block>
+  <block id="29c8fdea5770ee33ab8579bffb2a2797" category="list-text">根據需要自訂顯示以及搜尋和下載客戶資​​訊。</block>
+  <block id="c57ebf896522e61d2fb2936af391a342" category="inline-link-macro">準備管理您的 AFX 數據</block>
+  <block id="5546f6d8bc3d0dd5a40c20c4d749d48e" category="list-text"><block ref="5546f6d8bc3d0dd5a40c20c4d749d48e" category="inline-link-macro-rx"></block></block>
+  <block id="264c7a25568ab93610cc395140359eb4" category="summary">在管理 AFX 資料之前，您應該熟悉基本概念和功能。</block>
+  <block id="bfd961e2a1e35548010fea792ecda5e4" category="doc">準備管理您的 AFX 儲存系統數據</block>
+  <block id="0a73e1b98f2c30e86e79b4143a8c5993" category="admonition">由於AFF和FAS系統上的許多概念和管理程式與 AFX 儲存系統相同，因此檢視 Unified ONTAP文件會很有幫助。</block>
+  <block id="4e5fb30db16cab1af452750211083830" category="section-title">術語和選項</block>
+  <block id="91818c76048499823f8f320043c66890" category="paragraph">您應該熟悉幾個與 AFX 儲存相關的術語。</block>
+  <block id="045efe415c2e22ca0585f899f658f875" category="list-text">FlexVolume</block>
+  <block id="ce9a1e3e78b0b876d755b7371d43a929" category="list-text">FlexVol是 AFX 儲存系統中使用的邏輯容器。 FlexVol卷可以擴展、收縮、移動和高效複製。它們還可以使用 qtree 劃分為更易於管理的單元，並且可以使用配額來限制資源使用。</block>
+  <block id="54452390cac5f65f3bcec580ba079531" category="list-text">FlexGroup</block>
+  <block id="e30bf4ff22284d2efe2b9a3b696a8c36" category="list-text">FlexGroup磁碟區是一個橫向擴充 NAS 容器，可提供高效能和自動負載分配。每個磁碟區由多個透明共享流量的磁碟區組成。  FlexGroup磁碟區具有多種優勢，包括改進的可擴充性和效能以及簡化的管理。</block>
+  <block id="f24ce81f056d5acd59788df7f5ab36a1" category="list-text">FlexCache</block>
+  <block id="695a78a25b08b7328ab31bf8c1d73ff1" category="list-text">FlexCache是​​一種ONTAP快取技術，可在相同或不同的ONTAP叢集上建立稀疏、可寫入的磁碟區副本。它旨在透過讓資料更接近用戶來提高資料存取效能，從而可以在更小的佔用空間下實現更快的吞吐量。  FlexCache對於讀取密集型工作流程特別有用，有助於卸載訪問量大的磁碟區的流量。</block>
+  <block id="d3382dac61f659b1c31a0a2a6d584396" category="list-text">S3 儲存桶</block>
+  <block id="c97fe1037a8b3185d2d7ede777b9f993" category="list-text">S3 儲存桶是用來保存雲端中的物件或資料的儲存容器。使用ONTAP，S3 NAS 儲存桶是 S3 儲存桶名稱和 NAS 路徑之間的映射，允許 S3 存取具有現有磁碟區和目錄結構的 SVM 命名空間的任何部分。</block>
+  <block id="2978eaf1d0f1eba3dc983acec80251d6" category="list-text">資料容器</block>
+  <block id="cf1a51f2f4d70a79e8b3271ee5d83a4b" category="list-text">在 AFX 系統的上下文中，資料容器是一個通用術語，可以是磁碟區或 S3 儲存桶。</block>
+  <block id="89b807c612a641b6b17572be567a7bed" category="list-text">qtree</block>
+  <block id="692a49909241bac742572a889379979e" category="list-text">qtree 是磁碟區內的邏輯細分，您可以建立它來管理和組織資料。它允許您指定其屬性和安全樣式（NTFS 或 UNIX），並且可以從其父磁碟區繼承匯出策略或擁有自己的策略。  qtree 可以包含檔案和目錄，通常用於更精細地管理磁碟區內的權限和配額。</block>
+  <block id="d2d5c3e087f684e56b5b81d6212d7ccb" category="list-text">配額</block>
+  <block id="31c437cd0133ff745a1e93507c2eb20b" category="list-text">ONTAP中的配額是對使用者、群組或 qtree 可使用的儲存空間量或檔案數量設定的限制。配額用於管理和控制儲存系統內的資源使用情況，確保沒有單一使用者或應用程式可以消耗過多的資源。</block>
+  <block id="f850d5f072b99065b8b14f209d28b6f2" category="section-title">資料遷移選項</block>
+  <block id="0f0a1f25f9c98706310856dd6e959d85" category="paragraph">有幾種資料遷移選項。重點是將外部資料遷移到 AFX 叢集。</block>
+  <block id="2da5c6848fa97e6d57edd0fd7cc501e6" category="section-title">從 Unified ONTAP遷移數據</block>
+  <block id="09c3f872052627145e5ce120455694b0" category="paragraph">可使用以下技術實現從 Unified ONTAP到 AFX 的完全整合遷移路徑：</block>
+  <block id="794cb725c5631ad99b5b7c000307f0df" category="list-text">SnapMirror</block>
+  <block id="7dd44faf90251db698eeb99b51efee2a" category="list-text">SVM 遷移</block>
+  <block id="7e4716fcadce4a1adb7676534312a764" category="list-text">支援向量機預測</block>
+  <block id="5db926e7c011195bfaa831fe0aabc00c" category="paragraph">此外， FlexCache磁碟區可以在 AFX 和 Unified ONTAP之間以任意方向連接。</block>
+  <block id="586423b900754a96436e39f12ad34de7" category="section-title">從非ONTAP來源遷移數據</block>
+  <block id="21689beccd9247a465d647f5db5a3661" category="paragraph">可以使用檔案級複製操作從非ONTAP系統執行資料遷移。可以使用快速複製實用程式（例如 XCP 或 CloudSync）以及標準實用程式（例如 RoboCopy（用於 SMB）和 rsync（用於 NFS））以及第三方工具（例如 DataDobi）。</block>
+  <block id="9686c7656f6866ab27df53aba66aa5c4" category="section-title">遷移限制</block>
+  <block id="1825404caf9bf08322edc7f1e8fe7d2b" category="paragraph">如果資料磁碟區不包含 LUN 或 NVMe 命名空間，則現有的 Unified ONTAP系統可以複製到 AFX。複製到 Unified ONTAP系統時，Unified ONTAP系統支援的最低版本為 9.16.1。這是第一個支援進階容量平衡的 Unified ONTAP版本。</block>
+  <block id="25b6da96a8a760952124cb78cea3667f" category="section-title">AFX 對 NFS 中繼的支持</block>
+  <block id="4cee11533f48877b71ac4114308fddc5" category="paragraph">NFS 中繼是一種技術，它使 NFS v4.1 用戶端能夠開啟與 NFS 伺服器上不同 LIF 的多個連線。這提高了資料傳輸速度並透過多條路徑提供了彈性。中繼有利於將FlexVol磁碟區匯出到具有中繼功能的客戶端。</block>
+  <block id="708b9f56042f6f92040c66e027f3d1e6" category="paragraph">若要啟用中繼，您需要為 NFS 設定 SVM，並且應啟用 NFSv4.1。配置變更後，還需要重新安裝所有 NFSv4.x 用戶端，這可能會造成破壞。</block>
+  <block id="9ee9c2969db991ddef64d7ae817e6a57" category="section-title">檔案系統分析</block>
+  <block id="13d14f6d3eb21b302a07eca445ed601a" category="paragraph">檔案系統分析 (FSA) 是ONTAP中的一項功能，可即時查看FlexGroup或FlexVol磁碟區內的檔案使用情況和儲存容量趨勢。</block>
+  <block id="0d0e1ac7c6d2254324f44048d3433b8b" category="paragraph">FSA 透過提供有關儲存利用率和最佳化機會的洞察，消除了對外部工具的需求。  FSA 提供磁碟區檔案系統層次結構各個層級的詳細視圖，包括 SVM、磁碟區、目錄和檔案層級。</block>
+  <block id="b58d0f6a7ebb3c87391c546808fd9aad" category="section-title">顯示儲存概覽</block>
+  <block id="3aff0a3af97eea91975da75fea7d544b" category="paragraph">要開始管理您的 AFX 數據，您應該顯示儲存概覽。</block>
+  <block id="8f05b5c10e45f62d76648a8e56cf1f2a" category="paragraph">您可以存取為 AFX 叢集定義的所有磁碟區和儲存桶。這些中的每一個都被視為一個資料容器。</block>
+  <block id="85fe3474371cd0aac502436bdf158734" category="list-text">在系統管理員中，選擇“*儲存*”，然後選擇“*概覽*”</block>
+  <block id="918e438d431e461bd07d5f98b447ddf0" category="list-text">在「卷」旁邊，選擇<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block>顯示卷宗列表。</block>
+  <block id="db3f0383d30e6ccd6beb04b90bff8ab9" category="list-text">在「儲存桶」旁邊，選擇<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block>顯示儲存桶列表。</block>
+  <block id="6be5b6779fd2dc0957124c5946b4c605" category="list-text">根據需要更新或建立資料容器。</block>
+  <block id="cfb846ecee2549ab0f73e39c6089f653" category="inline-link-macro">準備管理 AFX 系統</block>
+  <block id="ff1ee460c311702f328e9ed39cb3a02f" category="list-text"><block ref="ff1ee460c311702f328e9ed39cb3a02f" category="inline-link-macro-rx"></block></block>
+  <block id="1bde2cea75771888ff0e15e96dc778b2" category="inline-link-macro">遷移 AFX 系統 SVM</block>
+  <block id="fa3928ebab1e80c528d4c7534429b95a" category="list-text"><block ref="fa3928ebab1e80c528d4c7534429b95a" category="inline-link-macro-rx"></block></block>
+  <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp互通性表工具</block>
+  <block id="e4cd53129cc4d7b20f289aa364c15ee4" category="list-text"><block ref="e4cd53129cc4d7b20f289aa364c15ee4" category="inline-link-rx"></block></block>
+  <block id="ad79924a27e2399dda2a2afad753d215" category="summary">您可以建立一致性群組來簡化應用程式工作負載的儲存管理和資料保護。一致性組可以基於現有磁碟區或新磁碟區。</block>
+  <block id="6f1aab89c587af045c0c8f017f17d044" category="doc">在 AFX 儲存系統上建立一致性群組</block>
+  <block id="7b4f407bf40048514b50210d998d806e" category="paragraph">如果您打算建立多個新磁碟區，則在建立新磁碟區時應該使用設定選項。</block>
+  <block id="15e46cbe1549ef495656815e2ed1821a" category="list-text">在系統管理員中，選擇*保護*，然後選擇*一致性群組*。</block>
+  <block id="6e13d47cb2da7cfe334838a1520c0873" category="list-text">選擇<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>並選擇以下其中之一：</block>
+  <block id="af0c3476798d784f9d9e85ec4d9bd2d0" category="list-text">使用現有捲</block>
+  <block id="f3d83b9ec90ba02df0eeead65270705f" category="list-text">使用新的 NAS 卷</block>
+  <block id="520eb1f570a206aca41ba235608feed5" category="list-text">提供配置詳細信息，包括名稱、磁碟區、應用程式類型和保護。</block>
+  <block id="9712f400eacfd75178398ff6c28bb880" category="inline-link-macro">管理一致性組</block>
+  <block id="a618a6f407eaf5d17492115b9adb3c91" category="list-text"><block ref="a618a6f407eaf5d17492115b9adb3c91" category="inline-link-macro-rx"></block></block>
+  <block id="2b24908d4a2e9108ac8c7b807fbb0333" category="inline-link-macro">建立和配置 AFX 卷</block>
+  <block id="d479a1c5ba99ee3db4b63c7485b4e3b9" category="list-text"><block ref="d479a1c5ba99ee3db4b63c7485b4e3b9" category="inline-link-macro-rx"></block></block>
+  <block id="98ace8995b3315e043ee9c466313c05b" category="summary">對等關係定義了允許叢集和儲存虛擬機器 (VM) 安全地交換資料的網路連線。您可以在不同叢集上的儲存虛擬機器之間建立對等關係，以使用SnapMirror實現資料保護和災難復原。</block>
+  <block id="077d5c925e9d47b34fbede8d9f0bdae1" category="doc">在 AFX 儲存系統上建立叢集間 SVM 對等關係</block>
+  <block id="72a7cb3bbba56280bfb0dbf79f420147" category="inline-link-macro">建立集群對等關係</block>
+  <block id="9d6602c26d0cc9c4fbb30511812ed132" category="paragraph">您必須先在本機叢集和遠端叢集之間建立叢集對等關係，然後才能建立儲存虛擬機器對等關係。<block ref="524396f856e0b8dc25625395aeecb268" category="inline-link-macro-rx"></block>如果您還沒有這樣做的話。</block>
+  <block id="8d8b639ec8160491c90dea5c1c1c3da9" category="list-text">在系統管理員中，選擇*保護&gt;概覽*。</block>
+  <block id="e3226f7625454b33ff3416d9f07c5a59" category="list-text">在*儲存 VM 對等體*下選擇*新增儲存 VM 對等體*。</block>
+  <block id="79e4a006de60736237736ca8b538df48" category="list-text">選擇本地叢集上的儲存虛擬機器；然後選擇遠端叢集上的儲存虛擬機器。</block>
+  <block id="23793c8b7aa9aee22a7a7aceb271dcb2" category="list-text">選擇*新增儲存虛擬機器對等體*。</block>
+  <block id="96d54cd4dca11897495ae0700eabe4db" category="inline-link">了解有關同伴關係的更多信息</block>
+  <block id="383c3eabfa756f51aa397d233fa4c61c" category="list-text"><block ref="8c94506992ba803e68fdcc47cda1766b" category="inline-link-rx"></block> 。</block>
+  <block id="f81ab333d6bb7012d09f83e944fc3267" category="summary">要備份 AFX 系統上的數據，您需要建立快照。您可以手動建立快照，也可以排程使用一致性群組自動建立快照。</block>
+  <block id="c1af8f80b6cf9d06f73b1fd2555a3a02" category="doc">在 AFX 儲存系統上建立快照</block>
+  <block id="a55eea56b3b5ac156631717b66974529" category="inline-link-macro">快照策略和計劃</block>
+  <block id="a28e2bba858cc9ed8622827db01170a8" category="paragraph">快照是資料的本機唯讀副本，您可以使用它將磁碟區還原到特定時間點。快照可以根據需要手動創建，也可以根據<block ref="83bfa2dc5e6407223dca634141b43309" category="inline-link-macro-rx"></block>。</block>
+  <block id="489f6d04129a903223243d618aaaeee6" category="paragraph">快照策略和計劃指定了詳細信息，包括何時創建快照、保留多少副本、如何命名快照以及如何標記快照以進行複製。例如，系統可能每天凌晨 12:10 建立一個快照，保留最近的兩個副本，將其命名為「每日」（附加時間戳記），並將其標記為「每日」以進行複製。</block>
+  <block id="778e49c36a4b37504a26fe297bcd89cd" category="paragraph-title">快照類型</block>
+  <block id="44a40179c071d1760071c6b6190a8478" category="paragraph">您可以建立單一磁碟區或一致性群組的按需快照。您也可以建立包含多個磁碟區的一致性群組的自動快照。但是，您無法建立單一磁碟區的自動快照。</block>
+  <block id="92cd7e74f8f496ce11ec549a066c7294" category="list-text">按需快照</block>
+  <block id="a23c13faa955bc610d3adf8814e604d9" category="paragraph">您可以隨時建立磁碟區的按需快照。該磁碟區不需要成為一致性群組的成員即可受到按需快照的保護。如果您建立一致性群組成員磁碟區的快照，則一致性群組中的其他磁碟區將不包含在快照中。當您建立一致性群組的按需快照時，將包含一致性群組中的所有磁碟區。</block>
+  <block id="1964699fd01a4c2ddcef9f17b9f6d567" category="list-text">自動快照</block>
+  <block id="7aa882b4192076c38fd5532049ef0cbf" category="paragraph">自動快照是根據快照策略定義建立的。若要將快照原則套用至磁碟區以自動建立快照，該磁碟區需要是相同一致性群組的成員。如果將快照原則套用至一致性群組，則一致性群組中的所有磁碟區都會受到保護。</block>
+  <block id="af9c364e0933200b7b8c1e7e13947ccf" category="section-title">建立快照</block>
+  <block id="5a9e713aab390c34ac43e2af80d46030" category="paragraph">建立磁碟區或一致性群組的快照。</block>
+  <block id="577715f98b92f1d580c94e3c3c1369ba" category="open-title">一致性組的快照</block>
+  <block id="b7bfd93e035b206d04aef27c2f3386e2" category="list-text">將滑鼠懸停在您想要保護的一致性組的名稱上。</block>
+  <block id="db35d86c9bc090fa1188d269ecb84850" category="list-text">選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>；然後選擇*保護*。</block>
+  <block id="596162ed2473cff647bf31baf7a6bd00" category="list-text">如果您想要按需建立即時快照，請在*本機保護*下選擇*立即新增快照*。</block>
+  <block id="c0404894be71f8fd89ee1a7222ea256d" category="paragraph">本機保護在包含該磁碟區的同一群集上建立快照。</block>
+  <block id="9e234717c17cb132226be9e21c351b98" category="list-text">輸入快照的名稱或接受預設名稱；然後（可選）輸入SnapMirror標籤。</block>
+  <block id="e3afffafdc9d2d30781b4982f6d374c4" category="paragraph">SnapMirror標籤由遠端目標使用。</block>
+  <block id="a2d3e982e03d924beb198d99458a7ea7" category="list-text">如果您想使用快照策略建立自動快照，請選擇*規劃快照*。</block>
+  <block id="6d984437f84200125e93c2afc3e1494e" category="list-text">選擇快照策略。</block>
+  <block id="2a3163042f5b0df451913ee28d91daa4" category="paragraph">接受預設快照策略，選擇現有策略，或建立新策略。</block>
+  <block id="054b4f3ea543c990f6b125f41af6ebf7" category="cell">選項</block>
+  <block id="dc41e6416d57bd1edd6593088e69616c" category="cell">選擇現有的快照策略</block>
+  <block id="489c376bfc4a222b1a886ded6998e28f" category="inline-image-macro">向下的藍色箭頭</block>
+  <block id="da2093b32757937154ea6fbd7ba9d94f" category="paragraph">選擇<block ref="ad6f4b1937ac80c272d93ceff6bae7b5" category="inline-image-macro-rx" type="image"></block>預設策略旁邊的；然後選擇要使用的現有策略。</block>
+  <block id="e9a241b2594039be3cdebf34cdd9b984" category="cell">建立新的快照策略</block>
+  <block id="082951028ef0b4999b51c96e84ec9dc7" category="inline-image-macro">藍色加號，後面跟著單字“add”</block>
+  <block id="bce4ea1c3ac85a33a255713f532d50c6" category="list-text">選擇<block ref="d5037d8bc032b89659bfdbce3d3d2753" category="inline-image-macro-rx" type="image"></block>；然後輸入快照策略參數。</block>
+  <block id="3a08b32c8007e0d1530fc753f2bfe9a9" category="list-text">選擇*新增策略*。</block>
+  <block id="54c72dad9c08fa9ae361ea9fec5f23f4" category="list-text">如果您想將快照複製到遠端集群，請在「*遠端保護*」下選擇「*複製到遠端集群*」。</block>
+  <block id="e9b39186eedf44bd8ca5e145d76a4d63" category="list-text">選擇來源叢集和儲存虛擬機器；然後選擇複製策略。</block>
+  <block id="76de2e8e61a5638e14882250205f1fbd" category="paragraph">預設情況下，複製的初始資料傳輸立即開始。</block>
+  <block id="b50e3d8a3f448c8b425359dfb797840d" category="open-title">卷的快照</block>
+  <block id="440178a58818be0975220a7fc5f7d588" category="list-text">將滑鼠懸停在您想要保護的磁碟區的名稱上。</block>
+  <block id="c32a6403a774a3688dc679bd55484681" category="list-text">選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>；然後選擇*保護*。如果您想要按需建立即時快照，請在*本機保護*下選擇*立即新增快照*。</block>
+  <block id="8b18689501fd9ddb21e2708e5efac121" category="inline-link">建立ONTAP快照策略</block>
+  <block id="f300a31530360cac95f3bb504fb72b19" category="list-text"><block ref="f300a31530360cac95f3bb504fb72b19" category="inline-link-rx"></block></block>
+  <block id="7de1a19b69935e69b0a7a338358c92c0" category="summary">您可以管理 AFX 系統上的一致性群組。這可以簡化您的儲存管理。</block>
+  <block id="ec53a3b58ce54e0bbeed53a899a457c6" category="doc">管理 AFX 儲存系統上的一致性群組</block>
+  <block id="756274998bfddb9ee5aca3ce09a0d910" category="section-title">為一致性群組新增快照資料保護</block>
+  <block id="23ac466c43a7661f9eb160659b1bf0f9" category="paragraph">當您為一致性群組新增快照資料保護時，可以根據預先定義的計畫定期拍攝一致性群組的本機快照。</block>
+  <block id="074d62224d0503ff6087225e736ee539" category="list-text">將滑鼠懸停在您想要保護的一致性群組上。</block>
+  <block id="33414f6307ba63e7051d9954ad9087f9" category="list-text">選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>；然後選擇*編輯*。</block>
+  <block id="64d07b931d0665d2943cee93c7ca29ab" category="list-text">在*本機保護*下，選擇*計劃快照*。</block>
+  <block id="9d881f9b7270312621fd4f788d3ffe17" category="list-text">選擇<block ref="d5037d8bc032b89659bfdbce3d3d2753" category="inline-image-macro-rx" type="image"></block>；然後輸入新的策略名稱。</block>
+  <block id="ec1a7b3257bed5985906c5e95f0d9c2f" category="list-text">選擇策略範圍。</block>
+  <block id="2dd8d293360356e18c0f62fc243f1b43" category="list-text">在*時間表*下選擇<block ref="d5037d8bc032b89659bfdbce3d3d2753" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="93c99d606f509a060b2e61a424494d1c" category="list-text">選擇出現在*時間表名稱*下的名稱；</block>
+  <block id="87a06a011b61bdd0250533047157cd30" category="inline-image-macro">指向下方的藍色箭頭</block>
+  <block id="58a9df332cae92457421a6c743d20c57" category="paragraph">然後選擇<block ref="ae97822195fab64c57868f45af967727" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="2a79371d63ff7c165ee10055e63ddc1a" category="list-text">選擇策略計劃。</block>
+  <block id="a3d38335033dbc3e63c68f76b308e45c" category="list-text">在*最大快照*下，輸入您想要保留的一致性群組的最大快照數。</block>
+  <block id="72c9cc57bd3acc347a45ea0b780c14ab" category="list-text">或者，在 * SnapMirror標籤* 下輸入SnapMirror標籤。</block>
+  <block id="071ef8ace6c74c9a1515550077974172" category="list-text">選擇*編輯*。</block>
+  <block id="ace2796973375b7bb95eef037620c781" category="list-text"><block ref="ace2796973375b7bb95eef037620c781" category="inline-link-rx"></block></block>
+  <block id="8e0633c9db6dd45b5e4ef8180b6adab5" category="summary">您可以管理 AFX 系統上的快照。有關詳細信息，請參閱 Unified ONTAP文件。</block>
+  <block id="4586a453a595c3bf09ea9a52c9598d9c" category="doc">管理 AFX 儲存系統上的快照</block>
+  <block id="edf390781768f11ecd6fba66ed02af98" category="inline-link">使用快照保護ONTAP FlexGroup卷</block>
+  <block id="489be052a7d5ee78426defb5f8ec5098" category="list-text"><block ref="489be052a7d5ee78426defb5f8ec5098" category="inline-link-rx"></block></block>
+  <block id="7b5292f1a5c2ddcb9e6f722d3e7ccd13" category="summary">您可以使用快照原則根據自動計劃保護一致性群組中的資料。快照策略中的策略計畫決定了拍攝快照的頻率。</block>
+  <block id="a87e462612c2c9d534bbbc43678b5ec9" category="doc">管理 AFX 儲存系統資料保護策略和計劃</block>
+  <block id="a5d94ffe746cc520a02e27113f7f17f8" category="section-title">建立新的保護策略計劃</block>
+  <block id="839eaac1f4b53c683e9bc97157690966" category="paragraph">保護策略計畫定義了快照策略的執行頻率。您可以建立以天數、小時數或分鐘數為單位定期運行的計劃。例如，您可以建立每小時運行一次或每天僅運行一次的計劃。您還可以建立計劃，在每週或每月的特定日期的特定時間運行。例如，您可以建立一個計劃，在每月 20 日凌晨 12:15 運行。</block>
+  <block id="5602873045e45e073e4b6542b9eaa3bf" category="paragraph">定義各種保護策略計劃可讓您靈活地增加或減少不同應用程式的快照頻率。與不太重要的工作負載相比，這可讓您為關鍵工作負載提供更高等級的保護，並降低資料遺失的風險。</block>
+  <block id="ca36d2ad2f79e607f48e8ff48e1cfadc" category="list-text">選擇*保護*，然後選擇*策略*；然後選擇*計劃*。</block>
+  <block id="3a491464203f4d5c208474ff64bb5049" category="inline-image-macro">一個藍色矩形，其中包含一個加號，後面跟著白色字母“add”</block>
+  <block id="6410543768483abec88bed0e73b5e7e1" category="list-text">選擇<block ref="6ce47eb77e3cf8662282bcd32b9971d1" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="0269a8ba0e45323cac42de9d59d1de5b" category="list-text">輸入計劃的名稱；然後選擇計劃參數。</block>
+  <block id="92d0ab5425be6ef24b32b89b0e003e73" category="paragraph">現在您已經建立了新的策略計劃，您可以在策略中使用新建立的計劃來定義何時拍攝快照。</block>
+  <block id="e807ebdf213353b8a415f991a2cade81" category="section-title">建立快照策略</block>
+  <block id="97fef1670a856044b58543b0bb9c9a6d" category="paragraph">快照策略定義了拍攝快照的頻率、允許的最大快照數量以及保留快照的時間。</block>
+  <block id="bffcbe3b442c0b7777603505ac862e85" category="list-text">在系統管理員中，選擇*保護*，然後選擇*策略*；然後選擇*快照策略*。</block>
+  <block id="177883a13692cc6b2a240a9eb176f518" category="list-text">輸入快照策略的名稱。</block>
+  <block id="d8ae1f3c2d9915ffcd2b71028c52661a" category="list-text">選擇「*叢集*」將策略套用到整個叢集。選擇「*儲存虛擬機器*」將政策套用至單一儲存虛擬機器。</block>
+  <block id="dd7ef557ea392d7d7a8e9ddc3d40487f" category="list-text">選擇*新增計劃*；然後輸入快照策略計劃。</block>
+  <block id="8bf4ba3f2ed35e1256e452979a821dc8" category="paragraph">現在您已經建立了快照策略，您可以將其套用到一致性群組。將根據您在快照策略中設定的參數對一致性群組進行快照。</block>
+  <block id="520f1c3480de74b9674b39b93318fad9" category="section-title">將快照策略套用到一致性群組</block>
+  <block id="237fc3d39df5571a9028914f696726ac" category="paragraph">將快照原則套用至一致性群組，以自動建立、保留和標記一致性群組的快照。</block>
+  <block id="b9cb249d424007128d7ffbc0823dbe8d" category="list-text">將滑鼠懸停在要套用的快照策略的名稱上。</block>
+  <block id="31ce73c51323669a605213f0e0e790eb" category="list-text">選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>；然後選擇*應用*。</block>
+  <block id="cfeaae7c79618f126692047c04747acd" category="list-text">選擇要套用快照策略的一致性群組；然後選擇*套用*。</block>
+  <block id="9a50e1eaf0bb6f5464df0a5ab61d663f" category="inline-link-macro">建立複製關係</block>
+  <block id="77ec3a368c81cec1f2da0fd5c151292f" category="paragraph">現在您的資料已透過快照受到保護，您應該<block ref="71383d603e2dd10cd99b2edcd612e72c" category="inline-link-macro-rx"></block>將一致性組複製到地理位置較遠的位置以進行備份和災難復原。</block>
+  <block id="b9cad560d21e8e44891f35b522094161" category="section-title">編輯、刪除或停用快照策略</block>
+  <block id="55b3098f761e922e4cc46505a05c0b56" category="paragraph">編輯快照策略以修改策略名稱、最大快照數或SnapMirror標籤。刪除策略以從叢集中刪除它及其相關的備份資料。停用策略以暫時停止策略指定的快照的建立或傳輸。</block>
+  <block id="476aaf01fe137ae82d98a1885545f98b" category="list-text">將滑鼠懸停在要編輯的快照策略的名稱上。</block>
+  <block id="b88f843a1498708989c2d5a092e2f732" category="list-text">選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>；然後選擇*編輯*、*刪除*或*停用*。</block>
+  <block id="535c668fa3441ff5eb5df6f60c734d9c" category="paragraph">您修改、刪除或停用了快照策略。</block>
+  <block id="140b481ea561e6db59b00912b5ea8eee" category="section-title">編輯複製策略</block>
+  <block id="5de63e7b797a02abda90c3b397a6af86" category="paragraph">編輯複製策略以修改策略描述、傳輸計劃和規則。您也可以編輯策略以啟用或停用網路壓縮。</block>
+  <block id="bb89c949a78bb896e491a768b686f763" category="list-text">在系統管理員中，選擇*保護*，然後選擇*策略*。</block>
+  <block id="88850c4b464eb3774fb43e6b09e54263" category="list-text">選擇*複製策略*。</block>
+  <block id="2aa13c213ee88c84d981559bd42eafe9" category="list-text">將滑鼠懸停在要編輯的複製策略上；然後選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="a5e06406af0ed5340393cd73877c6372" category="list-text">更新政策；然後選擇*儲存*。</block>
+  <block id="db8c4a07f00d6dec50867fee966dab17" category="summary">在保護您的 AFX 資料之前，您應該熟悉一些關鍵概念和儲存的當前狀態。</block>
+  <block id="1aaa61fdd6cbec1ae1f4385f75271e47" category="doc">準備保護您的 AFX 儲存系統數據</block>
+  <block id="67e575f149431fcc72ab38eb5867c82e" category="paragraph">在保護您的 AFX 資料之前，您應該熟悉一些關鍵概念和功能。</block>
+  <block id="7ae33c3333b18ba2e788f90e415ba60e" category="paragraph">您應該熟悉幾個與 AFX 資料保護相關的術語。</block>
+  <block id="d4e2713d1b1725a1592f9268589f990d" category="list-text">快照</block>
+  <block id="5a09ca1981b435735faf39d4be4a950e" category="list-text">快照是磁碟區的唯讀、時間點影像。它是 ONTAP 複製和資料保護服務的基礎技術。</block>
+  <block id="ae9e13b66877a85be97724063f459ec2" category="list-text">一致性組</block>
+  <block id="8c333d6a14c25ec3513729bf55553d89" category="list-text">一致性組是作為單一單元進行管理的磁碟區的集合。您可以建立一致性群組來簡化應用程式工作負載的儲存管理和資料保護。例如，您可以使用一致性群組而不是單一磁碟區在一次操作中對多個磁碟區進行快照。</block>
+  <block id="425514993f273b658b0218c334836b26" category="list-text">層次一致性組</block>
+  <block id="e2bf3258a6bd916a9b75ab07319e2aa4" category="list-text">分層一致性組是在ONTAP 9.16.1 中引入的，並可與 AFX 一起使用。透過分層結構，可以將一個或多個一致性組配置為父級下的子級。這些分層群組可讓您將單獨的快照策略套用至子一致性群組，並透過複製父群組將所有子群組的快照作為單一單元複製到遠端叢集。</block>
+  <block id="85fdd77d0274be7a2ed2bdefd292e18c" category="list-text">SnapLock是ONTAP 的一項功能，可讓您透過將檔案移至一次寫入多次讀取 (WORM) 狀態來保護檔案。這可以防止在指定的保留期內進行修改或刪除。創建的SnapLock磁碟區在基於保留創建後不能從非SnapLock磁碟區轉換。</block>
+  <block id="f5ec2b2f45cf6729ee766559c7aa50f1" category="summary">快照複製是將 AFX 系統上的一致性群組複製到地理位置較遠的位置的過程。初始複製之後，一致性組的變更將根據複製策略複製到遠端位置。複製的一致性組可用於災難復原或資料遷移。</block>
+  <block id="1fb9148e9e8349d6e785a8abe0e5fdba" category="doc">管理 AFX 儲存系統上的快照複製</block>
+  <block id="a7ee55059187c77f0db0f1191da3e6c8" category="paragraph">若要設定快照複製，您需要在 AFX 儲存系統和遠端位置之間建立複製關係。複製關係由複製策略控制。在叢集設定期間建立複製所有快照的預設策略。您可以使用預設策略，也可以選擇建立新策略。</block>
+  <block id="bb35c8e1197f3cb1f834baa178f51fdd" category="section-title">步驟 1：建立叢集對等關係</block>
+  <block id="256483a2b5ed8710e7c8fdf9ce515426" category="paragraph">在透過將資料複製到遠端叢集來保護資料之前，您需要在本機和遠端叢集之間建立叢集對等關係。</block>
+  <block id="bcde3dcffb78cbdd7bcc34a9e7872629" category="inline-link-macro">查看叢集對等連線的先決條件</block>
+  <block id="4cda74e229284ef3dac22e87f314c1c3" category="paragraph">AFX 系統與其他ONTAP系統的群集對等的先決條件相同。<block ref="bbba0a6c9386ee840a26b101e54e4db2" category="inline-link-macro-rx"></block> 。</block>
+  <block id="53950c8063da261b283bbbda8dcdf670" category="list-text">在本機集群上，在系統管理員中，選擇「集群」&gt;「設定」。</block>
+  <block id="111e1e243efefbc8f1f98dbcb38b2be9" category="list-text">在「集群間設定」下，選擇「集群對等體」旁的<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>，然後選擇*新增集群對等點*。</block>
+  <block id="695db69b9d1b9c619b5e7ddaa2999cc1" category="list-text">選擇*啟動遠端叢集*；這將產生一個密碼，您將使用該密碼來對遠端叢集進行身份驗證。</block>
+  <block id="817c3b20b4d3edad274a1a4e512f4000" category="list-text">產生遠端叢集的密碼後，將其貼上到本地叢集的 *Passphrase* 下。</block>
+  <block id="94e8481f76f7459831da0ff830f03693" category="inline-image-macro">藍色加號，後面跟著藍色字母“add”</block>
+  <block id="c48a364bcfea9942c880a707be66baf8" category="list-text">選擇<block ref="750f4f104efd8460cc9c38b724a23fe2" category="inline-image-macro-rx" type="image"></block>；然後輸入群集間網路介面 IP 位址。</block>
+  <block id="8c0b8a980a5fccf0d26e14839c9636e5" category="list-text">選擇*啟動叢集對等*。</block>
+  <block id="ff39a468a0a6580c02d4b5afda651168" category="paragraph">您已將本機 AFX 叢集與遠端叢集對等。您現在可以建立複製關係。</block>
+  <block id="20a02863b5c5716bf567035b35c78ac6" category="section-title">步驟 2：（可選）建立複製策略</block>
+  <block id="e5fb1f14197258bbfa055d7d284d9bb2" category="paragraph">快照複製策略定義何時將在 AFX 叢集上執行的更新複製到遠端站點。</block>
+  <block id="99ce99ecf863ff8fe2a9cbb3426c1e80" category="list-text">在系統管理員中，選擇*保護&gt;策略*；然後選擇*複製策略*。</block>
+  <block id="b03db2a30a32c3ac8c0f123bffb1ece4" category="list-text">輸入複製策略的名稱或接受預設名稱；然後輸入描述。</block>
+  <block id="ca8308195da9e8f1aaa6981179fa1910" category="list-text">選擇*政策範圍*。</block>
+  <block id="a5546e6ea4c83121c3fb18630b3d7390" category="paragraph">如果要將複製策略套用到整個集群，請選擇*集群*。如果您希望複製原則僅套用於特定儲存虛擬機器中的捲，請選擇「*儲存虛擬機器*」。</block>
+  <block id="cc4bd2e3882617e7952e21c6edcf0f70" category="list-text">選擇*政策類型*。</block>
+  <block id="94474bfd74d528818aa33385a7ef01b1" category="cell">將資料寫入來源後複製到遠端站點。</block>
+  <block id="5b9740e84ea801d163925a0b1f33b1c2" category="list-text">選擇*異步*。</block>
+  <block id="ca4245a2767798f81970db32d522e7cf" category="list-text">在*從來源傳輸快照*下，接受預設傳輸計劃或選擇其他計劃。</block>
+  <block id="63abd2a127bdae4f4eaf9ca003d89ab3" category="list-text">選擇傳輸所有快照或建立規則來決定要傳輸哪些快照。</block>
+  <block id="0527fa3e946de1ec8c471d2c7cae3688" category="list-text">可選地，啟用網路壓縮。</block>
+  <block id="a06950db009f1d0449acff1c4c0993e3" category="cell">同時將資料寫入來源站點和遠端站點。</block>
+  <block id="2ea2e8a2b83fdeb4e03eb89a3c69ea7a" category="list-text">選擇*同步*。</block>
+  <block id="908129a8e4d8c0d0e5b4e8d301f6c28b" category="paragraph">您已建立複製策略，現在準備在 AFX 系統和遠端位置之間建立複製關係。</block>
+  <block id="ce587252d09bb3dfb2d53f154ba81d93" category="section-title">步驟 3：建立複製關係</block>
+  <block id="c8733c85583475859780bc7c89c97d92" category="paragraph">快照複製關係會在您的 AFX 系統和遠端位置之間建立連接，以便您可以將一致性群組複製到遠端叢集。複製的一致性組可用於災難復原或資料遷移。</block>
+  <block id="c5d439ea8d2444de271a6842180ae515" category="paragraph">為了防止勒索軟體攻擊，當您設定複製關係時，您可以選擇鎖定目標快照。鎖定的快照不會被意外或惡意刪除。如果磁碟區受到勒索軟體攻擊，您可以使用鎖定的快照來復原資料。</block>
+  <block id="bf5d4ab274f571d57107a348e35cb081" category="inline-link-macro">初始化快照合規時鐘</block>
+  <block id="a2070fe1416691eeb91c53762fd2a74c" category="paragraph">如果要鎖定目標快照，則必須<block ref="27d9d0ff36409c51abdcd0a6f30da304" category="inline-link-macro-rx"></block>在創建複製關係之前。</block>
+  <block id="f07148b3f2fd0f0a23b807626916df29" category="paragraph">建立具有或不具有鎖定目標快照的複製關係。</block>
+  <block id="b581751404702669bf568b5f9581e76c" category="open-title">帶有鎖定快照</block>
+  <block id="82fd6aa34bfb21de39dd81c963a0a2e8" category="list-text">在系統管理員中，選擇*保護&gt;一致性群組*。</block>
+  <block id="02934a3c9c75bfb962ac39201fdf6f3d" category="list-text">選擇一個一致性組。</block>
+  <block id="15217bdc015a8a108f980bdb8c2e1a23" category="list-text">選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>；然後選擇*保護*。</block>
+  <block id="ac59bb95e3695bc7bee3aef9c11cc7ec" category="list-text">在*遠端保護*下，選擇*複製到遠端叢集*。</block>
+  <block id="7e1e6a3712eae4789ecd885097e5a4e7" category="list-text">選擇*複製策略*。</block>
+  <block id="7d4ac3ed3440432276ca5b8085ed49e5" category="paragraph">您必須選擇一個_vault_複製策略。</block>
+  <block id="fcb838cd8f6e32d4a616ee3de4983333" category="list-text">選擇*目標設定*。</block>
+  <block id="b554adedaaae05384ba07663a14834e4" category="list-text">選擇*鎖定目標快照以防止刪除*</block>
+  <block id="c4c50145f9cafae0b0fd638f59da1c0b" category="list-text">輸入最長和最短資料保留期。</block>
+  <block id="9e3c1427208e1336b5583fb9b78c3cc4" category="list-text">若要延遲資料傳輸的開始，請取消選擇*立即開始傳輸*。</block>
+  <block id="9625f43e1bf117d60569d5ad051c6f03" category="paragraph">預設情況下，初始資料傳輸立即開始。</block>
+  <block id="84a616a14078ce4e20513888ef5be141" category="list-text">或者，若要覆寫預設傳輸計劃，請選擇“*目標設定*”，然後選擇“*覆寫傳輸計劃*”。</block>
+  <block id="eb9b31e6e7ba2bbd9f868ff108f65a0c" category="paragraph">您的轉機時間安排必須至少為 30 分鐘才能獲得支援。</block>
+  <block id="b89eff40453beaa28eca7c9de402f85f" category="open-title">未鎖定快照</block>
+  <block id="ec6646be259e5b1c9af3de1f81da6328" category="list-text">在系統管理員中，選擇*保護&gt;複製*。</block>
+  <block id="656858cfe23bc7754225f82e6331e77e" category="list-text">選擇建立與本機目標或本機來源的複製關係。</block>
+  <block id="8edc642197b3fad6a6bfff2ea0a3c89d" category="cell">當地目的地</block>
+  <block id="eb46393253f3ac3c5696c2c6245f4718" category="inline-image-macro">藍色背景的矩形，白色字母“複製”</block>
+  <block id="3ef4e2b0ed7621b61717991263881b59" category="list-text">選擇*本地目的地*，然後選擇<block ref="08a74c2de12fbe2628462227f788ae6a" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="7485a1d9a9ea0155e076e47014e2a5cf" category="list-text">搜尋並選擇來源一致性組。</block>
+  <block id="d93ef2e9c8bf5236698bd94aa380ccdf" category="paragraph">_source_ 一致性群組是指您想要複製的本機叢集上的一致性群組。</block>
+  <block id="f731460115898cdd49151a66d75556b6" category="cell">本地來源</block>
+  <block id="5833acf9cb6206654194780dbf5bb4e0" category="list-text">選擇“本地來源”，然後選擇<block ref="08a74c2de12fbe2628462227f788ae6a" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="5a5499e4c4ae6b36a67583b6af81a9c3" category="list-text">在*複製目標*下，選擇要複製到的叢集；然後選擇儲存虛擬機器。</block>
+  <block id="a18a6418cfbf231c4bb22f6553628bd0" category="list-text">選擇複製策略。</block>
+  <block id="9572d425e8b443dcc7db3f94da93573b" category="list-text">若要延遲資料傳輸的開始，請選擇*目標設定*；然後取消選擇*立即開始傳輸*。</block>
+  <block id="f8de8f513726481c5cc25917dedf21ba" category="paragraph">現在您已經建立了複製策略和關係，您的初始資料傳輸將按照複製策略中的定義開始。您可以選擇測試複製故障轉移，以驗證如果 AFX 系統離線，是否可以成功進行故障轉移。</block>
+  <block id="55af8fe36cb88367588d3f92024db64d" category="section-title">步驟 4：測試複製故障轉移</block>
+  <block id="1bb4924da2baf2107f246b3ffd562f4f" category="paragraph">或者，如果來源叢集處於離線狀態，請驗證您是否可以成功從遠端叢集上的複製磁碟區提供資料。</block>
+  <block id="a2640285f2f549a8106a0b1aa4d9fbd1" category="list-text">將滑鼠懸停在要測試的複製關係上，然後選擇<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="bf63515cf285de8238ef0309a2d05678" category="list-text">選擇*測試故障轉移*。</block>
+  <block id="3376f100b6a6bbd185de234a90f4a252" category="list-text">輸入故障轉移訊息，然後選擇*測試故障轉移*。</block>
+  <block id="0bb0adac08ee917b57b12b2ff068f754" category="inline-link-macro">加密靜態數據</block>
+  <block id="93071e97cd2dd6df656cbf0cb27f9e7b" category="paragraph">現在您的資料已透過快照複製進行災難復原保護，您應該<block ref="fe828903eaf34996ebfa181196a5a3c3" category="inline-link-macro-rx"></block>這樣，如果您的 AFX 系統中的磁碟被重新利用、退回、放錯地方或被盜，它就無法被讀取。</block>
+  <block id="6057cbdccd33ced7b9fca642f1f8ab74" category="summary">了解ONTAP 9.17.1 中包含的可用於 AFX 儲存系統的新功能。</block>
+  <block id="fbf59db375d3d3850d40e0158e4de83d" category="doc">ONTAP 9.17.1 中適用於 AFX 儲存系統的新功能</block>
+  <block id="ed49a36c4fd547e5e2ace11bef4f21cf" category="section-title">平台</block>
+  <block id="06933067aafd48425d67bcb01bba5cb6" category="cell">更新</block>
+  <block id="68b8b395ad88d97c0eced393dd02e630" category="paragraph">以下NetApp AFX 儲存系統組件以及相關支援技術均可使用。該平台共同提供統一的硬體和軟體解決方案，為高效能 NAS 和 S3 客戶的需求提供簡化的體驗。</block>
+  <block id="cbafbb275060ad2c9ed9361f38daf280" category="list-text">Cisco Nexus 9332D-GX2B 和 Nexus 9364D-GX2A 交換機</block>
+  <block id="51048cf34d4c82d7ae92b4e8b33ccc35" category="inline-link">ONTAP 9 發布亮點</block>
+  <block id="858426bc9cba92152de24f66ed20c19b" category="list-text"><block ref="858426bc9cba92152de24f66ed20c19b" category="inline-link-rx"></block></block>
+  <block id="a94bc3cecb41ed2607e30e4137f48423" category="summary">AFX REST API 參考包含有關所有 API 呼叫的詳細資訊。該文件在開發自動化應用程式時很有用。</block>
+  <block id="9d9d25e0255ab68716120450f05905de" category="doc">AFX 儲存系統的 REST API 參考</block>
+  <block id="21ffe7e5e1175fdf48a61fcd9c71ff47" category="list-text">AFX 叢集管理 LIF 的 IP 位址或 FQDN</block>
+  <block id="33eb1e63e3f6eb080297d3d1813fb0fc" category="list-text">叢集管理員帳戶的憑證</block>
+  <block id="1aaa22d05f688af827774a38c8cc4a4f" category="list-text">將您的 Web 瀏覽器連接到叢集管理 IP 位址或網域名稱：</block>
+  <block id="61c9a91b8109381332ea40165965a049" category="paragraph"><block ref="21681865a85aff20c6818fdd4ea3d780" prefix="" category="inline-code"></block></block>
+  <block id="44d0495a119fcc60ff4f983adb013141" category="paragraph"><block ref="24832f48588dd39f7ecd6cc28c5417d8" prefix="" category="inline-code"></block></block>
+  <block id="8bb5c6ff5dffa3a5241cad022af2c0f4" category="list-text">如果出現提示，請提供使用者名稱和密碼。</block>
+  <block id="8ce1f60c06322b0a92e5f3cc2ba57e68" category="list-text">向下捲動至 *Cluster* 類別並選擇端點旁的 *GET*<block ref="e95402dceacd5260b74e758bf2e748ef" prefix=" " category="inline-code"></block>單一 API 呼叫的範例。</block>
+  <block id="8162203e3ec38c896e5f6d688115d731" category="inline-link">ONTAP REST API 參考</block>
+  <block id="99ec9f1726a6519eae656fd574344d13" category="list-text"><block ref="99ec9f1726a6519eae656fd574344d13" category="inline-link-rx"></block></block>
+  <block id="1b145f28c9e1e4044efc92e3e1567780" category="summary">您可以發出簡單的 curl 命令來開始使用 AFX REST API 並確認其可用性。</block>
+  <block id="82c5461d1a57f884eb846ca365801e17" category="doc">您的第一個 AFX 儲存系統 REST API 呼叫</block>
+  <block id="2adee5bb9e9abee9178f660513c83f69" category="paragraph">AFX 是ONTAP三位不同人物之一。您可以呼叫 REST API，根據回應中包含的兩個欄位來決定叢集的ONTAP特性。</block>
+  <block id="7013ac323311e3dab810263b1d637a84" category="paragraph">除了在本機工作站上提供 curl 實用程式之外，您還需要以下內容：</block>
+  <block id="e57ddd021ae925c610e301862e495d93" category="list-text">AFX 系統叢集管理 LIF 的 IP 位址或 FQDN</block>
+  <block id="6c62a36f8e262347f2ba79452265a020" category="list-text">有權存取ONTAP REST API 的帳戶的ONTAP憑證</block>
+  <block id="443197067be7e73a044a1b52eaba8077" category="list-text">在本地工作站的 CLI 上發出以下命令：</block>
+  <block id="29865af3d2a472bd10ab58e2e1a4097c" category="list-text">根據回應，確定ONTAP個性如下：</block>
+  <block id="a69ea189e5bd8809fa875ed27d1c6ec9" category="list-text">如果「分解」為*真*且：</block>
+  <block id="b6cc9b74c71e076a886033cca9abac0a" category="list-text">如果「san_optimized」為*false*，則個性為AFX</block>
+  <block id="599d207217f80cdc4705695fe579f735" category="list-text">如果「san_optimized」為*真*，則個性為ASA r2</block>
+  <block id="1ce1b145d61c2e2d8c310990b77b5fc2" category="list-text">如果「分解」是*錯誤的*，則個性是統一的ONTAP</block>
+  <block id="1d3b03f501dca82d114bc84916cb7ecc" category="summary">AFX 提供的 REST API 是基於 Unified ONTAP REST API。有許多變化可以使其適應 AFX 個性的獨特特徵和能力。</block>
+  <block id="2315c9b7359c6cf8ad17ee5b32952527" category="doc">了解 AFX 儲存系統 REST API</block>
+  <block id="c40f016d6141c65a8e7a7ea0b5573496" category="section-title">不支援的功能</block>
+  <block id="8ae69333555de203a85e5e6b1c079b66" category="paragraph">AFX 是一款高效能 NAS 和 S3 儲存系統。它使客戶端能夠使用 NFS、SMB/CIFS 和 S3 存取資料。由於這種專業化，有幾個不支援的功能，包括：</block>
+  <block id="9229c8b66085ba5760bf4b09d9991ffa" category="list-text">大都會集群</block>
+  <block id="359c9f8420e124c4ddc51b0d7e934133" category="list-text">儲存區域網路 (SAN)</block>
+  <block id="c88dde83b983f9ffec885fddfa72860e" category="list-text">磁碟聚合</block>
+  <block id="bfb9cdccbeb3ef587fa64b19d4b57768" category="section-title">已刪除 API 端點</block>
+  <block id="32f20da3e4cbbb8643a63c45fd1454b1" category="paragraph">與不支援的功能相對應的幾個端點已從 REST API 中刪除。</block>
+  <block id="6e664e0089189f243bff3c96749f1839" category="example-title">不受支援的端點列表</block>
+  <block id="3e060e6c494a4ffcad174dbba692dbcf" category="list-text"><block ref="3e060e6c494a4ffcad174dbba692dbcf" category="inline-link-rx"></block></block>
+  <block id="48c7d320d017a90d970e154c81d07dc1" category="inline-link">ASA r2 的 REST API 支持</block>
+  <block id="0c5e792bbcb1da7f9c908f97f8ec24c5" category="list-text"><block ref="0c5e792bbcb1da7f9c908f97f8ec24c5" category="inline-link-rx"></block></block>
+  <block id="f523993d35f99d01b60e90f6b2c16834" category="summary">您可以在硬體和軟體層級加密資料以實現雙層保護。當您加密靜態資料時，如果儲存媒體已重新利用、退回、放錯地方或被盜，則無法讀取資料。</block>
+  <block id="b611273c908dcc65fee4c7c52ce94c22" category="doc">加密 AFX 儲存系統上的靜態數據</block>
+  <block id="7b51e981529660667d1414c7a37e2172" category="paragraph">NetApp儲存加密 (NSE) 支援使用自加密磁碟機 (SED) 進行硬體加密。 SED 在寫入資料時進行加密。每個 SED 都包含一個唯一的加密金鑰。如果沒有 SED 的加密金鑰，就無法讀取儲存在 SED 上的加密資料。嘗試從 SED 讀取資料的節點必須經過身份驗證才能存取 SED 的加密金鑰。透過從金鑰管理員取得身份驗證金鑰，然後將身份驗證金鑰提供給 SED，對節點進行身份驗證。如果身份驗證金鑰有效，SED 將向節點提供其加密金鑰以存取其包含的資料。</block>
+  <block id="6e59a78106533caf6bae80e3a90c77fd" category="paragraph">使用 AFX 板載金鑰管理器或外部金鑰管理器為您的節點提供驗證金鑰。除了 NSE，您還可以啟用軟體加密，為您的資料添加另一層安全性。</block>
+  <block id="75a6d4dfa8575a75626662ce3afd1c4d" category="list-text">在系統管理員中，選擇*集群*，然後選擇*設定*。</block>
+  <block id="b59449d4094d1449f93a0de73791997c" category="list-text">在「*安全*」部分的「*加密*」下，選擇「*配置*」。</block>
+  <block id="9bd21eab9d09006d0846084b0f1b970d" category="list-text">配置密鑰管理器。</block>
+  <block id="ba6246026192852edb568b40ca46a1d0" category="cell">配置板載密鑰管理器</block>
+  <block id="abe4eb783dfc1ed20a1767b1b0b37e12" category="list-text">選擇*Onboard Key Manager*來新增金鑰伺服器。</block>
+  <block id="1fd88d59c1d719c57b195c707d7951de" category="list-text">輸入密碼。</block>
+  <block id="9bb5ba94825ba6d28795229ea175d9b8" category="cell">配置外部金鑰管理器</block>
+  <block id="13d04c22488a6d15142f8f511065deb1" category="list-text">選擇*外部金鑰管理員*來新增金鑰伺服器。</block>
+  <block id="d2197f431a28359dc4f7588a4ee17815" category="inline-image-macro">一個藍色加號，後面跟著單字“add”</block>
+  <block id="21a9ff1d73ef5743603ab3f10d2f2a69" category="list-text">選擇<block ref="36723c41fb4f69825dcd914ddf26b94e" category="inline-image-macro-rx" type="image"></block>新增密鑰伺服器。</block>
+  <block id="81d0ae691a9f27dbb334598577d9e74d" category="list-text">新增 KMIP 伺服器 CA 憑證。</block>
+  <block id="b66a2d14c1891462455fed5e4a620880" category="list-text">新增 KMIP 用戶端憑證。</block>
+  <block id="a2d38e07f32f557705115c0e67b1cf0c" category="list-text">選擇*雙層加密*以啟用軟體加密。</block>
+  <block id="de6f6891ab1d865f318115a39e658b18" category="summary">在管理 AFX 資料之前，您應該熟悉主要概念和功能。</block>
+  <block id="9297a6c5e1e2ce6644265b71048498d4" category="doc">準備保護您的 AFX 儲存系統數據</block>
+  <block id="fd0b40056f2f1d2d8b24894a14c29204" category="paragraph">您應該熟悉幾個與 AFX 資料安全相關的術語。</block>
+  <block id="232a2b16a1710c0ed1d16548ba8bb8f1" category="list-text">勒索軟體</block>
+  <block id="8e5c56447afc009e4174cf344c14b105" category="list-text">勒索軟體是一種惡意軟體，它會加密文件，使用戶無法存取它們。通常需要某種形式的付款才能解密資料。  NetApp ONTAP透過自主勒索軟體防護 (ARP) 等功能提供防禦勒索軟體的解決方案。</block>
+  <block id="e04c15856f0ea4ee0be8fd6e3957b0b0" category="list-text">加密是將資料轉換為安全格式的過程，未經適當授權就無法輕易讀取。 ONTAP提供基於軟體和基於硬體的加密技術來保護靜態資料。這確保了當儲存媒體被重新利用、退回、放錯地方或被盜時，它無法被讀取。這些加密解決方案可以使用外部金鑰管理伺服器或ONTAP提供的板載金鑰管理器進行管理。</block>
+  <block id="1dd2239be8a1348b44deadbaab8103bb" category="list-text">數位憑證和 PKI</block>
+  <block id="059460d88580ecd8442df8002819bed2" category="list-text">數位證書是用於證明公鑰所有權的電子文檔。公鑰和相關的私鑰可以以多種方式使用，包括通常作為更大的安全框架（如 TLS 和 IPsec）的一部分來建立身分。這些金鑰以及支援協定和格式標準構成了公鑰基礎設施 (PKI) 的基礎。</block>
+  <block id="cd2b16eefece89a607eb8deec53f101b" category="doc">防範針對 AFX 儲存系統的勒索軟體攻擊</block>
+  <block id="699abf1f897b13a155ff2ccb3ae3fb4c" category="sidebar">NetApp AFX 儲存系統是一種分解的硬體和軟體解決方案，專注於滿足高效能 NAS 和 S3 客戶的獨特需求。其效能和可擴充性專門設計用於滿足 AI 和 ML 工作負載的要求。  AFX 提供了簡化的使用者體驗，使其可由儲存專家和非專家進行管理。</block>
+  <block id="67e3534cd0feec346d52509c43cc0189" category="sidebar">AFX 文檔</block>
+  <block id="5f5ce9070c0881e38b8b17b23b3ece81" category="sidebar">NetApp ONTAP AFX 儲存系統是一種分解的硬體和軟體解決方案，專注於滿足高效能 NAS 和 S3 客戶的獨特需求。其效能和可擴充性專門設計用於滿足 AI 和 ML 工作負載的要求。  AFX 提供了簡化的使用者體驗，使其可由儲存專家和非專家進行管理。</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始</block>
+  <block id="c0531ee3830705c2acf41508b19aea16" category="sidebar">了解 AFX</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">快速啟動</block>
+  <block id="89ff3ce0de6b4487110c6bfb69e1cec4" category="sidebar">安裝 AFX 硬體</block>
+  <block id="4271b9430afa5773472f29d8cf243dc1" category="sidebar">設定 AFX 集群</block>
+  <block id="6c0e4fd4b7e2ef11d891ac59729c5f3e" category="sidebar">叢集管理</block>
+  <block id="2ee20619a771993544eaaa7e388816d1" category="sidebar">管理儲存虛擬機</block>
+  <block id="e7d018ea30ee4796b9c05dc524da3e90" category="sidebar">升級和維護集群</block>
+  <block id="646e0ee196bea2c5c7c3d289a6dba5ef" category="sidebar">額外的管理</block>
+  <block id="6a9ea63b411cae2a03810abb51ae0d31" category="sidebar">管理數據和訪問</block>
+  <block id="5648d4d69cb2d283e8e435612dc01a5e" category="sidebar">準備管理數據</block>
+  <block id="fc38d292d44dc86d983ac51599e4dea3" category="sidebar">建立並配置卷</block>
+  <block id="007e301697bcce2f0871e7233bc55685" category="sidebar">建立並配置儲存桶</block>
+  <block id="2d0c33667d8087d1a1d9ff3d074c05d5" category="sidebar">保護資料</block>
+  <block id="61742235493f79b14d63b06e77069132" category="sidebar">準備保護數據</block>
+  <block id="488726d2855412e63eae1202ebb65ccb" category="sidebar">安全數據</block>
+  <block id="a7d375fd0b7e997c2a60afc39cda6521" category="sidebar">準備保護數據</block>
+  <block id="adfd33fbce17f21dd8572d1c07677009" category="sidebar">加密靜態數據</block>
+  <block id="90182eba2ac7240af5b5cb5ba83a8c1b" category="sidebar">了解 REST API</block>
+  <block id="88e25761f6eadcead9ced5f76a00e95c" category="sidebar">您的第一次 API 呼叫</block>
+  <block id="ebac9abf4b1843b9733fd7bfa775a2cf" category="sidebar">REST API 參考</block>
+  <block id="bf07f432276ee2fe7e55f9ea12c2ba5a" category="sidebar">獲取更多信息</block>
+  <block id="755d7caaee9377929d6f686632ba449d" category="sidebar">AFX 系統常見問題解答</block>
+  <block id="ed93db7141f383118e5c6b577cb5fb60" category="sidebar">其他ONTAP系統的文檔</block>
+  <block id="8cd58c89ff3d51a256ecfe3fe8bab20f" category="sidebar">其他資源</block>
+  <block id="09b429c271c537c0f7f14dfe945dfddd" category="sidebar">AFX 文檔</block>
+  <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">常問問題</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="sidebar">法律聲明</block>
+  <block id="999742c56c542625e6c789b03c61d935" category="sidebar">監控叢集進程</block>
+  <block id="8395a418f540b31de23607146e05c1bc" category="sidebar">查看見解</block>
+  <block id="f9702e75bd3859c9eafa5764b93b45de" category="sidebar">監控效能</block>
+  <block id="e1a1d981fccc4378b9c311df342c1388" category="sidebar">查看事件和日誌</block>
+  <block id="c6b984bc2ca856b4291f8e64fa30cd9a" category="sidebar">查看職位</block>
+  <block id="4e0f95dd1bc897502198179fca802ef1" category="sidebar">管理網路和安全</block>
+  <block id="dced2d75745573df12ae5c487f914c89" category="sidebar">管理叢集網路</block>
+  <block id="f64f310cbe25437bd6d748991946ff1e" category="sidebar">管理乙太網路連接埠</block>
+  <block id="015653ee347fd187160fa2a4e0cc0018" category="sidebar">管理使用者和角色</block>
+  <block id="951d3fc54a28f9f46798897467d96a5b" category="sidebar">管理證書</block>
+  <block id="8ae55b420db4fe91916550e9abce16c2" category="sidebar">顯示您的 SVM</block>
+  <block id="a5a2f836dbc422c5264f743d742e50d1" category="sidebar">建立資料 SVM</block>
+  <block id="eb39e169e736ca6f2bbb00a0bab975b0" category="sidebar">配置資料 SVM</block>
+  <block id="91c934efd58347658e522d414f201107" category="sidebar">遷移 SVM</block>
+  <block id="9ecee3d5a1fbbf2427a10b60a5bf0cbe" category="sidebar">支援集群</block>
+  <block id="e8d169e6dc7b218b05fe89333590b11e" category="sidebar">管理AutoSupport</block>
+  <block id="bdec86833bc68cb3ec7e90fb7fa72510" category="sidebar">查看並提交支援案例</block>
+  <block id="cc00ecc8807926c957b868c222de58f6" category="sidebar">擴展集群</block>
+  <block id="d04e5f519989e5f2ca95f9541ffe17a0" category="sidebar">升級ONTAP</block>
+  <block id="00a69742e414f1b267e0cae78e185336" category="sidebar">更新韌體</block>
+  <block id="88fff44862def4168ac79c5db562ef39" category="sidebar">維護硬體</block>
+  <block id="3e3ccd70e170fe5490433b8d5cf56bf3" category="sidebar">了解您的 AFX 系統</block>
+  <block id="dbe4d9ee9509101eab810b6d20824b87" category="sidebar">了解NetApp AFX</block>
+  <block id="0a8322c611c6b2eb2c9ecb053a2bc62d" category="sidebar">系統特性</block>
+  <block id="ee3eaeb6a7cd31167c2dd23547b16511" category="sidebar">架構細節</block>
+  <block id="a7f68b037da8611dede6ae3b3bb41081" category="sidebar">比較 AFX 與AFF和FAS</block>
+  <block id="debbbcd57ac6bcfce5c192665fccf3db" category="sidebar">安裝您的 AFX 系統</block>
+  <block id="6f550466a69bad21f11ab99fc12db497" category="sidebar">安裝工作流程</block>
+  <block id="f5672ee179ad2bcc9cb2bc0cc89ba289" category="sidebar">查看硬體需求</block>
+  <block id="f76aaf3aaa7b30238e7a3e2b1a04493b" category="sidebar">準備安裝</block>
+  <block id="543e6a3c9b07a3642afb462fba582642" category="sidebar">安裝硬體</block>
+  <block id="86808d661c55cc296414487fb871c221" category="sidebar">安裝開關</block>
+  <block id="7c8504862cd4323566fbe14ef6bc44f6" category="sidebar">安裝儲存系統和架子</block>
+  <block id="d223aabe6d0751ac7fb17d3493f3c6c7" category="sidebar">佈線</block>
+  <block id="931abf3dfe7c654a870a9360097a29b0" category="sidebar">查看支援的配置</block>
+  <block id="ea6245a5aad1d347d3bfd8727ccbe15c" category="sidebar">電纜硬體</block>
+  <block id="dc8a5fc28ffc2088ab56d86a1a9b069a" category="sidebar">打開並配置交換機</block>
+  <block id="7b2ca066e862da1c95471b425468af14" category="sidebar">啟動系統</block>
+  <block id="c5c1ca2fb6b6370bc4279553f11ab96a" category="sidebar">設定您的 AFX 系統</block>
+  <block id="d59048f21fd887ad520398ce677be586" category="sidebar">了解更多</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">發行說明</block>
+  <block id="db63e5e7d34efa3840098020c2d030bc" category="sidebar">ONTAP 9.17.1 的新增功能</block>
+  <block id="6a66d4f800a8576eee650d6dd676dd9d" category="sidebar">使用 REST API</block>
+  <block id="8921c3b98c12a84674b91d6afb231018" category="sidebar">您的第一個 REST API 呼叫</block>
+  <block id="77811a66f12d1085614f313861555339" category="sidebar">管理數據</block>
+  <block id="6d275991ff8e14c257c20838221afc3d" category="sidebar">準備管理您的數據</block>
+  <block id="e2439a8512b353f75391ba9c346bc84d" category="sidebar">管理磁碟區</block>
+  <block id="79aa9197dc185dded5eb383a683a5219" category="sidebar">管理儲存桶</block>
+  <block id="4465a7025cccc1f73dbe68ea27051d49" category="sidebar">監控和排除儲存故障</block>
+  <block id="d423bdf7745f47fb367bbd9ed8c73888" category="sidebar">準備保護您的數據</block>
+  <block id="fff84298cd90a613302c98045d7150ab" category="sidebar">建立一致性組</block>
+  <block id="e5787a3a7b79c3cdbeb01e163f0a84de" category="sidebar">管理快照</block>
+  <block id="4e639b56a35915b63a83131451f9a2ab" category="sidebar">建立 SVM 對等關係</block>
+  <block id="d763fb8938024cd88263074e25273371" category="sidebar">設定和管理快照複製</block>
+  <block id="0482c0783bfb2959339ab71fc6aa2511" category="sidebar">管理政策和時間表</block>
+  <block id="97c10fb55bed7fe33c55683647d9105a" category="sidebar">準備保護您的數據</block>
+</blocks>

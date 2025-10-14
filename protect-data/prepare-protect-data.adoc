@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: protect-data/prepare-protect-data.html 
+keywords: afx, afx system, prepare, prepare protect, prepare protect data 
+summary: 在保護您的 AFX 資料之前，您應該熟悉一些關鍵概念和儲存的當前狀態。 
+---
+= 準備保護您的 AFX 儲存系統數據
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在保護您的 AFX 資料之前，您應該熟悉一些關鍵概念和功能。
+
+
+TIP: 由於AFF和FAS系統上的許多概念和管理程式與 AFX 儲存系統相同，因此檢視 Unified ONTAP文件會很有幫助。
+
+
+
+== 術語和選項
+
+您應該熟悉幾個與 AFX 資料保護相關的術語。
+
+快照:: 快照是磁碟區的唯讀、時間點影像。它是 ONTAP 複製和資料保護服務的基礎技術。
+一致性組:: 一致性組是作為單一單元進行管理的磁碟區的集合。您可以建立一致性群組來簡化應用程式工作負載的儲存管理和資料保護。例如，您可以使用一致性群組而不是單一磁碟區在一次操作中對多個磁碟區進行快照。
+層次一致性組:: 分層一致性組是在ONTAP 9.16.1 中引入的，並可與 AFX 一起使用。透過分層結構，可以將一個或多個一致性組配置為父級下的子級。這些分層群組可讓您將單獨的快照策略套用至子一致性群組，並透過複製父群組將所有子群組的快照作為單一單元複製到遠端叢集。
+SnapLock:: SnapLock是ONTAP 的一項功能，可讓您透過將檔案移至一次寫入多次讀取 (WORM) 狀態來保護檔案。這可以防止在指定的保留期內進行修改或刪除。創建的SnapLock磁碟區在基於保留創建後不能從非SnapLock磁碟區轉換。
+
+
+
+
+== 相關資訊
+
+* link:../administer/additional-ontap-svm.html["額外的 AFX SVM 管理"]
+* link:../get-started/prepare-cluster-admin.html["準備管理 AFX 系統"]
+

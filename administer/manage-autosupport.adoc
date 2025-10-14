@@ -1,0 +1,109 @@
+---
+sidebar: sidebar 
+permalink: administer/manage-autosupport.html 
+keywords: afx, afx system, autosupport 
+summary: AutoSupport是一項NetApp技術，您可以使用它來主動監控 AFX 儲存系統的健康狀況。它可以自動向NetApp技術支援、您的內部支援組織或支援合作夥伴發送訊息。 
+---
+= 管理 AFX 儲存系統叢集的AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AutoSupport是一項NetApp技術，您可以使用它來主動監控 AFX 儲存系統的健康狀況。它可以自動向NetApp技術支援、您的內部支援組織或支援合作夥伴發送訊息。
+
+當您設定 AFX 叢集時， AutoSupport預設為啟用，並且訊息將傳送給NetApp技術支援。若要向您的內部支援組織發送訊息，您需要正確配置您的叢集並提供有效的電子郵件主機。  AFX 在啟動 24 小時後開始傳送AutoSupport訊息。
+
+
+NOTE: 您需要使用叢集管理員帳戶登入系統管理員來管理AutoSupport。
+
+
+
+== 測試AutoSupport連接
+
+設定叢集後，您應該測試AutoSupport連線以驗證技術支援是否可以接收AutoSupport產生的訊息。
+
+.步驟
+. 在系統管理員中，選擇*集群*，然後選擇*設定*。
+. 在“* AutoSupport*”旁邊選擇image:icon_kabob.gif["三個垂直的藍點"]然後*測試連線*。
+. 輸入AutoSupport訊息的主題並選擇 *發送測試AutoSupport訊息*。
+
+
+
+
+== 新增AutoSupport收件人
+
+您可以選擇將內部支援組織的成員新增至接收AutoSupport訊息的電子郵件地址清單。
+
+.步驟
+. 在系統管理員中，選擇*集群*，然後選擇*設定*。
+. 在“* AutoSupport*”旁邊選擇image:icon_kabob.gif["三個垂直的藍點"]然後是*更多選項*。
+. 在「*電子郵件*」旁邊，選擇image:icon_edit_pencil_blue_outline.png["鉛筆圖示"]進而image:icon_add.gif["藍色加號，後面跟著單字 Add"]。
+. 提供收件者的電子郵件地址；對於收件者類別，選擇：
++
+** 為您的合作夥伴提供*合作夥伴*
+** *一般*適用於您的內部支持組織的成員
+
+
+. 選擇*儲存*。
+
+
+.結果
+您新增的電子郵件地址將收到針對其特定收件者類別的新AutoSupport訊息。
+
+
+
+== 發送AutoSupport數據
+
+如果您的 AFX 系統出現問題，您應該手動傳送AutoSupport資料。這可以顯著減少識別和解決問題所需的時間。
+
+.步驟
+. 在系統管理員中，選擇*集群*，然後選擇*設定*。
+. 在“* AutoSupport*”旁邊選擇image:icon_kabob.gif["三個垂直的藍點"]然後*生成並發送*。
+. 提供AutoSupport訊息的主題。
+. 選擇*發送*。
+
+
+.結果
+您的AutoSupport資料已傳送至技術支援。
+
+
+
+== 抑制支持案例生成
+
+如果您正在對 AFX 系統執行升級或維護，您可能想要抑制AutoSupport支援案例的生成，直到升級或維護完成。
+
+.步驟
+. 在系統管理員中，選擇*集群*，然後選擇*設定*。
+. 在“* AutoSupport*”旁邊選擇image:icon_kabob.gif["三個垂直的藍點"]然後*抑制支持案例生成*。
+. 指定抑制支援案例產生的小時數以及您不想為其產生案例的節點。
+. 選擇*發送*。
+
+
+.結果
+在您指定的時間內不會產生AutoSupport案例。如果您在指定時間之前完成升級或維護，則應立即恢復支援案例產生。
+
+
+
+== 恢復支援案例生成
+
+如果您在升級或維護期間抑制了支援案例的生成，則應在升級或維護完成後立即恢復支援案例的生成。
+
+.步驟
+. 在系統管理員中，選擇*集群*，然後選擇*設定*。
+. 在“* AutoSupport*”旁邊選擇image:icon_kabob.gif["三個垂直的藍點"]然後*恢復支援案例生成*。
+. 選擇要恢復AutoSupport案例產生的節點。
+. 選擇*發送*。
+
+
+.結果
+AutoSupport案例將根據需要為您的 AFX 系統自動產生。
+
+
+
+== 相關資訊
+
+* https://docs.netapp.com/us-en/ontap/system-admin/manage-autosupport-concept.html["了解ONTAP AutoSupport"^]
+* https://docs.netapp.com/us-en/ontap/system-admin/requirements-autosupport-reference.html["準備使用ONTAP AutoSupport"^]
+

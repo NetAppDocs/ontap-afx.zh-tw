@@ -1,0 +1,62 @@
+---
+permalink: install-setup/afx-cable-overview.html 
+sidebar: sidebar 
+keywords: afx, afx 1k, cable, overview, cisco 9332, cisco 9364, cabling, hardware, switches, storage shelves, disk shelves, controller nodes 
+summary: 了解如何將控制器節點連接到網路、交換器和儲存架。 
+---
+= AFX 1K 儲存系統支援的配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解 AFX 1K 儲存系統支援的硬體組件和佈線選項，包括相容的儲存磁碟架、交換器以及正確設定係統所需的電纜類型。
+
+
+
+== 支援的 AFX 1K 佈線配置
+
+AFX 1K 儲存系統的初始設定支援至少四個控制器節點透過雙交換器連接到儲存磁碟架。
+
+額外的控制器節點和磁碟架擴展了初始 AFX 1K 儲存系統配置。擴展的 AFX 1K 配置遵循與下圖所示的相同的基於交換器的佈線方法。
+
+image:../media/drw_afx_cable_overview_half_node_ieops-2358.svg["AFK 1K 儲存系統範例佈線"]
+
+
+
+== 支援的硬體組件
+
+查看 AFX 1K 儲存系統的相容儲存磁碟架、交換器和電纜類型。
+
+[cols="2,2,3,6"]
+|===
+| *控制器架* | *磁碟架* | *支援的交換器* | *支援的電纜* 
+
+
+ a| 
+AFX 1K
+ a| 
+NX224
+ a| 
+* CiscoNexus 9332D-GX2B（400GbE）
+* CiscoNexus 9364D-GX2A（400GbE）
+
+ a| 
+* 400GbE QSFP-DD 分支至 4x100GbE QSFP 分支電纜
++
+
+NOTE: 分支電纜用於交換器、控制器和磁碟架之間的 100GbE 連接。
+
++
+** 100GbE 電纜連接至控制器集群和 HA 端口
+** 100GbE 電纜連接至磁碟架
+
+
+* 2 條 400GbE 電纜，用於交換器 A 和交換器 B 之間的 ISL 連接
+* 用於管理連接的 RJ-45 電纜
+
+
+|===
+.下一步是什麼？
+在查看了支援的系統配置和硬體組件後，link:install-network-reqs.html["查看 AFX 1K 儲存系統的網路需求"] 。

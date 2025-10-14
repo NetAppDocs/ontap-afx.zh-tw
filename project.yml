@@ -1,0 +1,26 @@
+---
+settings:
+  name: AFX
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: zh-tw,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn
+sidebar:
+  entries:
+  - title: AFX 文檔
+    url: "/index.html"
+  - section: release-notes
+  - section: get-started
+  - section: administer
+  - section: svm-admin
+  - section: rest
+  - section: learn-more
+  - title: 常問問題
+    url: "/faq-ontap-afx.html"
+  - title: 法律聲明
+    url: "/legal-notices.html"
+product-family:
+  name: ONTAP
+  repo: ontap-family

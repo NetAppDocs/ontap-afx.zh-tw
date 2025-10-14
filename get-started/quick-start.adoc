@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: get-started/quick-start.html 
+keywords: afx, afx system, quick start 
+summary: 要初始啟動並執行您的 AFX 系統，您需要安裝硬體元件、設定叢集並準備管理叢集和 SVM。 
+---
+= 快速啟動設定 AFX 儲存系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要初始啟動並執行您的 AFX 系統，您需要安裝硬體元件、設定叢集並準備管理叢集和 SVM。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"]安裝並設定您的硬體
+[role="quick-margin-para"]
+link:../install-setup/install-setup-workflow.html["安裝"]您的 AFX 儲存系統並準備設定叢集。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"]設定集群
+[role="quick-margin-para"]
+按照快速簡便的流程link:../install-setup/cluster-setup.html["設定"]使用系統管理員的ONTAP集群。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]準備管理您的集群
+[role="quick-margin-para"]
+在生產環境部署 AFX 之前，必須link:../get-started/prepare-cluster-admin.html["準備"]透過了解管理結構（包括儲存虛擬機器 (SVM)、使用者、角色和管理介面），確保安全、高效和有效的叢集管理。

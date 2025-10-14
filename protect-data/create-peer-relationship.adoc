@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: protect-data/create-peer-relationship.html 
+keywords: afx, afx system, peering, peer relationship 
+summary: '對等關係定義了允許叢集和儲存虛擬機器 (VM) 安全地交換資料的網路連線。您可以在不同叢集上的儲存虛擬機器之間建立對等關係，以使用SnapMirror實現資料保護和災難復原。' 
+---
+= 在 AFX 儲存系統上建立叢集間 SVM 對等關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+對等關係定義了允許叢集和儲存虛擬機器 (VM) 安全地交換資料的網路連線。您可以在不同叢集上的儲存虛擬機器之間建立對等關係，以使用SnapMirror實現資料保護和災難復原。
+
+.開始之前
+您必須先在本機叢集和遠端叢集之間建立叢集對等關係，然後才能建立儲存虛擬機器對等關係。link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship["建立集群對等關係"]如果您還沒有這樣做的話。
+
+.步驟
+. 在系統管理員中，選擇*保護>概覽*。
+. 在*儲存 VM 對等體*下選擇*新增儲存 VM 對等體*。
+. 選擇本地叢集上的儲存虛擬機器；然後選擇遠端叢集上的儲存虛擬機器。
+. 選擇*新增儲存虛擬機器對等體*。
+
+
+.相關資訊
+* https://docs.netapp.com/us-en/ontap/peering/peering-basics-concept.html["了解有關同伴關係的更多信息"^] 。
+

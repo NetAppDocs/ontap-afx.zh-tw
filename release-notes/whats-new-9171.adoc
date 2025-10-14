@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: release-notes/whats-new-9171.html 
+keywords: 'afx, release notes, what"s new, 9.17.1' 
+summary: 了解ONTAP 9.17.1 中包含的可用於 AFX 儲存系統的新功能。 
+---
+= ONTAP 9.17.1 中適用於 AFX 儲存系統的新功能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解ONTAP 9.17.1 中包含的可用於 AFX 儲存系統的新功能。
+
+
+
+== 平台
+
+[cols="2,4"]
+|===
+| 更新 | 描述 
+
+
+| 平台  a| 
+以下NetApp AFX 儲存系統組件以及相關支援技術均可使用。該平台共同提供統一的硬體和軟體解決方案，為高效能 NAS 和 S3 客戶的需求提供簡化的體驗。
+
+* AFX 1K 控制器
+* NX224貨架
+* Cisco Nexus 9332D-GX2B 和 Nexus 9364D-GX2A 交換機
+
+
+|===
+.相關資訊
+* https://docs.netapp.com/us-en/ontap/release-notes/index.html["ONTAP 9 發布亮點"^]
+

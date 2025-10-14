@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: learn-more/additional-resources.html 
+keywords: afx, afx system, learn more, additional resources 
+summary: 您可以存取其他資源來協助管理和支援 AFX，以及了解有關ONTAP和相關NetApp產品和服務的更多資訊。 
+---
+= AFX 儲存系統的其他資源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以存取其他資源來協助管理和支援 AFX，以及了解有關ONTAP和相關NetApp產品和服務的更多資訊。
+
+
+
+== ONTAP 文件
+
+* https://docs.netapp.com/us-en/ontap/["統一ONTAP"^]
+* https://docs.netapp.com/us-en/asa-r2/["ASA r2"^]
+* https://docs.netapp.com/us-en/ontap-automation/["ONTAP自動化"^]
+* https://docs.netapp.com/us-en/ontap-family["ONTAP系列"^]
+
+
+
+
+== NetApp支援
+
+* https://mysupport.netapp.com/["NetApp支援站點"^]
+* https://kb.netapp.com/["NetApp知識庫"]
+

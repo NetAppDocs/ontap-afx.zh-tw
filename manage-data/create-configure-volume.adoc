@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: manage-data/create-configure-volume.html 
+keywords: afx, afx system, create volume, volume 
+summary: 您可以建立一個磁碟區並將其附加到資料 SVM。每個磁碟區都可以使用 AFX 支援的存取協定之一向客戶端公開。 
+---
+= 在 AFX 儲存系統上建立和設定卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立一個磁碟區並將其附加到資料 SVM。每個磁碟區都可以使用 AFX 支援的存取協定之一向客戶端公開。
+
+.關於此任務
+建立磁碟區時，您需要提供最少量的配置詳細資訊。可以在建立期間或之後透過編輯磁碟區來提供其他詳細資訊。如果您已建立其他資料 SVM，則需要為磁碟區選擇 SVM。
+
+.步驟
+. 在系統管理員中，選擇*儲存*，然後選擇*磁碟區*。
+. 選擇image:icon_add_blue_bg.png["新增藍色背景"]並提供名稱、容量、最佳化等基本配置。
+. （可選）選擇「更多選項」以獲得與資料保護、 SnapLock和 NFS 存取相關的其他配置。
+. 選擇“*儲存*”以新增磁碟區。
+

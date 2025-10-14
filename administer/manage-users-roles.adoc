@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: administer/manage-users-roles.html 
+keywords: afx, afx system, users, roles 
+summary: 您可以根據 AFX 提供的身份驗證和授權服務定義使用者帳戶和角色。 
+---
+= 管理 AFX 儲存系統叢集使用者和角色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以根據 AFX 提供的身份驗證和授權服務定義使用者帳戶和角色。
+
+
+NOTE: 每個ONTAP用戶都需要分配一個角色。角色包括權限並決定使用者能夠執行的操作。
+
+
+
+== 建立帳戶角色
+
+當您的 AFX 叢集設定並初始化時，會自動建立叢集管理員和儲存 VM 管理員的角色。您可以建立其他使用者帳戶角色來定義指派了這些角色的使用者可以在您的叢集上執行的特定功能。
+
+.步驟
+. 在系統管理員中，選擇*集群*，然後選擇*設定*。
+. 在「*安全*」部分中，在「*使用者和角色*」旁邊，選擇image:icon_arrow.gif["指向右側的藍色箭頭"]。
+. 在「*角色*」下，選擇image:icon_add_blue_bg.png["藍色矩形框內有一個加號，後面跟著白色字母“add”"]。
+. 提供角色的名稱和屬性。
+. 選擇*儲存*。
+
+
+
+
+== 建立集群帳戶
+
+您可以建立一個叢集級帳戶，以便在執行叢集或 SVM 管理時使用。
+
+.步驟
+. 在系統管理員中，選擇*集群*，然後選擇*設定*。
+. 在“*安全*”部分中，選擇image:icon_arrow.gif["指向右側的藍色箭頭"]在*使用者和角色*旁邊。
+. 選擇image:icon_add_blue_bg.png["藍色矩形框內有一個加號，後面跟著白色字母“add”"]. 在 *用戶* 下。
+. 輸入使用者名，然後選擇使用者的角色。
++
+該角色應該適合使用者。例如，*admin* 角色能夠在您的叢集上執行所有設定任務。
+
+. 選擇使用者登入方法和身份驗證方法；通常是*密碼*。
+. 輸入用戶的密碼。
+. 選擇*儲存*。
+
+
+.結果
+已建立新帳戶並可供您的 AFX 叢集使用。
+
+
+
+== 相關資訊
+
+* link:../administer/prepare-authentication.html["準備身份驗證服務"]
+* link:../administer/additional-ontap-svm.html["額外的 AFX SVM 管理"]
+

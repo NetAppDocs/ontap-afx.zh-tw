@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: rest/first-call.html 
+keywords: afx, afx system, rest api, first call, curl 
+summary: 您可以發出簡單的 curl 命令來開始使用 AFX REST API 並確認其可用性。 
+---
+= 您的第一個 AFX 儲存系統 REST API 呼叫
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以發出簡單的 curl 命令來開始使用 AFX REST API 並確認其可用性。
+
+.關於此任務
+AFX 是ONTAP三位不同人物之一。您可以呼叫 REST API，根據回應中包含的兩個欄位來決定叢集的ONTAP特性。
+
+.開始之前
+除了在本機工作站上提供 curl 實用程式之外，您還需要以下內容：
+
+* AFX 系統叢集管理 LIF 的 IP 位址或 FQDN
+* 有權存取ONTAP REST API 的帳戶的ONTAP憑證
+
+
+.步驟
+. 在本地工作站的 CLI 上發出以下命令：
++
+[source, curl]
+----
+curl --request GET \
+"https://$FQDN_IP/api/cluster?fields=disaggregated,san_optimized" \
+--user username:password
+----
+. 根據回應，確定ONTAP個性如下：
++
+** 如果「分解」為*真*且：
++
+*** 如果「san_optimized」為*false*，則個性為AFX
+*** 如果「san_optimized」為*真*，則個性為ASA r2
+
+
+** 如果「分解」是*錯誤的*，則個性是統一的ONTAP
+
+
+
+
+.相關資訊
+* link:../faq-ontap-afx.html["AFX 儲存系統常見問題解答"]
+

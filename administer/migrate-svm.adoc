@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: administer/migrate-svm.html 
+keywords: afx, afx system, svm, migrate svm 
+summary: 您可以將資料 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱 Unified ONTAP文件。 
+---
+= 遷移 AFX 儲存系統 SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以將資料 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱提供的 Unified ONTAP文件。
+
+
+
+== 互通性注意事項
+
+在規劃和執行 SVM 遷移之前，您應該了解互通性注意事項，包括功能和限制。
+
+
+
+=== 用例
+
+叢集管理員可以將 SVM 從來源叢集重新定位到目標叢集。您可以將其作為容量管理和負載平衡的一部分，或允許設備升級或資料中心整合。
+
+由於 AFX 儲存系統不支援從 Unified ONTAP進行就地升級，因此 SVM 遷移是一個重要的用例。您可以將應用程式工作負載從 Unified ONTAP9 叢集遷移到 AFX 叢集，而不會造成中斷。此外，SVM 還可以透過其他方式遷移，包括從 AFX 叢集遷移到 Unified ONTAP叢集以及在 AFX 叢集之間遷移。
+
+
+
+=== 版本互通性
+
+下表根據來源叢集和目標叢集的ONTAP特性和版本描述了允許的 SVM 遷移。
+
+[cols="40,30,30"]
+|===
+| 方向 | 來源版本 | 目標版本 
+
+
+| 統一到 AFX | 9.15.1 - 9.17.1 | 9.17.1 
+
+
+| AFX 到統一 | 9.17.1 | 9.17.1 
+
+
+| AFX 到 AFX | 9.17.1 | 9.17.1 
+|===
+
+
+=== 預檢
+
+Unified ONTAP包含幾項預檢查，這些預檢查也是透過 AFX 實現的。此外，還添加了幾個新的預檢查來標記 AFX 不支援的功能，包括：
+
+* FabricPool （駐留在複合聚合上的磁碟區）
+* 厚置備卷
+
+
+
+
+=== 卷配置
+
+配置 AFX 磁碟區是為了平衡叢集的儲存可用區 (SAZ) 中 AFX 磁碟區的放置。
+
+艙位保證:: AFX 不支援厚配置。如果正在遷移的 SVM 中的任何磁碟區是厚置備的，則使用預檢查來導致遷移失敗。
+加密:: AFX 系統支援NetApp磁碟區加密 (NVE)，但不支援NetApp聚合加密 (NAE)。因此，Unified ONTAP叢集中的任何 NAE 磁碟區在遷移到 AFX 時都會轉換為 NVE 磁碟區。下表總結了相容性和轉換。
+
+
+[cols="50,50"]
+|===
+| 來源磁碟區 | 目標卷 
+
+
+| 純文字 | 純文字 
+
+
+| 北威州 | 北威州 
+
+
+| 國家工程院 | 北威州 
+|===
+
+
+== 相關資訊
+
+* https://docs.netapp.com/us-en/ontap/svm-migrate/index.html["ONTAP SVM 資料移動性"^]
+* link:../faq-ontap-afx.html["AFX 儲存系統常見問題解答"]
+

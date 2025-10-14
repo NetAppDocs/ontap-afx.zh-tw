@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: rest/learn-rest-api.html 
+keywords: afx, afx system, rest api, rest, automation 
+summary: AFX 提供的 REST API 是基於 Unified ONTAP REST API。有許多變化可以使其適應 AFX 個性的獨特特徵和能力。 
+---
+= 了解 AFX 儲存系統 REST API
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 提供的 REST API 是基於 Unified ONTAP REST API。有許多變化可以使其適應 AFX 個性的獨特特徵和能力。
+
+
+
+== 不支援的功能
+
+AFX 是一款高效能 NAS 和 S3 儲存系統。它使客戶端能夠使用 NFS、SMB/CIFS 和 S3 存取資料。由於這種專業化，有幾個不支援的功能，包括：
+
+* 大都會集群
+* 儲存區域網路 (SAN)
+* 磁碟聚合
+
+
+
+
+== 已刪除 API 端點
+
+與不支援的功能相對應的幾個端點已從 REST API 中刪除。
+
+.不受支援的端點列表
+[%collapsible]
+====
+[source, text]
+----
+/cluster/counter/tables
+/cluster/metrocluster
+/cluster/metrocluster/diagnostics
+/cluster/metrocluster/dr-groups
+/cluster/metrocluster/interconnects
+/cluster/metrocluster/nodes
+/cluster/metrocluster/operations
+/cluster/metrocluster/svms
+/network/fc/fabrics
+/network/fc/interfaces
+/network/fc/logins
+/network/fc/ports
+/network/fc/wwpn-aliases
+/protocols/nvme/interfaces
+/protocols/nvme/services
+/protocols/nvme/subsystem-controllers
+/protocols/nvme/subsystem-maps
+/protocols/nvme/subsystems
+/protocols/san/fcp/services
+/protocols/san/igroups
+/protocols/san/initiators
+/protocols/san/iscsi/credentials
+/protocols/san/iscsi/services
+/protocols/san/iscsi/sessions
+/protocols/san/lun-maps
+/protocols/san/portsets
+/protocols/san/vvol-bindings
+/storage/luns
+/storage/namespaces
+----
+====
+
+
+== 相關資訊
+
+* https://docs.netapp.com/us-en/ontap-automation["ONTAP自動化"^]
+* https://docs.netapp.com/us-en/asa-r2/learn-more/rest-api-support.html["ASA r2 的 REST API 支持"^]
+

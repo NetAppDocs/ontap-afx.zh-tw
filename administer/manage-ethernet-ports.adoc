@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: administer/manage-ethernet-ports.html 
+keywords: afx, afx system, ethernet, ethernet ports 
+summary: AFX 系統使用的連接埠為網路連接和通訊提供了基礎。有多種設定選項可用於客製化網路的第二層方面。 
+---
+= 管理 AFX 儲存系統乙太網路連接埠
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 系統使用的連接埠為網路連接和通訊提供了基礎。有多種選項可用於客製化網路的第二層配置。
+
+
+
+== 創建 VLAN
+
+VLAN 由分組到廣播域的交換器連接埠組成。  VLAN 可讓您提高安全性、隔離潛在問題並限制 IP 網路基礎架構內的可用路徑。
+
+.開始之前
+網路中部署的交換器必須符合 IEEE 802.1Q 標準或具有特定於供應商的 VLAN 實作。
+
+.關於此任務
+請注意以下事項：
+
+* 您無法在沒有任何成員連接埠的介面群組連接埠上建立 VLAN。
+* 當您第一次在連接埠上設定 VLAN 時，連接埠可能會關閉，導致網路暫時中斷。後續向相同連接埠新增 VLAN 不會影響連接埠狀態。
+* 您不應在網路介面上建立與交換器的本機 VLAN 具有相同識別碼的 VLAN。例如，如果網路介面 e0b 位於本機 VLAN 10 上，則不應在該介面上建立 VLAN e0b-10。
+
+
+.步驟
+. 在系統管理員中，選擇*網路*，然後選擇*乙太網路連接埠*。
+. 選擇image:icon_vlan.png["藍色加號，後面跟著單字 vlan"]。
+. 提供配置詳細信息，包括所需節點的 ID、廣播域和連接埠。
++
+VLAN 無法連接到託管叢集 LIF 的連接埠或指派給叢集 IP 空間的連接埠。
+
+. 選擇*儲存*。
+
+
+.結果
+您已建立 VLAN 來提高安全性、隔離問題並限制 IP 網路基礎架構內的可用路徑。
+
+
+
+== 創建 LAG
+
+鏈路聚合組 (LAG) 是一種將多個實體網路連接組合成單一邏輯連接的技術。您可以使用它來增加頻寬並在節點之間提供冗餘。
+
+.步驟
+. 在系統管理員中，選擇*網路*，然後選擇*乙太網路連接埠*。
+. 選擇*連結聚合組*。
+. 提供配置詳細信息，包括節點、廣播域、連接埠、模式和負載分佈。
+. 選擇*儲存*。
+
+
+
+
+== 相關資訊
+
+* link:../administer/manage-cluster-networking.html["管理 AFX 群集網絡"]
+* https://docs.netapp.com/us-en/ontap/networking/configure_network_ports_cluster_administrators_only_overview.html["了解ONTAP網路連接埠配置"^]
+* https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html["組合實體連接埠以建立ONTAP介面組"^]
+

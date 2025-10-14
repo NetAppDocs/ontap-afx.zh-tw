@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: administer/view-dashboard.html 
+keywords: afx, afx system, dashboard, view dashboard, cluster status 
+summary: 您可以登入系統管理員來存取 AFX 儀表板並顯示叢集狀態。在開始 AFX 管理任務之前或懷疑有操作問題時，這是一個很好的第一步。 
+---
+= 查看 AFX 儲存系統儀表板
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以登入系統管理員來存取 AFX 儀表板並顯示叢集狀態。在開始 AFX 管理任務之前或懷疑有操作問題時，這是一個很好的第一步。
+
+.開始之前
+您需要以下物品：
+
+* 叢集管理 LIF 的 IP 位址或域名
+* 管理員帳戶憑證
+
+
+.步驟
+. 使用瀏覽器和叢集管理 IP 位址連線到系統管理員：
++
+`\https://$FQDN_IPADDR/`
+
++
+*例子*
+
++
+`\https://10.61.25.33/`
+
+. 提供管理員帳戶的使用者名稱和密碼，然後選擇*Sign in*。
+. 在左側導覽窗格中選擇“*儀表板*”，並查看頁面上的圖塊，包括群集“*運行狀況*”。
+. 在導覽窗格中，選擇“*Cluster*”，然後選擇“*Overview*”。
+. 查看叢集名稱、版本、 ONTAP特性和其他詳細資訊。
+. 在概覽頁面的頂部，選擇*佈線*以直觀顯示叢集硬體和連線。
+. 在導覽窗格中，選擇*事件和作業*，然後選擇*系統警報*以顯示和檢視系統警報。
+

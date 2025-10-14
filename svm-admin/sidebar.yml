@@ -1,0 +1,44 @@
+---
+section: svm-admin
+title: 管理您的儲存虛擬機器和數據
+entries:
+- title: 管理數據
+  entries:
+  - title: 準備管理您的數據
+    url: "/manage-data/prepare-manage-data.html"
+  - title: 建立並配置卷
+    url: "/manage-data/create-configure-volume.html"
+  - title: 管理磁碟區
+    url: "/manage-data/manage-volumes.html"
+  - title: 建立並配置儲存桶
+    url: "/manage-data/create-configure-bucket.html"
+  - title: 管理儲存桶
+    url: "/manage-data/manage-buckets.html"
+  - title: 監控和排除儲存故障
+    url: "/manage-data/monitor-debug-storage.html"
+- title: 保護資料
+  entries:
+  - title: 準備保護您的數據
+    url: "/protect-data/prepare-protect-data.html"
+  - title: 建立一致性組
+    url: "/protect-data/create-consistency-group.html"
+  - title: 管理一致性組
+    url: "/protect-data/manage-consistency-groups.html"
+  - title: 建立快照
+    url: "/protect-data/create-snapshot.html"
+  - title: 管理快照
+    url: "/protect-data/manage-snapshots.html"
+  - title: 建立 SVM 對等關係
+    url: "/protect-data/create-peer-relationship.html"
+  - title: 設定和管理快照複製
+    url: "/protect-data/snapshot-replication.html"
+  - title: 管理政策和時間表
+    url: "/protect-data/policies-schedules.html"
+- title: 安全數據
+  entries:
+  - title: 準備保護您的數據
+    url: "/secure-data/prepare-secure-data.html"
+  - title: 加密靜態數據
+    url: "/secure-data/encrypt-data-at-rest.html"
+- title: 額外的管理
+  url: "/administer/additional-ontap-svm.html"

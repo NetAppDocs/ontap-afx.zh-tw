@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: administer/manage-cluster-networking.html 
+keywords: afx, afx system, networking, cluster networking, broadcast domain, ipsace, subnet, network interface 
+summary: 您需要配置 AFX 儲存系統的網路。網路環境支援多種連線場景，包括用戶端存取 SVM 上的資料和叢集間通訊。 
+---
+= 管理 AFX 儲存系統叢集網絡
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您需要配置 AFX 儲存系統的網路。網路環境支援多種場景，包括客戶端存取 SVM 上的資料和叢集間通訊。
+
+
+NOTE: 建立網路資源是重要的第一步。您還需要根據需要執行其他管理操作，例如編輯或刪除網路定義。
+
+
+
+== 建立廣播域
+
+廣播域透過將屬於同一第二層網路的連接埠進行分組來簡化叢集網路的管理。然後可以為儲存虛擬機 (SVM) 分配群組中的端口，用於資料或管理流量。
+
+集群設定期間會建立多個廣播域，包括：
+
+預設:: 此廣播域包含「預設」IP空間中的連接埠。這些連接埠主要用於提供資料。還包括叢集管理和節點管理連接埠。
+簇:: 此廣播域包含「集群」IP空間中的連接埠。這些連接埠用於集群通信，包括集群中所有節點的所有集群連接埠。
+
+
+您可以在叢集初始化後建立其他廣播域。建立廣播網域時，將自動建立包含相同連接埠的故障轉移群組。
+
+.關於此任務
+為廣播域定義的連接埠的最大傳輸單元 (MTU) 值將更新為廣播域中設定的 MTU 值。
+
+.步驟
+. 在系統管理員中，選擇*網路*，然後選擇*概覽*。
+. 在「廣播域」下，選擇image:icon_add_blue_bg.png["藍色矩形框內有一個加號，後面跟著白色字母“add”"]。
+. 提供廣播域的名稱或接受預設值。
++
+所有廣播網域在 IP 空間內必須是唯一的。
+
+. 提供最大傳輸單元（MTU）。
++
+MTU是廣播域內可接受的最大資料包。
+
+. 選擇所需的連接埠並選擇*儲存*。
+
+
+
+
+== 建立 IP 空間
+
+IP空間是IP位址和相關網路配置的管理域。這些空間可用於透過隔離管理和路由來支援您的 SVM。例如，當用戶端具有來自相同 IP 位址和子網路範圍的重疊 IP 位址時，它們很有用。
+
+
+TIP: 您必須先擁有一個 IP 空間，然後才能建立子網路。
+
+.步驟
+. 在系統管理員中，選擇*網路*，然後選擇*概覽*。
+. 在「IP 空間」下，選擇image:icon_add_blue_bg.png["藍色矩形框內有一個加號，後面跟著白色字母“add”"]。
+. 提供 IP 空間的名稱或接受預設值。
++
+所有 IP 空間名稱在叢集內必須是唯一的。
+
+. 選擇*儲存*。
+
+
+.下一步
+您可以使用 IP 空間來建立​​子網路。
+
+
+
+== 建立子網路
+
+子網路或子網路強制對網路中的 IP 位址空間進行邏輯劃分。它使您能夠指派專用的 IP 位址區塊來建立網路介面 (LIF)。子網路允許您使用子網路名稱而不是特定的 IP 位址和網路遮罩組合，從而簡化了 LIF 的建立。
+
+.開始之前
+您必須有一個廣播域和將定義子網路的 IP 空間。另請注意：
+
+* 所有子網路名稱在特定 IP 空間內必須是唯一的。
+* 子網路使用的 IP 位址範圍不能與其他子網路的 IP 位址重疊。
+
+
+.步驟
+. 在系統管理員中，選擇*網路*，然後選擇*概覽*。
+. 在「子網路」標籤下，選擇image:icon_add_blue_bg.png["藍色矩形框內有一個加號，後面跟著白色字母“add”"]。
+. 提供設定詳細信息，包括子網路名稱、IP 位址詳細資訊和廣播網域。
+. 選擇*儲存*。
+
+
+.下一步
+新的子網路將簡化網路介面的建立。
+
+
+
+== 建立網路介面
+
+邏輯網路介面 (LIF) 由 IP 位址和相關網路設定參數組成。它可以與實體或邏輯連接埠相關聯，通常由客戶端用來存取 SVM 提供的資料。  LIF 在發生故障時提供彈性，並且可以在節點連接埠之間遷移，因此通訊不會中斷。
+
+.步驟
+. 在系統管理員中，選擇*網路*，然後選擇*概覽*。
+. 在「網路介面」標籤下，選擇image:icon_add_blue_bg.png["藍色矩形框內有一個加號，後面跟著白色字母“add”"]。
+. 提供配置詳細信息，包括介面名稱、介面類型、允許的協定和 IP 位址詳細資訊。
+. 選擇*儲存*。
+
+
+
+
+== 相關資訊
+
+* link:../administer/manage-ethernet-ports.html["管理 AFX 乙太網路端口"]
+* https://docs.netapp.com/us-en/ontap/networking/configure_broadcast_domains_cluster_administrators_only_overview.html["了解ONTAP廣播域"^]
+* https://docs.netapp.com/us-en/ontap/networking/configure_ipspaces_cluster_administrators_only_overview.html["了解ONTAP IP 空間配置"^]
+* https://docs.netapp.com/us-en/ontap/networking/configure_subnets_cluster_administrators_only_overview.html["了解ONTAP網路的子網"^]
+* https://docs.netapp.com/us-en/ontap/concepts/network-connectivity-concept.html["網路架構概述"^]
+

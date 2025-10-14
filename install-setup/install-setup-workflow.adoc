@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: install-setup/install-setup-workflow.html 
+keywords: afx, afx 1k, install, setup, workflow 
+summary: 開始安裝和設定 AFX 1K 儲存系統並將其部署到您的ONTAP環境中。 
+---
+= AFX 1K 儲存系統的安裝與設定工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要安裝和設定 AFX 1K 儲存系統，您需要查看硬體需求、準備站點、安裝交換器、安裝和連接硬體組件、啟動系統並設定ONTAP AFX 叢集。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"]link:install-setup-requirements.html["查看硬體安裝需求"]
+[role="quick-margin-para"]
+查看安裝 AFX 1K 儲存系統的硬體需求。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"]link:prepare-hardware.html["準備安裝 AFX 1K 儲存系統"]
+[role="quick-margin-para"]
+準備安裝 AFX 1K 儲存系統，包括準備場地、檢查環境和電氣要求、確保有足夠的機架空間、拆開設備包裝、根據裝箱單驗證內容以及註冊硬體以獲得支援。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"]link:install-switches.html["安裝 AFX 1K 儲存系統的交換機"]
+[role="quick-margin-para"]
+在機櫃或機架中安裝Cisco Nexus 9332D-GX2B 或 9364D-GX2A 交換器。如果使用Cisco Nexus 9364D-GX2A 交換機，請安裝直通面板套件。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"]link:deploy-hardware.html["安裝 AFX 1K 儲存系統的硬體"]
+[role="quick-margin-para"]
+安裝儲存系統和架子的導軌套件。將儲存系統固定在機櫃或電信機架中。接下來，將架子滑到安裝好的導軌上。最後，將電纜管理設備連接到儲存系統的後部，以便有組織地佈線。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"]link:cable-hardware.html["為 AFX 1K 儲存系統連接控制器和儲存架"]
+[role="quick-margin-para"]
+要連接硬件，首先將儲存控制器節點連接到網絡，然後將控制器節點和儲存架連接到叢集交換器。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"]link:power-on-configure-switch.html["開啟並配置 AFX 1K 儲存系統的交換機"]
+[role="quick-margin-para"]
+連接硬體，然後開啟電源並設定 AFX 1K 儲存系統的交換器。查看Cisco Nexus 9332D-GX2B 和 9364D-GX2A 交換器的設定說明。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["七"]link:power-on-hardware.html["啟動 AFX 1K 儲存系統"]
+[role="quick-margin-para"]
+在開啟控制器節點的電源之前，請開啟每個儲存架的電源並指派唯一的儲存架 ID，以清楚辨識設定中的每個儲存架。

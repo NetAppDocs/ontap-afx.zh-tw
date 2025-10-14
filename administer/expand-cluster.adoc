@@ -1,0 +1,148 @@
+---
+sidebar: sidebar 
+permalink: administer/expand-cluster.html 
+keywords: afx, afx system, expansion, cluster expansion, expand cluster, add nodes 
+summary: 您可以獨立於儲存容量擴充 AFX 叢集的運算容量。擴展過程不會中斷，隨著磁碟區在節點之間重新平衡，效能會線性提高。當您適應 AFX 使用者的持續需求時，此功能是一項顯著的優勢。 
+---
+= 擴展 AFX 儲存系統集群
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以獨立於儲存容量擴充 AFX 叢集的運算容量。擴展過程不會中斷，隨著磁碟區在節點之間重新平衡，效能會線性提高。當您適應 AFX 系統使用者的持續需求時，此功能是一項顯著的優勢。
+
+
+
+== 準備擴展集群
+
+在擴展 AFX 叢集之前，您應該熟悉基本要求和一般故障排除方法。
+
+
+
+=== 要求
+
+您需要叢集管理員帳戶的憑證，並且能夠使用 SSH 連線到ONTAP CLI。擴展叢集時，必須新增偶數節點，並遵守基於版本的 AFX 系統的大小限制。
+
+
+
+=== 故障排除
+
+在執行叢集擴充時，您應該了解一些概念和故障排除場景。
+
+
+
+==== 自動重新平衡卷
+
+自動拓撲管理 (ATM) 是內部 AFX 系統元件，可偵測分配不平衡並重新平衡叢集節點之間的磁碟區。它依靠零複製卷移動 (ZCVM) 技術使用元資料更新而不是複製資料來重新定位磁碟區。  ZCVM 是 AFX 儲存系統可用的預設磁碟區移動技術。
+
+
+
+==== 可能的故障排除場景
+
+在與 AFX 叢集擴展相關的捲移動期間，您可能需要調查幾種情況。
+
+ATM 未移動卷:: 當集群已經處於平衡狀態或沒有符合條件的捲可以移動時，就會發生這種情況。
+關於 ATM 應如何或何時啟動的困惑:: 看起來，卷的分配速度似乎沒有像預期的那麼快。 ATM 每五分鐘嘗試偵測並回應硬體事件。在最壞的情況下，重新平衡操作會在上一次操作完成 40 分鐘後啟動。
+
+
+
+
+==== CLI 指令
+
+您可以使用多個命令來監視叢集擴展操作。
+
+* `volume move show`
+* `volume move show -instance`
+
+
+您應該根據需要聯絡NetApp支援以取得更多協助。
+
+
+
+== 新增節點以擴展集群
+
+此程序說明如何為現有叢集新增一對節點，並且可以適應其他部署環境。您需要同時使用ONTAP CLI 和系統管理器管理介面。
+
+.步驟
+. 連接到ONTAP CLI 並設定進階權限等級：
++
+`afx> set advanced`
+
+. 顯示目前節點的捲位置；注意每個節點的捲數：
++
+`afx> vol show -fields node,size,constituent-count -is-constituent true -node *`
+
+. 顯示群集互連 IP 位址並保存以供後續步驟使用：
++
+`afx> net int show -role cluster`
+
+. 登入要新增至叢集的每個節點的服務處理器。
+. 在提示下，鍵入 *system console* 以存取節點的控制台。
+. 啟動節點顯示啟動選單提示：
++
+`LOADER> boot_ontap menu`
+
++
+如果選單未加載，請使用 *Ctrl+C* 技術存取啟動選單。
+
+. 從選單中選擇適當的啟動選項之一；如果出現提示，請輸入 *yes* 繼續。
++
+如果您從這裡返回 LOADER，請在 LOADER 提示字元下輸入 *boot_ontap*。
+
+. 使用叢集設定精靈配置節點管理 LIF、子網路和網關。
++
+系統管理器將使用此配置來偵測要新增至叢集的節點。根據提示輸入連接埠、IP位址、網路遮罩、預設閘道等值。
+
+. 按 *CTL+C* 存取 CLI。
+. 修改叢集互連位址，以便它們在您的網路中可路由；使用適合您環境的配置：
++
+`afx> net int show -role cluster`
+
++
+`afx> net int modify -vserver Cluster -lif clus1 -address 192.168.100.201`
+
++
+`afx> net int modify -vserver Cluster -lif clus2 -address 192.168.100.202`
+
++
+僅當其他介面不使用ONTAP自動建立的 169.254.xx 位址時才需要執行此步驟。
+
+. 在另一個 AFX 節點控制器上重複上述步驟。
+. 使用群集管理 IP 位址存取系統管理員。
+. 在系統管理員中，選擇*叢集*，然後選擇*概覽*；選擇*節點*標籤。
+. 找到“不屬於此集群”部分；選擇image:icon_add_blue_bg.png["藍色矩形框內有一個加號，後面跟著白色字母“add”"]。
++
+** 如果在叢集互連 IP 位址變更之前發現了節點，則需要退出視窗並返回以重新發現節點。
+** 您可以選擇使用 CLI 而不是系統管理員來新增節點；請參閱命令 `cluster add-node`。
+
+
+. 在*新增節點*選單中提供設定詳細資訊；您可以手動新增管理 IP 位址或使用子網路。
+. 連接到ONTAP CLI 以監控節點新增操作的狀態：
++
+`afx> add-node-status`
+
+. 操作完成後，確認所有節點上的磁碟區位置；使用適當的節點名稱對每個節點發出一次命令：
++
+`afx> set advanced`
+
++
+`afx> vol show -fields node,size,constituent-count -is-constituent true -node NODE_NAME`
+
+
+
+.結果
+* 向叢集新增節點不會造成中斷。
+* 音量移動應該會自動發生。
+* 性能將線性擴展。
+
+
+
+
+== 相關資訊
+
+* link:../get-started/prepare-cluster-admin.html["準備管理您的 AFX 系統"]
+* link:../faq-ontap-afx.html["ONTAP AFX 儲存系統常見問題解答"]
+* https://mysupport.netapp.com/["NetApp支援站點"^]
+

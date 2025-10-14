@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: secure-data/prepare-secure-data.html 
+keywords: afx, afx system, prepare, prepare secure, prepare secure data 
+summary: 在管理 AFX 資料之前，您應該熟悉主要概念和功能。 
+---
+= 準備保護您的 AFX 儲存系統數據
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在管理 AFX 資料之前，您應該熟悉主要概念和功能。
+
+
+TIP: 由於AFF和FAS系統上的許多概念和管理程式與 AFX 儲存系統相同，因此檢視 Unified ONTAP文件會很有幫助。
+
+
+
+== 術語和選項
+
+您應該熟悉幾個與 AFX 資料安全相關的術語。
+
+勒索軟體:: 勒索軟體是一種惡意軟體，它會加密文件，使用戶無法存取它們。通常需要某種形式的付款才能解密資料。  NetApp ONTAP透過自主勒索軟體防護 (ARP) 等功能提供防禦勒索軟體的解決方案。
+加密:: 加密是將資料轉換為安全格式的過程，未經適當授權就無法輕易讀取。 ONTAP提供基於軟體和基於硬體的加密技術來保護靜態資料。這確保了當儲存媒體被重新利用、退回、放錯地方或被盜時，它無法被讀取。這些加密解決方案可以使用外部金鑰管理伺服器或ONTAP提供的板載金鑰管理器進行管理。
+數位憑證和 PKI:: 數位證書是用於證明公鑰所有權的電子文檔。公鑰和相關的私鑰可以以多種方式使用，包括通常作為更大的安全框架（如 TLS 和 IPsec）的一部分來建立身分。這些金鑰以及支援協定和格式標準構成了公鑰基礎設施 (PKI) 的基礎。
+
+
+
+
+== 相關資訊
+
+* link:../administer/additional-ontap-svm.html["額外的 AFX SVM 管理"]
+* link:../get-started/prepare-cluster-admin.html["準備管理 AFX 系統"]
+

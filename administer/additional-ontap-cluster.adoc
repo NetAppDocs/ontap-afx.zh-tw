@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: administer/additional-ontap-cluster.html 
+keywords: afx, afx system, additional administration, advanced administration 
+summary: 除了典型的 AFX 叢集管理之外，您可能還需要根據您的環境執行其他任務。大多數附加任務都可以使用系統管理員執行，但在某些情況下您可能需要使用 CLI。 
+---
+= AFX 儲存系統叢集的附加管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+除了典型的 AFX 叢集管理之外，您可能還需要根據您的環境執行其他任務。大多數附加任務都可以使用系統管理員執行，但在某些情況下您可能需要使用 CLI。
+
+
+NOTE: 所描述的ONTAP功能和管理對於運行 Unified ONTAP 的AFX 儲存系統和AFF或FAS系統來說是通用的。其中包含相關 Unified ONTAP文件的連結（視情況而定）。
+
+
+
+== 授權
+
+AFX 系統的授權方式與 Unified ONTAP AFF和FAS系統類似。  AFX 叢集預設包含所支援協定的大多數功能。
+
+
+
+=== ONTAP許可證管理
+
+ONTAP許可證是一個或多個軟體授權的記錄。所有許可證均使用NetApp許可證文件 (NLF) 定義和提供。參考 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["ONTAP許可概述"^]了解更多。
+
+
+
+=== 在 AFX 系統上安裝許可證
+
+您可以安裝許可證檔案來根據需要啟動 AFX 儲存系統的附加功能。
+
+.步驟
+. 在系統管理員中，選擇*集群*，然後選擇*設定*。
+. 在「許可證」旁邊，選擇image:icon_arrow.gif["指向右側的藍色箭頭"]。
+. 選擇“*功能*”標籤以顯示可用的ONTAP功能。
+. 若要選擇性地安裝許可證，請選擇「*已安裝的許可證*」標籤。
+. 選擇image:icon_add_blue_bg.png["藍色矩形框內有一個加號，後面跟著白色字母“add”"]。
+. 選擇本機授權檔案並選擇*新增*。
+
+
+
+
+== 安全
+
+您可以在 AFX 部署中設定和使用多種可選的安全功能。
+
+
+
+=== ONTAP安全性與資料加密
+
+保護 AFX 儲存系統的安全性和隱私性非常重要。請參閱 https://docs.netapp.com/us-en/ontap/security-encryption/index.html["安全性和資料加密"^]
+
+
+
+=== ONTAP身份驗證和存取控制
+
+AFX 儲存系統提供了多種設定驗證和存取控制服務的選項。參考 https://docs.netapp.com/us-en/ontap/authentication-access-control/index.html["身份驗證和存取控制"^]了解更多。
+
+
+
+=== 在 AFX 系統上管理 OAuth 2.0
+
+OAuth 2.0 是業界標準授權框架，用於使用簽署的存取權杖來限制和控制對受保護資源的存取。
+
+.步驟
+. 在系統管理員中，選擇*集群*，然後選擇*設定*。
+. 在「安全」部分中，在「OAuth 2.0 授權」旁邊，選擇image:icon_arrow.gif["指向右側的藍色箭頭"]。
+. 啟用 OAuth 2.0
+. 選擇*新增配置*並提供配置詳細資訊。
+. 選擇*儲存*。
+
+
+
+
+== 相關資訊
+
+* link:../faq-ontap-afx.html["AFX 儲存系統常見問題解答"]
+* https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["ONTAP OAuth 2.0 實作概述"^]
+* link:../administer/additional-ontap-svm.html["AFX SVM 的額外管理"]
+

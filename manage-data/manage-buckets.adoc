@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: manage-data/manage-buckets.html 
+keywords: afx, afx system, manage buckets 
+summary: 在管理 AFX S3 儲存桶和用戶端存取時，您可以執行多項管理任務。 AFX 中的 S3 設定和支援與 Unified ONTAP提供的相同。有關詳細信息，請參閱 Unified ONTAP文件。 
+---
+= 管理 AFX 儲存系統儲存桶
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在管理 AFX S3 儲存桶和用戶端存取時，您可以執行多項管理任務。 AFX 中的 S3 設定和支援與 Unified ONTAP提供的相同。有關詳細信息，請參閱 Unified ONTAP文件。
+
+.相關資訊
+https://docs.netapp.com/us-en/ontap/s3-config/index.html["了解ONTAP S3 配置"^]

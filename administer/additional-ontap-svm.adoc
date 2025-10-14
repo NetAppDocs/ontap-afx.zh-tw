@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: administer/additional-ontap-svm.html 
+keywords: afx, afx system, additional administration, advanced administration 
+summary: 除了典型的 AFX SVM 管理之外，您可能還需要根據您的環境執行其他任務。大多數附加任務都可以使用系統管理員執行，但在某些情況下您可能需要使用 CLI。 
+---
+= AFX 儲存系統 SVM 的附加管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+除了典型的 AFX SVM 管理之外，您可能還需要根據您的環境執行其他任務。大多數附加任務都可以使用系統管理員執行，但在某些情況下您可能需要使用 CLI。
+
+
+NOTE: 所描述的ONTAP功能和管理對於運行 Unified ONTAP 的AFX 儲存系統和AFF或FAS系統來說是通用的。其中包含相關 Unified ONTAP文件的連結（視情況而定）。
+
+
+
+== 儲存管理和效能
+
+您可以在 AFX 部署中設定和使用多種可選的儲存管理和效能功能。
+
+
+
+=== ONTAP NAS 儲存管理
+
+網路附加儲存 (NAS) 提供專用文件存儲，可供網路中的多個用戶端存取。 ONTAP支援多種 NAS 協定。參考 https://docs.netapp.com/us-en/ontap/nas-management/index.html["NAS儲存管理"^]了解更多。
+
+
+
+=== ONTAP FlexCache卷
+
+FlexCache是​​ONTAP 的遠端快取功能。它使數據更接近客戶端，從而提高存取效能並降低成本。建立FlexCache磁碟區（最初僅從原始檔案系統複製元資料）可簡化檔案散佈並減少 WAN 流量。參考 https://docs.netapp.com/us-en/ontap/flexcache/index.html["了解ONTAP FlexCache卷"^]了解更多。
+
+
+
+=== ONTAP FlexGroup卷
+
+FlexGroup磁碟區由多個成員磁碟區組成，這些成員磁碟區會自動且透明地共用流量。 FlexGroup卷具有多種優勢，包括高效能和簡化的管理。參考 https://docs.netapp.com/us-en/ontap/flexgroup/creation-workflow-task.html["FlexGroup卷設定"^]了解更多。
+
+
+
+== 資料保護
+
+您可以在 AFX 部署中設定和使用多種可選的資料保護功能。
+
+
+
+=== 一致性組
+
+一致性組是作為單一單元進行管理的磁碟區的集合。參考 https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["了解ONTAP一致性組"^]了解更多。
+
+
+
+=== SnapLock
+
+您可以透過在磁碟區層級將檔案轉換為一次寫入多次讀取 (WORM) 狀態來保護檔案。 SnapLock支援兩種模式。合規模式確保文件在保留期到期之前不能被刪除，這滿足了政府或行業特定的要求。企業模式允許特權使用者在保留期到期之前刪除檔案。參考 https://docs.netapp.com/us-en/ontap/snaplock/index.html["了解ONTAP SnapLock"^]了解更多。
+
+
+
+== ONTAP事件和效能監控
+
+您可以監控叢集的健康和效能。這包括設定事件警報和管理系統健康警報通知。參考 https://docs.netapp.com/us-en/ontap/event-performance-monitoring/index.html["事件、效能和健康監控"^]了解更多信息
+
+
+
+== 相關資訊
+
+* link:../faq-ontap-afx.html["AFX 儲存系統常見問題解答"]
+* link:../administer/additional-ontap-cluster.html["AFX 叢集的附加管理"]
+

@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: administer/create-svm.html 
+keywords: afx, afx system, svm, create svm 
+summary: 您可以建立 SVM 來提供隔離並提高安全性。您可以針對組織內的不同團體或專案執行此操作。 
+---
+= 建立 AFX 儲存系統 SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立 SVM 來提供隔離並提高安全性。您可以針對組織內的不同團體或專案執行此操作。
+
+.關於此任務
+建立 SVM 時，您必須提供名稱並配置至少一個用於用戶端存取的協定。選擇客戶端協定後，系統也會提示您進行網路設定。建立 SVM 配置後，您可以根據需要變更它。
+
+.開始之前
+您需要以下物品：
+
+* 至少四個 IP 位址
+* IP空間名稱
+
+
+.步驟
+. 在系統管理員中，選擇*叢集*，然後選擇*儲存虛擬機器*。
+. 選擇image:icon_add_blue_bg.png["藍色矩形框內有一個加號，後面跟著白色字母“add”"]。
+. 為 SVM 提供一個名稱。
+. 選擇客戶端存取的協定並提供適當的配置詳細資訊。
+. 為 SVM 新增網路接口，包括 IP 位址和子網路遮罩。
+. 在*儲存虛擬機器管理*下，可選：
++
+.. 啟用最大容量並選擇一個值
+.. 管理 SVM 的管理員帳戶
+
+
+. 選擇*儲存*。
+
+
+.相關資訊
+* link:../administer/configure-svm.html["配置 AFX 系統 SVM"]
+* link:../administer/manage-cluster-networking.html["管理 AFX 系統集群網絡"]
+

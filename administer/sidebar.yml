@@ -1,0 +1,56 @@
+---
+section: administer
+title: 管理您的集群
+entries:
+- title: 監控叢集進程
+  entries:
+  - title: 查看儀表板和叢集狀態
+    url: "/administer/view-dashboard.html"
+  - title: 查看見解
+    url: "/administer/view-insights.html"
+  - title: 監控效能
+    url: "/administer/monitor-cluster-performance.html"
+  - title: 查看事件和日誌
+    url: "/administer/view-events-log.html"
+  - title: 查看職位
+    url: "/administer/view-jobs.html"
+- title: 管理網路和安全
+  entries:
+  - title: 管理叢集網路
+    url: "/administer/manage-cluster-networking.html"
+  - title: 管理乙太網路連接埠
+    url: "/administer/manage-ethernet-ports.html"
+  - title: 準備身份驗證服務
+    url: "/administer/prepare-authentication.html"
+  - title: 管理使用者和角色
+    url: "/administer/manage-users-roles.html"
+  - title: 管理證書
+    url: "/administer/manage-certificates.html"
+- title: 管理儲存虛擬機
+  entries:
+  - title: 顯示您的 SVM
+    url: "/administer/display-svms.html"
+  - title: 建立資料 SVM
+    url: "/administer/create-svm.html"
+  - title: 配置資料 SVM
+    url: "/administer/configure-svm.html"
+  - title: 遷移 SVM
+    url: "/administer/migrate-svm.html"
+- title: 支援集群
+  entries:
+  - title: 管理AutoSupport
+    url: "/administer/manage-autosupport.html"
+  - title: 查看並提交支援案例
+    url: "/administer/submit-view-case.html"
+- title: 升級和維護集群
+  entries:
+  - title: 擴展集群
+    url: "/administer/expand-cluster.html"
+  - title: 升級ONTAP
+    url: "/administer/upgrade-ontap.html"
+  - title: 更新韌體
+    url: "/administer/update-firmware.html"
+  - title: 維護硬體
+    url: "/administer/maintain-hardware.html"
+- title: 額外的管理
+  url: "/administer/additional-ontap-cluster.html"

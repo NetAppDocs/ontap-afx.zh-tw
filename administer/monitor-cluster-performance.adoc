@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: administer/monitor-cluster-performance.html 
+keywords: afx, afx system, cluster performance 
+summary: 您可以顯示 AFX 叢集效能的進階概覽。 
+---
+= 監控 AFX 儲存系統叢集效能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以顯示 AFX 叢集效能的進階概覽。
+
+
+
+== 儲存容量
+
+系統管理器儀表板包括叢集儲存利用率的進階顯示。
+
+.步驟
+. 在系統管理員中，選擇導覽窗格中的「*儀表板*」。
+. 找到*容量*圖塊並查看可用和已使用的實體儲存。
+. 選擇*歷史記錄*存取Active IQ查看歷史資料。
+
+
+
+
+== 集群性能
+
+系統管理器提供了 AFX 叢集效能的詳細概述。
+
+.步驟
+. 在系統管理員中，選擇*分析*，然後選擇*效能*。
+. 查看頂部的叢集效能摘要，包括延遲和吞吐量。
+. 在「*頂級參與者*」標籤下，選擇所需的 SVM，然後根據需要「啟用活動追蹤*」。
+. 在「磁碟區效能」標籤下，查看特定磁碟區的效能詳細資料。
+
+
+
+
+== 相關資訊
+
+* link:../administer/additional-ontap-cluster.html["額外的 AFX 叢集管理"]
+

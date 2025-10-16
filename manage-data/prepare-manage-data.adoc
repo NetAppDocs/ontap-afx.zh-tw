@@ -29,6 +29,13 @@ S3 儲存桶:: S3 儲存桶是用來保存雲端中的物件或資料的儲存�
 資料容器:: 在 AFX 系統的上下文中，資料容器是一個通用術語，可以是磁碟區或 S3 儲存桶。
 qtree:: qtree 是磁碟區內的邏輯細分，您可以建立它來管理和組織資料。它允許您指定其屬性和安全樣式（NTFS 或 UNIX），並且可以從其父磁碟區繼承匯出策略或擁有自己的策略。  qtree 可以包含檔案和目錄，通常用於更精細地管理磁碟區內的權限和配額。
 配額:: ONTAP中的配額是對使用者、群組或 qtree 可使用的儲存空間量或檔案數量設定的限制。配額用於管理和控制儲存系統內的資源使用情況，確保沒有單一使用者或應用程式可以消耗過多的資源。
+NFS 中繼:: NFS 中繼是一種技術，它使 NFS v4.1 用戶端能夠開啟與 NFS 伺服器上不同 LIF 的多個連線。這提高了資料傳輸速度，並在將FlexVol磁碟區匯出到具有中繼功能的用戶端時透過多條路徑提供了彈性。
++
+--
+若要啟用中繼，您需要為 NFS 設定 SVM，並且應啟用 NFSv4.1。配置變更後，還需要重新安裝所有 NFSv4.x 用戶端，這可能會造成破壞。對於所有ONTAP系統，NFS 中繼的支援和設定過程都是相同的。詳細了解 https://docs.netapp.com/us-en/ontap/nfs-trunking/index.html["NFS 中繼"^]
+
+--
+檔案系統分析:: 檔案系統分析 (FSA) 是ONTAP 的功能，可即時查看FlexGroup或FlexVol磁碟區內的檔案使用情況和儲存容量趨勢。它透過提供有關儲存利用率和優化機會的洞察，消除了對外部工具的需求。FSA 提供磁碟區檔案系統層次結構各個層級的詳細視圖，包括 SVM、磁碟區、目錄和檔案層級。
 
 
 
@@ -39,44 +46,28 @@ qtree:: qtree 是磁碟區內的邏輯細分，您可以建立它來管理和組
 
 
 
-=== 從 Unified ONTAP遷移數據
+=== 從AFF或FAS系統遷移數據
 
-可使用以下技術實現從 Unified ONTAP到 AFX 的完全整合遷移路徑：
+可使用下列技術實現從AFF或FAS系統（運行 Unified ONTAP個人化功能）到 AFX 的完全整合遷移路徑：
 
 * SnapMirror
 * SVM 遷移
 * 支援向量機預測
 
 
-此外， FlexCache磁碟區可以在 AFX 和 Unified ONTAP之間以任意方向連接。
+此外， FlexCache磁碟區可以在 AFX 和AFF或FAS系統之間以任意方向連接。
 
 
 
 === 從非ONTAP來源遷移數據
 
-可以使用檔案級複製操作從非ONTAP系統執行資料遷移。可以使用快速複製實用程式（例如 XCP 或 CloudSync）以及標準實用程式（例如 RoboCopy（用於 SMB）和 rsync（用於 NFS））以及第三方工具（例如 DataDobi）。
+可以使用檔案級複製操作從非ONTAP系統執行資料遷移。快速複製實用程序，例如 https://docs.netapp.com/us-en/xcp/["XCP"^]可以與標準實用程式（例如 RoboCopy（用於 SMB）和 rsync（用於 NFS）以及第三方工具（例如 DataDobi）一起使用。
 
 
 
 === 遷移限制
 
-如果資料磁碟區不包含 LUN 或 NVMe 命名空間，則現有的 Unified ONTAP系統可以複製到 AFX。複製到 Unified ONTAP系統時，Unified ONTAP系統支援的最低版本為 9.16.1。這是第一個支援進階容量平衡的 Unified ONTAP版本。
-
-
-
-== AFX 對 NFS 中繼的支持
-
-NFS 中繼是一種技術，它使 NFS v4.1 用戶端能夠開啟與 NFS 伺服器上不同 LIF 的多個連線。這提高了資料傳輸速度並透過多條路徑提供了彈性。中繼有利於將FlexVol磁碟區匯出到具有中繼功能的客戶端。
-
-若要啟用中繼，您需要為 NFS 設定 SVM，並且應啟用 NFSv4.1。配置變更後，還需要重新安裝所有 NFSv4.x 用戶端，這可能會造成破壞。
-
-
-
-== 檔案系統分析
-
-檔案系統分析 (FSA) 是ONTAP中的一項功能，可即時查看FlexGroup或FlexVol磁碟區內的檔案使用情況和儲存容量趨勢。
-
-FSA 透過提供有關儲存利用率和最佳化機會的洞察，消除了對外部工具的需求。  FSA 提供磁碟區檔案系統層次結構各個層級的詳細視圖，包括 SVM、磁碟區、目錄和檔案層級。
+如果來源資料卷不包含 LUN 或 NVMe 命名空間，則可以將資料從AFF或FAS系統複製到 AFX。從 AFX 複製到AFF或FAS系統時， AFF或FAS系統支援的最低ONTAP版本為 9.16.1。這是第一個支援高級容量平衡的ONTAP版本。
 
 
 
@@ -99,7 +90,7 @@ FSA 透過提供有關儲存利用率和最佳化機會的洞察，消除了對�
 == 相關資訊
 
 * link:../administer/additional-ontap-svm.html["額外的 AFX SVM 管理"]
-* link:../get-started/prepare-cluster-admin.html["準備管理 AFX 系統"]
+* link:../get-started/prepare-cluster-admin.html["準備管理您的 AFX 系統"]
 * link:../administer/migrate-svm.html["遷移 AFX 系統 SVM"]
 * https://mysupport.netapp.com/matrix/["NetApp互通性表工具"^]
 

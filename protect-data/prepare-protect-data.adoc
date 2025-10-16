@@ -14,7 +14,7 @@ summary: 在保護您的 AFX 資料之前，您應該熟悉一些關鍵概念和
 在保護您的 AFX 資料之前，您應該熟悉一些關鍵概念和功能。
 
 
-TIP: 由於AFF和FAS系統上的許多概念和管理程式與 AFX 儲存系統相同，因此檢視 Unified ONTAP文件會很有幫助。
+TIP: 由於AFF和FAS系統上的許多概念和管理程序與 AFX 儲存系統相同，因此請查看 Unified ONTAP文檔 https://docs.netapp.com/us-en/ontap/data-protection-disaster-recovery/index.html["資料保護和災難復原"^]可能會有幫助。
 
 
 
@@ -27,6 +27,15 @@ TIP: 由於AFF和FAS系統上的許多概念和管理程式與 AFX 儲存系統�
 層次一致性組:: 分層一致性組是在ONTAP 9.16.1 中引入的，並可與 AFX 一起使用。透過分層結構，可以將一個或多個一致性組配置為父級下的子級。這些分層群組可讓您將單獨的快照策略套用至子一致性群組，並透過複製父群組將所有子群組的快照作為單一單元複製到遠端叢集。
 SnapLock:: SnapLock是ONTAP 的一項功能，可讓您透過將檔案移至一次寫入多次讀取 (WORM) 狀態來保護檔案。這可以防止在指定的保留期內進行修改或刪除。創建的SnapLock磁碟區在基於保留創建後不能從非SnapLock磁碟區轉換。
 
+
+
+
+== AFX 資料保護限制
+
+您應該了解 AFX 儲存系統強制執行的ONTAP資料保護限制和約束。
+
+.SnapMirror同步 (SM-S)
+使用 SM-S 時有規模限制。單一 AFX 系統集群中最多可以有 400 個關係。
 
 
 

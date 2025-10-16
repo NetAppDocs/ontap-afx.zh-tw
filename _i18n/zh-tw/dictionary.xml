@@ -47,7 +47,6 @@
   <block id="057b0a61093f8c5a3fd2cb091c2487ed" category="section-title">ONTAP NAS 儲存管理</block>
   <block id="9a7a0f1104963c42c2710b02915c3716" category="inline-link">NAS儲存管理</block>
   <block id="96d4d0a4d3683684386667f3537301b0" category="paragraph">網路附加儲存 (NAS) 提供專用文件存儲，可供網路中的多個用戶端存取。 ONTAP支援多種 NAS 協定。參考<block ref="5a12468a094b7ac3a6242787d7d649a9" category="inline-link-rx"></block>了解更多。</block>
-  <block id="2f6306c1dbddc5160b5cb0ca2b5c9ac5" category="section-title">ONTAP FlexCache卷</block>
   <block id="4e59e775225da37265a8902119d82992" category="inline-link">了解ONTAP FlexCache卷</block>
   <block id="779755990ca58135bf4cfa4707ddbd6c" category="paragraph">FlexCache是​​ONTAP 的遠端快取功能。它使數據更接近客戶端，從而提高存取效能並降低成本。建立FlexCache磁碟區（最初僅從原始檔案系統複製元資料）可簡化檔案散佈並減少 WAN 流量。參考<block ref="8586d1d402de18023c61e6177e30172a" category="inline-link-rx"></block>了解更多。</block>
   <block id="be11a39b915644a1e65c81e32c070b68" category="section-title">ONTAP FlexGroup卷</block>
@@ -558,7 +557,6 @@
   <block id="0fd83bea6e8889a6410f4ad7c356b1c6" category="paragraph">與分解儲存相關的第二個概念是聚合和 RAID 管理被移除為可管理實體。 AFX 內的儲存抽象層自動配置和管理儲存的低階方面，包括實體磁碟和 RAID 群組。這使得 AFX 管理員可以專注於基於磁碟區和儲存桶的高級儲存配置。</block>
   <block id="67a915151759ecc737f698391f7cfd08" category="section-title">互通性</block>
   <block id="8fbc7f1351a3e90b34e2d50e0c07adcf" category="paragraph-title">我可以在同一個ONTAP叢集中將 AFX 系統節點與AFF、 ASA或FAS系統節點混合使用嗎？</block>
-  <block id="490ad830d699742950ceeaf58c8e893c" category="paragraph">不，每個ONTAP 的個性都是不同的。例如，您無法在同一個叢集中混合使用 AFX 和 Unified ONTAP節點。</block>
   <block id="6855bc632a4fb3c6b7b6e30b99fd4b1c" category="paragraph-title">如果我想使用運行統一ONTAP （FAS、 AFF、 ASA）的系統和用於SnapMirror或FlexCache 的AFX 系統，我需要哪個ONTAP版本？</block>
   <block id="b3c2db23091a0f69d5a98f7aa85c5999" category="inline-link">TR-4743</block>
   <block id="e41e8ba406c753a1f299483cef4ae186" category="paragraph">AFX 的SnapMirror版本規則與 Unified ONTAP相同。這意味著要從 Unified ONTAP複製，來源系統必須在支援的版本範圍內。若要從 AFX 複製，Unified ONTAP系統必須是ONTAP 9.16.1 或更高版本（支援進階容量平衡功能的最早版本）。對於FlexCache，來源系統和目標系統適用相同的規則，如<block ref="21d9cc15452a0fa353089141a3f02dce" category="inline-link-rx"></block>。</block>
@@ -576,15 +574,10 @@
   <block id="652c6ccc124f6a3b6160cc1d33fdf829" category="paragraph">否。 AFX 中的資料協定的運作方式與AFF和FAS系統相同。</block>
   <block id="ba49ccff7b34f35787d4c3a5a03c27ab" category="paragraph-title">AFX 中是否使用高階磁碟分割 (ADP)？</block>
   <block id="2e71120f5cf48a4101afcce566d9eb76" category="paragraph">不可以。 ADP 不會與 AFX 一起使用。由於 AFX 沒有根聚合，因此不需要 ADP 功能來最大限度地提高磁碟空間效率。</block>
-  <block id="96daca265fc7c3ad4031d8a0f60de302" category="paragraph-title">我可以為 AFX 儲存系統的後端網路使用不同類型的交換器嗎？</block>
-  <block id="c72efc6aac77bfb00478e553ab39b09e" category="paragraph">不可以。只有經過專門批准並隨 AFX 儲存平台提供的交換器才支援後端網路。</block>
   <block id="5f23273522ab6b5896afbea443e4b0e5" category="paragraph-title">AFX 叢集中的儲存是如何組織的？</block>
   <block id="d37066fb090f24f4a9c3a6f25f61165b" category="paragraph">連接到 AFX 叢集的所有磁碟和儲存架都是儲存可用區 (SAZ) 的一部分。每個 AFX 叢集僅支援一個 SAZ，且不能在 AFX 叢集之間共用（ SnapMirror複製和FlexCache操作除外）。</block>
   <block id="515a19ff656ef4e9a76499b11053c88b" category="paragraph">每個節點都可以看到 SAZ 中的所有儲存。當儲存架新增至叢集時， ONTAP會自動新增磁碟。</block>
-  <block id="bcb2406e546535bc5fbcf8b07e9027a3" category="paragraph-title">與 AFX 相比，Unified ONTAP中的捲移動操作如何運作？</block>
-  <block id="32b3ece0de9314e482a31fd5700a67ec" category="paragraph">借助 Unified ONTAP，可以無中斷地將磁碟區從叢集中的一個節點或聚合重新定位到另一個節點或聚合。這是使用採用SnapMirror技術的後台複製作業來執行的，其中在新位置建立一個新的目標磁碟區。根據磁碟區的大小和叢集資源的利用率，磁碟區移動完成所需的時間可能會有所不同。</block>
   <block id="25241163c37737db44029ed2218be089" category="paragraph">使用 AFX 時，不存在聚合。所有儲存都包含在單一儲存可用區內，叢集中的每個節點都可以存取該可用區。因此，卷移動實際上不需要複製資料。相反，所有磁碟區移動都是透過節點之間的指標更新來執行的。這被稱為零複製卷移動 (ZCVM)，並且是瞬間發生的，因為實際上沒有資料被複製或移動。這本質上與 Unified ONTAP使用的捲移動過程相同，但不使用SnapMirror副本。</block>
-  <block id="4c304f523f7e6755249f3a56088bb451" category="paragraph">請注意，在初始版本中，磁碟區只會在儲存故障轉移場景中以及在叢集中新增或刪除節點時移動。這些移動僅透過ONTAP進行控制。</block>
   <block id="504c7335601a5530da6d79c69af25d23" category="paragraph-title">AFX 如何確定在 SAZ 中放置資料的位置？</block>
   <block id="0dffaaac24629ec57e41901c2c49b5e9" category="paragraph">AFX 包含一項稱為自動拓撲管理 (ATM) 的功能，可回應系統和使用者物件的不平衡。 ATM 的主要目標是平衡 AFX 叢集中的磁碟區。當偵測到不平衡時，會觸發內部作業以在活動節點之間均勻分佈資料。使用 ZCVM 重新分配數據，只需複製和更新物件元數據。</block>
   <block id="1bce74755c5e5305616eddc17873d185" category="summary">NetApp AFX 系統運行客製化的ONTAP特性，它與在AFF和FAS儲存上運行的ONTAP特性（稱為統一ONTAP ）不同。您應該了解 AFX 系統與FAS和AFF系統有何相似之處和不同之處。這提供了寶貴的視角，並且在您的環境中部署 AFX 時會很有幫助。</block>
@@ -1224,11 +1217,8 @@
   <block id="419c1482f6cc63984c67f7fdaf13bd01" category="list-text"><block ref="419c1482f6cc63984c67f7fdaf13bd01" category="inline-link-rx"></block></block>
   <block id="3a77755c4eaf7897cda1f7db8e722428" category="inline-link">ONTAP自動化</block>
   <block id="486f6a4f906831713aed8c2567b3d906" category="list-text"><block ref="486f6a4f906831713aed8c2567b3d906" category="inline-link-rx"></block></block>
-  <block id="39b7c7792d43f9ad6b45d8bf594c6d5f" category="inline-link">ONTAP系列</block>
-  <block id="a583b1996b4842ce79d2bb2448839e4f" category="list-text"><block ref="a583b1996b4842ce79d2bb2448839e4f" category="inline-link-rx"></block></block>
   <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="section-title">NetApp支援</block>
   <block id="668e2078ef1b1722c77cdb5c523a4463" category="inline-link">NetApp知識庫</block>
-  <block id="47fcd25afe772010f3d079e237ae3a90" category="list-text"><block ref="47fcd25afe772010f3d079e237ae3a90" category="inline-link-rx"></block></block>
   <block id="95ef25aa47e9457c9ecb60dba8cacdf3" category="doc">AFX 儲存系統的法律聲明</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律聲明提供對版權聲明、商標、專利等的存取。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版權</block>
@@ -1312,22 +1302,12 @@
   <block id="31c437cd0133ff745a1e93507c2eb20b" category="list-text">ONTAP中的配額是對使用者、群組或 qtree 可使用的儲存空間量或檔案數量設定的限制。配額用於管理和控制儲存系統內的資源使用情況，確保沒有單一使用者或應用程式可以消耗過多的資源。</block>
   <block id="f850d5f072b99065b8b14f209d28b6f2" category="section-title">資料遷移選項</block>
   <block id="0f0a1f25f9c98706310856dd6e959d85" category="paragraph">有幾種資料遷移選項。重點是將外部資料遷移到 AFX 叢集。</block>
-  <block id="2da5c6848fa97e6d57edd0fd7cc501e6" category="section-title">從 Unified ONTAP遷移數據</block>
-  <block id="09c3f872052627145e5ce120455694b0" category="paragraph">可使用以下技術實現從 Unified ONTAP到 AFX 的完全整合遷移路徑：</block>
   <block id="794cb725c5631ad99b5b7c000307f0df" category="list-text">SnapMirror</block>
   <block id="7dd44faf90251db698eeb99b51efee2a" category="list-text">SVM 遷移</block>
   <block id="7e4716fcadce4a1adb7676534312a764" category="list-text">支援向量機預測</block>
-  <block id="5db926e7c011195bfaa831fe0aabc00c" category="paragraph">此外， FlexCache磁碟區可以在 AFX 和 Unified ONTAP之間以任意方向連接。</block>
   <block id="586423b900754a96436e39f12ad34de7" category="section-title">從非ONTAP來源遷移數據</block>
-  <block id="21689beccd9247a465d647f5db5a3661" category="paragraph">可以使用檔案級複製操作從非ONTAP系統執行資料遷移。可以使用快速複製實用程式（例如 XCP 或 CloudSync）以及標準實用程式（例如 RoboCopy（用於 SMB）和 rsync（用於 NFS））以及第三方工具（例如 DataDobi）。</block>
   <block id="9686c7656f6866ab27df53aba66aa5c4" category="section-title">遷移限制</block>
-  <block id="1825404caf9bf08322edc7f1e8fe7d2b" category="paragraph">如果資料磁碟區不包含 LUN 或 NVMe 命名空間，則現有的 Unified ONTAP系統可以複製到 AFX。複製到 Unified ONTAP系統時，Unified ONTAP系統支援的最低版本為 9.16.1。這是第一個支援進階容量平衡的 Unified ONTAP版本。</block>
-  <block id="25b6da96a8a760952124cb78cea3667f" category="section-title">AFX 對 NFS 中繼的支持</block>
-  <block id="4cee11533f48877b71ac4114308fddc5" category="paragraph">NFS 中繼是一種技術，它使 NFS v4.1 用戶端能夠開啟與 NFS 伺服器上不同 LIF 的多個連線。這提高了資料傳輸速度並透過多條路徑提供了彈性。中繼有利於將FlexVol磁碟區匯出到具有中繼功能的客戶端。</block>
-  <block id="708b9f56042f6f92040c66e027f3d1e6" category="paragraph">若要啟用中繼，您需要為 NFS 設定 SVM，並且應啟用 NFSv4.1。配置變更後，還需要重新安裝所有 NFSv4.x 用戶端，這可能會造成破壞。</block>
   <block id="9ee9c2969db991ddef64d7ae817e6a57" category="section-title">檔案系統分析</block>
-  <block id="13d14f6d3eb21b302a07eca445ed601a" category="paragraph">檔案系統分析 (FSA) 是ONTAP中的一項功能，可即時查看FlexGroup或FlexVol磁碟區內的檔案使用情況和儲存容量趨勢。</block>
-  <block id="0d0e1ac7c6d2254324f44048d3433b8b" category="paragraph">FSA 透過提供有關儲存利用率和最佳化機會的洞察，消除了對外部工具的需求。  FSA 提供磁碟區檔案系統層次結構各個層級的詳細視圖，包括 SVM、磁碟區、目錄和檔案層級。</block>
   <block id="b58d0f6a7ebb3c87391c546808fd9aad" category="section-title">顯示儲存概覽</block>
   <block id="3aff0a3af97eea91975da75fea7d544b" category="paragraph">要開始管理您的 AFX 數據，您應該顯示儲存概覽。</block>
   <block id="8f05b5c10e45f62d76648a8e56cf1f2a" category="paragraph">您可以存取為 AFX 叢集定義的所有磁碟區和儲存桶。這些中的每一個都被視為一個資料容器。</block>
@@ -1610,7 +1590,6 @@
   <block id="e04c15856f0ea4ee0be8fd6e3957b0b0" category="list-text">加密是將資料轉換為安全格式的過程，未經適當授權就無法輕易讀取。 ONTAP提供基於軟體和基於硬體的加密技術來保護靜態資料。這確保了當儲存媒體被重新利用、退回、放錯地方或被盜時，它無法被讀取。這些加密解決方案可以使用外部金鑰管理伺服器或ONTAP提供的板載金鑰管理器進行管理。</block>
   <block id="1dd2239be8a1348b44deadbaab8103bb" category="list-text">數位憑證和 PKI</block>
   <block id="059460d88580ecd8442df8002819bed2" category="list-text">數位證書是用於證明公鑰所有權的電子文檔。公鑰和相關的私鑰可以以多種方式使用，包括通常作為更大的安全框架（如 TLS 和 IPsec）的一部分來建立身分。這些金鑰以及支援協定和格式標準構成了公鑰基礎設施 (PKI) 的基礎。</block>
-  <block id="cd2b16eefece89a607eb8deec53f101b" category="doc">防範針對 AFX 儲存系統的勒索軟體攻擊</block>
   <block id="699abf1f897b13a155ff2ccb3ae3fb4c" category="sidebar">NetApp AFX 儲存系統是一種分解的硬體和軟體解決方案，專注於滿足高效能 NAS 和 S3 客戶的獨特需求。其效能和可擴充性專門設計用於滿足 AI 和 ML 工作負載的要求。  AFX 提供了簡化的使用者體驗，使其可由儲存專家和非專家進行管理。</block>
   <block id="67e3534cd0feec346d52509c43cc0189" category="sidebar">AFX 文檔</block>
   <block id="5f5ce9070c0881e38b8b17b23b3ece81" category="sidebar">NetApp ONTAP AFX 儲存系統是一種分解的硬體和軟體解決方案，專注於滿足高效能 NAS 和 S3 客戶的獨特需求。其效能和可擴充性專門設計用於滿足 AI 和 ML 工作負載的要求。  AFX 提供了簡化的使用者體驗，使其可由儲存專家和非專家進行管理。</block>
@@ -1698,4 +1677,30 @@
   <block id="d763fb8938024cd88263074e25273371" category="sidebar">設定和管理快照複製</block>
   <block id="0482c0783bfb2959339ab71fc6aa2511" category="sidebar">管理政策和時間表</block>
   <block id="97c10fb55bed7fe33c55683647d9105a" category="sidebar">準備保護您的數據</block>
+  <block id="8423e0b0f9e240bb2fb2285caef15ef6" category="section-title">ONTAP FlexCache卷</block>
+  <block id="93dbc5e0658220e9d45165593a50018b" category="paragraph">不可以。您不能在同一個叢集中混合運行不同ONTAP特性的系統節點。例如，您無法在同一個叢集中將 AFX 節點（執行 AFX ONTAP個人化）與AFF或FAS節點（執行 Unified ONTAP個人化）混合使用。</block>
+  <block id="51164cc9a2dc5e5fd1bc8b7caf4ff2de" category="paragraph-title">我可以在我的 AFX 系統的後端叢集網路中使用任何類型的交換器嗎？</block>
+  <block id="3cb557749455bb6c14d62ef66bdf31f6" category="paragraph">不可以。只有經過專門批准並隨 AFX 儲存平台提供的交換器才支援叢集網路。此外，這些後端交換器專用於 AFX 叢集操作。客戶端存取操作（使用 NFS、SMB 和 S3）只能透過前端客戶端資料網路執行。</block>
+  <block id="9cdb0f273ab22003628192e697981917" category="paragraph-title">叢集交換器如何配置？</block>
+  <block id="105f13233e6f74d02fd41159a532f770" category="paragraph">叢集網路交換器使用NetApp提供的設定檔進行設定。不支援更改設定檔。</block>
+  <block id="ad5b5485d7c558ed08465ac5fa9579b3" category="paragraph-title">與AFF或FAS系統相比，AFX 的捲移動操作有何不同？</block>
+  <block id="c5767895814e2f8cb34c84245552ba84" category="paragraph">借助運行 Unified ONTAP特性的AFF和FAS系統，可以無中斷地將磁碟區從叢集中的一個節點或聚合體重新定位到另一個節點或聚合體。這是使用採用SnapMirror技術的後台複製作業來執行的，其中在新位置建立一個新的目標磁碟區。根據磁碟區的大小和叢集資源的利用率，磁碟區移動完成所需的時間可能會有所不同。</block>
+  <block id="604d13ebe56ee6f22f1a3cf482e9cba8" category="paragraph">在初始 AFX 版本中，磁碟區只會在儲存故障轉移場景中以及在叢集中新增或刪除節點時移動。這些移動僅透過ONTAP進行控制。</block>
+  <block id="0a33bb860367c3285ff09c33b79eef88" category="list-text"><block ref="0a33bb860367c3285ff09c33b79eef88" category="inline-link-rx"></block></block>
+  <block id="2042512ad460fc59bd9840e2dbf6204c" category="list-text">NFS 中繼</block>
+  <block id="8eac7569fe98a77b56bea69f883ebcb6" category="list-text">NFS 中繼是一種技術，它使 NFS v4.1 用戶端能夠開啟與 NFS 伺服器上不同 LIF 的多個連線。這提高了資料傳輸速度，並在將FlexVol磁碟區匯出到具有中繼功能的用戶端時透過多條路徑提供了彈性。</block>
+  <block id="b76f98fdaf313a65cf2c6f59a3752a76" category="paragraph">若要啟用中繼，您需要為 NFS 設定 SVM，並且應啟用 NFSv4.1。配置變更後，還需要重新安裝所有 NFSv4.x 用戶端，這可能會造成破壞。對於所有ONTAP系統，NFS 中繼的支援和設定過程都是相同的。詳細了解<block ref="3bbd72ecc33379409e84301ec3f716f9" category="inline-link-rx"></block></block>
+  <block id="31a905eba0332220f52d70c6b0e96375" category="list-text">檔案系統分析 (FSA) 是ONTAP 的功能，可即時查看FlexGroup或FlexVol磁碟區內的檔案使用情況和儲存容量趨勢。它透過提供有關儲存利用率和優化機會的洞察，消除了對外部工具的需求。FSA 提供磁碟區檔案系統層次結構各個層級的詳細視圖，包括 SVM、磁碟區、目錄和檔案層級。</block>
+  <block id="5daeb7d02f0c8f2c5f519d60becbcc5d" category="section-title">從AFF或FAS系統遷移數據</block>
+  <block id="dce8a1fa8e4a094ef871a7103f3f1f14" category="paragraph">可使用下列技術實現從AFF或FAS系統（運行 Unified ONTAP個人化功能）到 AFX 的完全整合遷移路徑：</block>
+  <block id="d1d87d5c226a16c3537cdaf52219e6f9" category="paragraph">此外， FlexCache磁碟區可以在 AFX 和AFF或FAS系統之間以任意方向連接。</block>
+  <block id="a7ac1d2e69b9bbb9a2accb2ec30a1d69" category="inline-link">XCP</block>
+  <block id="a1ffadf93063cf27ac6a6513b066437f" category="paragraph">可以使用檔案級複製操作從非ONTAP系統執行資料遷移。快速複製實用程序，例如<block ref="2e068de43ed51d2c33a896a672bd332b" category="inline-link-rx"></block>可以與標準實用程式（例如 RoboCopy（用於 SMB）和 rsync（用於 NFS）以及第三方工具（例如 DataDobi）一起使用。</block>
+  <block id="d04306e92cf7956801c3a9ab37e4dd4b" category="paragraph">如果來源資料卷不包含 LUN 或 NVMe 命名空間，則可以將資料從AFF或FAS系統複製到 AFX。從 AFX 複製到AFF或FAS系統時， AFF或FAS系統支援的最低ONTAP版本為 9.16.1。這是第一個支援高級容量平衡的ONTAP版本。</block>
+  <block id="03c39d763ca15978d9ef16c2ba5fe98a" category="inline-link">資料保護和災難復原</block>
+  <block id="9e873281484e8b5b9a062501ed2ec409" category="admonition">由於AFF和FAS系統上的許多概念和管理程序與 AFX 儲存系統相同，因此請查看 Unified ONTAP文檔<block ref="dbe2ffaa0f590f79d1f22685959df345" category="inline-link-rx"></block>可能會有幫助。</block>
+  <block id="32a2e65f7d567a43c4e8522fcb11fd35" category="section-title">AFX 資料保護限制</block>
+  <block id="a5c027a54a434f7725d8ad7b173208cd" category="paragraph">您應該了解 AFX 儲存系統強制執行的ONTAP資料保護限制和約束。</block>
+  <block id="ea39e5b3dcce663e71e4c4855aff145f" category="paragraph-title">SnapMirror同步 (SM-S)</block>
+  <block id="763091f517e8df088fc850122ac6b19c" category="paragraph">使用 SM-S 時有規模限制。單一 AFX 系統集群中最多可以有 400 個關係。</block>
 </blocks>

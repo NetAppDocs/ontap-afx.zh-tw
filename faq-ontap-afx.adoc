@@ -38,6 +38,9 @@ ONTAP是一個強大且多功能的儲存平台，以其全面的功能集和對
 .不同ONTAP特性的系統管理器介面看起來都非常相似。我如何確定特定係統的個性？
 在系統管理員中，選擇左側導覽窗格中的“*叢集*”，然後選擇“*概覽*”。您將看到頁面上顯示的個性。或者，您可以在 CLI 中發出指令「system node show」。您也可以使用 REST API 確定ONTAP叢集的特性；請參閱link:./rest/first-call.html["您的第一個 AFX 系統 REST API 呼叫"]了解詳情。
 
+.AFX 儲存系統何時上市？AFX 支援的最早ONTAP版本是什麼？
+AFX 儲存系統於 2025 年 10 月在NetApp Insight大會上發布。AFX 支援ONTAP 9.17.1 及更高版本。請聯絡您的NetApp銷售代表以了解更多詳細資訊。
+
 .在 AFX 儲存系統中，「分解」是什麼意思？
 根據上下文，「分解」一詞與 AFX 可以有兩種不同但相關的含義。
 
@@ -52,7 +55,10 @@ ONTAP是一個強大且多功能的儲存平台，以其全面的功能集和對
 .我可以在同一個ONTAP叢集中將 AFX 系統節點與AFF、 ASA或FAS系統節點混合使用嗎？
 不可以。您不能在同一個叢集中混合運行不同ONTAP特性的系統節點。例如，您無法在同一個叢集中將 AFX 節點（執行 AFX ONTAP個人化）與AFF或FAS節點（執行 Unified ONTAP個人化）混合使用。
 
-.如果我想使用運行統一ONTAP （FAS、 AFF、 ASA）的系統和用於SnapMirror或FlexCache 的AFX 系統，我需要哪個ONTAP版本？
+.我可以將FlexCache與 AFX 系統叢集一起使用嗎？
+是的。AFX 儲存系統支援FlexCache與運作 Unified ONTAP特性的AFF或FAS系統之間的通訊。唯一的限制是 AFX 不支援具有回寫模式的FlexCache 。
+
+.如果我想將AFF或FAS系統（運行統一ONTAP個性）與 AFX 系統一起用於SnapMirror或FlexCache，我需要哪個ONTAP版本？
 AFX 的SnapMirror版本規則與 Unified ONTAP相同。這意味著要從 Unified ONTAP複製，來源系統必須在支援的版本範圍內。若要從 AFX 複製，Unified ONTAP系統必須是ONTAP 9.16.1 或更高版本（支援進階容量平衡功能的最早版本）。對於FlexCache，來源系統和目標系統適用相同的規則，如 https://www.netapp.com/pdf.html?item=/media/7336-tr4743.pdf["TR-4743"^]。
 
 對FlexGroup磁碟區的支援存在一些差異。  AFX 上的FlexGroup磁碟區不能成為使用寫回模式的FlexCache磁碟區的原始磁碟區。

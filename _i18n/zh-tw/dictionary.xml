@@ -539,12 +539,8 @@
   <block id="d9e933a0183aa036605a2650b119960c" category="paragraph">ONTAP是一個強大且多功能的儲存平台，以其全面的功能集和對各種儲存需求的適應性而聞名。雖然這種靈活性使其成為具有多樣化工作負載的組織的絕佳選擇，但一些客戶可以從針對其特定環境需求進行最佳化的更客製化的儲存解決方案中受益。</block>
   <block id="6823723f3d129ef57f6bcfbcd86bd04e" category="paragraph">為了滿足這些特殊需求，一些NetApp儲存系統提供了獨特的ONTAP特性，每種特性都包含一組旨在支援獨特客戶需求的功能。  ONTAP特性通常是硬體和軟體功能的組合，專門用於為目標用例提供最佳化的體驗。  NetApp提供三種ONTAP特性：</block>
   <block id="b33eab3f59e19afa3da64a7838372c21" category="list-text">統一ONTAP</block>
-  <block id="0ad35f334baf990d3a31bf6cfa0709f5" category="list-text">Unified ONTAP特性提供了廣泛的資料管理功能，支援 NAS、SAN 和 S3 協議，以實現最大的靈活性。這是NetApp 的旗艦產品，可在AFF和FAS系統以及ONTAP Select和Cloud Volumes ONTAP等虛擬化部署上使用。</block>
-  <block id="e9d7397e9772df2e11071d57657f4b22" category="list-text">AFX</block>
-  <block id="adf18a62ba91568ae4c17ed21c595973" category="list-text">AFX ONTAP特性提供了一種分解的解決方案，旨在滿足高效能 NAS 和 S3 工作負載（包括 AI/ML 應用程式）的嚴格要求。  AFX 系統為需要可擴充、高吞吐量檔案和物件儲存的客戶提供專門的功能。</block>
   <block id="df5b8332c344a8d1a2ca6124ea06defe" category="list-text">ASA r2</block>
   <block id="fde1abb5537b55c34521d414267b3f70" category="inline-link">ASA r2 系統</block>
-  <block id="fc33e2bbed08316e89f0df10590d22cc" category="list-text">ASA r2 ONTAP特性提供了專為僅 SAN 環境設計的分解解決方案。<block ref="e4ca437dd887d2a61be13c7ee5ecdac0" category="inline-link-rx"></block>  簡化區塊工作負載的儲存體驗，為 SAN 客戶提供簡化的管理和最佳化的效能。</block>
   <block id="6d1fe0d9c2d18d3c107ffcb493bdacf4" category="paragraph">透過提供這些獨特的ONTAP特性， NetApp使組織能夠選擇符合其營運要求和應用程式工作負載的儲存解決方案。</block>
   <block id="255bf722ae2f40f567ba6f42a03ffeee" category="paragraph-title">我可以更改NetApp儲存系統的ONTAP特性嗎？</block>
   <block id="6adee2606f39ed8126ea7419135e040d" category="paragraph">不可以。您的ONTAP儲存系統的特性是不可變的，無法變更。例如，您無法將FAS或AFF儲存系統（執行 Unified ONTAP特性）轉換或升級為 AFX 儲存系統。</block>
@@ -686,11 +682,8 @@
   <block id="ea7c1af5f0c16b4f7fadf9fe7aa9bd4b" category="section-title">使用ONTAP HA 對</block>
   <block id="44abd47dc22d8944944122617fadf4fe" category="paragraph">與 Unified ONTAP一樣，AFX 叢集節點配置為高可用性 (HA) 對，以實現容錯和無中斷運行。 HA 配對使得儲存操作能夠在發生節點故障（例如儲存故障轉移）時保持在線。每個節點都與另一個節點配對，形成一對。這通常是透過兩個節點的NVRAM模組之間的直接連接來完成的。</block>
   <block id="f1fda245e68667d714e981e6aef06611" category="paragraph">使用 AFX，新的 HA VLAN 被加入到後端叢集交換機，以使NVRAM模組能夠在 HA 夥伴節點之間保持連接。  HA 對仍然與 AFX 系統一起使用，但不再需要直接連接合作夥伴節點。</block>
-  <block id="67c232c91fe284ec9b1946d4112dfec0" category="section-title">AFX 系統部署限制</block>
-  <block id="9f663c4191836dca7619153a5977feb9" category="paragraph">在配置和使用叢集時，AFX 會強制執行多項限制，包括最小值和最大值。這些限制分為幾個不同的類別，包括：</block>
   <block id="4f153ef27e03f77db56acbf6b56a9003" category="list-text">每個叢集的控制器節點</block>
   <block id="e9f7ded0687b255de1c10debe9fb0f7d" category="list-text">每個 AFX 叢集必須至少有四個節點。最大節點數根據ONTAP版本的不同而不同。</block>
-  <block id="ec2bdf0a3ea1b056843de1d3ae912a78" category="list-text">這是叢集儲存可用區 (SAZ) 中所有 SSD 磁碟的總容量。最大儲存容量根據ONTAP版本而有所不同。您應該查看互通性矩陣工具 (IMT) 中提供的資訊來確定叢集的功能。</block>
   <block id="20940568e8a8df65f4ded7552f91cb5a" category="section-title">確認 AFX 系統健康狀況</block>
   <block id="32b20b465c25cf57c303655ae17c2681" category="paragraph">在執行任何 AFX 管理任務之前，您應該檢查叢集的健康狀況。</block>
   <block id="9d7934850e239388cf4ca1ba33e75b38" category="admonition">您可以隨時檢查 AFX 叢集的健康狀況，包括當您懷疑有操作或效能問題時。</block>
@@ -1542,7 +1535,6 @@
   <block id="99ec9f1726a6519eae656fd574344d13" category="list-text"><block ref="99ec9f1726a6519eae656fd574344d13" category="inline-link-rx"></block></block>
   <block id="1b145f28c9e1e4044efc92e3e1567780" category="summary">您可以發出簡單的 curl 命令來開始使用 AFX REST API 並確認其可用性。</block>
   <block id="82c5461d1a57f884eb846ca365801e17" category="doc">您的第一個 AFX 儲存系統 REST API 呼叫</block>
-  <block id="2adee5bb9e9abee9178f660513c83f69" category="paragraph">AFX 是ONTAP三位不同人物之一。您可以呼叫 REST API，根據回應中包含的兩個欄位來決定叢集的ONTAP特性。</block>
   <block id="7013ac323311e3dab810263b1d637a84" category="paragraph">除了在本機工作站上提供 curl 實用程式之外，您還需要以下內容：</block>
   <block id="e57ddd021ae925c610e301862e495d93" category="list-text">AFX 系統叢集管理 LIF 的 IP 位址或 FQDN</block>
   <block id="6c62a36f8e262347f2ba79452265a020" category="list-text">有權存取ONTAP REST API 的帳戶的ONTAP憑證</block>
@@ -1703,4 +1695,16 @@
   <block id="a5c027a54a434f7725d8ad7b173208cd" category="paragraph">您應該了解 AFX 儲存系統強制執行的ONTAP資料保護限制和約束。</block>
   <block id="ea39e5b3dcce663e71e4c4855aff145f" category="paragraph-title">SnapMirror同步 (SM-S)</block>
   <block id="763091f517e8df088fc850122ac6b19c" category="paragraph">使用 SM-S 時有規模限制。單一 AFX 系統集群中最多可以有 400 個關係。</block>
+  <block id="b38e285f6cc8e00ab41aae31ee5de40a" category="list-text">*Unified ONTAP* - Unified ONTAP特性提供了廣泛的資料管理功能，支援 NAS、SAN 和 S3 協議，以實現最大的靈活性。這是NetApp 的旗艦產品，可在AFF和FAS系統以及ONTAP Select和Cloud Volumes ONTAP等虛擬化部署上使用。</block>
+  <block id="41935759e3103eaecb4e639fabcfeaf8" category="list-text">*AFX* - AFX ONTAP特性提供了一種分解的解決方案，旨在滿足高效能 NAS 和 S3 工作負載（包括 AI/ML 應用程式）的嚴格要求。AFX 系統為需要可擴充、高吞吐量檔案和物件儲存的客戶提供專門的功能。</block>
+  <block id="4a4f6533cdc5a6d5e2e86605c2f59747" category="list-text">* ASA r2* - ASA r2 ONTAP特性提供了專為僅 SAN 環境設計的分解解決方案。<block ref="e4ca437dd887d2a61be13c7ee5ecdac0" category="inline-link-rx"></block>  簡化區塊工作負載的儲存體驗，為 SAN 客戶提供簡化的管理和最佳化的效能。</block>
+  <block id="523837832bb488119118889ecba260ea" category="section-title">AFX 群集部署限制</block>
+  <block id="6a304cee8eaf01d4c0221bb8185c36ae" category="paragraph">在配置和使用叢集時，AFX 會強制執行多項限制，包括最小值和最大值。這些限制分為幾類，包括：</block>
+  <block id="fb2af5c08b54884bae80e5f29c0d24f3" category="list-text">這是叢集儲存可用區 (SAZ) 中所有 SSD 磁碟的總容量。最大儲存容量根據ONTAP版本而有所不同。</block>
+  <block id="04f1bd4b5783cf5250b6f11f5f3c45bd" category="paragraph">您應該查看NetApp Hardware Universe和 Interoperability Matrix Tool 中提供的資訊來確定叢集的功能。</block>
+  <block id="4c1c93397a0ad82f0b80502a6c7c0799" category="list-text"><block ref="4c1c93397a0ad82f0b80502a6c7c0799" category="inline-link-rx"></block></block>
+  <block id="f6735f5b05187d612456240f1b4e15a9" category="list-text"><block ref="f6735f5b05187d612456240f1b4e15a9" category="inline-link-rx"></block></block>
+  <block id="158b0cd8e98337e4dafd6291bed45568" category="inline-link">互通性矩陣工具概述</block>
+  <block id="c9f4862e07def71045419c1015337766" category="list-text"><block ref="c9f4862e07def71045419c1015337766" category="inline-link-rx"></block></block>
+  <block id="b6b9f4e0ea5360bfc7fbf3d03fb49e3e" category="paragraph">AFX 是NetApp提供的三種ONTAP個人化產品之一。您可以發出 REST API 呼叫來決定ONTAP叢集的特性。您也可以使用系統管理員或 CLI 來確定ONTAP特性；有關詳細信息，請參閱常見問題解答頁面。</block>
 </blocks>

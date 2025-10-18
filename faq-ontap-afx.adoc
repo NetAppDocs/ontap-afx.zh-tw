@@ -25,9 +25,9 @@ ONTAP是一個強大且多功能的儲存平台，以其全面的功能集和對
 
 為了滿足這些特殊需求，一些NetApp儲存系統提供了獨特的ONTAP特性，每種特性都包含一組旨在支援獨特客戶需求的功能。  ONTAP特性通常是硬體和軟體功能的組合，專門用於為目標用例提供最佳化的體驗。  NetApp提供三種ONTAP特性：
 
-統一ONTAP:: Unified ONTAP特性提供了廣泛的資料管理功能，支援 NAS、SAN 和 S3 協議，以實現最大的靈活性。這是NetApp 的旗艦產品，可在AFF和FAS系統以及ONTAP Select和Cloud Volumes ONTAP等虛擬化部署上使用。
-AFX:: AFX ONTAP特性提供了一種分解的解決方案，旨在滿足高效能 NAS 和 S3 工作負載（包括 AI/ML 應用程式）的嚴格要求。  AFX 系統為需要可擴充、高吞吐量檔案和物件儲存的客戶提供專門的功能。
-ASA r2:: ASA r2 ONTAP特性提供了專為僅 SAN 環境設計的分解解決方案。 https://docs.netapp.com/us-en/asa-r2/["ASA r2 系統"^]  簡化區塊工作負載的儲存體驗，為 SAN 客戶提供簡化的管理和最佳化的效能。
+* *Unified ONTAP* - Unified ONTAP特性提供了廣泛的資料管理功能，支援 NAS、SAN 和 S3 協議，以實現最大的靈活性。這是NetApp 的旗艦產品，可在AFF和FAS系統以及ONTAP Select和Cloud Volumes ONTAP等虛擬化部署上使用。
+* *AFX* - AFX ONTAP特性提供了一種分解的解決方案，旨在滿足高效能 NAS 和 S3 工作負載（包括 AI/ML 應用程式）的嚴格要求。AFX 系統為需要可擴充、高吞吐量檔案和物件儲存的客戶提供專門的功能。
+* * ASA r2* - ASA r2 ONTAP特性提供了專為僅 SAN 環境設計的分解解決方案。 https://docs.netapp.com/us-en/asa-r2/["ASA r2 系統"^]  簡化區塊工作負載的儲存體驗，為 SAN 客戶提供簡化的管理和最佳化的效能。
 
 
 透過提供這些獨特的ONTAP特性， NetApp使組織能夠選擇符合其營運要求和應用程式工作負載的儲存解決方案。

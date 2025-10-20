@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: administer/migrate-svm.html 
 keywords: afx, afx system, svm, migrate svm 
-summary: 您可以將資料 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱 Unified ONTAP文件。 
+summary: 您可以將 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱 Unified ONTAP文件。 
 ---
 = 遷移 AFX 儲存系統 SVM
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您可以將資料 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢
 
 
 [role="lead"]
-您可以將資料 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱提供的 Unified ONTAP文件。
+您可以將 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱提供的 Unified ONTAP文件。
 
 
 

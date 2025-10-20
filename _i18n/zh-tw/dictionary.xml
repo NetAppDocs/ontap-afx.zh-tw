@@ -65,10 +65,8 @@
   <block id="f374f4f413ce58f29a5db8436a4f29ad" category="paragraph">您可以監控叢集的健康和效能。這包括設定事件警報和管理系統健康警報通知。參考<block ref="a6cdc1834b78b8b89ee92bbe49904c07" category="inline-link-rx"></block>了解更多信息</block>
   <block id="e5037510086003d93a3daf34030bf4c4" category="inline-link-macro">AFX 叢集的附加管理</block>
   <block id="cba9c10f96b3122132057453ba39d735" category="list-text"><block ref="cba9c10f96b3122132057453ba39d735" category="inline-link-macro-rx"></block></block>
-  <block id="bbdeadb34080fe84fcd07f7ec44186ec" category="summary">建立資料 SVM 後，您可以根據您的要求和客戶需求更新配置。</block>
   <block id="cca25dd2421f27456e2c8857f143bcc2" category="doc">配置 AFX 儲存系統 SVM</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">關於此任務</block>
-  <block id="d94881bcfe4d50e96c6c145dd72caead" category="paragraph">有四種存取 SVM 配置的路徑，如特定資料 SVM 的登入頁面上的標籤所示。這些包括：</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="list-text">概況</block>
   <block id="edbe21b71cfdb0ef81d44c4b10f0b4dd" category="paragraph">這提供了與網路介面和服務、協定、儲存和保護相關的當前配置詳細資訊的快速儀表板概覽。</block>
   <block id="f4f70727dc34561dfde1a3c529b6205c" category="list-text">設定</block>
@@ -354,9 +352,7 @@
   <block id="226bdb0cdd6382fa3ea10612ab014c8a" category="list-text"><block ref="226bdb0cdd6382fa3ea10612ab014c8a" category="inline-link-macro-rx"></block></block>
   <block id="0528feee79911ff26eb24a5427d6c691" category="inline-link-macro">額外的 AFX SVM 管理</block>
   <block id="22d8bf1361fa729ce722097e36befda5" category="list-text"><block ref="22d8bf1361fa729ce722097e36befda5" category="inline-link-macro-rx"></block></block>
-  <block id="1dd03c00c4e2e3c911f9c5e1ca60a786" category="summary">您可以將資料 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱 Unified ONTAP文件。</block>
   <block id="a820521ec80cdaaa7daf1f44b4d156bb" category="doc">遷移 AFX 儲存系統 SVM</block>
-  <block id="f32d86a462e8b74e0cbb626b1a9ccacb" category="paragraph">您可以將資料 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱提供的 Unified ONTAP文件。</block>
   <block id="d1c1098f48087357ac90227a16c8ce05" category="section-title">互通性注意事項</block>
   <block id="003431cd9bfaf71ce41b593a52eef029" category="paragraph">在規劃和執行 SVM 遷移之前，您應該了解互通性注意事項，包括功能和限制。</block>
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="section-title">用例</block>
@@ -577,11 +573,9 @@
   <block id="0dffaaac24629ec57e41901c2c49b5e9" category="paragraph">AFX 包含一項稱為自動拓撲管理 (ATM) 的功能，可回應系統和使用者物件的不平衡。 ATM 的主要目標是平衡 AFX 叢集中的磁碟區。當偵測到不平衡時，會觸發內部作業以在活動節點之間均勻分佈資料。使用 ZCVM 重新分配數據，只需複製和更新物件元數據。</block>
   <block id="1bce74755c5e5305616eddc17873d185" category="summary">NetApp AFX 系統運行客製化的ONTAP特性，它與在AFF和FAS儲存上運行的ONTAP特性（稱為統一ONTAP ）不同。您應該了解 AFX 系統與FAS和AFF系統有何相似之處和不同之處。這提供了寶貴的視角，並且在您的環境中部署 AFX 時會很有幫助。</block>
   <block id="9f2c66d4e6da8c9b288f3ecdc75c974a" category="doc">將 AFX 儲存系統與AFF和FAS系統進行比較</block>
-  <block id="12527f37b5a726348a974e1ebe9a0c75" category="admonition">此 AFX 文件包含 Unified ONTAP文件網站上各個主題的連結。附加內容提供了更深入的深度和不同的視角，可以幫助您管理 AFX 儲存系統。</block>
   <block id="99d6ed6b3347c27373da6da2f7b952a7" category="section-title">配置差異</block>
   <block id="00ee6ecb3fb7eed883369282913b6d76" category="paragraph">AFX 配置與AFF和FAS系統在某些方面有所不同。</block>
   <block id="51d20ad0622a1bf32203f0fd69eff8ee" category="list-text">高級容量平衡</block>
-  <block id="566c652f2e6af843af67f40ec0204464" category="list-text">進階容量平衡功能，使用<block ref="7617fb157efcfcd230d531be7d153280" prefix=" " category="inline-code"></block>CLI 參數，預設對所有FlexGroup磁碟區啟用。</block>
   <block id="9754d771ba2a8ed846d729e396e82783" category="section-title">不受支援或受限制的 Unified ONTAP功能</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="inline-link-macro">什麼是新的</block>
   <block id="7b4782deb376294d92e8953f8d14855a" category="paragraph">雖然 AFX、 AFF和FAS儲存系統非常相似，但 AFX 不支援一些功能。您應該查看 AFX 的更新和更改<block ref="e4ac4a7dd877729340e2b0880473ea1b" category="inline-link-macro-rx"></block>根據您的發布版本。</block>
@@ -602,7 +596,6 @@
   <block id="542dbb009e960ad2ab0d38ef4a2c5f99" category="list-text">RAID 管理</block>
   <block id="0a9e63106b5735d38d5bf5377346f3ed" category="section-title">資料複製</block>
   <block id="d3e592d24d461a69505c06ca342a0fbd" category="list-text">不複製包含 LUN 的AFF或FAS系統的捲</block>
-  <block id="52f9bbffe0c0eb37d5f0fee8efec6d05" category="list-text">AFX FlexGroup磁碟區只能複製到 Unified ONTAP 9.16.1 或更高版本</block>
   <block id="1ac02e30a31e8e8a271f79d995edae6b" category="section-title">命令列介面的更改</block>
   <block id="f0fbad4010250530a02ebeee997be99b" category="paragraph">AFX 提供的ONTAP CLI 通常與AFF和FAS系統提供的 CLI 相同。但存在一些差異，包括：</block>
   <block id="6ad554038f01b36139932064b15f012f" category="list-text">與以下相關的新 AFX 指令：</block>
@@ -618,7 +611,6 @@
   <block id="fc123d34fbcca975f8c6b4bcc69de12b" category="summary">NetApp AFX 儲存系統基於下一代儲存架構，將ONTAP儲存模型發展為分解的高效能 NAS 解決方案。  AFX 採用先進的技術和處理技巧來支援文件和物件工作負載，從而提供極高的效能。</block>
   <block id="eb945734dba0e6e93fb79ddc0d55d4bf" category="doc">了解 AFX 儲存系統</block>
   <block id="b03a11c36ac9c614434dc119668e67f2" category="section-title">典型的應用程式工作負載</block>
-  <block id="236c00235f30a5a8d87f94383158d92d" category="paragraph">AFX 儲存滿足 AI/ML 環境和其他相關以資料為中心的應用程式的典型獨特需求。  AFX 儲存系統非常適合管理多種不同工作負載的組織，包括：</block>
   <block id="3701ed1cc007561983bcf6db678215bd" category="list-text">與深度學習相關的訓練和迭代模型細化，需要持續的高頻寬和對海量資料集的存取。</block>
   <block id="d86fdbf9ebe98514661e8642bcee1f8c" category="list-text">處理包括文字、圖像和影片在內的多種資料類型。</block>
   <block id="7c780abd9bdd1f2a63614e10e5038ab8" category="list-text">需要嚴格響應時間視窗的低延遲即時推理應用程式。</block>
@@ -633,24 +625,19 @@
   <block id="e4b73aea5fedcc9f4eb9b804ebd249aa" category="summary">在生產環境中部署 AFX 之前，必須了解管理結構和配置選項。這可確保您的 AFX 叢集管理安全、高效且有效。</block>
   <block id="982e02e3abfea4e77a8d9e6cb357ccc0" category="doc">準備管理您的 AFX 儲存系統</block>
   <block id="1e793b1e0f039cf758071c91b073a4f1" category="paragraph">儲存虛擬機器 (SVM) 是ONTAP叢集內的隔離伺服器或租用戶環境。您可以設定 SVM 來向連線的客戶端提供資料。您應該熟悉 AFX SVM 的功能和特性。</block>
-  <block id="4e7376ecff75f0273e4afa234b99e80b" category="admonition">當您設定並初始部署 AFX 叢集時，會建立一個資料 SVM。如果需要，您可以建立額外的資料 SVM。</block>
   <block id="0214ea3e9ff4c3369ca3a5d938ad05f8" category="list-text">行政控制</block>
-  <block id="2aa945ebbfea0af7ca1c227cf6663c02" category="list-text">資料 SVM 可用於建立和強制執行資料和應用程式的隔離。當一個較大的組織中有許多不同的團體時，這會很有用。可以將管理控制委託給 SVM 來制定與資料存取、安全性和保護相關的策略。</block>
   <block id="73b02dba7a7033396cb6431429a56244" category="list-text">帳戶和 RBAC 角色</block>
   <block id="704843e96039f91b3b08cfaa04e6080d" category="list-text">AFX 有兩個層級的身份驗證和授權：叢集層級和 SVM 層級。除了叢集帳戶之外，每個 SVM 都有自己獨特的一組使用者和角色。在大多數情況下，使用叢集等級帳戶就足夠了。但根據您的環境，您可能還需要配置和使用限制性更強的 SVM 帳戶和角色。看<block ref="22d8bf1361fa729ce722097e36befda5" category="inline-link-macro-rx"></block>了解更多。</block>
   <block id="555cc37af7c0ac7518efde480ebc56bf" category="list-text">SVM 範圍的資源</block>
   <block id="5a9ae7f64107703302087b450d59e140" category="list-text">AFX 資源和可設定實體與叢集或特定 SVM 相關聯。  SVM 範圍內有許多資源，包括磁碟區和儲存桶以及 SVM 使用者帳戶和 RBAC 角色。</block>
   <block id="77fae90ec5b51b6cfe6791871adf5d26" category="list-text">專用網路介面</block>
-  <block id="43da3632eeafb9b99a3a65623dac7b06" category="list-text">每個 SVM 都有自己專用的一組網路介面。例如，將單獨的 LIF 指派給 SVM 以用於管理和客戶端資料存取。</block>
   <block id="f7f2bc8f16d6d8ce1388be712d241676" category="section-title">兩個AFX管理層級</block>
   <block id="2bbd9436630a6f6f1efcfaaea0a91596" category="paragraph">使用 AFX 執行的管理ONTAP任務通常分為兩類。某些任務適用於整個ONTAP集群，而其他任務適用於特定的 SVM。這就導致了兩級管理模式。</block>
   <block id="cceb3e82a6e3f7c69cdc1370590bd84d" category="paragraph">值得注意的是，這些層級描述如何組織和指派管理任務，而不一定描述如何配置相關的安全性。例如，雖然需要叢集管理員帳戶來執行叢集層級管理，但它也可以用於 SVM 管理。</block>
   <block id="0c495a02b1e7c6804ca0b6bb25a76070" category="list-text">集群管理員</block>
   <block id="90a6e9fb8ccc1124ac3c5f0933e7d6b1" category="inline-link-macro">管理您的集群</block>
-  <block id="975be2c51c1b50ce9df0371c891347a9" category="list-text">集群管理員可以完全控制 AFX 集群，包括所有資料 SVM。 AFX 叢集管理層級僅包含叢集管理員可以執行的任務，而不包括任何特定於 SVM 的管理任務。看<block ref="b7c6f4e89f282d3743609571d8ac253f" category="inline-link-macro-rx"></block>了解更多。</block>
   <block id="689ac3e21fde025488f91fe6b2d49bcc" category="list-text">SVM 管理員</block>
   <block id="df8f29ef891c5c3d811dd49253e8d408" category="inline-link-macro">管理您的儲存虛擬機器和數據</block>
-  <block id="569a9ca41985fd85eecbdd04c017c2ec" category="list-text">SVM 管理員角色可以控制特定的資料 SVM，因此與叢集管理員相比受到的限制更嚴格。 SVM 管理涉及對具有 SVM 範圍的物件和資源執行任務，例如建立磁碟區。看<block ref="ebfee1a77bcca45a20260db66aedfa55" category="inline-link-macro-rx"></block>了解更多。</block>
   <block id="bb3210ed29005c8ea476bca6aa6c4223" category="section-title">三個管理介面</block>
   <block id="8e3788e1e670292489b1aa44ebe90cf3" category="paragraph">與AFF和FAS系統一樣，AFX 有三個管理介面。您需要使用的 LIF（或 IP 位址）會根據管理介面和您的環境而有所不同。</block>
   <block id="dd02da233490bf471fd104c24bc9b3b5" category="admonition">對於大多數管理任務來說，系統管理器使用者介面是首選。除非另有說明，否則您應該使用管理員帳戶。</block>
@@ -699,14 +686,10 @@
   <block id="a9503c68529f59e753c7812cca97590c" category="list-text">顯示並記錄任何*Insight*建議。</block>
   <block id="c19f5b6b588c116922ff371fc32e4d81" category="inline-link-macro">使用 Insights 優化 AFX 叢集效能和安全性</block>
   <block id="974140d8603adf73843c167ac7d9cfb7" category="paragraph"><block ref="974140d8603adf73843c167ac7d9cfb7" category="inline-link-macro-rx"></block></block>
-  <block id="2aaf297d31d383472b54739f6376d5ac" category="section-title">建立和使用資料 SVM 的快速入門</block>
   <block id="39eac0c34fdfab35e0497a8da8e783c8" category="paragraph">安裝並設定 AFX 叢集後，您可以開始執行大多數 AFX 部署的典型管理任務。以下是開始與客戶分享資料所需的進階步驟。</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一</block>
-  <block id="28cdc83438b53f2b504a5d18cea557f7" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>顯示可用資料 SVM</block>
   <block id="b9987a246a537f4fe86f1f2e3d10dbdb" category="inline-link-macro">展示</block>
-  <block id="ee6a3e42cdd55c7cc62eafd9a1181292" category="paragraph"><block ref="fc233a35ea84021cc2134d6c4801b6e5" category="inline-link-macro-rx"></block>資料 SVM 清單並確定是否有一個可以使用。</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">二</block>
-  <block id="09f33f46e10efd1bbda8634f9024786f" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>（可選）建立資料 SVM</block>
   <block id="686e697538050e4664636337cc3b834f" category="inline-link-macro">創造</block>
   <block id="c0533f1f19802c560277a0111c780c39" category="paragraph"><block ref="2df885e22cba09efe84582dd2eeab4dc" category="inline-link-macro-rx"></block>如果現有 SVM 不可用，則可以使用 SVM 來隔離和保護您的應用程式工作負載和資料。</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三</block>
@@ -762,8 +745,6 @@
   <block id="7f118dd9288c3fe39cf47e1f8c466b6e" category="paragraph">下圖說明了典型的 AFX 叢集部署。控制器節點與儲存架分離並透過共享網路連接。</block>
   <block id="54dc0ff6a5d6a080c896de05ec31762c" category="inline-image-macro">AFX 叢集架構</block>
   <block id="9d406ef56e35fceeceb777198c3bf02c" category="paragraph"><block ref="9d406ef56e35fceeceb777198c3bf02c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9645c20c52f9891775e274f2d93f03b3" category="summary">NetApp AFX 儲存系統具有多種特性，使其能夠作為高效能 NAS 平台運作。</block>
-  <block id="f71d632154995b6966d93b074e6b0972" category="doc">AFX儲存系統特點</block>
   <block id="146bce7e5064a390cf7d24e569ded6b6" category="list-text">分離儲存和運算能力</block>
   <block id="488ac6d8b0b2f8a57a54112ba3e640c5" category="list-text">與AFF和FAS儲存系統不同，叢集的 AFX 儲存和運算元素是分開的。  AFX 控制器不限於存取有限的一組本機磁碟。</block>
   <block id="3e6ddd52fc2d6199e3bca227606a1e01" category="list-text">刪除聚合和 RAID 管理</block>
@@ -930,8 +911,6 @@
   <block id="fa0d00eba52004814f9e675e8b363e21" category="list-text">選擇*資料容器*並建立磁碟區或 S3 儲存桶。</block>
   <block id="7d4cccfbf4982cf98dfcc8ab84353542" category="inline-link-macro">準備管理 AFX</block>
   <block id="467c52b97e48b31eaae92b849c44d932" category="paragraph">你應該<block ref="ccf85198082f902f2e1613b287967043" category="inline-link-macro-rx"></block>在生產環境中使用 AFX 叢集之前。</block>
-  <block id="ba666587c9cf6e1e8d11bc6e10e937a6" category="inline-link-macro">配置 AFX 資料 SVM</block>
-  <block id="72322876bb564ee9e800d6d21ca838fc" category="list-text"><block ref="72322876bb564ee9e800d6d21ca838fc" category="inline-link-macro-rx"></block></block>
   <block id="ccf85198082f902f2e1613b287967043" category="list-text"><block ref="ccf85198082f902f2e1613b287967043" category="inline-link-macro-rx"></block></block>
   <block id="c38bd8923cd9d703f6afe0fbef452f80" category="summary">了解如何安裝 AFX 1K 儲存系統和儲存架的導軌套件，以及如何將 AFX 硬體固定在機櫃或電信機架中。</block>
   <block id="f15992b3ead5729a349b745d488997b1" category="doc">安裝 AFX 1K 儲存系統</block>
@@ -1228,18 +1207,14 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">開源</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有關NetApp軟體中使用的第三方版權和許可的資訊。</block>
-  <block id="7082fda89054b04f297465b55674c8c3" category="summary">您可以建立一個儲存桶並將其附加到資料 SVM。每個儲存桶都可以使用 AFX 支援的 S3 存取協定向客戶端公開。</block>
   <block id="5265e6c84f77a7188dc8cd5ff3c641a3" category="doc">在 AFX 儲存系統上建立並配置 S3 儲存桶</block>
-  <block id="648df5a81ff3f4cd88bbe0b3e860f754" category="paragraph">建立儲存桶時，您需要提供最少量的配置詳細資訊。可以在建立期間或之後透過編輯儲存桶來提供其他詳細資訊。如果您已建立其他資料 SVM，則需要為儲存桶選擇 SVM。</block>
   <block id="a5590d86ed283872e0cc7fda42aa3bce" category="paragraph">您需要為 SVM 配置 S3 服務，以便用戶端能夠存取儲存桶。</block>
   <block id="bf52e174f6ac4c5b6733ee2f2e65a8d5" category="list-text">在系統管理員中，選擇*儲存*，然後選擇*儲存桶*。</block>
   <block id="394342912380849041084ca6817e0908" category="inline-image-macro">新增藍色背景</block>
   <block id="c271225decbfd89189eb197f3188942f" category="list-text">選擇<block ref="9516e19ff09cda1665b431e9c6bddb77" category="inline-image-macro-rx" type="image"></block>並提供名稱、容量等基本配置。</block>
   <block id="b3f73832919ff203d0655477eb0a71d0" category="list-text">可選擇「更多選項」來取得與資料保護、鎖定和權限相關的其他配置。</block>
   <block id="67a0c2052a77821404e56241e4d45c4b" category="list-text">選擇“*儲存*”以新增儲存桶。</block>
-  <block id="96585b7d26434028471fdf031b5e4b94" category="summary">您可以建立一個磁碟區並將其附加到資料 SVM。每個磁碟區都可以使用 AFX 支援的存取協定之一向客戶端公開。</block>
   <block id="49d5bccae6c50bd251abe0dd4f6c6034" category="doc">在 AFX 儲存系統上建立和設定卷</block>
-  <block id="3cb60b9646911b23017534f96c6d39c9" category="paragraph">建立磁碟區時，您需要提供最少量的配置詳細資訊。可以在建立期間或之後透過編輯磁碟區來提供其他詳細資訊。如果您已建立其他資料 SVM，則需要為磁碟區選擇 SVM。</block>
   <block id="ba1585e4781d7032cd012b5e13d7ad9d" category="list-text">在系統管理員中，選擇*儲存*，然後選擇*磁碟區*。</block>
   <block id="49eb259f6822bfd3981a55650426e8a6" category="list-text">選擇<block ref="9516e19ff09cda1665b431e9c6bddb77" category="inline-image-macro-rx" type="image"></block>並提供名稱、容量、最佳化等基本配置。</block>
   <block id="c0ad6ca34d6a77f33624e2424a78336e" category="list-text">（可選）選擇「更多選項」以獲得與資料保護、 SnapLock和 NFS 存取相關的其他配置。</block>
@@ -1622,8 +1597,6 @@
   <block id="015653ee347fd187160fa2a4e0cc0018" category="sidebar">管理使用者和角色</block>
   <block id="951d3fc54a28f9f46798897467d96a5b" category="sidebar">管理證書</block>
   <block id="8ae55b420db4fe91916550e9abce16c2" category="sidebar">顯示您的 SVM</block>
-  <block id="a5a2f836dbc422c5264f743d742e50d1" category="sidebar">建立資料 SVM</block>
-  <block id="eb39e169e736ca6f2bbb00a0bab975b0" category="sidebar">配置資料 SVM</block>
   <block id="91c934efd58347658e522d414f201107" category="sidebar">遷移 SVM</block>
   <block id="9ecee3d5a1fbbf2427a10b60a5bf0cbe" category="sidebar">支援集群</block>
   <block id="e8d169e6dc7b218b05fe89333590b11e" category="sidebar">管理AutoSupport</block>
@@ -1634,7 +1607,6 @@
   <block id="88fff44862def4168ac79c5db562ef39" category="sidebar">維護硬體</block>
   <block id="3e3ccd70e170fe5490433b8d5cf56bf3" category="sidebar">了解您的 AFX 系統</block>
   <block id="dbe4d9ee9509101eab810b6d20824b87" category="sidebar">了解NetApp AFX</block>
-  <block id="0a8322c611c6b2eb2c9ecb053a2bc62d" category="sidebar">系統特性</block>
   <block id="ee3eaeb6a7cd31167c2dd23547b16511" category="sidebar">架構細節</block>
   <block id="a7f68b037da8611dede6ae3b3bb41081" category="sidebar">比較 AFX 與AFF和FAS</block>
   <block id="debbbcd57ac6bcfce5c192665fccf3db" category="sidebar">安裝您的 AFX 系統</block>
@@ -1669,7 +1641,6 @@
   <block id="97c10fb55bed7fe33c55683647d9105a" category="sidebar">準備保護您的數據</block>
   <block id="8423e0b0f9e240bb2fb2285caef15ef6" category="section-title">ONTAP FlexCache卷</block>
   <block id="93dbc5e0658220e9d45165593a50018b" category="paragraph">不可以。您不能在同一個叢集中混合運行不同ONTAP特性的系統節點。例如，您無法在同一個叢集中將 AFX 節點（執行 AFX ONTAP個人化）與AFF或FAS節點（執行 Unified ONTAP個人化）混合使用。</block>
-  <block id="51164cc9a2dc5e5fd1bc8b7caf4ff2de" category="paragraph-title">我可以在我的 AFX 系統的後端叢集網路中使用任何類型的交換器嗎？</block>
   <block id="3cb557749455bb6c14d62ef66bdf31f6" category="paragraph">不可以。只有經過專門批准並隨 AFX 儲存平台提供的交換器才支援叢集網路。此外，這些後端交換器專用於 AFX 叢集操作。客戶端存取操作（使用 NFS、SMB 和 S3）只能透過前端客戶端資料網路執行。</block>
   <block id="9cdb0f273ab22003628192e697981917" category="paragraph-title">叢集交換器如何配置？</block>
   <block id="105f13233e6f74d02fd41159a532f770" category="paragraph">叢集網路交換器使用NetApp提供的設定檔進行設定。不支援更改設定檔。</block>
@@ -1699,7 +1670,6 @@
   <block id="523837832bb488119118889ecba260ea" category="section-title">AFX 群集部署限制</block>
   <block id="6a304cee8eaf01d4c0221bb8185c36ae" category="paragraph">在配置和使用叢集時，AFX 會強制執行多項限制，包括最小值和最大值。這些限制分為幾類，包括：</block>
   <block id="fb2af5c08b54884bae80e5f29c0d24f3" category="list-text">這是叢集儲存可用區 (SAZ) 中所有 SSD 磁碟的總容量。最大儲存容量根據ONTAP版本而有所不同。</block>
-  <block id="04f1bd4b5783cf5250b6f11f5f3c45bd" category="paragraph">您應該查看NetApp Hardware Universe和 Interoperability Matrix Tool 中提供的資訊來確定叢集的功能。</block>
   <block id="4c1c93397a0ad82f0b80502a6c7c0799" category="list-text"><block ref="4c1c93397a0ad82f0b80502a6c7c0799" category="inline-link-rx"></block></block>
   <block id="f6735f5b05187d612456240f1b4e15a9" category="list-text"><block ref="f6735f5b05187d612456240f1b4e15a9" category="inline-link-rx"></block></block>
   <block id="158b0cd8e98337e4dafd6291bed45568" category="inline-link">互通性矩陣工具概述</block>
@@ -1710,7 +1680,40 @@
   <block id="3c9f430479263b3b25ec8e84988d27be" category="paragraph-title">我可以將FlexCache與 AFX 系統叢集一起使用嗎？</block>
   <block id="d53231824f8827127654628ac3883d6c" category="paragraph">是的。AFX 儲存系統支援FlexCache與運作 Unified ONTAP特性的AFF或FAS系統之間的通訊。唯一的限制是 AFX 不支援具有回寫模式的FlexCache 。</block>
   <block id="f580013220a8ab44a2f9b864e7f6425a" category="paragraph-title">如果我想將AFF或FAS系統（運行統一ONTAP個性）與 AFX 系統一起用於SnapMirror或FlexCache，我需要哪個ONTAP版本？</block>
-  <block id="05669daf6632b75bf0f439e5c851177a" category="section-title">NetApp行銷與支援</block>
   <block id="4d4bcd00dec0ee009c6a6c831d33fda4" category="inline-link">NetApp AFX</block>
   <block id="7eee2dae65b99dd9a2020ea7343b8b68" category="list-text"><block ref="7eee2dae65b99dd9a2020ea7343b8b68" category="inline-link-rx"></block></block>
+  <block id="228a97428b2aeec69210739af416feeb" category="summary">建立 SVM 後，您可以根據您的要求和客戶需求更新配置。</block>
+  <block id="c1eb2ef19412fc8a729ccabaa304e64b" category="paragraph">有四種存取 SVM 配置的路徑，具體體現在特定 SVM 的登入頁面上的標籤中。這些包括：</block>
+  <block id="feb5d82aa83ef8e2c0f2897980886042" category="summary">您可以將 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱 Unified ONTAP文件。</block>
+  <block id="de588dc77b66037715d1febfdf7f9ae7" category="paragraph">您可以將 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱提供的 Unified ONTAP文件。</block>
+  <block id="4c2e600ea7c53e0c32af10f2e4850cd6" category="paragraph-title">我可以在我的 AFX 儲存系統的後端叢集網路中使用任何類型的交換器嗎？</block>
+  <block id="42ed7ea439950fed1039106f87d3419f" category="admonition">AFX 文件包含統一ONTAP文件網站上各種主題的鏈接，其中詳細介紹了無論ONTAP特性如何都以相同方式運行的功能。附加內容提供了更深入的幫助，可以幫助您管理 AFX 儲存系統。</block>
+  <block id="765b47efc6becfafc2dfb93543aab395" category="list-text">先進的容量平衡功能，使用<block ref="7617fb157efcfcd230d531be7d153280" prefix=" " category="inline-code"></block>CLI 參數，預設對所有FlexGroup磁碟區啟用。</block>
+  <block id="80fdcbf5318cc8c8b782fe1e7d993261" category="list-text">FlexGroup磁碟區只能複製到 Unified ONTAP 9.16.1 或更高版本</block>
+  <block id="1803226ae8ecf68b259a8b81dd429f18" category="paragraph">NetApp AFX 儲存系統滿足 AI/ML 環境和其他相關以資料為中心的應用程式的典型獨特需求。AFX 儲存系統非常適合管理多種不同工作負載的組織，包括：</block>
+  <block id="5da4db9a83f67785c558d8ef8930983d" category="section-title">系統設計特點</block>
+  <block id="662e223dde993ac9a5f94e9df73c6020" category="paragraph">AFX 系統具有多種設計特點，使其能夠作為高效能 NAS 平台運作。</block>
+  <block id="1a305bb61d773e7c7f5ad044dfc05c1d" category="list-text">SVM 的類型</block>
+  <block id="902282c75e6affab91bbdb31485cdf7e" category="list-text">AFX 系統叢集託管幾種不同類型的 SVM。 *數據 SVM* 用於向客戶端提供數據，是 AFX 管理員可以直接存取和配置的一種類型。設定和初始部署 AFX 叢集時預設會建立一個資料 SVM，但您可以根據需要建立其他資料 SVM。本文檔中引用 SVM 時，除非另有說明，否則均指資料 SVM。</block>
+  <block id="7bec62bffdc897ef7663099481e0f9f5" category="list-text">SVM 可用於建立和強制隔離資料和應用程式。當一個較大的組織中有許多不同的團體時，這會很有用。可以將管理控制委託給 SVM 來制定與資料存取、安全性和保護相關的策略。</block>
+  <block id="e8bc1a75864c7a9374e67c0bd33006ce" category="list-text">每個 SVM 都有自己專用的一組網路介面。例如，將單獨的 LIF 指派給 SVM 以用於管理和用戶端存取。</block>
+  <block id="809ced36d61a966c3c67e773781e8212" category="list-text">集群管理員可以完全控制 AFX 集群，包括所有 SVM。AFX 叢集管理層級僅包含叢集管理員可以執行的任務，而不包括任何特定於 SVM 的管理任務。看<block ref="b7c6f4e89f282d3743609571d8ac253f" category="inline-link-macro-rx"></block>了解更多。</block>
+  <block id="1d82ecf6b3e30f8f3261b09fc7460cc8" category="list-text">SVM 管理員角色可以控制特定的 SVM，因此與叢集管理員相比受到的限制更多。SVM 管理涉及對具有 SVM 範圍的物件和資源執行任務，例如建立磁碟區。看<block ref="ebfee1a77bcca45a20260db66aedfa55" category="inline-link-macro-rx"></block>了解更多。</block>
+  <block id="e7cc598931ecb05f201eccb80edc35c0" category="paragraph">您應該查看NetApp Hardware Universe和 Interoperability Matrix Tool 中提供的信息，以確定 AFX 叢集的功能。</block>
+  <block id="0471cd90a0f200d2ea4dc6668e82834e" category="section-title">建立和使用 SVM 快速入門</block>
+  <block id="5874dae1e3f2cc499f13dd22399c0cdc" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>顯示可用的 SVM</block>
+  <block id="928443d797f5bfbe15e0c62ea304137b" category="paragraph"><block ref="fc233a35ea84021cc2134d6c4801b6e5" category="inline-link-macro-rx"></block>SVM 清單並確定是否有一個可以使用。</block>
+  <block id="4cd360631f281d125f455f70ac3527bb" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>（可選）建立 SVM</block>
+  <block id="4519e96c84aba4c336601823ddb844ab" category="inline-link">ONTAP叢集中的 SVM 類型</block>
+  <block id="1ad42be2bb7dc3e7472a52084bc95d1b" category="list-text"><block ref="1ad42be2bb7dc3e7472a52084bc95d1b" category="inline-link-rx"></block></block>
+  <block id="3dccf72fe610d6922e392e93335fdb6d" category="list-text">子網路遮罩</block>
+  <block id="b252ca5bc5d465dbb9f73964ff30983f" category="inline-link-macro">配置 AFX SVM</block>
+  <block id="3b69a0402bdc83907f6c34509f9f49ff" category="list-text"><block ref="3b69a0402bdc83907f6c34509f9f49ff" category="inline-link-macro-rx"></block></block>
+  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="section-title">NetApp支援</block>
+  <block id="37ac2a878ab8e3292778f647c0c9f361" category="summary">您可以建立一個儲存桶並將其附加到 SVM。每個儲存桶都可以使用 AFX 支援的 S3 存取協定向客戶端公開。</block>
+  <block id="1603f56fade4f1081349b74f936be80b" category="paragraph">建立儲存桶時，您需要提供最少量的配置詳細資訊。可以在建立期間或之後透過編輯儲存桶來提供其他詳細資訊。如果您已建立其他 SVM，則需要為儲存桶選擇 SVM。</block>
+  <block id="6bdcdb8ea3424dafa80e11dfcad6c534" category="summary">您可以建立一個磁碟區並將其附加到 SVM。每個磁碟區都可以使用 AFX 支援的存取協定之一向客戶端公開。</block>
+  <block id="679eb87712080343e0bc37dbc08451df" category="paragraph">建立磁碟區時，您需要提供最少量的配置詳細資訊。可以在建立期間或之後透過編輯磁碟區來提供其他詳細資訊。如果您已建立其他 SVM，則需要為磁碟區選擇 SVM。</block>
+  <block id="93b1520005778e826c33efa7132d61c9" category="sidebar">建立 SVM</block>
+  <block id="b4f82cc57b777a6dc79376d19998c912" category="sidebar">配置 SVM</block>
 </blocks>

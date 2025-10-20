@@ -30,9 +30,9 @@ entries:
   entries:
   - title: 顯示您的 SVM
     url: "/administer/display-svms.html"
-  - title: 建立資料 SVM
+  - title: 建立 SVM
     url: "/administer/create-svm.html"
-  - title: 配置資料 SVM
+  - title: 配置 SVM
     url: "/administer/configure-svm.html"
   - title: 遷移 SVM
     url: "/administer/migrate-svm.html"

@@ -6,8 +6,6 @@ entries:
   entries:
   - title: 了解NetApp AFX
     url: "/get-started/ontap-afx-storage.html"
-  - title: 系統特性
-    url: "/get-started/system-design.html"
   - title: 架構細節
     url: "/get-started/software-architecture.html"
   - title: 比較 AFX 與AFF和FAS

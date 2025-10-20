@@ -41,7 +41,7 @@ AFX 叢集有四個區域必須進行初始設定。前三個是必需的，最�
 * DNS 網域
 * DNS 名稱伺服器 IP 位址
 * NTP 伺服器 IP 位址
-* 資料子網路遮罩
+* 子網路遮罩
 
 
 .步驟
@@ -104,6 +104,6 @@ AFX 叢集有四個區域必須進行初始設定。前三個是必需的，最�
 你應該link:../get-started/prepare-cluster-admin.html["準備管理 AFX"]在生產環境中使用 AFX 叢集之前。
 
 .相關資訊
-* link:../administer/configure-svm.html["配置 AFX 資料 SVM"]
+* link:../administer/configure-svm.html["配置 AFX SVM"]
 * link:../get-started/prepare-cluster-admin.html["準備管理 AFX"]
 

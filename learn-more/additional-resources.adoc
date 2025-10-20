@@ -24,9 +24,8 @@ summary: 您可以存取其他資源來協助管理和支援 AFX，以及了解�
 
 
 
-== NetApp行銷與支援
+== NetApp支援
 
-* https://www.netapp.com/afx/["NetApp AFX"^]
 * https://mysupport.netapp.com/["NetApp支援站點"^]
 * https://hwu.netapp.com/["NetAppHardware Universe"^]
 * https://imt.netapp.com/["NetApp互通性表工具"^]

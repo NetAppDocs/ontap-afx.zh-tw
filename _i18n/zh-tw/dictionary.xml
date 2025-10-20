@@ -1209,7 +1209,6 @@
   <block id="419c1482f6cc63984c67f7fdaf13bd01" category="list-text"><block ref="419c1482f6cc63984c67f7fdaf13bd01" category="inline-link-rx"></block></block>
   <block id="3a77755c4eaf7897cda1f7db8e722428" category="inline-link">ONTAP自動化</block>
   <block id="486f6a4f906831713aed8c2567b3d906" category="list-text"><block ref="486f6a4f906831713aed8c2567b3d906" category="inline-link-rx"></block></block>
-  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="section-title">NetApp支援</block>
   <block id="668e2078ef1b1722c77cdb5c523a4463" category="inline-link">NetApp知識庫</block>
   <block id="95ef25aa47e9457c9ecb60dba8cacdf3" category="doc">AFX 儲存系統的法律聲明</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律聲明提供對版權聲明、商標、專利等的存取。</block>
@@ -1711,4 +1710,7 @@
   <block id="3c9f430479263b3b25ec8e84988d27be" category="paragraph-title">我可以將FlexCache與 AFX 系統叢集一起使用嗎？</block>
   <block id="d53231824f8827127654628ac3883d6c" category="paragraph">是的。AFX 儲存系統支援FlexCache與運作 Unified ONTAP特性的AFF或FAS系統之間的通訊。唯一的限制是 AFX 不支援具有回寫模式的FlexCache 。</block>
   <block id="f580013220a8ab44a2f9b864e7f6425a" category="paragraph-title">如果我想將AFF或FAS系統（運行統一ONTAP個性）與 AFX 系統一起用於SnapMirror或FlexCache，我需要哪個ONTAP版本？</block>
+  <block id="05669daf6632b75bf0f439e5c851177a" category="section-title">NetApp行銷與支援</block>
+  <block id="4d4bcd00dec0ee009c6a6c831d33fda4" category="inline-link">NetApp AFX</block>
+  <block id="7eee2dae65b99dd9a2020ea7343b8b68" category="list-text"><block ref="7eee2dae65b99dd9a2020ea7343b8b68" category="inline-link-rx"></block></block>
 </blocks>

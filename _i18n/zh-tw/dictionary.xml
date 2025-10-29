@@ -356,8 +356,6 @@
   <block id="d1c1098f48087357ac90227a16c8ce05" category="section-title">互通性注意事項</block>
   <block id="003431cd9bfaf71ce41b593a52eef029" category="paragraph">在規劃和執行 SVM 遷移之前，您應該了解互通性注意事項，包括功能和限制。</block>
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="section-title">用例</block>
-  <block id="aec776d00ac0b2ac01caca7839a38a2e" category="paragraph">叢集管理員可以將 SVM 從來源叢集重新定位到目標叢集。您可以將其作為容量管理和負載平衡的一部分，或允許設備升級或資料中心整合。</block>
-  <block id="70358fd17892e7eef43751c5c6946eb0" category="paragraph">由於 AFX 儲存系統不支援從 Unified ONTAP進行就地升級，因此 SVM 遷移是一個重要的用例。您可以將應用程式工作負載從 Unified ONTAP9 叢集遷移到 AFX 叢集，而不會造成中斷。此外，SVM 還可以透過其他方式遷移，包括從 AFX 叢集遷移到 Unified ONTAP叢集以及在 AFX 叢集之間遷移。</block>
   <block id="768b0db9b2b3020606a863a7304f2bb6" category="section-title">版本互通性</block>
   <block id="4c07b9a244d0b610dffd3f95dfe2141c" category="paragraph">下表根據來源叢集和目標叢集的ONTAP特性和版本描述了允許的 SVM 遷移。</block>
   <block id="02674a4ef33e11c879283629996c8ff8" category="cell">方向</block>
@@ -373,7 +371,6 @@
   <block id="9f6385211c0120de98d15e76448a065c" category="list-text">FabricPool （駐留在複合聚合上的磁碟區）</block>
   <block id="74a419556785700d1cff50e71e2c6f66" category="list-text">厚置備卷</block>
   <block id="be1b9ef68f31ecee991e2282c1f24f0f" category="section-title">卷配置</block>
-  <block id="03ee3c2dee1a91ecfb0e9091c6ad64ae" category="paragraph">配置 AFX 磁碟區是為了平衡叢集的儲存可用區 (SAZ) 中 AFX 磁碟區的放置。</block>
   <block id="7420b76eb6276efbe1211f3a42108fa9" category="list-text">艙位保證</block>
   <block id="e42ca8050871a475bf759240b1011c5e" category="list-text">AFX 不支援厚配置。如果正在遷移的 SVM 中的任何磁碟區是厚置備的，則使用預檢查來導致遷移失敗。</block>
   <block id="d7f2615c71a1567cc13cf3a7f7de0aea" category="list-text">加密</block>
@@ -1685,7 +1682,6 @@
   <block id="228a97428b2aeec69210739af416feeb" category="summary">建立 SVM 後，您可以根據您的要求和客戶需求更新配置。</block>
   <block id="c1eb2ef19412fc8a729ccabaa304e64b" category="paragraph">有四種存取 SVM 配置的路徑，具體體現在特定 SVM 的登入頁面上的標籤中。這些包括：</block>
   <block id="feb5d82aa83ef8e2c0f2897980886042" category="summary">您可以將 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱 Unified ONTAP文件。</block>
-  <block id="de588dc77b66037715d1febfdf7f9ae7" category="paragraph">您可以將 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱提供的 Unified ONTAP文件。</block>
   <block id="4c2e600ea7c53e0c32af10f2e4850cd6" category="paragraph-title">我可以在我的 AFX 儲存系統的後端叢集網路中使用任何類型的交換器嗎？</block>
   <block id="42ed7ea439950fed1039106f87d3419f" category="admonition">AFX 文件包含統一ONTAP文件網站上各種主題的鏈接，其中詳細介紹了無論ONTAP特性如何都以相同方式運行的功能。附加內容提供了更深入的幫助，可以幫助您管理 AFX 儲存系統。</block>
   <block id="765b47efc6becfafc2dfb93543aab395" category="list-text">先進的容量平衡功能，使用<block ref="7617fb157efcfcd230d531be7d153280" prefix=" " category="inline-code"></block>CLI 參數，預設對所有FlexGroup磁碟區啟用。</block>
@@ -1716,4 +1712,12 @@
   <block id="679eb87712080343e0bc37dbc08451df" category="paragraph">建立磁碟區時，您需要提供最少量的配置詳細資訊。可以在建立期間或之後透過編輯磁碟區來提供其他詳細資訊。如果您已建立其他 SVM，則需要為磁碟區選擇 SVM。</block>
   <block id="93b1520005778e826c33efa7132d61c9" category="sidebar">建立 SVM</block>
   <block id="b4f82cc57b777a6dc79376d19998c912" category="sidebar">配置 SVM</block>
+  <block id="23dd8e2a3266c643a92829254de9f453" category="paragraph">您可以將 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP 的操作相同，儘管存在一些互通性方面的考慮和限制。有關執行 SVM 遷移的詳細信息，請參閱 Unified ONTAP文件。</block>
+  <block id="d3600eb6973aa12c110f41460c893d41" category="paragraph">叢集管理員可以將 SVM 從來源叢集重新定位到目標叢集。您可以將其作為容量管理和負載平衡的一部分，或允許設備升級或資料中心整合。由於 AFX 儲存系統不支援從 Unified ONTAP進行就地升級，因此 SVM 遷移是一個重要的用例。</block>
+  <block id="d6f4865759aeafd0faf5d3cbce10e548" category="paragraph">您可以將應用程式工作負載從 Unified ONTAP叢集遷移到 AFX 叢集，而不會造成任何中斷。此外，SVM 還可以透過其他方式遷移，包括從 AFX 叢集遷移到 Unified ONTAP叢集以及在 AFX 叢集之間遷移。</block>
+  <block id="367fd97b2408a2862e7a2b7bc0f52d14" category="paragraph">這些磁碟區經過配置，以平衡它們在 AFX 叢集的儲存可用區 (SAZ) 中的位置。</block>
+  <block id="d66c3d45d2bb8165afc4400849d5ef66" category="section-title">附加限制</block>
+  <block id="110352dfc6688e1ab1d9271ac5a2552b" category="paragraph">在遷移 SVM 之前，您還應該考慮一些其他限制。</block>
+  <block id="937992c5285f166aa01c3633fc6cb85b" category="list-text">AFX 儲存系統不支援NetApp MetroCluster 。這為SVM的遷移帶來了限制。您無法將 AFX SVM 移轉到配置為使用MetroCluster 的AFF或FAS系統（或任何執行 Unified ONTAP特性的NetApp系統）或從 AFF 或 FAS 系統遷移。雖然不支援這些遷移方案，但 AFX 預檢查也沒有明確阻止它們，因此您需要小心不要嘗試這些方案。</block>
+  <block id="372a3016fd08d93f2bfe7c10abae9936" category="list-text"><block ref="372a3016fd08d93f2bfe7c10abae9936" category="inline-link-macro-rx"></block></block>
 </blocks>

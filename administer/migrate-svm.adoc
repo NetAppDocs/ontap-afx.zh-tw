@@ -11,7 +11,7 @@ summary: 您可以將 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。
 
 
 [role="lead"]
-您可以將 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP進行的操作相同，但存在一些互通性的考量。有關執行 SVM 遷移的詳細信息，請參閱提供的 Unified ONTAP文件。
+您可以將 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。使用 AFX 進行 SVM 遷移的操作與使用 Unified ONTAP 的操作相同，儘管存在一些互通性方面的考慮和限制。有關執行 SVM 遷移的詳細信息，請參閱 Unified ONTAP文件。
 
 
 
@@ -23,9 +23,9 @@ summary: 您可以將 SVM 從一個ONTAP叢集遷移到另一個 ONTAP 叢集。
 
 === 用例
 
-叢集管理員可以將 SVM 從來源叢集重新定位到目標叢集。您可以將其作為容量管理和負載平衡的一部分，或允許設備升級或資料中心整合。
+叢集管理員可以將 SVM 從來源叢集重新定位到目標叢集。您可以將其作為容量管理和負載平衡的一部分，或允許設備升級或資料中心整合。由於 AFX 儲存系統不支援從 Unified ONTAP進行就地升級，因此 SVM 遷移是一個重要的用例。
 
-由於 AFX 儲存系統不支援從 Unified ONTAP進行就地升級，因此 SVM 遷移是一個重要的用例。您可以將應用程式工作負載從 Unified ONTAP9 叢集遷移到 AFX 叢集，而不會造成中斷。此外，SVM 還可以透過其他方式遷移，包括從 AFX 叢集遷移到 Unified ONTAP叢集以及在 AFX 叢集之間遷移。
+您可以將應用程式工作負載從 Unified ONTAP叢集遷移到 AFX 叢集，而不會造成任何中斷。此外，SVM 還可以透過其他方式遷移，包括從 AFX 叢集遷移到 Unified ONTAP叢集以及在 AFX 叢集之間遷移。
 
 
 
@@ -60,7 +60,7 @@ Unified ONTAP包含幾項預檢查，這些預檢查也是透過 AFX 實現的�
 
 === 卷配置
 
-配置 AFX 磁碟區是為了平衡叢集的儲存可用區 (SAZ) 中 AFX 磁碟區的放置。
+這些磁碟區經過配置，以平衡它們在 AFX 叢集的儲存可用區 (SAZ) 中的位置。
 
 艙位保證:: AFX 不支援厚配置。如果正在遷移的 SVM 中的任何磁碟區是厚置備的，則使用預檢查來導致遷移失敗。
 加密:: AFX 系統支援NetApp磁碟區加密 (NVE)，但不支援NetApp聚合加密 (NAE)。因此，Unified ONTAP叢集中的任何 NAE 磁碟區在遷移到 AFX 時都會轉換為 NVE 磁碟區。下表總結了相容性和轉換。
@@ -81,8 +81,18 @@ Unified ONTAP包含幾項預檢查，這些預檢查也是透過 AFX 實現的�
 |===
 
 
+=== 附加限制
+
+在遷移 SVM 之前，您還應該考慮一些其他限制。
+
+MetroCluster:: AFX 儲存系統不支援NetApp MetroCluster 。這為SVM的遷移帶來了限制。您無法將 AFX SVM 移轉到配置為使用MetroCluster 的AFF或FAS系統（或任何執行 Unified ONTAP特性的NetApp系統）或從 AFF 或 FAS 系統遷移。雖然不支援這些遷移方案，但 AFX 預檢查也沒有明確阻止它們，因此您需要小心不要嘗試這些方案。
+
+
+
+
 == 相關資訊
 
 * https://docs.netapp.com/us-en/ontap/svm-migrate/index.html["ONTAP SVM 資料移動性"^]
+* link:../get-started/compare-unified-ontap.html["將 AFX 儲存系統與AFF和FAS系統進行比較"]
 * link:../faq-ontap-afx.html["AFX 儲存系統常見問題解答"]
 

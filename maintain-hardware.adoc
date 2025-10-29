@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: administer/maintain-hardware.html 
+permalink: maintain-hardware.html 
 keywords: afx, afx system, maintain hardware, hardware 
 summary: 導覽至 AFX 維護文件以了解如何對 AFX 儲存系統執行維護程序。 
 ---

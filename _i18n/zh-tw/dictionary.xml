@@ -1601,7 +1601,6 @@
   <block id="cc00ecc8807926c957b868c222de58f6" category="sidebar">擴展集群</block>
   <block id="d04e5f519989e5f2ca95f9541ffe17a0" category="sidebar">升級ONTAP</block>
   <block id="00a69742e414f1b267e0cae78e185336" category="sidebar">更新韌體</block>
-  <block id="88fff44862def4168ac79c5db562ef39" category="sidebar">維護硬體</block>
   <block id="3e3ccd70e170fe5490433b8d5cf56bf3" category="sidebar">了解您的 AFX 系統</block>
   <block id="dbe4d9ee9509101eab810b6d20824b87" category="sidebar">了解NetApp AFX</block>
   <block id="ee3eaeb6a7cd31167c2dd23547b16511" category="sidebar">架構細節</block>
@@ -1720,4 +1719,5 @@
   <block id="110352dfc6688e1ab1d9271ac5a2552b" category="paragraph">在遷移 SVM 之前，您還應該考慮一些其他限制。</block>
   <block id="937992c5285f166aa01c3633fc6cb85b" category="list-text">AFX 儲存系統不支援NetApp MetroCluster 。這為SVM的遷移帶來了限制。您無法將 AFX SVM 移轉到配置為使用MetroCluster 的AFF或FAS系統（或任何執行 Unified ONTAP特性的NetApp系統）或從 AFF 或 FAS 系統遷移。雖然不支援這些遷移方案，但 AFX 預檢查也沒有明確阻止它們，因此您需要小心不要嘗試這些方案。</block>
   <block id="372a3016fd08d93f2bfe7c10abae9936" category="list-text"><block ref="372a3016fd08d93f2bfe7c10abae9936" category="inline-link-macro-rx"></block></block>
+  <block id="f090951c6f34b76fa7499153d4fd51be" category="sidebar">維護硬體</block>
 </blocks>

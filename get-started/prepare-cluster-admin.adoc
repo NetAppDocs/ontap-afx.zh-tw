@@ -115,9 +115,10 @@ NOTE: 對於大多數管理任務來說，系統管理器使用者介面是首�
 
 每個叢集的控制器節點:: 每個 AFX 叢集必須至少有四個節點。最大節點數根據ONTAP版本的不同而不同。
 儲存容量:: 這是叢集儲存可用區 (SAZ) 中所有 SSD 磁碟的總容量。最大儲存容量根據ONTAP版本而有所不同。
+集群交換機:: 叢集儲存網路中至少需要兩台交換器。允許的最大值是根據叢集中控制器節點的總數來決定的。
 
 
-您應該查看NetApp Hardware Universe和 Interoperability Matrix Tool 中提供的信息，以確定 AFX 叢集的功能。
+您應該查看NetAppHardware Universe和互通性矩陣工具中提供的詳細信息，以確定您的 AFX 叢集的功能。
 
 
 
@@ -187,12 +188,12 @@ link:../manage-data/prepare-manage-data.html["準備"]分配和管理您的資�
 
 == 相關資訊
 
+* https://hwu.netapp.com/["NetAppHardware Universe"^]
+* https://imt.netapp.com/["NetApp互通性表工具"^]
+* https://docs.netapp.com/us-en/interoperability-matrix-tool/["互通性矩陣工具概述"^]
 * https://docs.netapp.com/us-en/ontap/concepts/introducing-ontap-interfaces-concept.html["ONTAP使用者介面"^]
 * https://docs.netapp.com/us-en/ontap/system-admin/set-privilege-level-task.html["在ONTAP CLI 中設定權限級別"^]
 * https://docs.netapp.com/us-en/ontap/system-admin/index.html["了解如何使用ONTAP CLI 進行叢集管理"^]
 * https://docs.netapp.com/us-en/ontap/system-admin/types-svms-concept.html["ONTAP叢集中的 SVM 類型"^]
-* https://hwu.netapp.com/["NetAppHardware Universe"^]
-* https://imt.netapp.com/["NetApp互通性表工具"^]
-* https://docs.netapp.com/us-en/interoperability-matrix-tool/["互通性矩陣工具概述"^]
 * link:../faq-ontap-afx.html["AFX 儲存系統常見問題解答"]
 

@@ -29,47 +29,51 @@ AFX 配置與AFF和FAS系統在某些方面有所不同。
 
 == 不受支援或受限制的 Unified ONTAP功能
 
-雖然 AFX、 AFF和FAS儲存系統非常相似，但 AFX 不支援一些功能。您應該查看 AFX 的更新和更改link:../release-notes/whats-new-9171.html["什麼是新的"]根據您的發布版本。
-
-以下功能分為幾個類別，在 AFX 中不可用或已發生變更。
+NetApp AFX 針對高效能 NAS 和物件工作負載進行了最佳化。因此，它與AFF和FAS以及其他統一ONTAP儲存系統存在差異。以下功能在NetApp AFX 中不可用；此清單按主要功能或功能領域進行組織。您還應該查看 AFX 的更新和變更。link:../release-notes/whats-new-9171.html["什麼是新的"]根據你的版本。
 
 
 
-=== 一般特徵
-
-* FabricPool
-* MetroCluster
-* 基於人工智慧的反勒索軟體保護
-* ONTAPI API（ZAPI）
-
-
-
-
-=== SAN 相關功能
+=== 區塊儲存和SAN
 
 * SAN 管理和客戶端訪問
-* 厚置備卷
+* LUN 和 NVMe 命名空間
+* 卷的厚配置
 
 
 
 
-=== 聚合相關功能
+=== 骨材和實體存儲
 
-AFX 系統不提供以下與聚合相關的功能：
-
-* 直接存取磁碟聚合
+* MetroCluster
+* 實體節點擁有的聚合
+* RAID 管理
 * NetApp聚合加密 (NAE)
 * 聚合級重複資料刪除
 * SyncMirror （聚合鏡像）
-* RAID 管理
+* FabricPool分層
 
 
 
 
-=== 資料複製
+=== 資料複製（SnapMirror）
 
-* 不複製包含 LUN 的AFF或FAS系統的捲
-* FlexGroup磁碟區只能複製到 Unified ONTAP 9.16.1 或更高版本
+
+NOTE: Unified ONTAP和 AFX 之間雙向支援所有資料複製，並遵循相同的版本控制限制（詳見下文）。 https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["SnapMirror關係相容的ONTAP版本"^] （除少數例外情況外）。
+
+* 無法從包含 LUN 或 NVMe 命名空間的AFF或FAS系統複製卷
+* FlexGroup磁碟區只能從 AFX 複製到 Unified ONTAP版本 9.16.1 或更高版本（因為需要高階容量平衡）。
+
+
+
+
+=== 可管理性
+
+* ONTAPI API（ZAPI）
+* 不支援的功能（例如MetroCluster）的 REST API
+* REST API 在效能統計方面存在一些初步限制
+* AIQ 統一管理器支援
+* Grafana Harvest 版本 25.08.1 及更高版本
+* NetApp Trident版本 25.10 及更高版本
 
 
 
@@ -86,7 +90,7 @@ AFX 提供的ONTAP CLI 通常與AFF和FAS系統提供的 CLI 相同。但存在�
 
 * 沒有與 SAN 相關的命令
 * 不再需要聚合管理命令
-* FlexAggr 指令只能顯示或展示 FlexAggrs
+* 聚合顯示現在顯示整個儲存可用區 (SAZ)
 
 
 

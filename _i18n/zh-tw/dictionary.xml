@@ -768,11 +768,8 @@
   <block id="9374c5e802bf6b1ff92af59f8a647e03" category="paragraph">連接器組件很精密，安裝到位時要小心。</block>
   <block id="db2d996135c18f3292b7becd924f6ce2" category="list-text">當佈線到光纖連接時，先將光纖收發器插入控制器端口，然後再佈線到交換器端口。</block>
   <block id="5f229a9a6914f36d0c7f990c5dd979ca" category="list-text">AFX 1K 儲存系統在叢集和儲存網路上使用 4x100GbE 分支電纜。 400GbE 連接與交換器連接埠相連，100GbE 連接與控制器和驅動器架連接埠相連。儲存和 HA/叢集連線可以與交換器上的任何非 ISL 連接埠建立。</block>
-  <block id="a39cbdf3556d2247e7f4fa382a8e5e35" category="paragraph">對於給定的 4x100GbE 分支電纜連接到特定的交換器端口，您可以透過這條分支電纜將所有 4 個連接埠連接到交換器。</block>
   <block id="6d89bbfd2411c00390171fa4620a2783" category="list-text">1 個 HA 連接埠（插槽 1）</block>
   <block id="b6d8c74111c188910bdefcd2adcda931" category="list-text">1 x 叢集連接埠（插槽 7）</block>
-  <block id="c4d3d45d793eb993ca03dfa39259404c" category="list-text">2 個儲存連接埠（插槽 10、11）</block>
-  <block id="df4996cbb1f5814efce564f5014e7310" category="paragraph">所有「a」連接埠連接到交換器 A，所有「b」連接埠連接到交換器 B。</block>
   <block id="298a50f0b4f9da25188462848d528731" category="admonition">Cisco Nexus 9332D-GX2B 和 9364D-GX2A 交換器設定到 AFX 1K 儲存系統需要 4x100GbE 分支電纜連接。</block>
   <block id="0b47086f2d53dbb9632d279e9918b4da" category="section-title">步驟 1：將控制器連接到管理網絡</block>
   <block id="682701dba15c7c4c75458bb51c17becf" category="paragraph">將每個交換器上的管理連接埠連接到任一管理交換器（如果訂購）或將其直接連接到管理網路。</block>
@@ -802,13 +799,11 @@
   <block id="7d1e8fb2f50320f7b5004ba0fd39055b" category="list-text">將下列控制器連接埠連接到叢集網路交換器 A 上的任何非 ISL 連接埠。</block>
   <block id="595df28a8a4a9361a6231a9d84e8cd08" category="list-text">控制器A</block>
   <block id="9cb7b36b3f2bccc776862e6f2f494077" category="list-text">e1a</block>
-  <block id="9a031538991c9e151341376dfd687bec" category="list-text">e7a</block>
   <block id="a9e70fa35de61f4ac25cc4bcd706a55d" category="list-text">控制器B</block>
   <block id="29b62d617481485649ea2d5b54fca512" category="image-alt">集群 HA 電纜</block>
   <block id="f1d133e33e29362e931a34312a961d0b" category="image-alt">將集群連接線連接至集群網絡</block>
   <block id="ac32cb5bd4dc17916ab1ece800d39226" category="list-text">將下列控制器連接埠連接到叢集網路交換器 B 上的任何非 ISL 連接埠。</block>
   <block id="e737b5ac24a63afc00e81377a906728d" category="list-text">e1b</block>
-  <block id="ef552e9c89303b51a8bdce9d5298edba" category="list-text">e7b</block>
   <block id="c61349783073807f1993874d0e3a4a8c" category="section-title">步驟 4：連接控制器到交換器的儲存連接</block>
   <block id="da160308e3b4b4a80bf1b72b5bdbedb8" category="inline-link">Hardware Universe</block>
   <block id="7bebd570400c9d8d9796caad43fdcebd" category="paragraph">將控制器儲存連接埠連接到交換器。確保您的交換器具有正確的電纜和連接器。看<block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block>了解更多。</block>
@@ -1740,4 +1735,11 @@
   <block id="5c9caa41b457294382a8eb7e1cef25e5" category="cell">增強體積放置</block>
   <block id="bd6a1d603e00e7749c4356b336d60ddb" category="paragraph">NetApp AFX 可自動平衡叢集中所有節點上的磁碟區放置位置。在先前的ONTAP版本中，放置演算法是基於叢集中的磁碟區數。無論活動情況如何，每個節點都被分配相同數量的捲。從ONTAP 9.18.1 開始，該演算法得到了增強，可以在放置或移動體資料時考慮節點的性能。這樣可以改善 AFX 叢集中各個節點之間的效能平衡，並大幅降低單一節點過載的可能性。</block>
   <block id="d529398546b94e10169c1e6f6f8aed12" category="sidebar">ONTAP 9.18.1 的新增功能</block>
+  <block id="11b5c9d9c84e61219bb777d18c81b347" category="paragraph">對於給定的 4x100GbE 分支電纜連接到特定交換器端口，您可以使用這條分支電纜將給定控制器的所有四個端口連接到交換器。</block>
+  <block id="7d581081b7f3fe9206d29f97bf033a53" category="list-text">2 個儲存連接埠（插槽 10、11）</block>
+  <block id="a4bf70134b59a2fe9b8e4eeee66ff6c2" category="paragraph">所有「a」連接埠連接到交換器A，所有「b」連接埠連接到交換器B。</block>
+  <block id="0fb874e7bc6012726d40fd59a1fb3c4f" category="list-text">e1a（HA）</block>
+  <block id="5fc4cd787cd9359f05ffec407ae5a910" category="list-text">e7a（集群）</block>
+  <block id="86b2625bfd2ba28e4a629382f2ebe2cf" category="list-text">e1b（HA）</block>
+  <block id="245f02c7386817b111d049fbb0a850bf" category="list-text">e7b（集群）</block>
 </blocks>

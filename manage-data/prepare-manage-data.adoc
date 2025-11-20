@@ -14,7 +14,7 @@ summary: 在管理 AFX 資料之前，您應該熟悉基本概念和功能。
 在管理 AFX 資料之前，您應該熟悉基本概念和功能。
 
 
-TIP: 由於AFF和FAS系統上的許多概念和管理程式與 AFX 儲存系統相同，因此檢視 Unified ONTAP文件會很有幫助。
+TIP: 由於AFF和FAS系統上的許多概念和管理程式與 AFX 儲存系統相同，因此檢視 Unified ONTAP文件會很有幫助。請參閱以下連結 <<相關資訊>> 了解更多。
 
 
 
@@ -89,6 +89,7 @@ NFS會話中繼:: NFS 中繼是一種技術，它使 NFS v4.1 用戶端能夠開
 
 == 相關資訊
 
+* https://docs.netapp.com/us-en/ontap/concept_nas_file_system_analytics_overview.html["了解ONTAP檔案系統分析"^]
 * link:../administer/additional-ontap-svm.html["額外的 AFX SVM 管理"]
 * link:../get-started/prepare-cluster-admin.html["準備管理您的 AFX 系統"]
 * link:../administer/migrate-svm.html["遷移 AFX 系統 SVM"]

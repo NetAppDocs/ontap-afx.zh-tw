@@ -1742,4 +1742,7 @@
   <block id="5fc4cd787cd9359f05ffec407ae5a910" category="list-text">e7a（集群）</block>
   <block id="86b2625bfd2ba28e4a629382f2ebe2cf" category="list-text">e1b（HA）</block>
   <block id="245f02c7386817b111d049fbb0a850bf" category="list-text">e7b（集群）</block>
+  <block id="e32cffee371df018e91cf4e0e060f3d8" category="admonition">由於AFF和FAS系統上的許多概念和管理程式與 AFX 儲存系統相同，因此檢視 Unified ONTAP文件會很有幫助。請參閱以下連結 <block ref="c31eb1064832aa01316b6b2a27c0e82b" category="inline-xref-macro-rx"></block> 了解更多。</block>
+  <block id="2b9e4f1d12477d7c60c4bdda5204b441" category="inline-link">了解ONTAP檔案系統分析</block>
+  <block id="9f1fbf578c51e2bec88398ab0ce2b672" category="list-text"><block ref="9f1fbf578c51e2bec88398ab0ce2b672" category="inline-link-rx"></block></block>
 </blocks>

@@ -62,7 +62,6 @@
   <block id="b9476488ba06770e5c543d441ead26ab" category="paragraph">您可以透過在磁碟區層級將檔案轉換為一次寫入多次讀取 (WORM) 狀態來保護檔案。 SnapLock支援兩種模式。合規模式確保文件在保留期到期之前不能被刪除，這滿足了政府或行業特定的要求。企業模式允許特權使用者在保留期到期之前刪除檔案。參考<block ref="961426c728ee82adbe3a73025990fea9" category="inline-link-rx"></block>了解更多。</block>
   <block id="d4ebca245013c8e11a21200cf7abd53f" category="section-title">ONTAP事件和效能監控</block>
   <block id="c19e19aadc6d75262a0f85886dc5deb3" category="inline-link">事件、效能和健康監控</block>
-  <block id="f374f4f413ce58f29a5db8436a4f29ad" category="paragraph">您可以監控叢集的健康和效能。這包括設定事件警報和管理系統健康警報通知。參考<block ref="a6cdc1834b78b8b89ee92bbe49904c07" category="inline-link-rx"></block>了解更多信息</block>
   <block id="e5037510086003d93a3daf34030bf4c4" category="inline-link-macro">AFX 叢集的附加管理</block>
   <block id="cba9c10f96b3122132057453ba39d735" category="list-text"><block ref="cba9c10f96b3122132057453ba39d735" category="inline-link-macro-rx"></block></block>
   <block id="cca25dd2421f27456e2c8857f143bcc2" category="doc">配置 AFX 儲存系統 SVM</block>
@@ -1745,4 +1744,8 @@
   <block id="e32cffee371df018e91cf4e0e060f3d8" category="admonition">由於AFF和FAS系統上的許多概念和管理程式與 AFX 儲存系統相同，因此檢視 Unified ONTAP文件會很有幫助。請參閱以下連結 <block ref="c31eb1064832aa01316b6b2a27c0e82b" category="inline-xref-macro-rx"></block> 了解更多。</block>
   <block id="2b9e4f1d12477d7c60c4bdda5204b441" category="inline-link">了解ONTAP檔案系統分析</block>
   <block id="9f1fbf578c51e2bec88398ab0ce2b672" category="list-text"><block ref="9f1fbf578c51e2bec88398ab0ce2b672" category="inline-link-rx"></block></block>
+  <block id="1a0f4bec43cf474af35c9e77aa8c28af" category="section-title">FPolicy</block>
+  <block id="4793cb6d96d5d4cc5414378f2e112491" category="inline-link">了解ONTAP FPolicy 解決方案</block>
+  <block id="2eeb3252b3af5fe61779a84830d2e434" category="paragraph">FPolicy 是一個文件存取通知框架，用於監控和管理儲存虛擬機器 (SVM) 上的文件存取事件。您可以使用 FPolicy 建立策略，根據您定義的標準來定義要監視的檔案操作，並可選擇封鎖這些操作。 FPolicy 通常用於安全審計、合規性和資料治理。請參閱<block ref="ebf1bc585900d5a5c7e4dd72e223b4f2" category="inline-link-rx"></block>了解更多。</block>
+  <block id="148f6424d726591d91b9421c2ce15592" category="paragraph">您可以監控叢集的健康和效能。這包括設定事件警報和管理系統健康警報通知。請參閱<block ref="a6cdc1834b78b8b89ee92bbe49904c07" category="inline-link-rx"></block>了解更多。</block>
 </blocks>

@@ -60,9 +60,21 @@ FlexGroup磁碟區由多個成員磁碟區組成，這些成員磁碟區會自�
 
 
 
+== 安全
+
+您可以在 AFX 部署中設定和使用多種可選的安全功能。
+
+
+
+=== FPolicy
+
+FPolicy 是一個文件存取通知框架，用於監控和管理儲存虛擬機器 (SVM) 上的文件存取事件。您可以使用 FPolicy 建立策略，根據您定義的標準來定義要監視的檔案操作，並可選擇封鎖這些操作。 FPolicy 通常用於安全審計、合規性和資料治理。請參閱 https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["了解ONTAP FPolicy 解決方案"^]了解更多。
+
+
+
 == ONTAP事件和效能監控
 
-您可以監控叢集的健康和效能。這包括設定事件警報和管理系統健康警報通知。參考 https://docs.netapp.com/us-en/ontap/event-performance-monitoring/index.html["事件、效能和健康監控"^]了解更多信息
+您可以監控叢集的健康和效能。這包括設定事件警報和管理系統健康警報通知。請參閱 https://docs.netapp.com/us-en/ontap/event-performance-monitoring/index.html["事件、效能和健康監控"^]了解更多。
 
 
 

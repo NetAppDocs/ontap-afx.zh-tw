@@ -1210,7 +1210,6 @@
   <block id="5546f6d8bc3d0dd5a40c20c4d749d48e" category="list-text"><block ref="5546f6d8bc3d0dd5a40c20c4d749d48e" category="inline-link-macro-rx"></block></block>
   <block id="264c7a25568ab93610cc395140359eb4" category="summary">在管理 AFX 資料之前，您應該熟悉基本概念和功能。</block>
   <block id="bfd961e2a1e35548010fea792ecda5e4" category="doc">準備管理您的 AFX 儲存系統數據</block>
-  <block id="0a73e1b98f2c30e86e79b4143a8c5993" category="admonition">由於AFF和FAS系統上的許多概念和管理程式與 AFX 儲存系統相同，因此檢視 Unified ONTAP文件會很有幫助。</block>
   <block id="4e5fb30db16cab1af452750211083830" category="section-title">術語和選項</block>
   <block id="91818c76048499823f8f320043c66890" category="paragraph">您應該熟悉幾個與 AFX 儲存相關的術語。</block>
   <block id="045efe415c2e22ca0585f899f658f875" category="list-text">FlexVolume</block>
@@ -1512,10 +1511,7 @@
   <block id="9297a6c5e1e2ce6644265b71048498d4" category="doc">準備保護您的 AFX 儲存系統數據</block>
   <block id="fd0b40056f2f1d2d8b24894a14c29204" category="paragraph">您應該熟悉幾個與 AFX 資料安全相關的術語。</block>
   <block id="232a2b16a1710c0ed1d16548ba8bb8f1" category="list-text">勒索軟體</block>
-  <block id="8e5c56447afc009e4174cf344c14b105" category="list-text">勒索軟體是一種惡意軟體，它會加密文件，使用戶無法存取它們。通常需要某種形式的付款才能解密資料。  NetApp ONTAP透過自主勒索軟體防護 (ARP) 等功能提供防禦勒索軟體的解決方案。</block>
-  <block id="e04c15856f0ea4ee0be8fd6e3957b0b0" category="list-text">加密是將資料轉換為安全格式的過程，未經適當授權就無法輕易讀取。 ONTAP提供基於軟體和基於硬體的加密技術來保護靜態資料。這確保了當儲存媒體被重新利用、退回、放錯地方或被盜時，它無法被讀取。這些加密解決方案可以使用外部金鑰管理伺服器或ONTAP提供的板載金鑰管理器進行管理。</block>
   <block id="1dd2239be8a1348b44deadbaab8103bb" category="list-text">數位憑證和 PKI</block>
-  <block id="059460d88580ecd8442df8002819bed2" category="list-text">數位證書是用於證明公鑰所有權的電子文檔。公鑰和相關的私鑰可以以多種方式使用，包括通常作為更大的安全框架（如 TLS 和 IPsec）的一部分來建立身分。這些金鑰以及支援協定和格式標準構成了公鑰基礎設施 (PKI) 的基礎。</block>
   <block id="699abf1f897b13a155ff2ccb3ae3fb4c" category="sidebar">NetApp AFX 儲存系統是一種分解的硬體和軟體解決方案，專注於滿足高效能 NAS 和 S3 客戶的獨特需求。其效能和可擴充性專門設計用於滿足 AI 和 ML 工作負載的要求。  AFX 提供了簡化的使用者體驗，使其可由儲存專家和非專家進行管理。</block>
   <block id="67e3534cd0feec346d52509c43cc0189" category="sidebar">AFX 文檔</block>
   <block id="5f5ce9070c0881e38b8b17b23b3ece81" category="sidebar">NetApp ONTAP AFX 儲存系統是一種分解的硬體和軟體解決方案，專注於滿足高效能 NAS 和 S3 客戶的獨特需求。其效能和可擴充性專門設計用於滿足 AI 和 ML 工作負載的要求。  AFX 提供了簡化的使用者體驗，使其可由儲存專家和非專家進行管理。</block>
@@ -1748,4 +1744,26 @@
   <block id="4793cb6d96d5d4cc5414378f2e112491" category="inline-link">了解ONTAP FPolicy 解決方案</block>
   <block id="2eeb3252b3af5fe61779a84830d2e434" category="paragraph">FPolicy 是一個文件存取通知框架，用於監控和管理儲存虛擬機器 (SVM) 上的文件存取事件。您可以使用 FPolicy 建立策略，根據您定義的標準來定義要監視的檔案操作，並可選擇封鎖這些操作。 FPolicy 通常用於安全審計、合規性和資料治理。請參閱<block ref="ebf1bc585900d5a5c7e4dd72e223b4f2" category="inline-link-rx"></block>了解更多。</block>
   <block id="148f6424d726591d91b9421c2ce15592" category="paragraph">您可以監控叢集的健康和效能。這包括設定事件警報和管理系統健康警報通知。請參閱<block ref="a6cdc1834b78b8b89ee92bbe49904c07" category="inline-link-rx"></block>了解更多。</block>
+  <block id="e37cca0fa7c8107fb5020cf4582f3929" category="inline-link">在ONTAP中產生並安裝由 CA 簽署的伺服器證書</block>
+  <block id="231f720f91efedbb9764ddf8fda35120" category="list-text"><block ref="231f720f91efedbb9764ddf8fda35120" category="inline-link-rx"></block></block>
+  <block id="f24bbb5da9459bbeeaa879e76bdb2ef5" category="list-text"><block ref="f24bbb5da9459bbeeaa879e76bdb2ef5" category="inline-link-rx"></block></block>
+  <block id="31e5accb4e8aaf28149365ab0968edb0" category="list-text">勒索軟體是一種惡意軟體，它會加密文件，使用戶無法存取它們。通常情況下，解密資料需要支付一定的費用。  ONTAP透過自主勒索軟體防護 (ARP) 等功能提供抵禦勒索軟體的解決方案。</block>
+  <block id="86921103071233483e469eaa840b0e55" category="list-text">加密是將資料轉換為安全格式的過程，未經適當授權就無法輕易讀取。ONTAP提供基於軟體和基於硬體的加密技術來保護靜態資料。這確保了當儲存媒體被重新利用、退回、放錯地方或被盜時，它無法被讀取。這些加密解決方案可以使用外部金鑰管理伺服器或ONTAP提供的板載金鑰管理器進行管理。請參閱<block ref="c93bd16a781b45e60a7d7d16eedf487d" category="inline-link-macro-rx"></block>了解更多。</block>
+  <block id="420d6d4489a72885833a9c3cef85fb57" category="list-text">數位證書是用於證明公鑰所有權的電子文檔。公鑰和相關的私鑰可以以多種方式使用，包括通常作為更大的安全框架（如 TLS 和 IPsec）的一部分來建立身分。這些金鑰以及支援協定和格式標準構成了公鑰基礎設施 (PKI) 的基礎。請參閱<block ref="e4dcc7e3ac3e4848bf64003b8c2cdc66" category="inline-link-macro-rx"></block>了解更多。</block>
+  <block id="04c053beb02ce1214b9f43301cc9ee58" category="list-text">網際網路協定安全</block>
+  <block id="4504e962308541316b8f741529026c50" category="inline-link-macro">AFX 儲存系統上的安全 IP 連接</block>
+  <block id="b434862bc36c3dfc5a3f669575381d37" category="list-text">IPsec 是一種網際網路標準，它為網路端點之間在 IP 層傳輸的資料提供傳輸中的資料加密、完整性和驗證。它能保護ONTAP與客戶端之間的所有 IP 流量，包括 NFS 和 SMB 等更高層級的協定。 IPsec 可保護您的資料免受惡意重播攻擊和中間人攻擊。請參閱<block ref="fefb8a20b2037a3c6c06f48d1c1a3c61" category="inline-link-macro-rx"></block>了解更多。</block>
+  <block id="4f6a6f917a61b67c18bc3831abc050e2" category="summary">IP 安全性 (IPsec) 是一種網際網路協定標準，它為網路端點之間在 IP 層流動的流量提供資料加密、完整性和驗證。您可以使用 IPsec 來增強 AFX 叢集和客戶端之間前端網路的安全性。</block>
+  <block id="ff3b00711e5ec535f68b25c53f6c52ea" category="section-title">在 AFX 系統上設定 IPsec</block>
+  <block id="b73a4478ceeb8906001c1f76559a3230" category="inline-link">準備配置ONTAP網路的 IP 安全</block>
+  <block id="0877f2530b01c998dd67177f7f07a423" category="paragraph">AFX 儲存系統的 IPsec 設定流程與AFF和FAS系統相同，只是硬體卸載功能所支援的網路介面控制器 (NIC) 卡有所不同。請參閱<block ref="e979fc5d5ca6bb587b0b1477a0dab95e" category="inline-link-rx"></block>了解更多。</block>
+  <block id="ff24c22105541820490a27b55da3fb5d" category="section-title">硬體卸載功能</block>
+  <block id="5920fa28152f424e58623c8cd561ce4f" category="paragraph">IPsec 加密操作（如加密和完整性檢查）中的幾個可以卸載到 AFX 系統上支援的網路卡上執行。這可以顯著提高受 IPsec 保護的網路流量的效能和吞吐量。</block>
+  <block id="d2c8b86e2d63347fd5a4b610c1648c10" category="admonition">從ONTAP 9.18.1 開始，IPsec 硬體卸載功能擴展到支援 IPv6 流量。</block>
+  <block id="a9c93ccddc8c2c53048396fb5013e027" category="paragraph">從ONTAP 9.17.1 開始，AFX 儲存系統支援下列網路卡的 IPsec 硬體卸載功能：</block>
+  <block id="f520fb7c95dbe4015bfbc9b0987d59a1" category="list-text">X50130B（2端口，40G/100G乙太網路控制器）</block>
+  <block id="9c77196713db9b360b550aa3217d507f" category="list-text">X50131B（2路，40G/100G/200G/400G乙太網路控制器）</block>
+  <block id="9b3ab302175091da61fb00078bbdf676" category="paragraph">請參閱<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block>有關在您的 AFX 系統上運行的ONTAP版本所支援的卡片的詳細資訊。</block>
+  <block id="d41e75fa1b06d9a7c925a3f985c520e5" category="list-text"><block ref="d41e75fa1b06d9a7c925a3f985c520e5" category="inline-link-rx"></block></block>
+  <block id="0a0e33e3bee1123a43e4178aad30ed45" category="sidebar">安全IP連線</block>
 </blocks>

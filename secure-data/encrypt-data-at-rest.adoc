@@ -46,3 +46,7 @@ NetApp儲存加密 (NSE) 支援使用自加密磁碟機 (SED) 進行硬體加密
 . 選擇*雙層加密*以啟用軟體加密。
 . 選擇*儲存*。
 
+
+.相關資訊
+* https://docs.netapp.com/us-en/ontap/concepts/encryption-concept.html["加密"^]
+

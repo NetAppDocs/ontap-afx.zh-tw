@@ -40,5 +40,7 @@ entries:
     url: "/secure-data/prepare-secure-data.html"
   - title: 加密靜態數據
     url: "/secure-data/encrypt-data-at-rest.html"
+  - title: 安全IP連線
+    url: "/secure-data/secure-ip-connections.html"
 - title: 額外的管理
   url: "/administer/additional-ontap-svm.html"

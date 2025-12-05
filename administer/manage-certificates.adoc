@@ -132,5 +132,6 @@ ONTAP提供了一組預設的可信任根證書，可用於傳輸層安全性 (T
 
 == 相關資訊
 
+* https://docs.netapp.com/us-en/ontap/authentication/install-server-certificate-cluster-svm-ssl-server-task.html["在ONTAP中產生並安裝由 CA 簽署的伺服器證書"^]
 * https://docs.netapp.com/us-en/ontap/authentication/manage-certificates-sm-task.html["使用 System Manager 管理ONTAP證書"^]
 

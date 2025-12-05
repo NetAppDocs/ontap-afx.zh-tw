@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: secure-data/secure-ip-connections.html 
+keywords: netapp afx, afx, ip security, ipsec, secure data, data security, encryption, data-in-flight, secure connections, hardware offload 
+summary: 'IP 安全性 (IPsec) 是一種網際網路協定標準，它為網路端點之間在 IP 層流動的流量提供資料加密、完整性和驗證。您可以使用 IPsec 來增強 AFX 叢集和客戶端之間前端網路的安全性。' 
+---
+= AFX 儲存系統上的安全 IP 連接
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+IP 安全性 (IPsec) 是一種網際網路協定標準，它為網路端點之間在 IP 層流動的流量提供資料加密、完整性和驗證。您可以使用 IPsec 來增強 AFX 叢集和客戶端之間前端網路的安全性。
+
+
+
+== 在 AFX 系統上設定 IPsec
+
+AFX 儲存系統的 IPsec 設定流程與AFF和FAS系統相同，只是硬體卸載功能所支援的網路介面控制器 (NIC) 卡有所不同。請參閱 https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["準備配置ONTAP網路的 IP 安全"^]了解更多。
+
+
+
+== 硬體卸載功能
+
+IPsec 加密操作（如加密和完整性檢查）中的幾個可以卸載到 AFX 系統上支援的網路卡上執行。這可以顯著提高受 IPsec 保護的網路流量的效能和吞吐量。
+
+
+NOTE: 從ONTAP 9.18.1 開始，IPsec 硬體卸載功能擴展到支援 IPv6 流量。
+
+從ONTAP 9.17.1 開始，AFX 儲存系統支援下列網路卡的 IPsec 硬體卸載功能：
+
+* X50130B（2端口，40G/100G乙太網路控制器）
+* X50131B（2路，40G/100G/200G/400G乙太網路控制器）
+
+
+請參閱 https://hwu.netapp.com/["NetAppHardware Universe"^]有關在您的 AFX 系統上運行的ONTAP版本所支援的卡片的詳細資訊。
+
+
+
+== 相關資訊
+
+* https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["準備配置ONTAP網路的 IP 安全"^]
+* https://hwu.netapp.com/["NetAppHardware Universe"^]
+

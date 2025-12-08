@@ -1766,4 +1766,10 @@
   <block id="9b3ab302175091da61fb00078bbdf676" category="paragraph">請參閱<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block>有關在您的 AFX 系統上運行的ONTAP版本所支援的卡片的詳細資訊。</block>
   <block id="d41e75fa1b06d9a7c925a3f985c520e5" category="list-text"><block ref="d41e75fa1b06d9a7c925a3f985c520e5" category="inline-link-rx"></block></block>
   <block id="0a0e33e3bee1123a43e4178aad30ed45" category="sidebar">安全IP連線</block>
+  <block id="70aaaf8a9f143b7a315bba12766865d7" category="summary">ONTAP叢集回滾是指將所有節點遷移到上一個主要的ONTAP版本的過程。</block>
+  <block id="ae002bc4aaa91da5f0456bd41f4ec74f" category="doc">ONTAP回滾功能不支援 AFX 儲存系統</block>
+  <block id="25a89c0d2271ffea21d078f4e6d93fd2" category="paragraph">NetApp AFX 儲存系統不支援ONTAP回滾。嘗試使用 AFX 執行回滾操作可能會導致叢集不穩定和資料遺失。您不應該嘗試對 AFX 系統執行還原操作。</block>
+  <block id="b34a4582eb04bf97b29749b7a8e1ee38" category="inline-link-macro">ONTAP恢復</block>
+  <block id="dbca7577f0796430f28fd2f1f5805bc9" category="admonition">AFX 儲存系統不支援 <block ref="af98218b92f959dac30e2de6f742409f" category="inline-link-macro-rx"></block> 營運.</block>
+  <block id="0f3715b1b8b72110fa162f2666d15f10" category="sidebar">恢復限制</block>
 </blocks>

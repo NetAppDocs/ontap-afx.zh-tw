@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: administer/revert-ontap.html 
+keywords: afx, afx system, revert, revert ontap, revert limitation 
+summary: ONTAP叢集回滾是指將所有節點遷移到上一個主要的ONTAP版本的過程。 
+---
+= ONTAP回滾功能不支援 AFX 儲存系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP叢集回滾是指將所有節點遷移到上一個主要的ONTAP版本的過程。
+
+NetApp AFX 儲存系統不支援ONTAP回滾。嘗試使用 AFX 執行回滾操作可能會導致叢集不穩定和資料遺失。您不應該嘗試對 AFX 系統執行還原操作。

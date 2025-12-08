@@ -50,5 +50,7 @@ entries:
     url: "/administer/upgrade-ontap.html"
   - title: 更新韌體
     url: "/administer/update-firmware.html"
+  - title: 恢復限制
+    url: "/administer/revert-ontap.html"
 - title: 額外的管理
   url: "/administer/additional-ontap-cluster.html"

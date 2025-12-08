@@ -25,6 +25,8 @@ indexpage:
       url: "/administer/display-svms.html"
     - title: 升級和維護集群
       url: "/administer/expand-cluster.html"
+    - title: 恢復限制
+      url: "/administer/revert-ontap.html"
     - title: 額外的管理
       url: "/administer/additional-ontap-cluster.html"
   - title: 管理數據和訪問

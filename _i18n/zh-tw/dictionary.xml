@@ -444,7 +444,6 @@
   <block id="c06b2149bbe3e94f6eac8a64039cc025" category="list-text">閱讀 EULA。</block>
   <block id="d6aeb9cf91111f522e0f1901518a3836" category="list-text">接受預設設定以*顯示建議更新的通知*。或者，選擇*自動更新*或*自動忽略*建議的更新。</block>
   <block id="17ac6cdd9934a4f4aca00f5228a64555" category="list-text">選擇確認您的更新修改將套用於所有目前和未來的更新。</block>
-  <block id="09190524572cf4f2b42ddf32f3f54ce7" category="paragraph">根據您的更新選擇，建議的更新將自動下載並安裝在您的 OTAP AFX 系統上。</block>
   <block id="5de0adb95551ff3c1458ae6247a4959f" category="section-title">停用自動更新</block>
   <block id="6141cdc0ba26479d87d6b8c24af9fc18" category="paragraph">如果您希望在安裝之前靈活地查看建議的更新，請停用自動更新。如果停用自動更新，則需要手動執行韌體和系統檔案更新。</block>
   <block id="9c2cdad0235d8d361f21c8343ef95363" category="list-text">在系統管理員中，選擇“集群”&gt;“設定”。</block>
@@ -1409,8 +1408,6 @@
   <block id="ce587252d09bb3dfb2d53f154ba81d93" category="section-title">步驟 3：建立複製關係</block>
   <block id="c8733c85583475859780bc7c89c97d92" category="paragraph">快照複製關係會在您的 AFX 系統和遠端位置之間建立連接，以便您可以將一致性群組複製到遠端叢集。複製的一致性組可用於災難復原或資料遷移。</block>
   <block id="c5d439ea8d2444de271a6842180ae515" category="paragraph">為了防止勒索軟體攻擊，當您設定複製關係時，您可以選擇鎖定目標快照。鎖定的快照不會被意外或惡意刪除。如果磁碟區受到勒索軟體攻擊，您可以使用鎖定的快照來復原資料。</block>
-  <block id="bf5d4ab274f571d57107a348e35cb081" category="inline-link-macro">初始化快照合規時鐘</block>
-  <block id="a2070fe1416691eeb91c53762fd2a74c" category="paragraph">如果要鎖定目標快照，則必須<block ref="27d9d0ff36409c51abdcd0a6f30da304" category="inline-link-macro-rx"></block>在創建複製關係之前。</block>
   <block id="f07148b3f2fd0f0a23b807626916df29" category="paragraph">建立具有或不具有鎖定目標快照的複製關係。</block>
   <block id="b581751404702669bf568b5f9581e76c" category="open-title">帶有鎖定快照</block>
   <block id="82fd6aa34bfb21de39dd81c963a0a2e8" category="list-text">在系統管理員中，選擇*保護&gt;一致性群組*。</block>
@@ -1772,4 +1769,5 @@
   <block id="b34a4582eb04bf97b29749b7a8e1ee38" category="inline-link-macro">ONTAP恢復</block>
   <block id="dbca7577f0796430f28fd2f1f5805bc9" category="admonition">AFX 儲存系統不支援 <block ref="af98218b92f959dac30e2de6f742409f" category="inline-link-macro-rx"></block> 營運.</block>
   <block id="0f3715b1b8b72110fa162f2666d15f10" category="sidebar">恢復限制</block>
+  <block id="c29e3429d133a5255487ffdb4b3cd5b3" category="paragraph">根據您的更新選擇，建議的更新將自動下載並安裝在您的 ONTAP AFX 系統上。</block>
 </blocks>

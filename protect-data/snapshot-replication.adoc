@@ -86,8 +86,6 @@ AFX 系統與其他ONTAP系統的群集對等的先決條件相同。link:https:
 為了防止勒索軟體攻擊，當您設定複製關係時，您可以選擇鎖定目標快照。鎖定的快照不會被意外或惡意刪除。如果磁碟區受到勒索軟體攻擊，您可以使用鎖定的快照來復原資料。
 
 .開始之前
-如果要鎖定目標快照，則必須link:../secure-data/ransomware-protection.html#initialize-the-snaplock-compliance-clock["初始化快照合規時鐘"]在創建複製關係之前。
-
 建立具有或不具有鎖定目標快照的複製關係。
 
 [role="tabbed-block"]

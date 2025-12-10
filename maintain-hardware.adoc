@@ -7,7 +7,7 @@ summary: 導覽至 AFX 維護文件以了解如何對 AFX 儲存系統執行維�
 = 維護 AFX 儲存系統硬體
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]

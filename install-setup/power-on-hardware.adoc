@@ -136,7 +136,7 @@ NOTE: 如果 ID 閃爍的時間超過 15 秒，請再次按住貨架 ID 按鈕�
 .. 將控制台連接線連接到筆記型電腦，然後使用儲存系統隨附的控制台連接線連接控制器上的序列控制台連接埠。
 .. 將筆記型電腦連接到管理子網路上的交換器。
 +
-image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[控制台連接]
+image::../media/drw_afx_1k_console_connection_ieops-2708.svg[控制台連接]
 
 
 

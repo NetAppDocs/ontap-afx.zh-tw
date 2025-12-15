@@ -1770,4 +1770,6 @@
   <block id="dbca7577f0796430f28fd2f1f5805bc9" category="admonition">AFX 儲存系統不支援 <block ref="af98218b92f959dac30e2de6f742409f" category="inline-link-macro-rx"></block> 營運.</block>
   <block id="0f3715b1b8b72110fa162f2666d15f10" category="sidebar">恢復限制</block>
   <block id="c29e3429d133a5255487ffdb4b3cd5b3" category="paragraph">根據您的更新選擇，建議的更新將自動下載並安裝在您的 ONTAP AFX 系統上。</block>
+  <block id="f6ea197b186340b340ddfd0eb0da559f" category="inline-link-macro">建立ONTAP叢集並加入節點</block>
+  <block id="46111b54a1fe09b4b0f338f84ed73d0f" category="admonition">有關如何在非 Windows 環境中建立叢集的信息，請參閱 <block ref="084582f867948d8226893522df8bc4b0" category="inline-link-macro-rx"></block>。</block>
 </blocks>

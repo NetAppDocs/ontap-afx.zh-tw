@@ -72,6 +72,10 @@ AFX 叢集有四個區域必須進行初始設定。前三個是必需的，最�
 +
 您可以定義集群加密的詳細資訊。選擇*繼續*。
 
++
+
+NOTE: 有關如何在非 Windows 環境中建立叢集的信息，請參閱 link:https://docs.netapp.com/us-en/ontap/software_setup/setup-cluster.html["建立ONTAP叢集並加入節點"^]。
+
 
 
 .下一步

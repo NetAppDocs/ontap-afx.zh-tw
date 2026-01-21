@@ -980,7 +980,6 @@
   <block id="784c55256af328db72b621f19722713c" category="admonition">直通套件中不包含跳線。如果您的交換器未附帶跳線，請聯絡NetApp訂購正確的跳線。</block>
   <block id="290d336236260cd4a5246beda2a977d5" category="inline-link">Cisco Nexus 9332D-GX2B NX-OS 模式交換器硬體安裝指南</block>
   <block id="b1ec8c60f31cf5056d372b5933be8b0b" category="inline-link">Cisco Nexus 9364D-GX2A NX-OS 模式交換器硬體安裝指南</block>
-  <block id="66bae34306cc0c72e7058ee11822a847" category="admonition">Cisco 9332D-GX2B 和 9364D-GX2A 是連接埠側進氣交換器。交換器的網路連接埠必須安裝在機櫃的前面，排氣扇必須安裝在機櫃的後方。對於這種配置，您必須確保使用足夠長的電纜從機櫃前部的網路連接埠延伸到機櫃後部的儲存連接埠。  + 有關這些交換器的更多詳細信息，請訪問Cisco網站：<block ref="41dd90940bbf956b1a1bc9743b5329d8" category="inline-link-rx"></block>和<block ref="0684e00763f44490e4a966ecd9b6db00" category="inline-link-rx"></block>。</block>
   <block id="233f5d43fe68130332533db747eb58bf" category="list-text">安裝直通盲板。</block>
   <block id="f6a7153bd6774aa611c605474f2c556a" category="list-text">確定機櫃或機架中交換器和盲板的垂直位置。</block>
   <block id="eca4fd64fa30887cca883fb2a8f5e9b3" category="list-text">在前櫃導軌兩側的相應方孔中安裝兩個夾緊螺帽。</block>
@@ -1772,4 +1771,5 @@
   <block id="c29e3429d133a5255487ffdb4b3cd5b3" category="paragraph">根據您的更新選擇，建議的更新將自動下載並安裝在您的 ONTAP AFX 系統上。</block>
   <block id="f6ea197b186340b340ddfd0eb0da559f" category="inline-link-macro">建立ONTAP叢集並加入節點</block>
   <block id="46111b54a1fe09b4b0f338f84ed73d0f" category="admonition">有關如何在非 Windows 環境中建立叢集的信息，請參閱 <block ref="084582f867948d8226893522df8bc4b0" category="inline-link-macro-rx"></block>。</block>
+  <block id="26790bd35f75a3d2177dc5a2d5e4162f" category="admonition">如果您的交換器氣流配置為連接埠側進氣（風扇和電源供應器為酒紅色），則交換器的網路連接埠必須朝向機櫃正面，排氣風扇必須朝向機櫃背面。採用此配置時，您必須確保使用足夠長的線纜，以便從機櫃正面的網路連接埠連接到機櫃背面的儲存連接埠。+ 有關這些交換器的更多詳細資訊,請造訪 Cisco 網站:<block ref="41dd90940bbf956b1a1bc9743b5329d8" category="inline-link-rx"></block> 和 <block ref="0684e00763f44490e4a966ecd9b6db00" category="inline-link-rx"></block>。</block>
 </blocks>

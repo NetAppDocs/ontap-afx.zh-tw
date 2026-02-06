@@ -15,6 +15,12 @@ summary: 了解如何啟動和設定 AFX 1K 儲存系統的交換器。
 
 .步驟
 . 將交換器的電源線插入電源。
+. 連接兩台交換器之間的 ISL 電纜。
++
+** 對於 Cisco Nexus 9332D-GX2B 交換器，請使用連接埠 31/32 進行 ISL 連線。如需詳細資訊，請參閱 link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Cisco Nexus 9332D-GX2B NX-OS 模式交換器硬體安裝指南"^]。
+** 對於 Cisco Nexus 9364D-GX2A 交換器，請使用連接埠 63/64 進行 ISL 連線。如需詳細資訊，請參閱 link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Cisco Nexus 9364D-GX2A NX-OS 模式交換器硬體安裝指南"^]。
+
+
 . 打開每個交換器的電源。
 . 配置交換器以支援 AFX 1K 儲存系統。
 +

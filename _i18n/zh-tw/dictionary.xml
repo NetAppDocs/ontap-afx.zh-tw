@@ -1677,7 +1677,6 @@
   <block id="39d6c09487ae39b696712047458ae97f" category="paragraph">借助運行 Unified ONTAP特性的AFF和FAS系統，可以無中斷地將磁碟區從叢集中的一個節點或聚合體重新定位到另一個節點或聚合體。這是透過SnapMirror技術的後台複製作業實現的。在目標位置建立一個新的目標磁碟區。根據磁碟區的大小和叢集資源的利用情況，磁碟區移動作業完成所需的時間可能會有所不同。</block>
   <block id="411d09bf181cc2e222bccf10feaa6685" category="paragraph">使用 AFX 時，不存在聚合。所有儲存都包含在單一儲存可用區 (SAZ) 中，叢集中的每個節點都可以存取該可用區。因此，卷移動實際上不需要複製資料。相反，所有捲移動都是透過節點間的指標更新來實現的。這被稱為零複製卷移動 (ZCVM)，並且是瞬間發生的，因為實際上沒有資料被複製或移動。這本質上與 Unified ONTAP使用的捲移動過程相同，但不使用SnapMirror副本。</block>
   <block id="268c5fd9a5edfb16a9eb083ccc6295cb" category="paragraph">在最初的 9.17.1 AFX 版本中，磁碟區只會在儲存故障轉移復原場景中以及向叢集新增或刪除節點時移動。這些移動僅透過ONTAP進行控制。</block>
-  <block id="fb5d5611f76c91a55f531d729a96c588" category="paragraph">NetApp AFX 針對高效能 NAS 和物件工作負載進行了最佳化。因此，它與AFF和FAS以及其他統一ONTAP儲存系統存在差異。以下功能在NetApp AFX 中不可用；此清單按主要功能或功能領域進行組織。您還應該查看 AFX 的更新和變更。<block ref="e4ac4a7dd877729340e2b0880473ea1b" category="inline-link-macro-rx"></block>根據你的版本。</block>
   <block id="2e3bb6088dc4e4a9fd41f59e608d064e" category="section-title">區塊儲存和SAN</block>
   <block id="1e6026bdcb8941485ad6d5451708325a" category="list-text">LUN 和 NVMe 命名空間</block>
   <block id="7921b04e636fb6fa93137406e2d5d5f5" category="list-text">卷的厚配置</block>
@@ -1775,4 +1774,6 @@
   <block id="5ba4d3956504a570f9a51b322b5f740c" category="list-text">連接兩台交換器之間的 ISL 電纜。</block>
   <block id="86411bbf3fc2afbe73de144737c4ff80" category="list-text">對於 Cisco Nexus 9332D-GX2B 交換器，請使用連接埠 31/32 進行 ISL 連線。如需詳細資訊，請參閱 <block ref="bab51173328bbc094a925e4a5c7604c6" category="inline-link-macro-rx"></block>。</block>
   <block id="f8979ce4e5d66f41e330415672140ef8" category="list-text">對於 Cisco Nexus 9364D-GX2A 交換器，請使用連接埠 63/64 進行 ISL 連線。如需詳細資訊，請參閱 <block ref="d3ef7ae1e3bea631e525704fa9f8906b" category="inline-link-macro-rx"></block>。</block>
+  <block id="35baa74f76db10604e3f71a16b4078d1" category="paragraph">NetApp AFX 針對高效能 NAS 和物件工作負載進行了最佳化。因此，它與 AFF 和 FAS 儲存系統存在差異。以下功能在 NetApp AFX 中不可用；此清單按主要功能或功能領域進行分類。您還應根據您的 ONTAP 版本查看 AFX 的更新和變更<block ref="e4ac4a7dd877729340e2b0880473ea1b" category="inline-link-macro-rx"></block>。</block>
+  <block id="86daf5160966102a39f5f3c0390bde11" category="list-text">負載共享鏡像</block>
 </blocks>

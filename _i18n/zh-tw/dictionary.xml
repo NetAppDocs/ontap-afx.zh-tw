@@ -792,28 +792,18 @@
   <block id="808f3fa88e6266b2beb8f1153dd991ec" category="list-text">將下列連接埠連接至乙太網路資料網路交換器 B。</block>
   <block id="53c535a8b8a2c8bb670d136b82e73f99" category="list-text">e2b</block>
   <block id="969d430598a257671bdf944480e4d46b" category="list-text">e3b</block>
-  <block id="4015e00b406d10c628519f953d69e086" category="section-title">步驟 3：連接集群和 HA</block>
-  <block id="093fe9dff1e5370d0b97313cefba5acd" category="paragraph">使用群集和 HA 互連電纜將 e1a 和 e7a 連接埠到交換器 A，將 e1b 和 e7b 連接到交換器 B。 e1a/e1b 連接埠用於 HA 連接，e7a/e7b 連接埠用於叢集連接。</block>
-  <block id="7d1e8fb2f50320f7b5004ba0fd39055b" category="list-text">將下列控制器連接埠連接到叢集網路交換器 A 上的任何非 ISL 連接埠。</block>
   <block id="595df28a8a4a9361a6231a9d84e8cd08" category="list-text">控制器A</block>
   <block id="9cb7b36b3f2bccc776862e6f2f494077" category="list-text">e1a</block>
   <block id="a9e70fa35de61f4ac25cc4bcd706a55d" category="list-text">控制器B</block>
-  <block id="29b62d617481485649ea2d5b54fca512" category="image-alt">集群 HA 電纜</block>
-  <block id="f1d133e33e29362e931a34312a961d0b" category="image-alt">將集群連接線連接至集群網絡</block>
-  <block id="ac32cb5bd4dc17916ab1ece800d39226" category="list-text">將下列控制器連接埠連接到叢集網路交換器 B 上的任何非 ISL 連接埠。</block>
   <block id="e737b5ac24a63afc00e81377a906728d" category="list-text">e1b</block>
-  <block id="c61349783073807f1993874d0e3a4a8c" category="section-title">步驟 4：連接控制器到交換器的儲存連接</block>
   <block id="da160308e3b4b4a80bf1b72b5bdbedb8" category="inline-link">Hardware Universe</block>
-  <block id="7bebd570400c9d8d9796caad43fdcebd" category="paragraph">將控制器儲存連接埠連接到交換器。確保您的交換器具有正確的電纜和連接器。看<block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block>了解更多。</block>
   <block id="d7434100057b78673eee73421ad29942" category="list-text">將下列儲存連接埠連接到交換器 A 上的任何非 ISL 連接埠。</block>
   <block id="405e469b4aa3065616ee04f4a4b2b35e" category="list-text">e10a</block>
   <block id="2772fdc65a945771c18178a5b650c575" category="list-text">e11a</block>
   <block id="b222cca23840b6a495e76b8c300b08f2" category="image-alt">100 Gb 電纜</block>
-  <block id="56812cf9e76eb2dfaa41475474798d4b" category="image-alt">將控制器記憶體以電纜連接至交換器 A</block>
   <block id="dc1921771bb6c193442045d9a99b8c9d" category="list-text">將下列儲存連接埠連接到交換器 B 上的任何非 ISL 連接埠。</block>
   <block id="d5dec99b9c0f6ad0c56335c85d42e40b" category="list-text">e10b</block>
   <block id="6dfe0149eb6951bd7c7e5c94c1713869" category="list-text">e11b</block>
-  <block id="73b33ccdc5c989a11800499004721836" category="image-alt">將控制器記憶體以電纜連接至交換器 B</block>
   <block id="18154dcfffa2547c8d59ed9df65fb3ac" category="section-title">步驟 5：架設機架到交換器的連接線</block>
   <block id="b1ea5415ee8f031dcace291f9c98e0be" category="paragraph">將 NX224 儲存擴充架連接到交換器。</block>
   <block id="5a684badbec5242d1800f819ca49559e" category="paragraph">有關儲存系統支援的最大架數量以及所有佈線選項，請參閱<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
@@ -1776,4 +1766,12 @@
   <block id="f8979ce4e5d66f41e330415672140ef8" category="list-text">對於 Cisco Nexus 9364D-GX2A 交換器，請使用連接埠 63/64 進行 ISL 連線。如需詳細資訊，請參閱 <block ref="d3ef7ae1e3bea631e525704fa9f8906b" category="inline-link-macro-rx"></block>。</block>
   <block id="35baa74f76db10604e3f71a16b4078d1" category="paragraph">NetApp AFX 針對高效能 NAS 和物件工作負載進行了最佳化。因此，它與 AFF 和 FAS 儲存系統存在差異。以下功能在 NetApp AFX 中不可用；此清單按主要功能或功能領域進行分類。您還應根據您的 ONTAP 版本查看 AFX 的更新和變更<block ref="e4ac4a7dd877729340e2b0880473ea1b" category="inline-link-macro-rx"></block>。</block>
   <block id="86daf5160966102a39f5f3c0390bde11" category="list-text">負載共享鏡像</block>
+  <block id="8c60e60e96c6540bd35beb72adc17cb0" category="section-title">步驟 3：將叢集、HA 和儲存連接線連接到交換器 A</block>
+  <block id="1255d6bb11db98e4f919212687145a90" category="paragraph">使用 4x100GbE 分線電纜將控制器上的叢集、HA 和儲存連接埠連接到網路交換器 A。叢集和 HA 互連電纜將連接埠 e1a 和 e7a 連接到交換器 A。e1a 連接埠用於 HA 連接，e7a 連接埠用於叢集連接。對於儲存連接，請將連接埠 e10a 和 e11a 連接到交換器 A。</block>
+  <block id="245afd341214dde6198c6abfdac71264" category="paragraph">請確保您擁有與交換器相符的正確線纜和連接器。請參閱<block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block>以取得更多資訊。</block>
+  <block id="e42929c9f069074fd111dfa1c107772e" category="list-text">將下列控制器連接埠連接至網路交換器 A 上的任意非 ISL 連接埠。</block>
+  <block id="c1209a2ef5ab3b20312d0aebe91b01d3" category="image-alt">電纜控制器叢集</block>
+  <block id="c42589aeb6cdc4aab7c9ee5517ef1f84" category="section-title">步驟 4：將叢集、HA 和儲存連接線連接到交換器 B</block>
+  <block id="14aa705a8a71a02fb1b277002e0c52ed" category="paragraph">使用 4x100GbE 分線電纜將控制器上的叢集連接埠、HA 連接埠和儲存連接埠連接到網路交換器 B。叢集和 HA 互連電纜將連接埠 e1b 和 e7b 連接到交換器 B。e1b 連接埠用於 HA 連接，e7b 連接埠用於叢集連接。對於儲存連接，請將連接埠 e10b 和 e11b 連接到交換器 B。</block>
+  <block id="8cff5fa6944271f10e636cadf3153077" category="list-text">將下列控制器連接埠連接至網路交換器 B 上的任意非 ISL 連接埠。</block>
 </blocks>

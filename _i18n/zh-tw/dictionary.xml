@@ -1078,8 +1078,6 @@
   <block id="eccb4d5293fe0dd408e74aab9093fb9b" category="list-text">LED 閃爍且風扇啟動，表示控制器正在通電。</block>
   <block id="2a15831b428ec92914dd2d9b9c14a463" category="list-text">風扇在啟動時可能會有噪音，這是正常現象。</block>
   <block id="d420064a5f4919f9be16d853c6d1997c" category="list-text">使用每個電源上的固定裝置固定電源線。</block>
-  <block id="d86c8f4fff3fb2feed3ee9c6ab6626ed" category="inline-link-macro">設定 AFX 集群</block>
-  <block id="4eb20ef06f12f582d4ebd27eaee89115" category="paragraph">開啟 AFX 1K 儲存系統後，您<block ref="a4e3e0c950d1563a6f1d32259f274df6" category="inline-link-macro-rx"></block>。</block>
   <block id="4037f9dba9d587023878b63255863f7d" category="summary">準備在您的ONTAP環境中安裝 AFX 1K 儲存系統並註冊硬體以獲得支援權益。</block>
   <block id="b81fa34f137f3d44fa104594a5caaef5" category="paragraph">準備安裝您的 AFX 1K 儲存系統，準備好場地、拆開包裝箱並將包裝箱內物品與裝箱單進行比較，然後註冊系統以取得支援權益。</block>
   <block id="92c8397408f55d9526d554c55cde3d22" category="section-title">步驟 1：準備場地</block>
@@ -1774,4 +1772,11 @@
   <block id="c42589aeb6cdc4aab7c9ee5517ef1f84" category="section-title">步驟 4：將叢集、HA 和儲存連接線連接到交換器 B</block>
   <block id="14aa705a8a71a02fb1b277002e0c52ed" category="paragraph">使用 4x100GbE 分線電纜將控制器上的叢集連接埠、HA 連接埠和儲存連接埠連接到網路交換器 B。叢集和 HA 互連電纜將連接埠 e1b 和 e7b 連接到交換器 B。e1b 連接埠用於 HA 連接，e7b 連接埠用於叢集連接。對於儲存連接，請將連接埠 e10b 和 e11b 連接到交換器 B。</block>
   <block id="8cff5fa6944271f10e636cadf3153077" category="list-text">將下列控制器連接埠連接至網路交換器 B 上的任意非 ISL 連接埠。</block>
+  <block id="3e43f7eeca64d5c830b0064870a6156b" category="admonition">在安裝和維護過程中，請務必配戴連接至已驗證接地點的接地腕帶。未採取正確的 ESD 防護措施可能會對控制器節點、儲存架和網路交換器造成永久性損壞。</block>
+  <block id="1e64a8c98278cbf94fdc5e55cf23d748" category="inline-link-macro">安裝 AIDE 資料計算節點</block>
+  <block id="5d16f9931acd5c0aea8659ad61ec6628" category="admonition">如果您要部署具有 AI Data Engine （AIDE） 的 AFX 1K，請在啟動 AFX 系統後安裝 AIDE 資料計算節點。如需更多資訊，請參閱 <block ref="770e46e4a0d2400ce8dd3c354b4e69c6" category="inline-link-macro-rx"></block>。</block>
+  <block id="d9af9d0a822fab56f67da32f96760bcd" category="paragraph">啟動 AFX 1K 儲存系統後，根據您的部署選項完成設定：</block>
+  <block id="9f17a32279457eb3f0ec945352a82e96" category="inline-link-macro">設定 AFX 叢集</block>
+  <block id="65baec5e9f4a78defefb1154f095ae89" category="list-text">對於專用 AFX 1K 儲存系統部署，請前往<block ref="b434a61d8681e909828695f9b932fe31" category="inline-link-macro-rx"></block>。</block>
+  <block id="2958d97f86a68931454e4d5cb0f3fa2a" category="list-text">對於具有 AI Data Engine（AIDE）的 AFX 1K 部署，請前往 <block ref="770e46e4a0d2400ce8dd3c354b4e69c6" category="inline-link-macro-rx"></block>。</block>
 </blocks>

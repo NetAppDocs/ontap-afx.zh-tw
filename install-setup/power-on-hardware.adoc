@@ -159,4 +159,8 @@ image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1K儲存系統與A7
 
 
 .下一步是什麼？
-開啟 AFX 1K 儲存系統後，您link:../install-setup/cluster-setup.html["設定 AFX 集群"]。
+啟動 AFX 1K 儲存系統後，根據您的部署選項完成設定：
+
+* 對於專用 AFX 1K 儲存系統部署，請前往link:../install-setup/cluster-setup.html["設定 AFX 叢集"]。
+* 對於具有 AI Data Engine（AIDE）的 AFX 1K 部署，請前往 link:https://docs.netapp.com/us-en/ai-data-engine/install-setup/aide-hardware-requirements.html["安裝 AIDE 資料計算節點"]。
+

@@ -686,15 +686,8 @@
   <block id="67901f429b628d99fcc5a2d234be3c16" category="list-text"><block ref="67901f429b628d99fcc5a2d234be3c16" category="inline-link-rx"></block></block>
   <block id="be295ac553513eb5e74d13f03267efb7" category="inline-link">了解如何使用ONTAP CLI 進行叢集管理</block>
   <block id="b1ca62b8e216e4c4af0bae762b5c33bf" category="list-text"><block ref="b1ca62b8e216e4c4af0bae762b5c33bf" category="inline-link-rx"></block></block>
-  <block id="6496e25d87d450f75eeeac2307f5d601" category="summary">要初始啟動並執行您的 AFX 系統，您需要安裝硬體元件、設定叢集並準備管理叢集和 SVM。</block>
   <block id="22735d3e264cefb0543000862e7f0904" category="doc">快速啟動設定 AFX 儲存系統</block>
-  <block id="40a0d9b63d17cd9ee40121b195ad7812" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>安裝並設定您的硬體</block>
-  <block id="349838fb1d851d3e2014b9fe39203275" category="inline-link-macro">安裝</block>
-  <block id="a89571e2a58d58d092c115e8476ed9e9" category="paragraph"><block ref="956a819b10989cd1b828400e2784a3e3" category="inline-link-macro-rx"></block>您的 AFX 儲存系統並準備設定叢集。</block>
-  <block id="d950f0cc340509cac6299d8daed8cf0a" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>設定集群</block>
   <block id="d5158c215f75d40b3dc3a9efd519b60a" category="inline-link-macro">設定</block>
-  <block id="952715d9fa928d1059a800473c5469c0" category="paragraph">按照快速簡便的流程<block ref="5f55a5e0ef0b631e2040a3d854a6456f" category="inline-link-macro-rx"></block>使用系統管理員的ONTAP集群。</block>
-  <block id="373a0502633d2333dd8b952009c2d1ad" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>準備管理您的集群</block>
   <block id="0ee63ccea22773b7b711a299adc32792" category="inline-link-macro">準備</block>
   <block id="862b23ef0c9f5a6e409d8a2a17fe80e2" category="paragraph">在生產環境部署 AFX 之前，必須<block ref="8b4d8002fc8012c25c048b6e7a24771f" category="inline-link-macro-rx"></block>透過了解管理結構（包括儲存虛擬機器 (SVM)、使用者、角色和管理介面），確保安全、高效和有效的叢集管理。</block>
   <block id="0a6e83c5c4575b7e80d6da08f9735aa2" category="summary">AFX 架構由多個硬體和軟體元件組成。這些系統組件被組織成不同的類別。</block>
@@ -818,9 +811,7 @@
   <block id="4a7ee7fbba5bc8a1a276d9ee6a63ed38" category="list-text">模組 B 到交換器 B 的連接</block>
   <block id="fd237566ec57d5c7d07a07d2de3f5da4" category="inline-link-macro">打開電源並配置交換機</block>
   <block id="f5a20b01e4e92799bd754e081d26baa2" category="paragraph">連接硬體後，<block ref="ea78b4766c5f2cc6aaf348a949513439" category="inline-link-macro-rx"></block> 。</block>
-  <block id="61aa41645e90edf222517c80068cc2c5" category="summary">安裝 AFX 硬體後，您可以完成叢集設定。此過程涉及兩個相關的配置階段，您需要按順序執行。</block>
   <block id="555d2f7366ee48937103a84c2e34ab15" category="doc">設定 AFX 儲存系統ONTAP集群</block>
-  <block id="1a03950a8b042e50b4fa0a4ba5ebf056" category="paragraph">安裝 AFX 硬體後，您可以完成ONTAP叢集設定。此過程涉及兩個相關的配置階段，您需要按順序執行。</block>
   <block id="4a10c4c51ce8042f23d8552dbd29c615" category="section-title">執行初始叢集設定</block>
   <block id="d67e08295ddac36d182423f29b6d953e" category="paragraph">您可以將筆記型電腦設備連接到 AFX 叢集並設定幾個全域設定值。</block>
   <block id="a357a6dc879fb21456a023174999f986" category="paragraph">AFX 叢集有四個區域必須進行初始設定。前三個是必需的，最後一個是可選的。</block>
@@ -829,7 +820,6 @@
   <block id="98120899673f27e9689b61d6b3870732" category="paragraph">叢集管理 IP 位址是叢集管理員用來存取管理 SVM 和管理叢集的叢集管理介面的唯一 IPv4 位址。您可以從組織中負責指派 IP 位址的管理員處取得此 IP 位址。</block>
   <block id="cbb81dee4f5c03c21f392a86f157336d" category="list-text">網路子網路遮罩</block>
   <block id="c434bb8b0d4ff4f8c72a02f79eb9224a" category="paragraph">在叢集設定期間， ONTAP需要一組適合您的配置的網路介面。如有必要，您可以調整建議。</block>
-  <block id="04a28563d9cca86ff33d1886c922c8d7" category="paragraph">您還需要以下物品：</block>
   <block id="e62d1b7c016fb6f9a0829b685c2ab1ea" category="list-text">網路閘道 IP 位址</block>
   <block id="4f003881b79490db2f8b01b7c398fce1" category="list-text">DNS 網域</block>
   <block id="e28af899651d52d4e958ed29e85f0c9c" category="list-text">DNS 名稱伺服器 IP 位址</block>
@@ -843,9 +833,7 @@
   <block id="59b375f59423995965c5949c469b768e" category="paragraph">將顯示系統管理器使用者介面。</block>
   <block id="e041869cafad45776d41ace1eaf57baf" category="list-text">設定管理員密碼。</block>
   <block id="1a3fdad9d641133a1e19c5fdbfe21255" category="paragraph">提供並驗證<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block>帳戶。選擇*繼續*。</block>
-  <block id="65dc37fafad28c1a8a9c109af3d8d976" category="list-text">配置叢集和控制節點的IP位址。</block>
   <block id="35c7fe01157254d80eb6615358234c6a" category="paragraph">提供 IP 位址和子網路遮罩。</block>
-  <block id="8165f1d7607b0e72446c39d17955414b" category="list-text">設定網路服務。選擇*繼續*。</block>
   <block id="2d044c807325a8c22321174a6d18dbd9" category="paragraph">定義您的 DNS 和 NTP 伺服器的詳細資訊。</block>
   <block id="083faa6cc4d08f602b1c409c9b142a4c" category="list-text">可選擇設定加密。</block>
   <block id="29c706988d6c18477050ac049bc0a43a" category="paragraph">您可以定義集群加密的詳細資訊。選擇*繼續*。</block>
@@ -1680,8 +1668,6 @@
   <block id="a701ac944f045a1319dfa2aefa340a51" category="list-text">不支援的功能（例如MetroCluster）的 REST API</block>
   <block id="79c2b38f38c51ccecb846e7b61411345" category="list-text">REST API 在效能統計方面存在一些初步限制</block>
   <block id="53c74ff394516eb726fa498958baa748" category="list-text">AIQ 統一管理器支援</block>
-  <block id="9778559854e477e3145f111560df12c2" category="list-text">Grafana Harvest 版本 25.08.1 及更高版本</block>
-  <block id="2d13ab42fbf58a40e728ee212f01218c" category="list-text">NetApp Trident版本 25.10 及更高版本</block>
   <block id="ccb648feabbcf21905f5b3e3b6da2bfe" category="list-text">聚合顯示現在顯示整個儲存可用區 (SAZ)</block>
   <block id="853b2544b8e3ce0ee8744c82e99c89a0" category="paragraph">NetApp AFX 儲存系統滿足了 NAS 和 S3 物件工作負載對高效能和獨立擴充的獨特需求。這些應用程式受益於基於高並發性和平行 I/O 的先進設計。  AFX 非常適合部署和管理多種不同類型應用程式工作負載的組織，包括：</block>
   <block id="25b0ede2a92c78f78da91d95666bf71d" category="list-text">與其他NetApp ONTAP儲存系統不同，AFX 叢集的運算和儲存元素是解耦的，並透過交換網路連接。磁碟所有權不再與特定節點綁定，這帶來了許多好處。例如，AFX 叢集的運算和儲存組件可以獨立擴展。</block>
@@ -1779,4 +1765,66 @@
   <block id="9f17a32279457eb3f0ec945352a82e96" category="inline-link-macro">設定 AFX 叢集</block>
   <block id="65baec5e9f4a78defefb1154f095ae89" category="list-text">對於專用 AFX 1K 儲存系統部署，請前往<block ref="b434a61d8681e909828695f9b932fe31" category="inline-link-macro-rx"></block>。</block>
   <block id="2958d97f86a68931454e4d5cb0f3fa2a" category="list-text">對於具有 AI Data Engine（AIDE）的 AFX 1K 部署，請前往 <block ref="770e46e4a0d2400ce8dd3c354b4e69c6" category="inline-link-macro-rx"></block>。</block>
+  <block id="7485a9a2ae4ee9755a52213e23e1172c" category="inline-link">如何從 NetApp 支援網站下載 NLF 授權</block>
+  <block id="0d31e45cb458235b1c184c1176df0af6" category="list-text"><block ref="0d31e45cb458235b1c184c1176df0af6" category="inline-link-rx"></block></block>
+  <block id="d0e68fc1dba1032a2fa3af9f7e71bfc4" category="list-text">25.08.1 之前的 Grafana Harvest 版本</block>
+  <block id="f4400f8e3998b00dc936390760dfa0b2" category="summary">NetApp AI Data Engine （AIDE）是一款儲存整合式 AI 資料服務，運行於連接到 AFX 叢集的資料運算節點上。您可以選擇安裝 AIDE 並將其與 AFX 叢集整合，透過為 AI 和 ML 工作負載提供專用的 GPU 加速資料處理能力來擴展 AFX，同時保留 ONTAP 的所有優勢。</block>
+  <block id="a488cbabbe8d00d891faddf3e2aaedec" category="doc">了解 NetApp AI Data Engine</block>
+  <block id="fd73f0069f1d3fe412b6cc9624e9d727" category="section-title">AIDE 概述</block>
+  <block id="6bcc7c95100882ca261552d0ffd8f1b6" category="paragraph">AIDE 是一個系統，旨在加速和簡化 AI 和 ML 工作負載的資料準備和管理。它獨立安裝，並與 AFX 儲存系統叢集緊密整合。AIDE 利用高效能、可擴展的 AFX 儲存基礎架構，並增加了用於 AI 資料處理、治理和工作流程自動化的專用服務。</block>
+  <block id="37b3dc451b95ca444c011393639868c7" category="paragraph">AIDE 的核心優勢在於其能夠集中化並自動化管理大型分散式資料集的元資料。它可以配置為基於 ONTAP 卷中的資料持續編目和更新元資料存儲，使用戶能夠有效率地搜尋、分類和應用治理策略。其內部處理流程可產生可用於 AI 的資料集，包括建立語意搜尋和檢索任務所需的向量嵌入。</block>
+  <block id="e4a694a3dc8671d50ac2711d735738d2" category="paragraph">安全性和治理也是其設計的核心。AIDE 提供身份驗證、基於新型 RBAC 角色的存取控制、資料分類和策略驅動的強制執行，以保護敏感資訊。自動編輯、遮罩和稽核日誌記錄等功能可協助您滿足適用的監管要求，並在整個 AI 生命週期中保護關鍵資料。</block>
+  <block id="a4a07490b53ede56eedd6615965e9098" category="paragraph">AIDE 透過提供快速資料發現、整理和工作流程管理的工具，賦能資料工程師和資料科學家。透過專用的 AIDE 控制台和增強的 AFX REST API，使用者可以建立整理好的資料集、執行向量搜索，並與外部 AI 和 GenAI 應用程式整合。AIDE 減少了所需的人工操作，使團隊能夠專注於從資料中提取洞見。</block>
+  <block id="ea206a7167c7e693d778525a7c87c869" category="section-title">安裝選項</block>
+  <block id="a4fe9c37a470f8ecf5564e8a245e6426" category="paragraph">安裝 AIDE 並與 AFX 儲存叢集整合有兩種選擇。</block>
+  <block id="e47448b4066bbe2bcd70858f5bace656" category="section-title">同時設定 AFX 和 AIDE</block>
+  <block id="76114086772ee7fa8f48ad37d5d95dcb" category="paragraph">同時部署 AFX 儲存系統和 AIDE 可提供統一簡化的安裝流程，確保即時整合和最佳配置。這種一站式解決方案簡化了上線流程，保證了相容性，並使您能夠快速利用功能齊全的 AI 資料平台，這對於尋求快速實現價值的新部署而言是理想之選。</block>
+  <block id="a94dcc736627933f5609e28e7ef85321" category="section-title">將 AIDE 與現有 AFX 叢集整合</block>
+  <block id="08b9205a85210f5785e7bf74bc45457c" category="paragraph">如果您已安裝並執行了 AFX 儲存集群，您可以隨時新增 AIDE 來增強資料的存取和價值。AIDE 會作為現有 AFX 儲存環境的附加元件進行部署，連接到已建立的叢集儲存網絡，而不會中斷現有運作。整合過程會自動發現可用的 ONTAP 磁碟區並同步元資料。透過 AI 自動化、治理和管理工具，您的資料處理工作流程將會增強，同時保留您現有的儲存基礎架構。</block>
+  <block id="75d38d77f71f859f0e6bfa05a8868b12" category="inline-link">了解 AI Data Engine</block>
+  <block id="14905966d4697587a926c48b4f3b6868" category="list-text"><block ref="14905966d4697587a926c48b4f3b6868" category="inline-link-rx"></block></block>
+  <block id="dcaec67f8b6685884b28ce763c3b6b20" category="inline-link">NetApp AI Data Engine 常見問題</block>
+  <block id="19d7d8892fce8fa9173b4cd097aeae29" category="list-text"><block ref="19d7d8892fce8fa9173b4cd097aeae29" category="inline-link-rx"></block></block>
+  <block id="9781d9b60a3156749ead991d1b8f8476" category="inline-link">設定您的 ONTAP AIDE 叢集</block>
+  <block id="72c3ab9fda47d2c464e4e6035e5ee7d5" category="list-text"><block ref="72c3ab9fda47d2c464e4e6035e5ee7d5" category="inline-link-rx"></block></block>
+  <block id="2f05d6cddb39e99b401c758387957ed6" category="inline-link">NetApp AI Data Engine</block>
+  <block id="97bf7903281438713379444f1d00bdfe" category="list-text"><block ref="97bf7903281438713379444f1d00bdfe" category="inline-link-rx"></block></block>
+  <block id="cb2003e71a82c4946bc9b91168398431" category="summary">要啟動並運行您的 AFX 系統，您需要安裝硬體元件、設定叢集，並準備管理叢集和 SVM。</block>
+  <block id="14c19ed730096036466b6f8aa6689f4e" category="paragraph">若要初始啟動並執行您的 AFX 系統，您需要安裝硬體元件、設定叢集，並準備管理叢集和 SVM。</block>
+  <block id="08c7f01b69af18ad32a13c64bc8b43d1" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> AI Data Engine（AIDE）是否也會隨 AFX 一起安裝？</block>
+  <block id="5089e4b50d1f4e886a231cd5c043ad9d" category="inline-link">AIDE 安裝選項</block>
+  <block id="d3d9eaa68fa2acc25f51847944519bc7" category="paragraph">您需要決定是僅安裝 AFX 還是同時安裝 AFX 和 AI Data Engine。請查看<block ref="b158da038797eb3a533563ed16d340e2" category="inline-link-rx"></block>以協助您確定最適合您需求的方案。</block>
+  <block id="99882077cc5150985de38b05fe43c5bf" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 安裝並設定您的硬體</block>
+  <block id="1f9c2a9600aa7017fad495f671dfcc9d" category="inline-link-macro">安裝您的 AFX 儲存系統</block>
+  <block id="11aa15e40e1637eea4cb9402a0d516ac" category="inline-link">安裝 AIDE 資料運算節點</block>
+  <block id="699373ac8ea184bb06b16fa3333018c8" category="paragraph"><block ref="a832b8bc8244484582041183718520b7" category="inline-link-macro-rx"></block> 以及（可選）<block ref="c3c6cfb14f39c305fe598a32c865c296" category="inline-link-rx"></block> 如果您也將 AIDE 作為初始配置的一部分包含在內。</block>
+  <block id="8a28e13725679cf81ae7a97f135f3151" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 設定叢集</block>
+  <block id="67cf641733ab3c2361c8f1f769a0874b" category="inline-link">使用新的 AFX 叢集設定 AIDE</block>
+  <block id="35a50ba3ebcc67e69ce937368b540ae9" category="paragraph">按照簡單快速的步驟使用系統管理器<block ref="5f55a5e0ef0b631e2040a3d854a6456f" category="inline-link-macro-rx"></block>您的 ONTAP 叢集。如果您也要在資料運算節點上安裝 AIDE 和 AFX，請查看<block ref="ea340cdc1a42614e036446f1b104ebdd" category="inline-link-rx"></block>以瞭解其他必要的組態。</block>
+  <block id="927e370f9384cda0a4f5d88224cb1fdb" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 準備管理您的叢集</block>
+  <block id="40b9c78d4cb87fc896b9f0629f52df42" category="summary">安裝完 AFX 硬體後，即可完成 ONTAP 叢集的設定。此過程包含多個相關的配置階段，您需要依序執行這些階段。在此過程中，您可以選擇新增運行 AI Data Engine（AIDE）的資料運算節點（DCN），讓 AFX 儲存叢集和 DCN 叢集能夠作為單一系統運行，並透過同一個 ONTAP 控制平面進行管理。</block>
+  <block id="437d7eedd2da2ae1c1685c0d0c80c679" category="section-title">準備設定 AFX 儲存系統</block>
+  <block id="f41ed4469bd565e9483931052957aea1" category="paragraph">在設定 ONTAP 叢集之前，您應該查看核心 AFX 要求和額外的 AIDE 注意事項，以確保您擁有成功完成設定流程所需的所有資訊和資源。</block>
+  <block id="9d88ee465b7f03fb4741ec9544797f42" category="section-title">核心 AFX 要求</block>
+  <block id="c2eb7333972f3fa93553cd7a06df958c" category="paragraph">設定 AFX 叢集時需要考慮幾個核心需求。</block>
+  <block id="2381aa60d42fb06772fbc2c2f051f150" category="paragraph-title">硬體安裝</block>
+  <block id="6bdae78158db3aed30f99e4020e54ba0" category="paragraph">請確保您已完成 AFX 系統的硬體安裝。如需詳細資訊，請參閱 <block ref="24f1c81fd520b56826d37df1f34835fc" category="inline-link-macro-rx"></block>。</block>
+  <block id="9dac04dd5c39331c1b9184292052ca5f" category="paragraph-title">基本 IP 位址</block>
+  <block id="bbadb22f847f13b3fb765b4ca3e45a35" category="paragraph">您需要以下 IP 位址組態：</block>
+  <block id="754aeda810cf43298af8b5d9682a3ff0" category="paragraph-title">其他網路組態</block>
+  <block id="3716d7de1273609f72cac60d3ce80a8b" category="paragraph">您還需要以下相關的網路資訊：</block>
+  <block id="6f17f12812465b184f0ec95def3e37b7" category="section-title">其他 AIDE 注意事項</block>
+  <block id="9b7a97724bdee6ba810c5f7ed7bb4a23" category="paragraph">首次安裝和設定 AFX 時，您可以選擇性地包含 NetApp AI Data Engine（AIDE）。如果您打算設定 AIDE，則需要先執行下列操作：</block>
+  <block id="d403e07cdcb82bc6254e18c43e49b61e" category="inline-link">安裝 AIDE</block>
+  <block id="f67110073c1073ed49e669e523c3d0aa" category="list-text">務必<block ref="a88dad6aff82834a7260b0bc0d75cb8f" category="inline-link-rx"></block>並將運算節點連接到 AFX 儲存網路。</block>
+  <block id="56e6d9b90dd803813cfcc4eafb5af9c2" category="list-text">取得資料運算節點的位址及任何相關的網路組態。</block>
+  <block id="51a1e9578b7b51efdaedcad5b2df0d09" category="list-text">設定 AFX 叢集和控制器節點的 IP 位址。</block>
+  <block id="8e8eb81d1e3ccb55cbe0fb7ab62931e6" category="list-text">如果您要將 AI Data Engine 與 AFX 儲存系統一起安裝，請提供三個 AIDE DCN 節點的 IP 位址。</block>
+  <block id="b8bd3c09a7652f21306db623894a4a8e" category="list-text">設定網路服務，包括 DNS 和 NIS。選擇 *Continue* 。</block>
+  <block id="b0124f2be19a540828d3e1c546d45955" category="inline-link">設定 AI Data Engine</block>
+  <block id="9aaf27dbeb82d284903572456c7a9c4b" category="list-text">如果您已將 AIDE 納入 AFX 叢集設定中，則需要執行額外的設定步驟，包括授權和驗證。如需更多資訊，請參閱<block ref="bd3118f2bb5e86ecaca641a7e2c5d81b" category="inline-link-rx"></block>。</block>
+  <block id="e656cce89d1f00ff5696185aaf4f7d5d" category="list-text"><block ref="e656cce89d1f00ff5696185aaf4f7d5d" category="inline-link-macro-rx"></block></block>
+  <block id="6afed200d44923974d96400177a883ce" category="inline-link">對 AI Data Engine 的全新及增強支援</block>
+  <block id="eae4a2342adfae45b252359cd535161d" category="list-text">瞭解<block ref="ac735c3e650d75aa2b1309606d309f7d" category="inline-link-rx"></block>。</block>
+  <block id="ec728291e475cad65a149d393bcb1011" category="sidebar">了解 AIDE</block>
 </blocks>

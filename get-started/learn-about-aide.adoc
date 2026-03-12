@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: get-started/learn-about-aide.html 
+keywords: ai, ai data engine, aide, learn about aide, aide pipeline data management, data governance 
+summary: NetApp AI Data Engine （AIDE）是一款儲存整合式 AI 資料服務，運行於連接到 AFX 叢集的資料運算節點上。您可以選擇安裝 AIDE 並將其與 AFX 叢集整合，透過為 AI 和 ML 工作負載提供專用的 GPU 加速資料處理能力來擴展 AFX，同時保留 ONTAP 的所有優勢。 
+---
+= 了解 NetApp AI Data Engine
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp AI Data Engine （AIDE）是一款儲存整合式 AI 資料服務，運行於連接到 AFX 叢集的資料運算節點上。您可以選擇安裝 AIDE 並將其與 AFX 叢集整合，透過為 AI 和 ML 工作負載提供專用的 GPU 加速資料處理能力來擴展 AFX，同時保留 ONTAP 的所有優勢。
+
+
+
+== AIDE 概述
+
+AIDE 是一個系統，旨在加速和簡化 AI 和 ML 工作負載的資料準備和管理。它獨立安裝，並與 AFX 儲存系統叢集緊密整合。AIDE 利用高效能、可擴展的 AFX 儲存基礎架構，並增加了用於 AI 資料處理、治理和工作流程自動化的專用服務。
+
+AIDE 的核心優勢在於其能夠集中化並自動化管理大型分散式資料集的元資料。它可以配置為基於 ONTAP 卷中的資料持續編目和更新元資料存儲，使用戶能夠有效率地搜尋、分類和應用治理策略。其內部處理流程可產生可用於 AI 的資料集，包括建立語意搜尋和檢索任務所需的向量嵌入。
+
+安全性和治理也是其設計的核心。AIDE 提供身份驗證、基於新型 RBAC 角色的存取控制、資料分類和策略驅動的強制執行，以保護敏感資訊。自動編輯、遮罩和稽核日誌記錄等功能可協助您滿足適用的監管要求，並在整個 AI 生命週期中保護關鍵資料。
+
+AIDE 透過提供快速資料發現、整理和工作流程管理的工具，賦能資料工程師和資料科學家。透過專用的 AIDE 控制台和增強的 AFX REST API，使用者可以建立整理好的資料集、執行向量搜索，並與外部 AI 和 GenAI 應用程式整合。AIDE 減少了所需的人工操作，使團隊能夠專注於從資料中提取洞見。
+
+
+
+== 安裝選項
+
+安裝 AIDE 並與 AFX 儲存叢集整合有兩種選擇。
+
+
+
+=== 同時設定 AFX 和 AIDE
+
+同時部署 AFX 儲存系統和 AIDE 可提供統一簡化的安裝流程，確保即時整合和最佳配置。這種一站式解決方案簡化了上線流程，保證了相容性，並使您能夠快速利用功能齊全的 AI 資料平台，這對於尋求快速實現價值的新部署而言是理想之選。
+
+
+
+=== 將 AIDE 與現有 AFX 叢集整合
+
+如果您已安裝並執行了 AFX 儲存集群，您可以隨時新增 AIDE 來增強資料的存取和價值。AIDE 會作為現有 AFX 儲存環境的附加元件進行部署，連接到已建立的叢集儲存網絡，而不會中斷現有運作。整合過程會自動發現可用的 ONTAP 磁碟區並同步元資料。透過 AI 自動化、治理和管理工具，您的資料處理工作流程將會增強，同時保留您現有的儲存基礎架構。
+
+
+
+== 相關資訊
+
+* https://docs.netapp.com/us-en/ai-data-engine/get-started/learn-about.html["了解 AI Data Engine"^]
+* https://docs.netapp.com/us-en/ai-data-engine/faq-aide.html["NetApp AI Data Engine 常見問題"^]
+* https://docs.netapp.com/us-en/ai-data-engine/install-setup/cluster-setup-afx.html["設定您的 ONTAP AIDE 叢集"^]
+* https://www.netapp.com/data-services/ai-data-engine/["NetApp AI Data Engine"^]
+

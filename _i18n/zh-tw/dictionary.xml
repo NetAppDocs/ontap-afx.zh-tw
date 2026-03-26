@@ -1797,7 +1797,6 @@
   <block id="99882077cc5150985de38b05fe43c5bf" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 安裝並設定您的硬體</block>
   <block id="1f9c2a9600aa7017fad495f671dfcc9d" category="inline-link-macro">安裝您的 AFX 儲存系統</block>
   <block id="11aa15e40e1637eea4cb9402a0d516ac" category="inline-link">安裝 AIDE 資料運算節點</block>
-  <block id="699373ac8ea184bb06b16fa3333018c8" category="paragraph"><block ref="a832b8bc8244484582041183718520b7" category="inline-link-macro-rx"></block> 以及（可選）<block ref="c3c6cfb14f39c305fe598a32c865c296" category="inline-link-rx"></block> 如果您也將 AIDE 作為初始配置的一部分包含在內。</block>
   <block id="8a28e13725679cf81ae7a97f135f3151" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 設定叢集</block>
   <block id="67cf641733ab3c2361c8f1f769a0874b" category="inline-link">使用新的 AFX 叢集設定 AIDE</block>
   <block id="35a50ba3ebcc67e69ce937368b540ae9" category="paragraph">按照簡單快速的步驟使用系統管理器<block ref="5f55a5e0ef0b631e2040a3d854a6456f" category="inline-link-macro-rx"></block>您的 ONTAP 叢集。如果您也要在資料運算節點上安裝 AIDE 和 AFX，請查看<block ref="ea340cdc1a42614e036446f1b104ebdd" category="inline-link-rx"></block>以瞭解其他必要的組態。</block>
@@ -1827,4 +1826,5 @@
   <block id="6afed200d44923974d96400177a883ce" category="inline-link">對 AI Data Engine 的全新及增強支援</block>
   <block id="eae4a2342adfae45b252359cd535161d" category="list-text">瞭解<block ref="ac735c3e650d75aa2b1309606d309f7d" category="inline-link-rx"></block>。</block>
   <block id="ec728291e475cad65a149d393bcb1011" category="sidebar">了解 AIDE</block>
+  <block id="a24b3a4fa2af20f41c5f8f436edbe537" category="paragraph"><block ref="a832b8bc8244484582041183718520b7" category="inline-link-macro-rx"></block> 以及選擇性地<block ref="50d1466c5b78eabcde8bd2bc00ff3011" category="inline-link-rx"></block>如果您將 AIDE 作為初始配置的一部分。</block>
 </blocks>

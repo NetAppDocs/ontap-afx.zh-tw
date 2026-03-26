@@ -19,7 +19,7 @@ summary: 要啟動並運行您的 AFX 系統，您需要安裝硬體元件、設
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 安裝並設定您的硬體
 [role="quick-margin-para"]
-link:../install-setup/install-setup-workflow.html["安裝您的 AFX 儲存系統"] 以及（可選） https://docs.netapp.com/us-en/ai-data-engine/install-setup/install-setup-workflow.html["安裝 AIDE 資料運算節點"] 如果您也將 AIDE 作為初始配置的一部分包含在內。
+link:../install-setup/install-setup-workflow.html["安裝您的 AFX 儲存系統"] 以及選擇性地 https://docs.netapp.com/us-en/ai-data-engine/install-setup/aide-hardware-requirements.html["安裝 AIDE 資料運算節點"]如果您將 AIDE 作為初始配置的一部分。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 設定叢集
 [role="quick-margin-para"]

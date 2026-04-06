@@ -764,7 +764,6 @@
   <block id="298a50f0b4f9da25188462848d528731" category="admonition">Cisco Nexus 9332D-GX2B 和 9364D-GX2A 交換器設定到 AFX 1K 儲存系統需要 4x100GbE 分支電纜連接。</block>
   <block id="0b47086f2d53dbb9632d279e9918b4da" category="section-title">步驟 1：將控制器連接到管理網絡</block>
   <block id="682701dba15c7c4c75458bb51c17becf" category="paragraph">將每個交換器上的管理連接埠連接到任一管理交換器（如果訂購）或將其直接連接到管理網路。</block>
-  <block id="d48270c5683eeae465518dbbfacf48fe" category="paragraph">管理連接埠是位於交換器 PSU 側的右上方連接埠。每個交換器的CAT6電纜在安裝完成後都需要穿過直通面板，以連接到管理交換器或管理網路。</block>
   <block id="c7900e3ee1f4eb935f449465b57ad5c1" category="paragraph">使用 1000BASE-T RJ-45 電纜將每個控制器上的管理（扳手）連接埠連接到管理網路交換器。</block>
   <block id="1107155d6b0c900a6485f06681854862" category="image-alt">RJ-45 電纜</block>
   <block id="9c29eb35e98929529d99ca71cd855f4e" category="paragraph">*1000BASE-T RJ-45 電纜*</block>
@@ -775,28 +774,18 @@
   <block id="8637ca13eb3c1a10bb4383130268c950" category="paragraph">將乙太網路模組連接埠連接到您的主機網路。</block>
   <block id="7b528e83c1ae7816f8ec31c6295ac578" category="paragraph">此過程可能會因您的 I/O 模組配置而異。以下是一些典型的主機網路佈線範例。看<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>適合您的特定係統配置。</block>
   <block id="effd554ec19ebcab6d3a374ac9b51cd1" category="list-text">將下列連接埠連接到乙太網路資料網路交換器 A。</block>
-  <block id="a5c5fdf5a84c0bc3e0ec5da0813516da" category="list-text">控制器A（範例）</block>
   <block id="e166f18e211001ff8f47f5d71bd5c254" category="list-text">e2a</block>
   <block id="577e6b9899e57c4e54e43cf79c919f83" category="list-text">e3a</block>
-  <block id="b91a4a6a419923eeb8f97338fc34936b" category="list-text">控制器 B（範例）</block>
   <block id="11db4a2b68c8f1aeb97f773a0dce8ecc" category="paragraph">*100GbE 電纜*</block>
   <block id="c6dd9fad40f1c30f08c8f34623f8ed7d" category="image-alt">100 Gb 乙太網路電纜</block>
   <block id="50f69b736cea52c0f9b7cc77b698390c" category="image-alt">乙太網路電纜</block>
   <block id="808f3fa88e6266b2beb8f1153dd991ec" category="list-text">將下列連接埠連接至乙太網路資料網路交換器 B。</block>
   <block id="53c535a8b8a2c8bb670d136b82e73f99" category="list-text">e2b</block>
   <block id="969d430598a257671bdf944480e4d46b" category="list-text">e3b</block>
-  <block id="595df28a8a4a9361a6231a9d84e8cd08" category="list-text">控制器A</block>
   <block id="9cb7b36b3f2bccc776862e6f2f494077" category="list-text">e1a</block>
-  <block id="a9e70fa35de61f4ac25cc4bcd706a55d" category="list-text">控制器B</block>
   <block id="e737b5ac24a63afc00e81377a906728d" category="list-text">e1b</block>
   <block id="da160308e3b4b4a80bf1b72b5bdbedb8" category="inline-link">Hardware Universe</block>
-  <block id="d7434100057b78673eee73421ad29942" category="list-text">將下列儲存連接埠連接到交換器 A 上的任何非 ISL 連接埠。</block>
-  <block id="405e469b4aa3065616ee04f4a4b2b35e" category="list-text">e10a</block>
-  <block id="2772fdc65a945771c18178a5b650c575" category="list-text">e11a</block>
   <block id="b222cca23840b6a495e76b8c300b08f2" category="image-alt">100 Gb 電纜</block>
-  <block id="dc1921771bb6c193442045d9a99b8c9d" category="list-text">將下列儲存連接埠連接到交換器 B 上的任何非 ISL 連接埠。</block>
-  <block id="d5dec99b9c0f6ad0c56335c85d42e40b" category="list-text">e10b</block>
-  <block id="6dfe0149eb6951bd7c7e5c94c1713869" category="list-text">e11b</block>
   <block id="18154dcfffa2547c8d59ed9df65fb3ac" category="section-title">步驟 5：架設機架到交換器的連接線</block>
   <block id="b1ea5415ee8f031dcace291f9c98e0be" category="paragraph">將 NX224 儲存擴充架連接到交換器。</block>
   <block id="5a684badbec5242d1800f819ca49559e" category="paragraph">有關儲存系統支援的最大架數量以及所有佈線選項，請參閱<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
@@ -1827,4 +1816,11 @@
   <block id="eae4a2342adfae45b252359cd535161d" category="list-text">瞭解<block ref="ac735c3e650d75aa2b1309606d309f7d" category="inline-link-rx"></block>。</block>
   <block id="ec728291e475cad65a149d393bcb1011" category="sidebar">了解 AIDE</block>
   <block id="a24b3a4fa2af20f41c5f8f436edbe537" category="paragraph"><block ref="a832b8bc8244484582041183718520b7" category="inline-link-macro-rx"></block> 以及選擇性地<block ref="50d1466c5b78eabcde8bd2bc00ff3011" category="inline-link-rx"></block>如果您將 AIDE 作為初始配置的一部分。</block>
+  <block id="97b5a2da97dacb4945c7a40a9b91f0ea" category="paragraph">將每個控制器上的管理（扳手）連接埠連接到任一管理交換器，或直接將它們連接到您的管理網路。</block>
+  <block id="be2a2f351864aca4d396a29665b7c035" category="list-text">控制器（Example）</block>
+  <block id="9bbf373797bf7cf7ba62c80023682e25" category="list-text">控制器</block>
+  <block id="cfcad9c82f72d361c92d725ca0bf3a2b" category="list-text">e10a （Storage）</block>
+  <block id="6f6d8208a6030c9676f47f16bbb4e52d" category="list-text">e11a （Storage）</block>
+  <block id="37fea526549e28ae68ef55e55a51f038" category="list-text">e10b （Storage）</block>
+  <block id="6d865fdc8b96603a02615c7c46b07937" category="list-text">e11b （Storage）</block>
 </blocks>

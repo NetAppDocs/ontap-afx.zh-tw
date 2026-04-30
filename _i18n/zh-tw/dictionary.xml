@@ -1748,12 +1748,9 @@
   <block id="14aa705a8a71a02fb1b277002e0c52ed" category="paragraph">使用 4x100GbE 分線電纜將控制器上的叢集連接埠、HA 連接埠和儲存連接埠連接到網路交換器 B。叢集和 HA 互連電纜將連接埠 e1b 和 e7b 連接到交換器 B。e1b 連接埠用於 HA 連接，e7b 連接埠用於叢集連接。對於儲存連接，請將連接埠 e10b 和 e11b 連接到交換器 B。</block>
   <block id="8cff5fa6944271f10e636cadf3153077" category="list-text">將下列控制器連接埠連接至網路交換器 B 上的任意非 ISL 連接埠。</block>
   <block id="3e43f7eeca64d5c830b0064870a6156b" category="admonition">在安裝和維護過程中，請務必配戴連接至已驗證接地點的接地腕帶。未採取正確的 ESD 防護措施可能會對控制器節點、儲存架和網路交換器造成永久性損壞。</block>
-  <block id="1e64a8c98278cbf94fdc5e55cf23d748" category="inline-link-macro">安裝 AIDE 資料計算節點</block>
-  <block id="5d16f9931acd5c0aea8659ad61ec6628" category="admonition">如果您要部署具有 AI Data Engine （AIDE） 的 AFX 1K，請在啟動 AFX 系統後安裝 AIDE 資料計算節點。如需更多資訊，請參閱 <block ref="770e46e4a0d2400ce8dd3c354b4e69c6" category="inline-link-macro-rx"></block>。</block>
   <block id="d9af9d0a822fab56f67da32f96760bcd" category="paragraph">啟動 AFX 1K 儲存系統後，根據您的部署選項完成設定：</block>
   <block id="9f17a32279457eb3f0ec945352a82e96" category="inline-link-macro">設定 AFX 叢集</block>
   <block id="65baec5e9f4a78defefb1154f095ae89" category="list-text">對於專用 AFX 1K 儲存系統部署，請前往<block ref="b434a61d8681e909828695f9b932fe31" category="inline-link-macro-rx"></block>。</block>
-  <block id="2958d97f86a68931454e4d5cb0f3fa2a" category="list-text">對於具有 AI Data Engine（AIDE）的 AFX 1K 部署，請前往 <block ref="770e46e4a0d2400ce8dd3c354b4e69c6" category="inline-link-macro-rx"></block>。</block>
   <block id="7485a9a2ae4ee9755a52213e23e1172c" category="inline-link">如何從 NetApp 支援網站下載 NLF 授權</block>
   <block id="0d31e45cb458235b1c184c1176df0af6" category="list-text"><block ref="0d31e45cb458235b1c184c1176df0af6" category="inline-link-rx"></block></block>
   <block id="d0e68fc1dba1032a2fa3af9f7e71bfc4" category="list-text">25.08.1 之前的 Grafana Harvest 版本</block>
@@ -1785,7 +1782,6 @@
   <block id="d3d9eaa68fa2acc25f51847944519bc7" category="paragraph">您需要決定是僅安裝 AFX 還是同時安裝 AFX 和 AI Data Engine。請查看<block ref="b158da038797eb3a533563ed16d340e2" category="inline-link-rx"></block>以協助您確定最適合您需求的方案。</block>
   <block id="99882077cc5150985de38b05fe43c5bf" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 安裝並設定您的硬體</block>
   <block id="1f9c2a9600aa7017fad495f671dfcc9d" category="inline-link-macro">安裝您的 AFX 儲存系統</block>
-  <block id="11aa15e40e1637eea4cb9402a0d516ac" category="inline-link">安裝 AIDE 資料運算節點</block>
   <block id="8a28e13725679cf81ae7a97f135f3151" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 設定叢集</block>
   <block id="67cf641733ab3c2361c8f1f769a0874b" category="inline-link">使用新的 AFX 叢集設定 AIDE</block>
   <block id="35a50ba3ebcc67e69ce937368b540ae9" category="paragraph">按照簡單快速的步驟使用系統管理器<block ref="5f55a5e0ef0b631e2040a3d854a6456f" category="inline-link-macro-rx"></block>您的 ONTAP 叢集。如果您也要在資料運算節點上安裝 AIDE 和 AFX，請查看<block ref="ea340cdc1a42614e036446f1b104ebdd" category="inline-link-rx"></block>以瞭解其他必要的組態。</block>
@@ -1802,20 +1798,13 @@
   <block id="754aeda810cf43298af8b5d9682a3ff0" category="paragraph-title">其他網路組態</block>
   <block id="3716d7de1273609f72cac60d3ce80a8b" category="paragraph">您還需要以下相關的網路資訊：</block>
   <block id="6f17f12812465b184f0ec95def3e37b7" category="section-title">其他 AIDE 注意事項</block>
-  <block id="9b7a97724bdee6ba810c5f7ed7bb4a23" category="paragraph">首次安裝和設定 AFX 時，您可以選擇性地包含 NetApp AI Data Engine（AIDE）。如果您打算設定 AIDE，則需要先執行下列操作：</block>
-  <block id="d403e07cdcb82bc6254e18c43e49b61e" category="inline-link">安裝 AIDE</block>
-  <block id="f67110073c1073ed49e669e523c3d0aa" category="list-text">務必<block ref="a88dad6aff82834a7260b0bc0d75cb8f" category="inline-link-rx"></block>並將運算節點連接到 AFX 儲存網路。</block>
-  <block id="56e6d9b90dd803813cfcc4eafb5af9c2" category="list-text">取得資料運算節點的位址及任何相關的網路組態。</block>
   <block id="51a1e9578b7b51efdaedcad5b2df0d09" category="list-text">設定 AFX 叢集和控制器節點的 IP 位址。</block>
-  <block id="8e8eb81d1e3ccb55cbe0fb7ab62931e6" category="list-text">如果您要將 AI Data Engine 與 AFX 儲存系統一起安裝，請提供三個 AIDE DCN 節點的 IP 位址。</block>
   <block id="b8bd3c09a7652f21306db623894a4a8e" category="list-text">設定網路服務，包括 DNS 和 NIS。選擇 *Continue* 。</block>
   <block id="b0124f2be19a540828d3e1c546d45955" category="inline-link">設定 AI Data Engine</block>
-  <block id="9aaf27dbeb82d284903572456c7a9c4b" category="list-text">如果您已將 AIDE 納入 AFX 叢集設定中，則需要執行額外的設定步驟，包括授權和驗證。如需更多資訊，請參閱<block ref="bd3118f2bb5e86ecaca641a7e2c5d81b" category="inline-link-rx"></block>。</block>
   <block id="e656cce89d1f00ff5696185aaf4f7d5d" category="list-text"><block ref="e656cce89d1f00ff5696185aaf4f7d5d" category="inline-link-macro-rx"></block></block>
   <block id="6afed200d44923974d96400177a883ce" category="inline-link">對 AI Data Engine 的全新及增強支援</block>
   <block id="eae4a2342adfae45b252359cd535161d" category="list-text">瞭解<block ref="ac735c3e650d75aa2b1309606d309f7d" category="inline-link-rx"></block>。</block>
   <block id="ec728291e475cad65a149d393bcb1011" category="sidebar">了解 AIDE</block>
-  <block id="a24b3a4fa2af20f41c5f8f436edbe537" category="paragraph"><block ref="a832b8bc8244484582041183718520b7" category="inline-link-macro-rx"></block> 以及選擇性地<block ref="50d1466c5b78eabcde8bd2bc00ff3011" category="inline-link-rx"></block>如果您將 AIDE 作為初始配置的一部分。</block>
   <block id="97b5a2da97dacb4945c7a40a9b91f0ea" category="paragraph">將每個控制器上的管理（扳手）連接埠連接到任一管理交換器，或直接將它們連接到您的管理網路。</block>
   <block id="be2a2f351864aca4d396a29665b7c035" category="list-text">控制器（Example）</block>
   <block id="9bbf373797bf7cf7ba62c80023682e25" category="list-text">控制器</block>
@@ -1823,4 +1812,23 @@
   <block id="6f6d8208a6030c9676f47f16bbb4e52d" category="list-text">e11a （Storage）</block>
   <block id="37fea526549e28ae68ef55e55a51f038" category="list-text">e10b （Storage）</block>
   <block id="6d865fdc8b96603a02615c7c46b07937" category="list-text">e11b （Storage）</block>
+  <block id="2f89616ef718a1cdf501f4048f79f110" category="paragraph">NetApp AI Data Engine（AIDE）是一款與儲存整合的 AI 資料服務，運行在連接到 AFX 叢集的運算節點上。您可以選擇使用以下兩種部署模型之一，將 AIDE 安裝並整合到您的 AFX 叢集中：NetApp 提供的資料運算節點（DCN）或在第三方伺服器上部署 AIDE 軟體。NetApp DCN 部署提供完整的 AIDE 功能，而第三方伺服器部署則專注於元資料。</block>
+  <block id="26bf1fb96884a6d564b885faac9346fe" category="inline-link">安裝 AIDE 第三方伺服器</block>
+  <block id="0feacb0d94d23bf1fee14eae79e870cd" category="inline-link">安裝 AIDE NetApp 資料運算節點</block>
+  <block id="d038ff5d4df9255a9c0316641b289913" category="paragraph"><block ref="a832b8bc8244484582041183718520b7" category="inline-link-macro-rx"></block> 以及選擇性的 <block ref="55438a0ee0065472ca14633bb4190e20" category="inline-link-rx"></block> 或 <block ref="2e7d33dc5887b0da93aae67b0f923c5c" category="inline-link-rx"></block>（如果您將 AIDE 納入初始組態的一部分）。</block>
+  <block id="bd9ad7be68120900030f68ff19b5b1e4" category="paragraph">首次安裝和設定 AFX 時，您可以選擇包含 NetApp AI Data Engine（AIDE）。AIDE 支援兩種部署模式：第三方伺服器上的 AIDE 軟體或 NetApp 提供的資料運算節點（DCN）。如果您打算設定 AIDE，請先完成部署模式所需的先決條件：</block>
+  <block id="bf53bb5aa0413b6868cea02f2c24f170" category="inline-link">在第三方伺服器上安裝 AI Data Engine 的硬體</block>
+  <block id="1f9fa35f3b88c59775937f1382277c15" category="inline-link">在第三方伺服器上安裝 AIDE 軟體</block>
+  <block id="2531713737eb86bda494a4c431d75639" category="list-text">對於第三方伺服器部署，請完成<block ref="d5b26b1f5ada71a4220042a5d6aef0e3" category="inline-link-rx"></block>，然後<block ref="77329e7d1925c704e553ae44f4833aec" category="inline-link-rx"></block>。</block>
+  <block id="cd260db427b0e8de4b6152a0d113773b" category="inline-link">在 NetApp 提供的資料運算節點上安裝 AI Data Engine 的硬體</block>
+  <block id="d641ea3e8a3406887e82efb694adcee3" category="list-text">對於 NetApp DCN 部署，請完成<block ref="c15fb65309a0948930bd70e0eed618f3" category="inline-link-rx"></block>。</block>
+  <block id="671c5433927bc9dfd6b61da2ab79dd6d" category="list-text">取得運算節點的位址和任何相關的網路組態。</block>
+  <block id="4ba7d969d3c09dfd698e8db23d272f9e" category="list-text">如果您要將 AI Data Engine 與 AFX 儲存系統一起安裝，請提供三個運算節點的 IP 位址。</block>
+  <block id="9f492f03b9dc61bbcd50dd10c6f65d02" category="list-text">如果您已將 AIDE 整合到 AFX 叢集設定中，請完成額外的 AIDE 設定步驟。身份驗證配置適用於所有 AIDE 部署。使用已授權 AIDE 功能的 NetApp DCN 部署需要獲得許可；第三方伺服器部署專注於中繼資料，無需 AIDE 許可證。如需更多資訊，請參閱<block ref="bd3118f2bb5e86ecaca641a7e2c5d81b" category="inline-link-rx"></block>。</block>
+  <block id="a1ac1e4ef8ad5ef211eee25ab52448af" category="paragraph">如果您要部署具有 AI Data Engine（AIDE）的 AFX 1K，則可以在完成 AFX 系統的安裝後安裝 AIDE 資料運算節點。</block>
+  <block id="79f06cc713b63c00f3f4c906219bbb17" category="inline-link">在第三方伺服器上搭載 AIDE 軟體的 AI Data Engine 需求</block>
+  <block id="6a12977e2cc394f47a7265809fa30061" category="list-text">對於第三方伺服器部署，請參閱<block ref="216082099dd458e387ea1ec05818ffcf" category="inline-link-rx"></block>和<block ref="77329e7d1925c704e553ae44f4833aec" category="inline-link-rx"></block>。</block>
+  <block id="701208c90aa7ca244e696c853da7a08f" category="inline-link">AI Data Engine 對 NetApp 所提供的資料運算節點的需求</block>
+  <block id="1087440b8e57c1c16de3ff366293314d" category="list-text">有關 NetApp DCN 部署，請參閱<block ref="364d48f5ea1b31d0e89302baf07337b8" category="inline-link-rx"></block>。</block>
+  <block id="67add66066f52297e3d254e9771fa694" category="list-text">對於搭載 AI Data Engine（AIDE）的 AFX 1K 部署，請安裝 AIDE 第三方伺服器或 NetApp 提供的資料運算節點：</block>
 </blocks>

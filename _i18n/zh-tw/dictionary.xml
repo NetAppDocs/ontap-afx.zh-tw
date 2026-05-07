@@ -46,20 +46,13 @@
   <block id="49d90ebf58826726d312cf6ef4c4a365" category="paragraph">您可以在 AFX 部署中設定和使用多種可選的儲存管理和效能功能。</block>
   <block id="057b0a61093f8c5a3fd2cb091c2487ed" category="section-title">ONTAP NAS 儲存管理</block>
   <block id="9a7a0f1104963c42c2710b02915c3716" category="inline-link">NAS儲存管理</block>
-  <block id="96d4d0a4d3683684386667f3537301b0" category="paragraph">網路附加儲存 (NAS) 提供專用文件存儲，可供網路中的多個用戶端存取。 ONTAP支援多種 NAS 協定。參考<block ref="5a12468a094b7ac3a6242787d7d649a9" category="inline-link-rx"></block>了解更多。</block>
-  <block id="4e59e775225da37265a8902119d82992" category="inline-link">了解ONTAP FlexCache卷</block>
-  <block id="779755990ca58135bf4cfa4707ddbd6c" category="paragraph">FlexCache是​​ONTAP 的遠端快取功能。它使數據更接近客戶端，從而提高存取效能並降低成本。建立FlexCache磁碟區（最初僅從原始檔案系統複製元資料）可簡化檔案散佈並減少 WAN 流量。參考<block ref="8586d1d402de18023c61e6177e30172a" category="inline-link-rx"></block>了解更多。</block>
   <block id="be11a39b915644a1e65c81e32c070b68" category="section-title">ONTAP FlexGroup卷</block>
   <block id="2ad76da4da3aa0cbabd66aeb0f1572ae" category="inline-link">FlexGroup卷設定</block>
-  <block id="02ddf5b25cc6ef3a72b0ad352ff66521" category="paragraph">FlexGroup磁碟區由多個成員磁碟區組成，這些成員磁碟區會自動且透明地共用流量。 FlexGroup卷具有多種優勢，包括高效能和簡化的管理。參考<block ref="63895c5e62230764dd21746cff7332a8" category="inline-link-rx"></block>了解更多。</block>
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="section-title">資料保護</block>
   <block id="5a03d27c72cc0c41eec3cb2eb030cdd6" category="paragraph">您可以在 AFX 部署中設定和使用多種可選的資料保護功能。</block>
   <block id="6165c4352e1504dbaeef34d0cc50c187" category="section-title">一致性組</block>
   <block id="c787098ec77629691b918cef145e8e2b" category="inline-link">了解ONTAP一致性組</block>
-  <block id="553d5c04d3b6848d5d2c375027218fb2" category="paragraph">一致性組是作為單一單元進行管理的磁碟區的集合。參考<block ref="1d797ba417ec088935d1e276649d9717" category="inline-link-rx"></block>了解更多。</block>
   <block id="acdc6b4f6edd40f37bce01247a32ff86" category="section-title">SnapLock</block>
-  <block id="5641890857d855addbaf3e3074d37f96" category="inline-link">了解ONTAP SnapLock</block>
-  <block id="b9476488ba06770e5c543d441ead26ab" category="paragraph">您可以透過在磁碟區層級將檔案轉換為一次寫入多次讀取 (WORM) 狀態來保護檔案。 SnapLock支援兩種模式。合規模式確保文件在保留期到期之前不能被刪除，這滿足了政府或行業特定的要求。企業模式允許特權使用者在保留期到期之前刪除檔案。參考<block ref="961426c728ee82adbe3a73025990fea9" category="inline-link-rx"></block>了解更多。</block>
   <block id="d4ebca245013c8e11a21200cf7abd53f" category="section-title">ONTAP事件和效能監控</block>
   <block id="c19e19aadc6d75262a0f85886dc5deb3" category="inline-link">事件、效能和健康監控</block>
   <block id="e5037510086003d93a3daf34030bf4c4" category="inline-link-macro">AFX 叢集的附加管理</block>
@@ -382,9 +375,7 @@
   <block id="8c10cb2ce36c4290ea15f00c954019c9" category="inline-link">ONTAP SVM 資料移動性</block>
   <block id="b229244f98d8e9c60a6847468959dcc3" category="list-text"><block ref="b229244f98d8e9c60a6847468959dcc3" category="inline-link-rx"></block></block>
   <block id="56491087e809d9c88a6bbada6750e79d" category="summary">您可以顯示 AFX 叢集效能的進階概覽。</block>
-  <block id="a650528b859ac27025201a1a9b9a5691" category="doc">監控 AFX 儲存系統叢集效能</block>
   <block id="83f73443b8e5ae5f7dc3654ef7bffac3" category="section-title">儲存容量</block>
-  <block id="fb744f68867236e6e6e1bbc5b1d4cc74" category="paragraph">系統管理器儀表板包括叢集儲存利用率的進階顯示。</block>
   <block id="e44852debac5a9e5a6473708a4fa03d6" category="list-text">在系統管理員中，選擇導覽窗格中的「*儀表板*」。</block>
   <block id="d35f807031be514353c155302f3cc5ed" category="list-text">找到*容量*圖塊並查看可用和已使用的實體儲存。</block>
   <block id="acbaa01efa8b6508857616a630c8b0cc" category="list-text">選擇*歷史記錄*存取Active IQ查看歷史資料。</block>
@@ -649,7 +640,6 @@
   <block id="44abd47dc22d8944944122617fadf4fe" category="paragraph">與 Unified ONTAP一樣，AFX 叢集節點配置為高可用性 (HA) 對，以實現容錯和無中斷運行。 HA 配對使得儲存操作能夠在發生節點故障（例如儲存故障轉移）時保持在線。每個節點都與另一個節點配對，形成一對。這通常是透過兩個節點的NVRAM模組之間的直接連接來完成的。</block>
   <block id="f1fda245e68667d714e981e6aef06611" category="paragraph">使用 AFX，新的 HA VLAN 被加入到後端叢集交換機，以使NVRAM模組能夠在 HA 夥伴節點之間保持連接。  HA 對仍然與 AFX 系統一起使用，但不再需要直接連接合作夥伴節點。</block>
   <block id="4f153ef27e03f77db56acbf6b56a9003" category="list-text">每個叢集的控制器節點</block>
-  <block id="e9f7ded0687b255de1c10debe9fb0f7d" category="list-text">每個 AFX 叢集必須至少有四個節點。最大節點數根據ONTAP版本的不同而不同。</block>
   <block id="20940568e8a8df65f4ded7552f91cb5a" category="section-title">確認 AFX 系統健康狀況</block>
   <block id="32b20b465c25cf57c303655ae17c2681" category="paragraph">在執行任何 AFX 管理任務之前，您應該檢查叢集的健康狀況。</block>
   <block id="9d7934850e239388cf4ca1ba33e75b38" category="admonition">您可以隨時檢查 AFX 叢集的健康狀況，包括當您懷疑有操作或效能問題時。</block>
@@ -1581,7 +1571,6 @@
   <block id="41935759e3103eaecb4e639fabcfeaf8" category="list-text">*AFX* - AFX ONTAP特性提供了一種分解的解決方案，旨在滿足高效能 NAS 和 S3 工作負載（包括 AI/ML 應用程式）的嚴格要求。AFX 系統為需要可擴充、高吞吐量檔案和物件儲存的客戶提供專門的功能。</block>
   <block id="4a4f6533cdc5a6d5e2e86605c2f59747" category="list-text">* ASA r2* - ASA r2 ONTAP特性提供了專為僅 SAN 環境設計的分解解決方案。<block ref="e4ca437dd887d2a61be13c7ee5ecdac0" category="inline-link-rx"></block>  簡化區塊工作負載的儲存體驗，為 SAN 客戶提供簡化的管理和最佳化的效能。</block>
   <block id="523837832bb488119118889ecba260ea" category="section-title">AFX 群集部署限制</block>
-  <block id="6a304cee8eaf01d4c0221bb8185c36ae" category="paragraph">在配置和使用叢集時，AFX 會強制執行多項限制，包括最小值和最大值。這些限制分為幾類，包括：</block>
   <block id="fb2af5c08b54884bae80e5f29c0d24f3" category="list-text">這是叢集儲存可用區 (SAZ) 中所有 SSD 磁碟的總容量。最大儲存容量根據ONTAP版本而有所不同。</block>
   <block id="4c1c93397a0ad82f0b80502a6c7c0799" category="list-text"><block ref="4c1c93397a0ad82f0b80502a6c7c0799" category="inline-link-rx"></block></block>
   <block id="f6735f5b05187d612456240f1b4e15a9" category="list-text"><block ref="f6735f5b05187d612456240f1b4e15a9" category="inline-link-rx"></block></block>
@@ -1699,9 +1688,6 @@
   <block id="2b9e4f1d12477d7c60c4bdda5204b441" category="inline-link">了解ONTAP檔案系統分析</block>
   <block id="9f1fbf578c51e2bec88398ab0ce2b672" category="list-text"><block ref="9f1fbf578c51e2bec88398ab0ce2b672" category="inline-link-rx"></block></block>
   <block id="1a0f4bec43cf474af35c9e77aa8c28af" category="section-title">FPolicy</block>
-  <block id="4793cb6d96d5d4cc5414378f2e112491" category="inline-link">了解ONTAP FPolicy 解決方案</block>
-  <block id="2eeb3252b3af5fe61779a84830d2e434" category="paragraph">FPolicy 是一個文件存取通知框架，用於監控和管理儲存虛擬機器 (SVM) 上的文件存取事件。您可以使用 FPolicy 建立策略，根據您定義的標準來定義要監視的檔案操作，並可選擇封鎖這些操作。 FPolicy 通常用於安全審計、合規性和資料治理。請參閱<block ref="ebf1bc585900d5a5c7e4dd72e223b4f2" category="inline-link-rx"></block>了解更多。</block>
-  <block id="148f6424d726591d91b9421c2ce15592" category="paragraph">您可以監控叢集的健康和效能。這包括設定事件警報和管理系統健康警報通知。請參閱<block ref="a6cdc1834b78b8b89ee92bbe49904c07" category="inline-link-rx"></block>了解更多。</block>
   <block id="e37cca0fa7c8107fb5020cf4582f3929" category="inline-link">在ONTAP中產生並安裝由 CA 簽署的伺服器證書</block>
   <block id="231f720f91efedbb9764ddf8fda35120" category="list-text"><block ref="231f720f91efedbb9764ddf8fda35120" category="inline-link-rx"></block></block>
   <block id="f24bbb5da9459bbeeaa879e76bdb2ef5" category="list-text"><block ref="f24bbb5da9459bbeeaa879e76bdb2ef5" category="inline-link-rx"></block></block>
@@ -1802,8 +1788,6 @@
   <block id="b8bd3c09a7652f21306db623894a4a8e" category="list-text">設定網路服務，包括 DNS 和 NIS。選擇 *Continue* 。</block>
   <block id="b0124f2be19a540828d3e1c546d45955" category="inline-link">設定 AI Data Engine</block>
   <block id="e656cce89d1f00ff5696185aaf4f7d5d" category="list-text"><block ref="e656cce89d1f00ff5696185aaf4f7d5d" category="inline-link-macro-rx"></block></block>
-  <block id="6afed200d44923974d96400177a883ce" category="inline-link">對 AI Data Engine 的全新及增強支援</block>
-  <block id="eae4a2342adfae45b252359cd535161d" category="list-text">瞭解<block ref="ac735c3e650d75aa2b1309606d309f7d" category="inline-link-rx"></block>。</block>
   <block id="ec728291e475cad65a149d393bcb1011" category="sidebar">了解 AIDE</block>
   <block id="97b5a2da97dacb4945c7a40a9b91f0ea" category="paragraph">將每個控制器上的管理（扳手）連接埠連接到任一管理交換器，或直接將它們連接到您的管理網路。</block>
   <block id="be2a2f351864aca4d396a29665b7c035" category="list-text">控制器（Example）</block>
@@ -1831,4 +1815,95 @@
   <block id="701208c90aa7ca244e696c853da7a08f" category="inline-link">AI Data Engine 對 NetApp 所提供的資料運算節點的需求</block>
   <block id="1087440b8e57c1c16de3ff366293314d" category="list-text">有關 NetApp DCN 部署，請參閱<block ref="364d48f5ea1b31d0e89302baf07337b8" category="inline-link-rx"></block>。</block>
   <block id="67add66066f52297e3d254e9771fa694" category="list-text">對於搭載 AI Data Engine（AIDE）的 AFX 1K 部署，請安裝 AIDE 第三方伺服器或 NetApp 提供的資料運算節點：</block>
+  <block id="9446a98ad14416153cc4d45ab8b531bf" category="section-title">效能</block>
+  <block id="345b766b796f651335c71b9f6b81cfdc" category="paragraph">利用 ONTAP 的常用功能來優化 AFF 儲存系統叢集的效能。</block>
+  <block id="61dd3b29ebbda633eaa5595a4948d71f" category="section-title">修改控制自動 QoS 吞吐量上限增加的預設設定</block>
+  <block id="94600295107637045ae7497db8aad330" category="paragraph">預設情況下，自適應和非自適應 QoS 原則群組會自動啟用，以便在短期內將工作負載的處理量上限暫時提高 50%，持續 1 秒，從而回應對更高效能的短期需求。從 ONTAP 9.19.1 開始，您可以修改這些預設設定。在 ONTAP 9.18.1 及更早版本中，這些設定無法變更。</block>
+  <block id="828fdd2a06dc14432a1adccecfd282a8" category="inline-link-macro">QoS 吞吐量上限</block>
+  <block id="c7b499818585b7be547b8eaab769148a" category="paragraph">請參閱<block ref="3f42ae70763faee54a340e7f6afafb6b" category="inline-link-macro-rx"></block>。</block>
+  <block id="5353ac6f70c00977b80e72c8f0907604" category="section-title">ONTAP TLS 硬體卸載</block>
+  <block id="8863838c87c7804c533b11593435d494" category="inline-link">設定 ONTAP TLS 硬體卸載</block>
+  <block id="f9aa958da9fbcaa0269654c62d465499" category="paragraph">您可以將整個叢集的傳輸層安全性（TLS）加密和解密任務卸載到支援的乙太網路卡上。這可以降低 CPU 開銷，並提高使用 TLS 的系統的效能。如需詳細資訊，請參閱<block ref="0de92ceec83ca51b4ece73a71650833c" category="inline-link-rx"></block>。</block>
+  <block id="a81ef30e221c242fbc0c2d74ef86f12e" category="paragraph">網路附加儲存（NAS）提供專用檔案儲存空間，可供網路中的多個用戶端存取。ONTAP 支援多種 NAS 協定。深入瞭解<block ref="5a12468a094b7ac3a6242787d7d649a9" category="inline-link-rx"></block>。</block>
+  <block id="f240942303612052168764d58a8a08da" category="paragraph">FlexCache 是 ONTAP 的一項遠端快取功能。它將資料更靠近用戶端，從而提高存取效能並降低成本。建立一個 FlexCache Volume，該 Volume 最初僅從來源檔案系統複製 Metadata，從而簡化檔案分發並減少 WAN 流量。深入瞭解<block ref="e19ced3d3f1077b5f0ff0996624fbfac" category="inline-link-rx"></block>。</block>
+  <block id="5f0b7bf4d897304bb96e05e5f47dcbcc" category="paragraph">FlexGroup Volume 由多個成員 Volume 組成，這些成員 Volume 可以自動透明地共享流量。FlexGroup Volume 具有諸多優勢、包括高效能和簡化的管理。深入瞭解<block ref="63895c5e62230764dd21746cff7332a8" category="inline-link-rx"></block>。</block>
+  <block id="1303c20cd830975438100525e4e6a204" category="section-title">跨檔案循序讀取</block>
+  <block id="ec53a4a7cf9bd72f345e28fb0f27766d" category="paragraph">跨檔案順序讀取（CFSR）是 ONTAP 9.19.1 及更高版本 AFX 系統中的一項功能，可提升影片編輯及相關應用程式的效能。對於將視訊幀儲存為單獨的順序檔案（通常每個檔案大小為 50 至 250 MB）的工作流程，CFSR 可根據順序檔案名稱模式智慧預測並預先擷取下一個檔案。最多可預先擷取 10 個檔案或 500 MB 的資料，從而顯著降低讀取延遲，並確保以每秒 30 幀的速度流暢播放 4K/8K 原始影片。</block>
+  <block id="9ffce7fb8e54f56696551b44d500b57a" category="paragraph">在執行 ONTAP 9.19.1 或更新版本的 AFX 系統上，CFSR 預設為啟用，但您需要在個別磁碟區上明確啟用。儲存管理員可以使用 ONTAP CLI 或同等的 REST API 呼叫來設定此功能。使用 CLI 時，您可以在建立新磁碟區的過程中啟用 CFSR。您也可以使用下列命令更新現有的磁碟區：</block>
+  <block id="71b43bbd135006cd264ab9afb0020754" category="paragraph"><block ref="b9eabbf8f8b7363563ddb247c501f7ee" prefix="" category="inline-code"></block></block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="listing-title">範例</block>
+  <block id="8edcee6512b2b3e11e535126bf66af86" category="paragraph">CFSR 功能與 FlexVol 和 FlexGroup Volume 相容，且與檔案副檔名無關，支援十進位和十六進位檔案名稱編號方案。對於 NFSv4.x 傳輸協定，CFSR 與多傳輸協定 I/O（MPIO）讀取功能整合，透過直接從記憶體提供後續讀取來進一步提升效能。CFSR 僅適用於 AFX 系統，且對支援的 Volume 有所限制。下列 Volume 類型不支援 CFSR：</block>
+  <block id="b97498dbcf9d6ad57e16ce8b492677b5" category="list-text">FabricPool 啟用的磁碟區</block>
+  <block id="6f83d52840f8642f00fd83bd7d3a63f6" category="list-text">FlexCache 端點磁碟區</block>
+  <block id="0775c49b198cbabce2a6c367caf92118" category="list-text">SnapMirror 目的地磁碟區</block>
+  <block id="8b1aed3de1c31ff18685e8461b7f1ee3" category="paragraph">CFSR 不支援任何其他 ONTAP 平台（FAS、AFF 或 ASA）或雲端部署，例如 Cloud Volumes ONTAP。它可以在啟用或停用 GDD 的 FlexGroup 磁碟區上運行。但是，由於視訊幀檔案通常遠小於 GDD 的最小分段大小，GDD 無法有效地將這些檔案條帶化到各個 FlexGroup 組成部分。這意味著 GDD 對 CFSR 的檔案預取行為幾乎沒有直接影響。</block>
+  <block id="a1ff961d82619f0f75cfd94e5bd12786" category="inline-link">ONTAP 一致性群組</block>
+  <block id="f7befbba1ef4605a6e87e203bf3bcfb7" category="paragraph">一致性群組是作為單一單元管理的磁碟區集合。深入瞭解<block ref="539740ae54ead95aa89257ecb3131e33" category="inline-link-rx"></block>。</block>
+  <block id="af30d81f9a8c2c0f5b25d08da7858ddc" category="inline-link">ONTAP SnapLock</block>
+  <block id="4993f5d84497d864e50ae30a1440d9c4" category="paragraph">您可以將檔案轉換為磁碟區層級的一次寫入多次讀取（WORM）狀態來保護檔案。SnapLock 支援兩種模式。Compliance 模式確保檔案在保留期到期前無法刪除，從而滿足政府或行業特定要求。Enterprise 模式允許特權使用者在保留期到期前刪除檔案。深入瞭解<block ref="07d696bcee67d91842559dd4ae3acf62" category="inline-link-rx"></block>。</block>
+  <block id="fd18465573ec21a6218982055981f6b1" category="section-title">儲存效率</block>
+  <block id="dfdcc5b12452d4e08907c16e1c9e522a" category="paragraph">ONTAP 提供多種儲存效率功能，可協助您最佳化儲存使用並降低成本。</block>
+  <block id="d2faa14ab70288d07188a62b2f1242e8" category="section-title">全域重複資料刪除</block>
+  <block id="83f45cad5e6f535ff10e564a526baad0" category="inline-link">重複資料刪除</block>
+  <block id="eb4cc3c2b6dc052414756a8693c56e60" category="inline-link">ONTAP 儲存效率</block>
+  <block id="3ee3130b03d52a7a5e1a41c14cce1a62" category="paragraph"><block ref="e7bb8c41e713a5e09c5b6c4aa21afc7c" category="inline-link-rx"></block> 是一項 <block ref="30cea8cc21e75ae75b4c274f3027b5c5" category="inline-link-rx"></block> 功能，可透過識別和移除重複的資料區塊來降低實體儲存需求。傳統的重複資料刪除作業可在磁碟區或集合體層級進行。這項現有功能可為所有 ONTAP 平台的客戶提供顯著的儲存效率。</block>
+  <block id="36274f9cffa9c3a6538b6416731328dc" category="paragraph">從 ONTAP 9.19.1 開始，AFX 引入了新的操作範圍，將重複資料刪除擴展到整個儲存可用區（SAZ）。全域重複資料刪除在磁碟區級重複資料刪除的基礎上，自動消除整個 SAZ 中所有磁碟區上的重複資料區塊。全域重複資料刪除工作階段會自動觸發，無需人工幹預即可確保最佳的節省效果。</block>
+  <block id="73d0b69e3580f55144d741f104a398ce" category="paragraph">AFF A1K 系統預設啟用全域重複資料刪除功能，該功能在背景透明運行，對效能的影響極小。無需功能授權，且該功能可與現有的儲存效率技術（包括壓縮和精簡）無縫整合。透過全域重複資料刪除所實現的節省將透過儲存效率指標進行報告。對於資料頻繁地跨多個磁碟區共享或複製的應用程式工作負載，此功能尤其有利。</block>
+  <block id="ac31395328b246f66c058221c318c5a6" category="inline-link">ONTAP FPolicy 解決方案</block>
+  <block id="f9f90a47b55629ce4982062305aeaa14" category="paragraph">FPolicy 是一個檔案存取通知框架，用於監控和管理儲存虛擬機器（SVM）上的檔案存取事件。您可以使用 FPolicy 建立策略，根據您定義的條件，定義要監控的檔案操作，並可選擇封鎖這些操作。FPolicy 通常用於安全審計、合規性和資料治理。了解更多<block ref="2cbc056381fa6ce97acee98d3e7706ac" category="inline-link-rx"></block>。</block>
+  <block id="07ab6f4af7937aab4a83213e8805f4be" category="paragraph">您可以監控叢集的健全狀況和效能。這包括設定事件警示和管理系統健全狀況警示的通知。深入瞭解<block ref="a6cdc1834b78b8b89ee92bbe49904c07" category="inline-link-rx"></block>。</block>
+  <block id="accf00d5fc4a1f9c1d6a53eebcd55454" category="doc">監控 AFF 儲存系統叢集效能和儲存使用率</block>
+  <block id="0cb46562c9e3eb5ec5c992d8bbda59ae" category="paragraph">您可以顯示 AFF 叢集的效能和儲存使用率的高階概觀。</block>
+  <block id="019ee4c7c3f3603e3479c3236ac3ba55" category="paragraph">監控儲存使用率，確保您擁有足夠的儲存容量來滿足目前和未來的工作負載需求。</block>
+  <block id="8325c349a81657aa68658f6dfe8cc0ba" category="section-title">監控高階叢集儲存使用率</block>
+  <block id="5bbf4db0552ce5aed4684688f682d477" category="paragraph">在 ONTAP System Manager 中、您可以檢視整個叢集的儲存使用率高階顯示。</block>
+  <block id="d9ac41c6f29654588c382a291bb7fbd1" category="section-title">監控儲存可用區容量詳細資料</block>
+  <block id="a8e966aed44d379dbc42c2c852f2de32" category="paragraph">從 ONTAP 9.19.1 開始，您可以檢視儲存可用區的容量詳細資料，包括空間臨界值、快照所耗用的空間以及資料精簡。您也可以將空間使用量臨界值設定為您希望 ONTAP 產生警告和嚴重警示的百分比。</block>
+  <block id="ba8b1e81f4e4ad69f73393700da9baac" category="list-text">在 System Manager 中、選取 *Cluster &gt; Overview* 、然後選取 *Availability zone* 。</block>
+  <block id="2e552ef32be6f92ce392e84bf2d8e306" category="inline-image-macro">藍色鉛筆編輯圖示</block>
+  <block id="c7a0726e75447c05e53bbb2e9dda315f" category="list-text">若要修改警告或嚴重空間臨界值，請在要編輯的臨界值下選取 <block ref="c0bf7cb59ecb5afb4c0c97bf4daf3397" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="0000dac1f1d7d52694ae1c57ec4c4952" category="section-title">在計劃升級之前執行自動升級前檢查</block>
+  <block id="1e136489f0f4579da4728cecbc41c760" category="paragraph">您無需正在進行 ONTAP 軟體升級即可執行 ONTAP 自動升級預檢查。獨立於 ONTAP 自動升級程序執行預升級檢查，可讓您查看針對叢集執行的檢查項目，並取得一份錯誤或警告列表，以便在開始實際升級之前進行修正。</block>
+  <block id="97b8d819cd6f1c3d1e12d20c69bc9343" category="paragraph">從 ONTAP 9.19.1 開始、錯誤和警告會分開顯示、以協助您輕鬆識別升級前必須解決的問題。</block>
+  <block id="170743be2a6a78b5fbd04a46f5573078" category="inline-link-macro">學習如何執行 ONTAP 自動升級前檢查</block>
+  <block id="8be77a2049d797a572f777fdb84e8649" category="paragraph"><block ref="8763d61324a33658e2ac5dae03cea487" category="inline-link-macro-rx"></block>.</block>
+  <block id="929a1409e86daea3b473f0180fc6b678" category="inline-link">ONTAP System Manager SVM 管理員儀表板</block>
+  <block id="2de6d638a130f9818bda5d9a251ad5c8" category="admonition">從 ONTAP 9.19.1 開始、SVM 管理員可以使用專用的 System Manager 儀表板來監控和管理自己的 SVM。深入瞭解<block ref="2185e3072c3ca27b5462a691693a5a31" category="inline-link-rx"></block></block>
+  <block id="867daeeeb6f3e3dbf90bc2470bdf5fa3" category="paragraph">AFX 在設定和使用叢集時會強制執行一些限制，包括最小值和最大值。這些限制分為以下幾類。</block>
+  <block id="e03d1a6e5f175f9e1dca199acd1ed7a4" category="admonition">在提升 AFX 儲存系統的任何運作參數之前，您應該評估其對應用程式以及整個叢集的影響。例如，增加控制器節點數量雖然可以提高整體容量，但也可能會增加叢集網路的流量。因此，了解這些組態變更的影響以及它們可能對您的環境造成的影響至關重要。</block>
+  <block id="737a863c22a0501aae47dfc0b82907b3" category="list-text">每個 AFX 叢集必須至少有四個節點。最大節點數取決於 ONTAP 版本；例如，9.19.1 RC 版本允許每個 AFX 叢集最多有 32 個節點。</block>
+  <block id="471b5d11017777fb374abe9e4f2cfed4" category="paragraph">隨時了解 ONTAP 對 S3 儲存支援的最新變更和更新也至關重要。例如，從 ONTAP 9.19.1 開始，您可以為每個 S3 使用者產生第二個存取金鑰。這樣，即使原始存取金鑰過期，您仍然可以存取 S3 資源。您也可以控制條件操作（寫入、複製、刪除）的強制執行。</block>
+  <block id="1f88cf259e7331ee9666de0aed1e61b2" category="inline-link">重新產生 ONTAP S3 金鑰並修改其保留期限</block>
+  <block id="da33e3b3b6f0f55817eb5e53583085c6" category="list-text"><block ref="da33e3b3b6f0f55817eb5e53583085c6" category="inline-link-rx"></block></block>
+  <block id="1338d36244d668a642dfc6cca5a1c144" category="inline-link">向預設 ONTAP S3 儲存區原則新增存取規則</block>
+  <block id="64f4444ba55f9951fddb7993dc2eb691" category="list-text"><block ref="64f4444ba55f9951fddb7993dc2eb691" category="inline-link-rx"></block></block>
+  <block id="424a10335c5c90e5b96111de1934acec" category="inline-link">AI Data Engine</block>
+  <block id="1f237fc34e7dd74398581eefc40958c3" category="admonition">了解新增和增強的支援 <block ref="50cef57effbd6fcf26f3b3db513271ba" category="inline-link-rx"></block>。</block>
+  <block id="10d7bfdf332491f86c54ec3d92031af9" category="summary">了解 ONTAP 9.19.1 中包含的、可與您的 AFX 儲存系統一起使用的新功能。</block>
+  <block id="9ebdbbd8dbfbcf6224092a44e6772af0" category="doc">AFX 儲存系統的 ONTAP 9.19.1 新功能</block>
+  <block id="a0c84a4c41f756ea7750bb10b0423e11" category="section-title">效能與擴充性</block>
+  <block id="0d0331cbf0e501ed4e4912dc043a60c7" category="cell">擴充的 AFX 叢集大小</block>
+  <block id="25bb096e1dae008973cf4d1cbcb776f6" category="paragraph">ONTAP 9.19.1 支援將 AFX 叢集擴展到最多 32 個節點。這使您可以擴展 AFX 儲存系統，以滿足不斷增長的工作負載和應用程式需求。</block>
+  <block id="5713c60dfa0d2bc57e54b11e4a1b6cfe" category="cell">跨檔案循序讀取 (CFSR)</block>
+  <block id="4c400b26187ab8dd0971020d23077db3" category="paragraph">Cross File Sequential Read 可大幅改善特定媒體和娛樂工作負載的讀取效能。此功能可智慧預先擷取連續視訊框架、大幅改善視訊編輯應用程式的處理量、並減少延遲。如需詳細資訊、請參閱 <block ref="d20869026a82d2608dc3e8932f1a0bfe" category="inline-link-macro-rx"></block>。</block>
+  <block id="9d8ca8942805bbef83b9c607e5358741" category="paragraph">全域重複資料刪除功能將 ONTAP 重複資料刪除的空間節省範圍擴展到整個儲存可用區（SAZ）。透過消除 SAZ 中所有磁碟區上的重複資料區塊，它可以顯著提高儲存效率並降低整體擁有成本。此功能在 AFX 系統上預設啟用，無需管理員配置即可透明運作。如需更多資訊，請參閱 <block ref="d20869026a82d2608dc3e8932f1a0bfe" category="inline-link-macro-rx"></block>。</block>
+  <block id="5726d8d4b7f0b6d793e33cbdb3ddf7aa" category="cell">Kubernetes 儲存協調的平衡放置增強功能</block>
+  <block id="f77466cfbba999a74a9b2bfdbefe7288" category="paragraph">ONTAP 9.19.1 在<block ref="3f7ecfe68df8aae32ef20639ae717f55" prefix=" " category="inline-code"></block> REST API 端點中新增了六個目前可用的參數至<block ref="74c1b9ffe0a04056613523d15a186b5a" prefix=" " category="inline-code"></block> 端點。此項增強功能讓使用 NetApp Trident 進行 Kubernetes 儲存協調的客戶能夠利用 ONTAP 原生的平衡配置功能來建立磁碟區。</block>
+  <block id="5473f7e1d0ef87e9a99388e05733c203" category="cell">符合資格的 SnapMirror 主要磁碟區的 ARP/AI 支援</block>
+  <block id="3def1da8e6d471a763e2b21ec25e0c82" category="paragraph">ARP/AI 支援與 AFX 系統建立 SnapMirror 同步關係的合格主磁碟區。ARP/AI 在活動的讀寫主磁碟區上運行，建立僅針對主磁碟區的 ARP 快照，並提供基於機器學習的勒索軟體偵測。</block>
+  <block id="281fd14262fa7c1793e3c18dfd336f7f" category="inline-link-macro">支援 TLS 硬體卸載</block>
+  <block id="9ae8ab2f2bc89803b54b2d95dc15e797" category="cell"><block ref="9ae8ab2f2bc89803b54b2d95dc15e797" category="inline-link-macro-rx"></block></block>
+  <block id="0cb676b13f3e5b88d1d96f6dc967fbf0" category="paragraph">您可以將整個叢集的傳輸層安全性（TLS）加密和解密任務卸載到支援的乙太網路卡上。這可以降低 CPU 開銷，並提高使用 TLS 的系統的效能。</block>
+  <block id="92da55166137739e02f5b936f74380ee" category="section-title">儲存資源管理</block>
+  <block id="1a561f1031fa3c9ec323d8ea0ca63836" category="inline-link-macro">System Manager 支援儲存可用區容量詳細資訊。</block>
+  <block id="375e0ed5bd2ce224e2a7246363f3f0a1" category="cell"><block ref="375e0ed5bd2ce224e2a7246363f3f0a1" category="inline-link-macro-rx"></block></block>
+  <block id="99e20a75ce8e4c3137222aab66c29dd9" category="paragraph">您可以在 System Manager 中檢視儲存可用度區域容量詳細資料，包括空間臨界值、 Snapshot 所耗用的空間、以及資料縮減。您也可以將空間使用量臨界值設定為您希望 ONTAP 產生警告和嚴重警示的百分比。</block>
+  <block id="06d8255b249000a8dc1ea05905facab1" category="inline-link-macro">支援修改控制自動 QoS 吞吐量上限增加的預設設定</block>
+  <block id="8c6b9a12d0c79c48e883b5be70798908" category="cell"><block ref="8c6b9a12d0c79c48e883b5be70798908" category="inline-link-macro-rx"></block></block>
+  <block id="526357124bf4a788b83696c381ec921e" category="paragraph">您可以修改預設設定，這些設定控制 QoS 原則群組如何根據短期效能需求自動提高 QoS 處理量上限。這些設定在 ONTAP 9.18.1 及更早版本中無法修改。</block>
+  <block id="f683581d3e75f05f9d9215f9b4696cef" category="section-title">升級</block>
+  <block id="446769ecfd2416f049608620cc994ac8" category="inline-link-macro">增強自動升級前檢查的報告功能</block>
+  <block id="368f083985829ad76ae5f8d7530fbd0e" category="cell"><block ref="368f083985829ad76ae5f8d7530fbd0e" category="inline-link-macro-rx"></block></block>
+  <block id="2b1cc84feb959647df3e34b19f0fa843" category="paragraph">執行自動升級前檢查時，錯誤和警告會分別顯示，以協助您輕鬆識別升級前必須解決的問題。</block>
+  <block id="7ceef35284e2093e2f3f2e17a1256628" category="sidebar">ONTAP 9.19.1 的新增功能</block>
 </blocks>

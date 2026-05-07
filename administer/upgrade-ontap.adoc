@@ -23,3 +23,13 @@ AFX 儲存系統的ONTAP軟體升級遵循與其他ONTAP系統升級相同的流
 .相關資訊
 * https://docs.netapp.com/us-en/ontap/upgrade/index.html["了解ONTAP升級"^] 。
 
+
+
+
+== 在計劃升級之前執行自動升級前檢查
+
+您無需正在進行 ONTAP 軟體升級即可執行 ONTAP 自動升級預檢查。獨立於 ONTAP 自動升級程序執行預升級檢查，可讓您查看針對叢集執行的檢查項目，並取得一份錯誤或警告列表，以便在開始實際升級之前進行修正。
+
+從 ONTAP 9.19.1 開始、錯誤和警告會分開顯示、以協助您輕鬆識別升級前必須解決的問題。
+
+link:https://docs.netapp.com/us-en/ontap/upgrade/automated-pre-checks.html["學習如何執行 ONTAP 自動升級前檢查"^].

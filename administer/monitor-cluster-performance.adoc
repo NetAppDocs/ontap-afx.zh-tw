@@ -4,25 +4,42 @@ permalink: administer/monitor-cluster-performance.html
 keywords: afx, afx system, cluster performance 
 summary: 您可以顯示 AFX 叢集效能的進階概覽。 
 ---
-= 監控 AFX 儲存系統叢集效能
+= 監控 AFF 儲存系統叢集效能和儲存使用率
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以顯示 AFX 叢集效能的進階概覽。
+您可以顯示 AFF 叢集的效能和儲存使用率的高階概觀。
 
 
 
 == 儲存容量
 
-系統管理器儀表板包括叢集儲存利用率的進階顯示。
+監控儲存使用率，確保您擁有足夠的儲存容量來滿足目前和未來的工作負載需求。
+
+
+
+=== 監控高階叢集儲存使用率
+
+在 ONTAP System Manager 中、您可以檢視整個叢集的儲存使用率高階顯示。
 
 .步驟
 . 在系統管理員中，選擇導覽窗格中的「*儀表板*」。
 . 找到*容量*圖塊並查看可用和已使用的實體儲存。
 . 選擇*歷史記錄*存取Active IQ查看歷史資料。
+
+
+
+
+=== 監控儲存可用區容量詳細資料
+
+從 ONTAP 9.19.1 開始，您可以檢視儲存可用區的容量詳細資料，包括空間臨界值、快照所耗用的空間以及資料精簡。您也可以將空間使用量臨界值設定為您希望 ONTAP 產生警告和嚴重警示的百分比。
+
+.步驟
+. 在 System Manager 中、選取 *Cluster > Overview* 、然後選取 *Availability zone* 。
+. 若要修改警告或嚴重空間臨界值，請在要編輯的臨界值下選取 image:icon_edit_pencil_blue_outline.png["藍色鉛筆編輯圖示"]。
 
 
 

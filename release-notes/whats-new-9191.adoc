@@ -1,0 +1,109 @@
+---
+sidebar: sidebar 
+permalink: release-notes/whats-new-9191.html 
+keywords: 'afx, release notes, what"s new, 9.19.1, ai data engine, aide' 
+summary: 了解 ONTAP 9.19.1 中包含的、可與您的 AFX 儲存系統一起使用的新功能。 
+---
+= AFX 儲存系統的 ONTAP 9.19.1 新功能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解 ONTAP 9.19.1 中包含的、可與您的 AFX 儲存系統一起使用的新功能。
+
+
+TIP: 了解新增和增強的支援  https://docs.netapp.com/us-en/ai-data-engine/release-notes/whats-new.html["AI Data Engine"^]。
+
+
+
+== 效能與擴充性
+
+[cols="2,4"]
+|===
+| 更新 | 描述 
+
+
+| 擴充的 AFX 叢集大小  a| 
+ONTAP 9.19.1 支援將 AFX 叢集擴展到最多 32 個節點。這使您可以擴展 AFX 儲存系統，以滿足不斷增長的工作負載和應用程式需求。
+
+
+
+| 跨檔案循序讀取 (CFSR)  a| 
+Cross File Sequential Read 可大幅改善特定媒體和娛樂工作負載的讀取效能。此功能可智慧預先擷取連續視訊框架、大幅改善視訊編輯應用程式的處理量、並減少延遲。如需詳細資訊、請參閱 link:../administer/additional-ontap-svm.html["AFX 儲存系統 SVM 的附加管理"]。
+
+
+
+| 全域重複資料刪除  a| 
+全域重複資料刪除功能將 ONTAP 重複資料刪除的空間節省範圍擴展到整個儲存可用區（SAZ）。透過消除 SAZ 中所有磁碟區上的重複資料區塊，它可以顯著提高儲存效率並降低整體擁有成本。此功能在 AFX 系統上預設啟用，無需管理員配置即可透明運作。如需更多資訊，請參閱 link:../administer/additional-ontap-svm.html["AFX 儲存系統 SVM 的附加管理"]。
+
+|===
+
+
+== REST API
+
+[cols="2,4"]
+|===
+| 更新 | 描述 
+
+
+| Kubernetes 儲存協調的平衡放置增強功能  a| 
+ONTAP 9.19.1 在 `/storage/volumes` REST API 端點中新增了六個目前可用的參數至 `/applications/containers` 端點。此項增強功能讓使用 NetApp Trident 進行 Kubernetes 儲存協調的客戶能夠利用 ONTAP 原生的平衡配置功能來建立磁碟區。
+
+|===
+
+
+== 安全
+
+[cols="2,4"]
+|===
+| 更新 | 描述 
+
+
+| 符合資格的 SnapMirror 主要磁碟區的 ARP/AI 支援  a| 
+ARP/AI 支援與 AFX 系統建立 SnapMirror 同步關係的合格主磁碟區。ARP/AI 在活動的讀寫主磁碟區上運行，建立僅針對主磁碟區的 ARP 快照，並提供基於機器學習的勒索軟體偵測。
+
+
+
+| link:../administer/additional-ontap-cluster.html["支援 TLS 硬體卸載"]  a| 
+您可以將整個叢集的傳輸層安全性（TLS）加密和解密任務卸載到支援的乙太網路卡上。這可以降低 CPU 開銷，並提高使用 TLS 的系統的效能。
+
+|===
+
+
+== 儲存資源管理
+
+[cols="2,4"]
+|===
+| 更新 | 描述 
+
+
+| link:../administer/monitor-cluster-performance.html["System Manager 支援儲存可用區容量詳細資訊。"]  a| 
+您可以在 System Manager 中檢視儲存可用度區域容量詳細資料，包括空間臨界值、 Snapshot 所耗用的空間、以及資料縮減。您也可以將空間使用量臨界值設定為您希望 ONTAP 產生警告和嚴重警示的百分比。
+
+
+
+| link:../administer/additional-ontap-cluster.html["支援修改控制自動 QoS 吞吐量上限增加的預設設定"]  a| 
+您可以修改預設設定，這些設定控制 QoS 原則群組如何根據短期效能需求自動提高 QoS 處理量上限。這些設定在 ONTAP 9.18.1 及更早版本中無法修改。
+
+|===
+
+
+== 升級
+
+[cols="2,4"]
+|===
+| 更新 | 描述 
+
+
+| link:../administer/upgrade-ontap.html["增強自動升級前檢查的報告功能"]  a| 
+執行自動升級前檢查時，錯誤和警告會分別顯示，以協助您輕鬆識別升級前必須解決的問題。
+
+|===
+.相關資訊
+* https://docs.netapp.com/us-en/ontap/release-notes/index.html["ONTAP 9 發布亮點"^]
+

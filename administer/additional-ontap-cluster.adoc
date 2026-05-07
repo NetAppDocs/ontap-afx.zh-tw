@@ -45,6 +45,20 @@ ONTAP許可證是一個或多個軟體授權的記錄。所有許可證均使用
 
 
 
+== 效能
+
+利用 ONTAP 的常用功能來優化 AFF 儲存系統叢集的效能。
+
+
+
+=== 修改控制自動 QoS 吞吐量上限增加的預設設定
+
+預設情況下，自適應和非自適應 QoS 原則群組會自動啟用，以便在短期內將工作負載的處理量上限暫時提高 50%，持續 1 秒，從而回應對更高效能的短期需求。從 ONTAP 9.19.1 開始，您可以修改這些預設設定。在 ONTAP 9.18.1 及更早版本中，這些設定無法變更。
+
+請參閱link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html["QoS 吞吐量上限"^]。
+
+
+
 == 安全
 
 您可以在 AFX 部署中設定和使用多種可選的安全功能。
@@ -60,6 +74,12 @@ ONTAP許可證是一個或多個軟體授權的記錄。所有許可證均使用
 === ONTAP身份驗證和存取控制
 
 AFX 儲存系統提供了多種設定驗證和存取控制服務的選項。參考 https://docs.netapp.com/us-en/ontap/authentication-access-control/index.html["身份驗證和存取控制"^]了解更多。
+
+
+
+=== ONTAP TLS 硬體卸載
+
+您可以將整個叢集的傳輸層安全性（TLS）加密和解密任務卸載到支援的乙太網路卡上。這可以降低 CPU 開銷，並提高使用 TLS 的系統的效能。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/ontap/networking/configure-tls-offload.html["設定 ONTAP TLS 硬體卸載"^]。
 
 
 

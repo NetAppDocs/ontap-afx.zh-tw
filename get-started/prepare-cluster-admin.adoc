@@ -124,7 +124,7 @@ CAUTION: 在提升 AFX 儲存系統的任何運作參數之前，您應該評估
 集群交換機:: 叢集儲存網路中至少需要兩台交換器。允許的最大值是根據叢集中控制器節點的總數來決定的。
 
 
-您應該查看NetAppHardware Universe和互通性矩陣工具中提供的詳細信息，以確定您的 AFX 叢集的功能。
+您應查看 NetApp Hardware Universe 和互通性矩陣工具中提供的詳細資訊，以確定您的 AFX 叢集的功能。另請參閱 AFX 發行說明部分中的link:../release-notes/changes-to-limits-defaults.html["ONTAP 限制和預設值的變更"]。
 
 
 

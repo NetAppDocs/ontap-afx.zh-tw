@@ -1881,9 +1881,6 @@
   <block id="1f237fc34e7dd74398581eefc40958c3" category="admonition">了解新增和增強的支援 <block ref="50cef57effbd6fcf26f3b3db513271ba" category="inline-link-rx"></block>。</block>
   <block id="10d7bfdf332491f86c54ec3d92031af9" category="summary">了解 ONTAP 9.19.1 中包含的、可與您的 AFX 儲存系統一起使用的新功能。</block>
   <block id="9ebdbbd8dbfbcf6224092a44e6772af0" category="doc">AFX 儲存系統的 ONTAP 9.19.1 新功能</block>
-  <block id="a0c84a4c41f756ea7750bb10b0423e11" category="section-title">效能與擴充性</block>
-  <block id="0d0331cbf0e501ed4e4912dc043a60c7" category="cell">擴充的 AFX 叢集大小</block>
-  <block id="25bb096e1dae008973cf4d1cbcb776f6" category="paragraph">ONTAP 9.19.1 支援將 AFX 叢集擴展到最多 32 個節點。這使您可以擴展 AFX 儲存系統，以滿足不斷增長的工作負載和應用程式需求。</block>
   <block id="5713c60dfa0d2bc57e54b11e4a1b6cfe" category="cell">跨檔案循序讀取 (CFSR)</block>
   <block id="4c400b26187ab8dd0971020d23077db3" category="paragraph">Cross File Sequential Read 可大幅改善特定媒體和娛樂工作負載的讀取效能。此功能可智慧預先擷取連續視訊框架、大幅改善視訊編輯應用程式的處理量、並減少延遲。如需詳細資訊、請參閱 <block ref="d20869026a82d2608dc3e8932f1a0bfe" category="inline-link-macro-rx"></block>。</block>
   <block id="9d8ca8942805bbef83b9c607e5358741" category="paragraph">全域重複資料刪除功能將 ONTAP 重複資料刪除的空間節省範圍擴展到整個儲存可用區（SAZ）。透過消除 SAZ 中所有磁碟區上的重複資料區塊，它可以顯著提高儲存效率並降低整體擁有成本。此功能在 AFX 系統上預設啟用，無需管理員配置即可透明運作。如需更多資訊，請參閱 <block ref="d20869026a82d2608dc3e8932f1a0bfe" category="inline-link-macro-rx"></block>。</block>
@@ -1906,4 +1903,18 @@
   <block id="368f083985829ad76ae5f8d7530fbd0e" category="cell"><block ref="368f083985829ad76ae5f8d7530fbd0e" category="inline-link-macro-rx"></block></block>
   <block id="2b1cc84feb959647df3e34b19f0fa843" category="paragraph">執行自動升級前檢查時，錯誤和警告會分別顯示，以協助您輕鬆識別升級前必須解決的問題。</block>
   <block id="7ceef35284e2093e2f3f2e17a1256628" category="sidebar">ONTAP 9.19.1 的新增功能</block>
+  <block id="b48fd339e170a9f069029f36a4c5c062" category="inline-link-macro">ONTAP 限制和預設值的變更</block>
+  <block id="86c7db31d90416abec90b535da924b25" category="paragraph">您應查看 NetApp Hardware Universe 和互通性矩陣工具中提供的詳細資訊，以確定您的 AFX 叢集的功能。另請參閱 AFX 發行說明部分中的<block ref="8bef5b3500e1d2396e08db40f86c62db" category="inline-link-macro-rx"></block>。</block>
+  <block id="4cc2a31dced9a524a1b76972ce8cabf5" category="summary">了解影響 AFX 系統的限制和預設值變更。NetApp 致力於幫助客戶了解每個 ONTAP 版本中最重要的預設值和限制變更。</block>
+  <block id="d119e4d4dc8f9b894c96d18128e78e46" category="doc">影響 AFX 系統的 ONTAP 限制和預設值變更</block>
+  <block id="d579ca395df40cbbb953cb531ce23a3d" category="section-title">ONTAP 限制變更</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">功能</block>
+  <block id="4d209cddba5e4e3f517cda6d0180e867" category="cell">限制變更</block>
+  <block id="534453c63ab1c5041c53f8bbc059a9b7" category="cell">已在版本中變更</block>
+  <block id="8010ab2f71c733c1a8013b31b901be79" category="cell">每個叢集的節點數</block>
+  <block id="355836185b6feaed32d56f19e33032eb" category="paragraph">您可以將 AFX 叢集擴展到最多 32 個節點。這樣，您可以擴展 AFX 儲存系統，以滿足不斷增長的工作負載和應用程式的需求。</block>
+  <block id="5148c61a8c3e3afeb285a73e9241d26c" category="cell">ONTAP 9.19.1 RC</block>
+  <block id="f80f1ede0c7983dcab18fc7104224f56" category="cell">動態儲存效率</block>
+  <block id="00e7d9732d9f1a308baa60f42ec78d16" category="paragraph">Dynamic Storage Efficiency 可智慧優化儲存效率操作（壓縮、去重和資料精簡），以滿足需要高效能和最大吞吐量的大型工作負載的需求。它能夠自動偵測高寫入量情況，並在高峰負載期間暫時中止線上和背景儲存效率進程，以防止效能下降。當吞吐量低於設定的閾值時，儲存效率操作將自動恢復，無需人工幹預即可恢復節省的效能。此功能適用於 AFX 儲存系統，預設啟用，無需任何配置。</block>
+  <block id="0b6845dd2391304844b6f9578fd8c865" category="sidebar">ONTAP 預設設定和限制的變更</block>
 </blocks>

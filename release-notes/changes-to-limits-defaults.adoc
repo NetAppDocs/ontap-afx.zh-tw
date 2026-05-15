@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: release-notes/changes-to-limits-defaults.html 
+keywords: release notes, changes, updates, defaults, limits, afx storage system, afx system, afx 
+summary: 了解影響 AFX 系統的限制和預設值變更。NetApp 致力於幫助客戶了解每個 ONTAP 版本中最重要的預設值和限制變更。 
+---
+= 影響 AFX 系統的 ONTAP 限制和預設值變更
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解影響 AFX 系統的限制和預設值變更。NetApp 致力於幫助客戶了解每個 ONTAP 版本中最重要的預設值和限制變更。
+
+
+TIP: 您應該查看NetAppHardware Universe和互通性矩陣工具中提供的詳細信息，以確定您的 AFX 叢集的功能。
+
+
+
+== ONTAP 限制變更
+
+[cols="2,4,4"]
+|===
+| 功能 | 限制變更 | 已在版本中變更 
+
+
+| 每個叢集的節點數  a| 
+您可以將 AFX 叢集擴展到最多 32 個節點。這樣，您可以擴展 AFX 儲存系統，以滿足不斷增長的工作負載和應用程式的需求。
+| ONTAP 9.19.1 RC 
+|===
+
+
+== 相關資訊
+
+* https://hwu.netapp.com/["NetAppHardware Universe"^]
+* https://imt.netapp.com/["NetApp互通性表工具"^]
+* https://docs.netapp.com/us-en/interoperability-matrix-tool/["互通性矩陣工具概述"^]
+

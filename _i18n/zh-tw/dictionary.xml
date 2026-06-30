@@ -592,7 +592,6 @@
   <block id="66d537e06ce64167a2a89717123fb13a" category="paragraph">以下硬體組件與 AFX 叢集一起使用：</block>
   <block id="95f44be3500aa9aeb45f0071ca7649b2" category="list-text">AFX 1K 控制器</block>
   <block id="a43cc36cba3c97642118a8f1e1411d2a" category="list-text">NX224貨架</block>
-  <block id="e89680076a38528b667f845c37798fcc" category="list-text">Cisco Nexus 9332D-GX2B 或 Nexus 9364D-GX2A 交換機</block>
   <block id="e4b73aea5fedcc9f4eb9b804ebd249aa" category="summary">在生產環境中部署 AFX 之前，必須了解管理結構和配置選項。這可確保您的 AFX 叢集管理安全、高效且有效。</block>
   <block id="982e02e3abfea4e77a8d9e6cb357ccc0" category="doc">準備管理您的 AFX 儲存系統</block>
   <block id="1e793b1e0f039cf758071c91b073a4f1" category="paragraph">儲存虛擬機器 (SVM) 是ONTAP叢集內的隔離伺服器或租用戶環境。您可以設定 SVM 來向連線的客戶端提供資料。您應該熟悉 AFX SVM 的功能和特性。</block>
@@ -713,8 +712,6 @@
   <block id="cef2cef14135fa0a7f8a1a1b12d33005" category="section-title">支援的 AFX 1K 佈線配置</block>
   <block id="d68caa870c599c4f4feda00ea05204ad" category="paragraph">AFX 1K 儲存系統的初始設定支援至少四個控制器節點透過雙交換器連接到儲存磁碟架。</block>
   <block id="8204ac96f4db60a13314fdddc8e9d0b9" category="paragraph">額外的控制器節點和磁碟架擴展了初始 AFX 1K 儲存系統配置。擴展的 AFX 1K 配置遵循與下圖所示的相同的基於交換器的佈線方法。</block>
-  <block id="325fb005ba5ff6b41fa0892905611f15" category="inline-image-macro">AFK 1K 儲存系統範例佈線</block>
-  <block id="3fbfe926ceca9a55d625df8be8f9ee1b" category="paragraph"><block ref="3fbfe926ceca9a55d625df8be8f9ee1b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cf0b851cf65a2b38aa358691f2054eb4" category="section-title">支援的硬體組件</block>
   <block id="1614dfbda42baa4bbc5a3a16bcf72202" category="paragraph">查看 AFX 1K 儲存系統的相容儲存磁碟架、交換器和電纜類型。</block>
   <block id="bd5c641408f65aa18580861a6ce2400c" category="cell">*控制器架*</block>
@@ -886,12 +883,9 @@
   <block id="e3eb7077125dbf096d560da8b3939c79" category="paragraph">AFX 儲存控制器和儲存架很重。抬起和移動這些物品時要小心。</block>
   <block id="8426a795d3bdc2e3b917313eb942f86a" category="section-title">儲存控制器權重</block>
   <block id="7d83ce9fcec155b754d28f26c44bb2c0" category="paragraph">移動或抬起 AFX 1K 儲存控制器時請採取必要的預防措施。</block>
-  <block id="ce697af2e18af53f8cb875724d64de00" category="paragraph">AFX 1K 儲存控制器的重量可達 62.83 磅（28.5 公斤）。要抬起儲存控制器，需要兩個人或使用液壓升降機。</block>
-  <block id="ea2b428ae3132b5aa1f8abadc2dac0ec" category="image-alt">ASA A1K 解除警告圖標</block>
   <block id="336e0262f6402efd45d8cf9d7ae13e8c" category="section-title">倉儲貨架重量</block>
   <block id="fe464b77547b113c26b6c4a663f8d99c" category="paragraph">移動或抬起架子時請採取必要的預防措施。</block>
   <block id="95431e07be1f7b49eef0ce6156cca6e1" category="open-title">NX224貨架</block>
-  <block id="1e9ac948c22c380faef83bb8dfbfecd1" category="paragraph">NX224 架子的重量最多可達 60.1 磅（27.3 公斤）。要抬起架子，需要兩個人或使用液壓升降機。將所有組件放在架子上（前部和後部），以防止架子重量不平衡。</block>
   <block id="6eb6b5d3bd8847e6deb32e696bd6b006" category="image-alt">NX224 NSM100 起吊注意事項</block>
   <block id="35c124f455f44a154eb3b514029ee58a" category="inline-link">安全資訊和監管通知</block>
   <block id="fa81f583d8b6c7dcaf8e26a5fcf5de52" category="list-text"><block ref="fa81f583d8b6c7dcaf8e26a5fcf5de52" category="inline-link-rx"></block></block>
@@ -935,8 +929,6 @@
   <block id="828eeccf398aa5a5516c86cf77b98e41" category="list-text">對於每個交換機，使用八個 10-32 或 12-24 螺絲和夾緊螺母將支架和滑軌安裝到前後櫃柱上。</block>
   <block id="19a356d6227c782e9f5da9f11a646795" category="list-text">用於在NetApp機櫃中安裝交換器的Cisco標準導軌套件。</block>
   <block id="784c55256af328db72b621f19722713c" category="admonition">直通套件中不包含跳線。如果您的交換器未附帶跳線，請聯絡NetApp訂購正確的跳線。</block>
-  <block id="290d336236260cd4a5246beda2a977d5" category="inline-link">Cisco Nexus 9332D-GX2B NX-OS 模式交換器硬體安裝指南</block>
-  <block id="b1ec8c60f31cf5056d372b5933be8b0b" category="inline-link">Cisco Nexus 9364D-GX2A NX-OS 模式交換器硬體安裝指南</block>
   <block id="233f5d43fe68130332533db747eb58bf" category="list-text">安裝直通盲板。</block>
   <block id="f6a7153bd6774aa611c605474f2c556a" category="list-text">確定機櫃或機架中交換器和盲板的垂直位置。</block>
   <block id="eca4fd64fa30887cca883fb2a8f5e9b3" category="list-text">在前櫃導軌兩側的相應方孔中安裝兩個夾緊螺帽。</block>
@@ -1040,7 +1032,6 @@
   <block id="5dc15886a7be0b02974c471249fd2702" category="image-alt">控制台連接</block>
   <block id="9e7e8b48adc159107d0baf9021253c61" category="list-text">使用管理子網路上的 TCP/IP 位址為筆記型電腦指派一個 TCP/IP 位址。</block>
   <block id="a2e521b7ad497537c9e544a50086c51b" category="list-text">將電源線插入控制器電源，然後將其連接到不同電路的電源。</block>
-  <block id="5d181ca91be1af691d1f01654691cc7b" category="image-alt">A1K儲存系統與A70或A90電源連接圖</block>
   <block id="e477637685baafe9bbd353f71ef51283" category="list-text">系統開始啟動。初始啟動可能需要長達八分鐘。</block>
   <block id="eccb4d5293fe0dd408e74aab9093fb9b" category="list-text">LED 閃爍且風扇啟動，表示控制器正在通電。</block>
   <block id="2a15831b428ec92914dd2d9b9c14a463" category="list-text">風扇在啟動時可能會有噪音，這是正常現象。</block>
@@ -1469,7 +1460,6 @@
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始</block>
   <block id="c0531ee3830705c2acf41508b19aea16" category="sidebar">了解 AFX</block>
   <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">快速啟動</block>
-  <block id="89ff3ce0de6b4487110c6bfb69e1cec4" category="sidebar">安裝 AFX 硬體</block>
   <block id="4271b9430afa5773472f29d8cf243dc1" category="sidebar">設定 AFX 集群</block>
   <block id="6c0e4fd4b7e2ef11d891ac59729c5f3e" category="sidebar">叢集管理</block>
   <block id="2ee20619a771993544eaaa7e388816d1" category="sidebar">管理儲存虛擬機</block>
@@ -1719,10 +1709,7 @@
   <block id="c29e3429d133a5255487ffdb4b3cd5b3" category="paragraph">根據您的更新選擇，建議的更新將自動下載並安裝在您的 ONTAP AFX 系統上。</block>
   <block id="f6ea197b186340b340ddfd0eb0da559f" category="inline-link-macro">建立ONTAP叢集並加入節點</block>
   <block id="46111b54a1fe09b4b0f338f84ed73d0f" category="admonition">有關如何在非 Windows 環境中建立叢集的信息，請參閱 <block ref="084582f867948d8226893522df8bc4b0" category="inline-link-macro-rx"></block>。</block>
-  <block id="26790bd35f75a3d2177dc5a2d5e4162f" category="admonition">如果您的交換器氣流配置為連接埠側進氣（風扇和電源供應器為酒紅色），則交換器的網路連接埠必須朝向機櫃正面，排氣風扇必須朝向機櫃背面。採用此配置時，您必須確保使用足夠長的線纜，以便從機櫃正面的網路連接埠連接到機櫃背面的儲存連接埠。+ 有關這些交換器的更多詳細資訊,請造訪 Cisco 網站:<block ref="41dd90940bbf956b1a1bc9743b5329d8" category="inline-link-rx"></block> 和 <block ref="0684e00763f44490e4a966ecd9b6db00" category="inline-link-rx"></block>。</block>
   <block id="5ba4d3956504a570f9a51b322b5f740c" category="list-text">連接兩台交換器之間的 ISL 電纜。</block>
-  <block id="86411bbf3fc2afbe73de144737c4ff80" category="list-text">對於 Cisco Nexus 9332D-GX2B 交換器，請使用連接埠 31/32 進行 ISL 連線。如需詳細資訊，請參閱 <block ref="bab51173328bbc094a925e4a5c7604c6" category="inline-link-macro-rx"></block>。</block>
-  <block id="f8979ce4e5d66f41e330415672140ef8" category="list-text">對於 Cisco Nexus 9364D-GX2A 交換器，請使用連接埠 63/64 進行 ISL 連線。如需詳細資訊，請參閱 <block ref="d3ef7ae1e3bea631e525704fa9f8906b" category="inline-link-macro-rx"></block>。</block>
   <block id="35baa74f76db10604e3f71a16b4078d1" category="paragraph">NetApp AFX 針對高效能 NAS 和物件工作負載進行了最佳化。因此，它與 AFF 和 FAS 儲存系統存在差異。以下功能在 NetApp AFX 中不可用；此清單按主要功能或功能領域進行分類。您還應根據您的 ONTAP 版本查看 AFX 的更新和變更<block ref="e4ac4a7dd877729340e2b0880473ea1b" category="inline-link-macro-rx"></block>。</block>
   <block id="86daf5160966102a39f5f3c0390bde11" category="list-text">負載共享鏡像</block>
   <block id="8c60e60e96c6540bd35beb72adc17cb0" category="section-title">步驟 3：將叢集、HA 和儲存連接線連接到交換器 A</block>
@@ -1767,7 +1754,6 @@
   <block id="5089e4b50d1f4e886a231cd5c043ad9d" category="inline-link">AIDE 安裝選項</block>
   <block id="d3d9eaa68fa2acc25f51847944519bc7" category="paragraph">您需要決定是僅安裝 AFX 還是同時安裝 AFX 和 AI Data Engine。請查看<block ref="b158da038797eb3a533563ed16d340e2" category="inline-link-rx"></block>以協助您確定最適合您需求的方案。</block>
   <block id="99882077cc5150985de38b05fe43c5bf" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 安裝並設定您的硬體</block>
-  <block id="1f9c2a9600aa7017fad495f671dfcc9d" category="inline-link-macro">安裝您的 AFX 儲存系統</block>
   <block id="8a28e13725679cf81ae7a97f135f3151" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 設定叢集</block>
   <block id="67cf641733ab3c2361c8f1f769a0874b" category="inline-link">使用新的 AFX 叢集設定 AIDE</block>
   <block id="35a50ba3ebcc67e69ce937368b540ae9" category="paragraph">按照簡單快速的步驟使用系統管理器<block ref="5f55a5e0ef0b631e2040a3d854a6456f" category="inline-link-macro-rx"></block>您的 ONTAP 叢集。如果您也要在資料運算節點上安裝 AIDE 和 AFX，請查看<block ref="ea340cdc1a42614e036446f1b104ebdd" category="inline-link-rx"></block>以瞭解其他必要的組態。</block>
@@ -1799,7 +1785,6 @@
   <block id="2f89616ef718a1cdf501f4048f79f110" category="paragraph">NetApp AI Data Engine（AIDE）是一款與儲存整合的 AI 資料服務，運行在連接到 AFX 叢集的運算節點上。您可以選擇使用以下兩種部署模型之一，將 AIDE 安裝並整合到您的 AFX 叢集中：NetApp 提供的資料運算節點（DCN）或在第三方伺服器上部署 AIDE 軟體。NetApp DCN 部署提供完整的 AIDE 功能，而第三方伺服器部署則專注於元資料。</block>
   <block id="26bf1fb96884a6d564b885faac9346fe" category="inline-link">安裝 AIDE 第三方伺服器</block>
   <block id="0feacb0d94d23bf1fee14eae79e870cd" category="inline-link">安裝 AIDE NetApp 資料運算節點</block>
-  <block id="d038ff5d4df9255a9c0316641b289913" category="paragraph"><block ref="a832b8bc8244484582041183718520b7" category="inline-link-macro-rx"></block> 以及選擇性的 <block ref="55438a0ee0065472ca14633bb4190e20" category="inline-link-rx"></block> 或 <block ref="2e7d33dc5887b0da93aae67b0f923c5c" category="inline-link-rx"></block>（如果您將 AIDE 納入初始組態的一部分）。</block>
   <block id="bd9ad7be68120900030f68ff19b5b1e4" category="paragraph">首次安裝和設定 AFX 時，您可以選擇包含 NetApp AI Data Engine（AIDE）。AIDE 支援兩種部署模式：第三方伺服器上的 AIDE 軟體或 NetApp 提供的資料運算節點（DCN）。如果您打算設定 AIDE，請先完成部署模式所需的先決條件：</block>
   <block id="bf53bb5aa0413b6868cea02f2c24f170" category="inline-link">在第三方伺服器上安裝 AI Data Engine 的硬體</block>
   <block id="1f9fa35f3b88c59775937f1382277c15" category="inline-link">在第三方伺服器上安裝 AIDE 軟體</block>
@@ -1917,4 +1902,199 @@
   <block id="f80f1ede0c7983dcab18fc7104224f56" category="cell">動態儲存效率</block>
   <block id="00e7d9732d9f1a308baa60f42ec78d16" category="paragraph">Dynamic Storage Efficiency 可智慧優化儲存效率操作（壓縮、去重和資料精簡），以滿足需要高效能和最大吞吐量的大型工作負載的需求。它能夠自動偵測高寫入量情況，並在高峰負載期間暫時中止線上和背景儲存效率進程，以防止效能下降。當吞吐量低於設定的閾值時，儲存效率操作將自動恢復，無需人工幹預即可恢復節省的效能。此功能適用於 AFX 儲存系統，預設啟用，無需任何配置。</block>
   <block id="0b6845dd2391304844b6f9578fd8c865" category="sidebar">ONTAP 預設設定和限制的變更</block>
+  <block id="ade0334803648df75c59492f5cdc9515" category="list-text">AFX 1K 或 2K 控制器</block>
+  <block id="d93573d87e2303f62f258396da54c30a" category="list-text">Cisco Nexus 9332D-GX2B、Nexus 9364D-GX2A 或 Nexus 9808 交換機</block>
+  <block id="23b43ede4557b73e6fa354124a73ba91" category="inline-link-macro">AFX 2K</block>
+  <block id="67f77e2b70d6947cf982bd2da150677a" category="paragraph">安裝您的 <block ref="7348958905d0d24441b4869883313dcd" category="inline-link-macro-rx"></block> 或 <block ref="024ba43ec37d7ed62c4f2aab58b974f1" category="inline-link-macro-rx"></block> 儲存系統。您也可以選擇 <block ref="55438a0ee0065472ca14633bb4190e20" category="inline-link-rx"></block> 或 <block ref="2e7d33dc5887b0da93aae67b0f923c5c" category="inline-link-rx"></block>（如果您將 AIDE 作為初始 AFX 1K 設定的一部分）。</block>
+  <block id="8d7460cb352c0a6b105cf65e1fa10c31" category="doc">您的 AFX 2K 儲存系統支援的配置</block>
+  <block id="1a99ce1ec4ed0985ca29a2e328f9e4c9" category="paragraph">了解 AFX 2K 儲存系統支援的硬體組件和佈線選項，包括相容的儲存磁碟櫃、交換器以及正確設定系統所需的線纜類型。</block>
+  <block id="0c6e41fac4d1679f2837b31810ad5736" category="section-title">支援的 AFX 2K 佈線配置</block>
+  <block id="dcf9ddc90465a875b2ffe5e80d67051e" category="paragraph">AFX 2K 儲存系統的初始配置支援至少四個控制器節點，這些節點透過雙交換器連接到儲存磁碟架。</block>
+  <block id="78f6ed6aec8bf39808f6730998cc28af" category="paragraph">額外的控制器節點和磁碟櫃可擴充初始的 AFX 2K 儲存系統配置。擴充後的 AFX 2K 配置遵循與下圖所示相同的交換器型佈線方法。</block>
+  <block id="32d8581495e9b5e3e83544b56bf80e78" category="inline-image-macro">AFX 2K 儲存系統範例佈線，寬度=1000px</block>
+  <block id="c059960fdf7d3084051bf28117228b5e" category="paragraph"><block ref="c059960fdf7d3084051bf28117228b5e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9b81f2c4d0680a7c5c28bbb9d57141fe" category="paragraph">查看與 AFX 2K 儲存系統相容的儲存磁碟架、交換器和電纜類型。</block>
+  <block id="b2311a2cf7a04db2bfe860c3fa17635c" category="cell">硬體組件</block>
+  <block id="01769bf0c8e5ef5209cacdb3116f2451" category="cell">支援的線纜</block>
+  <block id="4d4abeb46ced7064cea6f8653ed03898" category="cell">AFX 2K（控制器架）</block>
+  <block id="411e488c95ab8539adbaede3043cb31b" category="list-text">400GbE QDD 轉 400GbE QSFP 連接線（控制器到交換器的連接）</block>
+  <block id="34d2248a5a5108ca5028027917e19230" category="cell">NX224（磁碟架）</block>
+  <block id="c61f21daf666beed13cb4995d166bf43" category="list-text">400GbE QSFP-DD 轉 4x100GbE QSFP 轉接線（交換器至磁碟櫃連接）</block>
+  <block id="0790b922a8eca7a3264b8934f8991968" category="cell">Cisco Nexus 9808（交換器）</block>
+  <block id="b557fd9426768bc84f4452915257ea41" category="cell">Cisco Nexus 9332D-GX2B（交換器）</block>
+  <block id="35759d2d8d631c485934e676110bed0b" category="cell">Cisco Nexus 9364D-GX2A（交換器）</block>
+  <block id="8c8650d90ea2e4c85cf6f7a261e6a88a" category="inline-link-macro">查看您的 AFX 2K 儲存系統的網路需求</block>
+  <block id="a71737a22e6e6082f84dda969583a3a8" category="paragraph">在審查了支援的系統配置和硬體組件之後，<block ref="1eed71682bbf2ef2fc9992d178fdd1e6" category="inline-link-macro-rx"></block>。</block>
+  <block id="83f3a94c9271728fcefda23571e5e329" category="summary">了解如何將 AFX 2K 控制器纜線連接至網路，以及如何將控制器纜線連接至磁碟櫃。</block>
+  <block id="a0ed08f2fe307d8bdc70986871965e30" category="doc">為您的 AFX 2K 儲存系統連接硬體</block>
+  <block id="f752c6c9dfd63493ae5fab0c6aeae9db" category="paragraph">安裝好 AFX 2K 儲存系統的機架硬體後，安裝控制器的網路纜線，並連接控制器與儲存櫃之間的纜線。</block>
+  <block id="f9bf2d74923113919435e379d4f8c326" category="list-text">AFX 2K 控制器上的 I/O 插槽編號為 1 到 11。</block>
+  <block id="1910382d2df1981bfd58fce3bc46f693" category="cell">插槽號</block>
+  <block id="e6010d0015a0057354e2f435c8258d8c" category="cell">I/O插槽</block>
+  <block id="594c16ca0695f6665d7cf4971707adf6" category="cell">HA</block>
+  <block id="f92f448740bddae7b25ed117dcbd39ec" category="image-alt">圖說編號 4</block>
+  <block id="140e6f3619a868d803ee4deb2e00c8d2" category="image-alt">圖說編號 5</block>
+  <block id="36a9bb76a73be848a5443273efc36dce" category="cell">NVRAM12</block>
+  <block id="6ba8ef21cd3a6e29bac6f5100625f023" category="image-alt">圖說編號 9</block>
+  <block id="eec89088ee408b80387155272b113256" category="cell">網路</block>
+  <block id="252d3b7f2054eb6f5b22182e91ecc613" category="image-alt">圖說編號 6</block>
+  <block id="07df018939a3e88fde27c12e57c601e0" category="image-alt">圖說編號 7</block>
+  <block id="3b8240959b126ef66dac73a8609d4e88" category="cell">NVRAM12-EX</block>
+  <block id="995ee42e14fa7ada296e437cafe297d0" category="image-alt">圖說編號 10</block>
+  <block id="8c4aa541ee911e8d80451ef8cc304806" category="cell">儲存</block>
+  <block id="5f695e51ae076dac62d244a3e86a2eae" category="image-alt">圖說編號 3</block>
+  <block id="8c7663c7feb0ad581220a65f1966b9b1" category="image-alt">圖說編號 8</block>
+  <block id="3f93d6296d6d3a4e6ccba7c6defe16e0" category="image-alt">圖說編號 11</block>
+  <block id="2bbc0144b4be4eb8e87f365fd41bfd2b" category="cell">（*可選*）用於額外管理連接的四埠 25GbE SFP28</block>
+  <block id="6bd9339f2f0585eab4cbb0c0d62df9e5" category="list-text">AFX 2K 儲存系統採用 400GbE 線纜。控制器和交換器之間使用 400GbE 連接。儲存機架和交換器之間使用 4x100GbE 分線線纜，其中 100GbE 連接連接至硬碟機架連接埠。</block>
+  <block id="93396b568b9b4bf0b46ec65fc0558907" category="paragraph">機架儲存連接可連接至交換器上的任一 100GbE 分支連接埠。HA/叢集連線可連接至交換器上的任一 400GbE 連接埠。所有「a」控制器連接埠均連接至交換器 A，所有「b」控制器連接埠均連接至交換器 B。</block>
+  <block id="fdc34d062b69cbcf219ffbaae6462289" category="list-text">連接到管理網路。</block>
+  <block id="b8a432c7c652eb6366dd8feef36c1192" category="list-text">e9a</block>
+  <block id="6652bb7b257b817e0c435d5f894c4feb" category="paragraph">*400GbE 纜線*</block>
+  <block id="f768c4d18da94e03e6c29967d495968f" category="image-alt">400 Gb 乙太網路線</block>
+  <block id="128fc4f48693ac191c662898b0719506" category="list-text">e9b</block>
+  <block id="4015e00b406d10c628519f953d69e086" category="section-title">步驟 3：連接叢集和 HA 連線</block>
+  <block id="a45bc78fe2c6d80b60e2cbcea70b132c" category="paragraph">使用叢集和 HA 互連電纜將連接埠 e1a 和 e2a 連接至交換器 A，將連接埠 e1b 和 e2b 連接至交換器 B。e1a/e1b 連接埠用於 HA 連接，e2a/e2a 連接埠用於叢集連接。</block>
+  <block id="7d1e8fb2f50320f7b5004ba0fd39055b" category="list-text">將下列控制器連接埠連接到叢集網路交換器 A 上的任何非 ISL 連接埠。</block>
+  <block id="e2aeea381e329717c42f44dba2be7dd2" category="list-text">e2a（集群）</block>
+  <block id="29b62d617481485649ea2d5b54fca512" category="image-alt">叢集 HA 纜線</block>
+  <block id="f1d133e33e29362e931a34312a961d0b" category="image-alt">連接叢集纜線至叢集網路</block>
+  <block id="ac32cb5bd4dc17916ab1ece800d39226" category="list-text">將下列控制器連接埠連接到叢集網路交換器 B 上的任何非 ISL 連接埠。</block>
+  <block id="071d2b87306e3f261a7ce8b66da93da7" category="list-text">e2b（集群）</block>
+  <block id="c61349783073807f1993874d0e3a4a8c" category="section-title">步驟 4：連接控制器和交換器儲存設備之間的電纜</block>
+  <block id="7bebd570400c9d8d9796caad43fdcebd" category="paragraph">將控制器儲存連接埠連接到交換器。請確保您使用的線纜和連接器與您的交換器相符。請參閱<block ref="16a6d09025d51cb8dd3516798b3fee8a" category="inline-link-rx"></block>以取得更多資訊。</block>
+  <block id="994d86a3ee99c20bd6e3b1c0feaa203f" category="admonition">在 AFX 2K 儲存系統配置中，控制器上的 e10b 和 e8a 連接埠未用於儲存連線。</block>
+  <block id="d7434100057b78673eee73421ad29942" category="list-text">將下列儲存連接埠連接到交換器 A 上的任意非 ISL 連接埠。</block>
+  <block id="405e469b4aa3065616ee04f4a4b2b35e" category="list-text">e10a</block>
+  <block id="56812cf9e76eb2dfaa41475474798d4b" category="image-alt">將控制器儲存設備纜線連接至交換器 A</block>
+  <block id="dc1921771bb6c193442045d9a99b8c9d" category="list-text">將下列儲存連接埠連接到交換器 B 上的任意非 ISL 連接埠。</block>
+  <block id="9c7db5f6d7644e660ab462efb6df4eb6" category="list-text">e8b</block>
+  <block id="73b33ccdc5c989a11800499004721836" category="image-alt">將控制器儲存設備纜線連接至交換器 B</block>
+  <block id="db9e36945d880b9a54f22b3bab495a59" category="paragraph">將 NX224 儲存架連接到交換器上的 100GbE 分支連接埠。</block>
+  <block id="135eab8c92ccb3775b404dfdd27aa456" category="list-text">將下列機架連接埠連接至交換器 A 和交換器 B 上模組 A 的任意分支連接埠。</block>
+  <block id="3a7f101e405892ae90298d3607c48869" category="list-text">將下列機架連接埠連接到交換器 A 和交換器 B 上的任意分支連接埠，以用於模組 B。</block>
+  <block id="9e78fee773333046040ad791b8742899" category="summary">了解如何安裝 AFX 2K 儲存系統和儲存架的導軌套件，並將 AFX 硬體固定在機櫃或電信機架中。</block>
+  <block id="3b2dc186f0daefb9da028ec51012f0c6" category="doc">安裝您的 AFX 2K 儲存系統</block>
+  <block id="23b39f09dd672a4fdc11c4332efa1d13" category="paragraph">安裝交換器後，您應該安裝 AFX 2K 儲存系統的硬體。首先，安裝導軌套件。然後將儲存系統安裝並固定在機櫃或電信機架中。</block>
+  <block id="ae0d8e847f8ab5ee560c68b32f1bbded" category="list-text">如果您的 AFX 2K 儲存系統配備線纜管理裝置，請將其連接到儲存系統的背面。</block>
+  <block id="375fabf294ecb62aaa7fb7257a915f0f" category="inline-link-macro">適用於您的 AFX 2K 儲存系統的支援佈線配置</block>
+  <block id="bb885cec98023257ba83b46bd8568bd7" category="paragraph">安裝 AFX 系統的硬體後，請檢查<block ref="644587c64becba73f3c1cc55fca7e5b4" category="inline-link-macro-rx"></block>。</block>
+  <block id="9de04133b422a45b2b4db0f6da19c6de" category="doc">AFX 2K 儲存系統的網路需求</block>
+  <block id="9373657b437037574bdca50e8fc97e26" category="paragraph">記錄連接到 AFX 2K 儲存系統的每個網路所需的資訊。</block>
+  <block id="d922d73d59b6c4f4e139c54f8514fbef" category="paragraph">在開始安裝 AFX 2K 儲存系統之前，請收集所需的網路資訊</block>
+  <block id="66ae8ff18d363d41b87658f9954edf91" category="paragraph">對於 Cisco Nexus 9808、Cisco Nexus 9332D-GX2 和 9364D-GX2A 交換器的安裝和維護，請務必查看佈線和網路需求。</block>
+  <block id="45e89ca8f25ad9002015ba4fa01c00b7" category="inline-link-macro">為您的 AFX 2K 儲存系統連接控制器和儲存架</block>
+  <block id="fb8b0fb286d0cedc5fa7dcb033bf8b01" category="paragraph">在審查了網路需求之後，您<block ref="5f4d9374056fc6c09ec104940ef99307" category="inline-link-macro-rx"></block>。</block>
+  <block id="fe1577361af26f8e4dd532050fb50109" category="summary">檢查 AFX 2K 儲存控制器和儲存架所需的設備以及搬運注意事項。</block>
+  <block id="d308c28d83ec0bb0d058af4f3c2204da" category="doc">AFX 2K 儲存系統的安裝要求</block>
+  <block id="f5c6c7697af84dadac884b524b99bb4f" category="paragraph">檢查 AFX 2K 儲存控制器和儲存架所需的設備以及搬運注意事項。</block>
+  <block id="07e65db26538c9813f032d5d18ab781c" category="paragraph">要安裝您的 AFX 2K 儲存系統，您需要以下設備和工具。</block>
+  <block id="a39eb1657f72fd9be67946f2084dca74" category="paragraph">移動或抬起 AFX 2K 儲存控制器時，請採取必要的預防措施。</block>
+  <block id="f415d8d2a6618e04d44d634d47bc83a2" category="paragraph">AFX 2K 儲存控制器重量可達 64.0 磅（29.03 公斤）。要抬起儲存控制器，請使用兩人或液壓升降機。</block>
+  <block id="0a89a0c735763d3d02f511e7e0568691" category="image-title">AFX 2K 控制器吊掛注意事項。</block>
+  <block id="bc9f127189e18d043f25d56a13a3f3a6" category="image-alt">AFX 2K 控制器提升注意圖示</block>
+  <block id="49d94e9d9cc1d911477394f4f5587281" category="paragraph">NX224 磁碟櫃最大重量可達 60.1 磅（27.3 公斤）。搬運磁碟櫃時，請兩人操作或使用液壓升降機。請將所有組件（包括前後組件）放置在磁碟櫃內，以防止磁碟櫃重量不平衡。</block>
+  <block id="e3d899fe7d7d08e9d1b7af94989d0ea1" category="image-title">NX224 磁碟櫃搬運注意事項。</block>
+  <block id="e6f1e8dcf7e84e228388169fccef969e" category="image-alt">NX224 NSM100 提升警告圖標</block>
+  <block id="b6283ecc2875030877658d5f50509cca" category="section-title">切換權重</block>
+  <block id="1e7fc07c8d33fee1cd76c12787fb389a" category="paragraph">移動或抬起開關時，請採取必要的預防措施。</block>
+  <block id="2082d0b73a4a04320b20b1e6d00e06cf" category="paragraph-title">Cisco Nexus 9808</block>
+  <block id="71d0ecf29d8418c39d3a7020d9e1d139" category="inline-link-macro">162 磅（73 公斤），而一台滿載的 Cisco 9808 交換器重量可達 766 磅（347 公斤）。</block>
+  <block id="0647f55e09b4cecb34907d2657dd833f" category="paragraph">一台空載的 Cisco 9808 交換器重量可達<block ref="13f1d1617f442c7bc3aba3932c9f89e0" category="inline-link-macro-rx"></block>。若要吊起此交換器，請使用液壓升降機。</block>
+  <block id="f688f103c3ec15271cd0271af6a60615" category="image-title">卸載 Cisco Nexus 9808 的吊掛注意事項。</block>
+  <block id="d1074c2e1d5567caec7fef210fcc6c0c" category="image-alt">Cisco Nexus 9808 提升警示圖示</block>
+  <block id="8ea52e70a593eb2b21673e9d3cf56c98" category="image-title">滿載的 Cisco Nexus 9808 吊運注意事項。</block>
+  <block id="85ac8bd593004fb7ff69d84ab92ddf4f" category="image-alt">Cisco Nexus 9808 滿載提升警告圖示</block>
+  <block id="6e6cbd7e9384425cb0fa31a261d35522" category="paragraph-title">Cisco Nexus9332D-GX2B</block>
+  <block id="e8084d649e131c99b13eccc6351f748c" category="inline-link-macro">12.7 公斤（28.1 磅）</block>
+  <block id="a66d55678c1a6c3efd062d73040bd490" category="paragraph">Cisco 9332D-GX2B 的重量可達 <block ref="6f9014f572f52bb6524452d132abc2f4" category="inline-link-macro-rx"></block>。</block>
+  <block id="0e7640c65f26c9e296a33421d0fb5c5a" category="paragraph-title">Cisco Nexus 9364D-GX2A</block>
+  <block id="cf32471bf244ab09b7a83cfa57b0a59d" category="inline-link-macro">58 lb （26.3 kg）</block>
+  <block id="02366468ef122cb4ccf5c75dc007d66e" category="paragraph">一台 Cisco Nexus 9364D-GX2A 交換器的重量可達 <block ref="143c757a55c009a400277dc1af60d01f" category="inline-link-macro-rx"></block>。若要抬起此交換器，請使用兩人或液壓升降機。</block>
+  <block id="80a48afafed4748afbb7fb8e00d4fbac" category="image-title">Cisco Nexus 9364D-GX2A 吊掛注意事項。</block>
+  <block id="9c652f92636878a413a07289fa19df8b" category="image-alt">Cisco Nexus 9364D-GX2A 提升警告圖示</block>
+  <block id="6d2e6fa4ad5c4e1d70e0049f2bb6744f" category="inline-link-macro">準備安裝您的 AFX 2K 儲存系統</block>
+  <block id="ceda96a5bbb707ae04d5b2e833b8513f" category="paragraph">在您查看完硬體需求後，您<block ref="df78cfc12e7986adea8b6958aea20c15" category="inline-link-macro-rx"></block>。</block>
+  <block id="14c2f5caaa33edd3d9c98d021675599a" category="summary">開始安裝和設定 AFX 2K 儲存系統，並將其部署到您的 ONTAP 環境中。</block>
+  <block id="bb5e6a0ec35d5434a23001e4f5b7aa1c" category="doc">AFX 2K 儲存系統的安裝與設定工作流程</block>
+  <block id="748f51609c111e704a444b9474a78c25" category="paragraph">要安裝和設定 AFX 2K 儲存系統，您需要查看硬體需求、準備站台、安裝交換器、安裝和連接硬體元件、啟動系統並設定 ONTAP AFX 叢集。</block>
+  <block id="62871ffb3e01a536fedef64c1e7e369d" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="9e214765c0ab508a9dabd5b4c0fc9d2c" category="inline-link-macro-rx"></block></block>
+  <block id="8cf07a0ccfd463d05761ad47cd2b6674" category="paragraph">查看安裝 AFX 2K 儲存系統的硬體需求。</block>
+  <block id="4e8e5e25feb54728bbdf5f233f6f6deb" category="inline-link-macro">準備安裝您的 AFX 2K 儲存系統</block>
+  <block id="692d921a1a212daf707f21af1597565f" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="2fb89b8f2c297a83f899bf1a209a7f04" category="inline-link-macro-rx"></block></block>
+  <block id="b071c0df87fd86ef958c06a3a3081417" category="paragraph">安裝 AFX 2K 儲存系統前，請先準備場地、檢查環境和電氣需求、確保足夠的機架空間、拆箱設備、核對裝箱單上的內容，並註冊硬體以獲得支援。</block>
+  <block id="9798a67def0b529180e57f6634c50e86" category="inline-link-macro">為您的 AFX 2K 儲存系統安裝交換器</block>
+  <block id="e020a50d66335697eec9135a7be5ff38" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block><block ref="dc3f7314737cc8aa039ac5d145cd875b" category="inline-link-macro-rx"></block></block>
+  <block id="e0932c1a37a4c035802585cf946bb5c5" category="paragraph">在機櫃或機架中安裝 Cisco Nexus 9808、9332D-GX2B 或 9364D-GX2A 交換器。如果使用 Cisco Nexus 9364D-GX2A 交換器，請安裝直通面板套件。</block>
+  <block id="f1db20f2a6ea67281b280039ed23e84b" category="inline-link-macro">安裝 AFX 2K 儲存系統的硬體</block>
+  <block id="174ba30a4adb6eef22be0ec2ba4f2bbb" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="29c414a2b34b20c38b54cd0b7cbe50f0" category="inline-link-macro-rx"></block></block>
+  <block id="0339b38c5e536ce5872c1e1f4a7277bc" category="inline-link-macro">為您的 AFX 2K 儲存系統連接控制器和磁碟櫃</block>
+  <block id="cc6a36795b2fc813a47ae09ef8a58b8b" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="177fa42f91004bf8418c9d0abe33728e" category="inline-link-macro-rx"></block></block>
+  <block id="03e1dec6cc3a9116adc8943ea0059cd6" category="inline-link-macro">開啟 AFX 2K 儲存系統的電源並設定交換器</block>
+  <block id="1b96854974d5f4ffd9f2dcc8a009acc3" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block><block ref="beaa88dc5bf8500bb31077215f00658c" category="inline-link-macro-rx"></block></block>
+  <block id="c5e937dffaba36411bcbdd3eb4791ea6" category="paragraph">啟動並設定 AFX 2K 儲存系統的交換器。請查閱 Cisco Nexus 9808、9332D-GX2B 和 9364D-GX2A 交換器的設定說明。</block>
+  <block id="c5468f271ce4f817142b4ba7b7e32a93" category="inline-link-macro">啟動您的 AFX 2K 儲存系統</block>
+  <block id="ae11ea589792bd6df4cefbf4beb129f3" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block><block ref="e44d41ea69a939c847404b9f191abb00" category="inline-link-macro-rx"></block></block>
+  <block id="9304d8e6349135f4f1b0131240ab5a26" category="summary">了解如何安裝 AFX 2K 儲存系統和儲存櫃的交換器。</block>
+  <block id="07e73c47ab45b375fd0ccd199b3b74bb" category="paragraph">完成 AFX 2K 儲存系統安裝的準備工作後，您應該將交換器安裝到機櫃或電信機架中。</block>
+  <block id="abbd69be44276666819991687fb0f350" category="inline-link-macro">Cisco Nexus 9808 模式交換器硬體安裝指南</block>
+  <block id="2abff668059e41efff161539a8bd3a5d" category="inline-link-macro">Cisco Nexus 9332D-GX2B 模式交換器硬體安裝指南</block>
+  <block id="9ff9fb2231633f869e228568f0b014a0" category="inline-link-macro">Cisco Nexus 9364D-GX2A 模式交換器硬體安裝指南</block>
+  <block id="1155f06a0efc47f87895fe1d43b1308b" category="admonition">如果您的交換器氣流配置為連接埠側進氣（風扇和電源供應器為酒紅色），則交換器的網路連接埠必須朝向機櫃正面，排氣風扇必須朝向機櫃背面。在這種配置下，您必須確保使用足夠長的線纜，以便從機櫃正面的網路連接埠連接到機櫃背面的儲存連接埠。+ 有關這些交換器的更多詳細資訊，請造訪 Cisco 網站：<block ref="b1e3c6adefcb656038c1e4e161770597" category="inline-link-macro-rx"></block>、<block ref="3148b19c0d24aa893b9a673ab43c93f2" category="inline-link-macro-rx"></block> 和 <block ref="ada068d3b68a48c78244497c91bbab0b" category="inline-link-macro-rx"></block>。</block>
+  <block id="634537c38f042132e8fd2f46f0570ece" category="section-title">Cisco Nexus 9808 交換器安裝</block>
+  <block id="98e35c1e75a2c08c1f49e829579e9817" category="paragraph">如果您要安裝 Cisco Nexus 9808 交換器，請參閱 <block ref="9d897c09acfda023b7ac88c3caedc148" category="inline-link-macro-rx"></block>，以取得如何在機櫃或機架中安裝交換器的詳細說明。</block>
+  <block id="b30efe348aad9b1fd465cf0c2c1f78e7" category="section-title">Cisco Nexus 9332D-GX2B 和 9364D-GX2A 交換器安裝</block>
+  <block id="22f4977d08b7fc3ab6d1301c0f1669d8" category="paragraph">如果您要安裝 Cisco Nexus 9332D-GX2B 或 9364D，請依照下列步驟將交換器安裝到機櫃或機架。</block>
+  <block id="f73884780799db5b46f3b756e9cbc3b9" category="list-text">將兩條跳線的母接頭從面板背面穿過電刷組件。</block>
+  <block id="a522609cadcb30fbb8ce2ab61205935c" category="paragraph">將這兩台交換器安裝在方便存取控制器和層架的機櫃位置，例如中間幾排。</block>
+  <block id="3c44162e4d90b6e64a452898e30b09c1" category="inline-link-macro">將 AFX 2K 儲存系統和層架安裝到機櫃或機架中</block>
+  <block id="3acd5cce42e7b34cb81528cf7752716c" category="paragraph">將交換器安裝到機櫃或機架後，您<block ref="aa2c652314319031e5bb331412a6d709" category="inline-link-macro-rx"></block>。</block>
+  <block id="20b605f2c9500a07e9e58525fa298af8" category="summary">了解如何開啟和設定 AFX 2K 儲存系統的交換器。</block>
+  <block id="b89899cc68b1c7a6d28cb399bc72cff3" category="paragraph">完成 AFX 2K 儲存系統的佈線後，您需要開啟 Cisco Nexus 9808、9332D-GX2B 或 9364D-GX2A 交換器的電源並進行設定。</block>
+  <block id="a401dc7d868b438d53e932d19bbe29c1" category="list-text">有關 Cisco Nexus 9808 交換器的詳細資訊，請參閱 <block ref="b1e3c6adefcb656038c1e4e161770597" category="inline-link-macro-rx"></block>。</block>
+  <block id="5a5c4176551fe6dd6fe6ee11995ce220" category="list-text">對於 Cisco Nexus 9332D-GX2B 交換器，請使用連接埠 31/32 進行 ISL 連線。如需詳細資訊，請參閱 <block ref="2fc588ea5e031befba9fe0b0a6466061" category="inline-link-macro-rx"></block>。</block>
+  <block id="1f87cb3b672fcebc0f3e8c027541a0f4" category="list-text">對於 Cisco Nexus 9364D-GX2A 交換器，請使用連接埠 63/64 進行 ISL 連線。如需詳細資訊，請參閱 <block ref="9a6587d5653529e56536e1d546440a92" category="inline-link-macro-rx"></block>。</block>
+  <block id="3f09832565123d546de503a179a2a73a" category="list-text">配置交換器以支援 AFX 2K 儲存系統。</block>
+  <block id="6643d25175cee9ed135211156448f273" category="inline-link-macro">配置 AFX 儲存系統的交換器</block>
+  <block id="658d597bb59c7324b20aa493f0ff0299" category="list-text">有關配置交換器的更多資訊，請參閱 <block ref="c680c8d03caae4efc1e016b731ff8649" category="inline-link-macro-rx"></block>。</block>
+  <block id="708b74e6831efbdefff002e1e0fa8f36" category="inline-link-macro">啟動 AFX 2K 儲存系統</block>
+  <block id="bdd33111aa5c5ee954d515d83c1a9731" category="paragraph">配置 AFX 2K 儲存系統的交換器後，<block ref="50a620d565af3ded921cd2d40d21ce59" category="inline-link-macro-rx"></block>。</block>
+  <block id="e9cff4d9b0d60850bd0c9246eb98b0bc" category="paragraph">安裝 AFX 2K 儲存系統的機架硬體並安裝控制器節點和儲存架的纜線後，您應該開啟儲存架和控制器節點的電源。</block>
+  <block id="756031cf2e8f6f44dd7976fb219e5e77" category="image-alt">AFX 儲存系統電源連接圖</block>
+  <block id="676acf548f3628aecf9dda22c2fbb15f" category="section-title">步驟 3：驗證交換器連接</block>
+  <block id="c0b7f24cd31d467c7ed81224bec89d8c" category="paragraph">從交換器 CLI 驗證連接到叢集連接埠的交換器連接埠是否已啟動，叢集節點是否位於正確的叢集 VLAN 中，以及兩個交換器之間的 ISL 連線是否正常運作。</block>
+  <block id="0097fca24c28b6259e494bccda3ea5ac" category="list-text">確認連接到叢集連接埠的交換器連接埠已啟動：</block>
+  <block id="44ff10d140597f1cb51bd7445d226660" category="paragraph"><block ref="9bacb249b0368cefba275373cd07ba98" prefix="" category="inline-code"></block></block>
+  <block id="850ac0959fb08d131db400ce32ac1260" category="paragraph">您可以使用<block ref="067b42f7046950ac29ec16c1ee1f3a25" prefix=" " category="inline-code"></block>篩選輸出，僅顯示已開啟的連接埠。</block>
+  <block id="4cf6c071b062edfe390393becef4ddb8" category="example-title">展示 Cisco Nexus 9332D-GX2B 和 9364D-GX2A 交換器的範例</block>
+  <block id="df1a0104b3b10c280d3eb4a8b64408b5" category="example-title">展示 Cisco Nexus 9808 交換器的範例</block>
+  <block id="2672a0c9ba5986c403c26e013c160859" category="list-text">使用下列命令驗證叢集節點是否位於正確的叢集 VLAN 中：</block>
+  <block id="89706bbdab62cd83048f38305d846f95" category="paragraph"><block ref="7d4adecb4116bbfb7ed1130103f872a7" prefix="" category="inline-code"></block></block>
+  <block id="12bc122b0d9a4c902fdf52bfcc13ddc2" category="paragraph"><block ref="c01eca2c804c6a35b8aa8d87eceefe5d" prefix="" category="inline-code"></block></block>
+  <block id="67be433ec0e6f696ebdaeb0fc0c7c17d" category="example-title">展示 Cisco Nexus 9332D-GX2B 交換器的範例</block>
+  <block id="7357894129543c2e60263a258bb54ce3" category="example-title">展示 Cisco Nexus 9364D-GX2A 交換器的範例</block>
+  <block id="422d547a919ce56042b89a80c5d53dc8" category="admonition">有關具體的連接埠和 VLAN 使用詳情，請參閱 RCF 中的橫幅和重要說明部分。</block>
+  <block id="30cf20765052250ba29f76c2b9e4fee6" category="list-text">驗證第一台交換器（cs1）和第二台交換器（cs2）之間的 ISL 是否正常運作：</block>
+  <block id="a8dce9ba2c375a697682cb30d4bd3f7a" category="paragraph"><block ref="2f9f4462a41014889ceaf0991f774466" prefix="" category="inline-code"></block></block>
+  <block id="9217dd0e439535a316153915b1269ee5" category="admonition">由於 Cisco Nexus 9808 交換器是單一交換器，ISL 已中斷；因此，您將在命令輸出中看不到對等體。</block>
+  <block id="e489edfb772eb917fcfdf241301b7148" category="paragraph">啟動 AFX 2K 儲存系統後，根據您的部署選項完成設定：</block>
+  <block id="90a434a515ece3b128a45b7317851ca2" category="list-text">對於專用 AFX 2K 儲存系統部署，請前往<block ref="b434a61d8681e909828695f9b932fe31" category="inline-link-macro-rx"></block>。</block>
+  <block id="c324eabd50a9696c22e3b2bbcb852087" category="summary">準備在您的 ONTAP 環境中安裝 AFX 2K 儲存系統，並註冊硬體以存取支援權益。</block>
+  <block id="f4aa0fcc2422372f2166e5b045d1f496" category="paragraph">準備安裝您的 AFX 2K 儲存系統，首先要準備好場地，打開包裝箱，將包裝箱內的物品與裝箱單進行核對，然後註冊系統以存取支援權益。</block>
+  <block id="4ad7b5c48c502f39bfd8b09fbcca74ad" category="paragraph">若要安裝 AFX 2K 儲存系統，請確保您計劃使用的場地和機櫃或機架符合您的配置規格。</block>
+  <block id="c48d746f4e2949a6e8b2cff970781dd9" category="list-text">1U 適用於 Cisco Nexus 9332D-GX2B 交換器。</block>
+  <block id="5464b20ffc22b4fad80fe63190fc78f2" category="list-text">適用於 Cisco Nexus 9364D-GX2A 交換器的 2U 機架空間。</block>
+  <block id="51921b7f60ec1ecae6ad35b585f36760" category="list-text">Cisco Nexus 9808 交換器的 16U 機架空間。</block>
+  <block id="6054c582ca07fd4aea4c2ef89af00491" category="list-text">Cisco Nexus 9808、9332D-GX2B 或 9364D-GX2A 交換器</block>
+  <block id="d633bcd1ddfd076b687e4dd6dfdcaad6" category="paragraph">在您確認您的網站符合 AFX 2K 儲存系統規格的要求，並且確認您擁有所有訂購的零件後，請註冊您的儲存系統。</block>
+  <block id="6ad695199dd1267c394e1b5e8918c099" category="inline-link-macro">為您的 AFX 2K 儲存系統安裝交換器</block>
+  <block id="64f0f32053db18eaa823db38747a60f5" category="paragraph">準備好安裝 AFX 2K 硬體後，您<block ref="841c968c6845aaa96391977b14dd30de" category="inline-link-macro-rx"></block>。</block>
+  <block id="24f867588084fea793ec7e904d0fe6bc" category="inline-image-macro">AFX 1K 儲存系統範例佈線，寬度=1000px</block>
+  <block id="ac53f8ceaf3de2a14d4130e5c80476fc" category="paragraph"><block ref="ac53f8ceaf3de2a14d4130e5c80476fc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a7f2e82dc420248ac6b5bb4612abfd3b" category="paragraph">AFX 1K 儲存控制器重量可達 62.83 磅（28.5 公斤）。搬運此儲存控制器時，請使用兩人協助或液壓升降機。</block>
+  <block id="46faf4c338a5ad7f7a91f9b2519d784f" category="image-title">AFX 1K 控制器吊掛注意事項。</block>
+  <block id="f5d3c91e099d33ba30a8c9acd3937c30" category="image-alt">AFX 1K 抬升警示圖示</block>
+  <block id="fbaadf625a1c5ac027179dc6e2a281b6" category="admonition">如果您的交換器氣流配置為連接埠側進氣（風扇和電源供應器為酒紅色），則交換器的網路連接埠必須朝向機櫃正面，排氣風扇必須朝向機櫃背面。採用此配置時，您必須確保使用足夠長的線纜，以便從機櫃正面的網路連接埠連接到機櫃背面的儲存連接埠。+ 有關這些交換器的更多詳細資訊,請造訪 Cisco 網站:<block ref="5de327010a827538dae114b632be0b56" category="inline-link-rx"></block> 和 <block ref="95c8681536a10cd34cb9abaa027869ff" category="inline-link-rx"></block>。</block>
+  <block id="e6b43d44e837c88835a24eed44fe337e" category="sidebar">安裝 AFX 1K 硬體</block>
+  <block id="22b501d3873dc125bd1324e3e003ec6c" category="sidebar">安裝 AFX 2K 硬體</block>
 </blocks>

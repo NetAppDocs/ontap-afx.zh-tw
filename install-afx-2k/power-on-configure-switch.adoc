@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: install-afx-2k/power-on-configure-switch.html 
+keywords: afx, afx 2k, cable controllers, Cisco Nexus 9332D-GX2B, Cisco Nexus 9364D-GX2A, switches, switch, power on, configure switches, 
+summary: 了解如何開啟和設定 AFX 2K 儲存系統的交換器。 
+---
+= 開啟 AFX 2K 儲存系統的電源並設定交換器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+完成 AFX 2K 儲存系統的佈線後，您需要開啟 Cisco Nexus 9808、9332D-GX2B 或 9364D-GX2A 交換器的電源並進行設定。
+
+.步驟
+. 將交換器的電源線插入電源。
+. 連接兩台交換器之間的 ISL 電纜。
++
+** 有關 Cisco Nexus 9808 交換器的詳細資訊，請參閱 link:https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/9800/9808/nx-os/cisco-nexus-9808-nx-os-mode-switch-hardware-installation-guide/m-8000-modular-overview-ph2.html["Cisco Nexus 9808 模式交換器硬體安裝指南"^]。
+** 對於 Cisco Nexus 9332D-GX2B 交換器，請使用連接埠 31/32 進行 ISL 連線。如需詳細資訊，請參閱 link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9332d-gx2b/cisco-nexus-9332d-gx2b-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Cisco Nexus 9332D-GX2B 模式交換器硬體安裝指南"^]。
+** 對於 Cisco Nexus 9364D-GX2A 交換器，請使用連接埠 63/64 進行 ISL 連線。如需詳細資訊，請參閱 link:https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/9364d-gx2a/cisco-nexus-9364d-gx2a-nx-os-mode-switch-hardware-installation-guide/m_overview1.html["Cisco Nexus 9364D-GX2A 模式交換器硬體安裝指南"^]。
+
+
+. 打開每個交換器的電源。
+. 配置交換器以支援 AFX 2K 儲存系統。
++
+** 有關配置交換器的更多資訊，請參閱 link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["配置 AFX 儲存系統的交換器"^]。
+
+
+
+
+.下一步是什麼？
+配置 AFX 2K 儲存系統的交換器後，link:power-on-hardware.html["啟動 AFX 2K 儲存系統"]。

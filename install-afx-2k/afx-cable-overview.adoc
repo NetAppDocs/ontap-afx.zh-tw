@@ -1,0 +1,74 @@
+---
+permalink: install-afx-2k/afx-cable-overview.html 
+sidebar: sidebar 
+keywords: afx, afx 2k, cable, overview, cisco 9332, cisco 9364, cabling, hardware, switches, storage shelves, disk shelves, controller nodes 
+summary: 了解如何將控制器節點連接到網路、交換器和儲存架。 
+---
+= 您的 AFX 2K 儲存系統支援的配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解 AFX 2K 儲存系統支援的硬體組件和佈線選項，包括相容的儲存磁碟櫃、交換器以及正確設定系統所需的線纜類型。
+
+
+
+== 支援的 AFX 2K 佈線配置
+
+AFX 2K 儲存系統的初始配置支援至少四個控制器節點，這些節點透過雙交換器連接到儲存磁碟架。
+
+額外的控制器節點和磁碟櫃可擴充初始的 AFX 2K 儲存系統配置。擴充後的 AFX 2K 配置遵循與下圖所示相同的交換器型佈線方法。
+
+image:../media/drw_afx_2k_cable_overview_half_node_ieops-2871.svg["AFX 2K 儲存系統範例佈線，寬度=1000px"]
+
+
+
+== 支援的硬體組件
+
+查看與 AFX 2K 儲存系統相容的儲存磁碟架、交換器和電纜類型。
+
+[cols="35%,65%"]
+|===
+| 硬體組件 | 支援的線纜 
+
+
+| AFX 2K（控制器架）  a| 
+* 400GbE QDD 轉 400GbE QSFP 連接線（控制器到交換器的連接）
+* 用於管理連接的 RJ-45 電纜
+
+
+
+
+| NX224（磁碟架）  a| 
+* 400GbE QSFP-DD 轉 4x100GbE QSFP 轉接線（交換器至磁碟櫃連接）
+
+
+
+
+| Cisco Nexus 9808（交換器）  a| 
+* 400GbE QSFP-DD 轉 4x100GbE QSFP 轉接線（交換器至磁碟櫃連接）
+* 2 條 400GbE 電纜，用於交換器 A 和交換器 B 之間的 ISL 連接
+* 用於管理連接的 RJ-45 電纜
+
+
+
+
+| Cisco Nexus 9332D-GX2B（交換器）  a| 
+* 400GbE QSFP-DD 轉 4x100GbE QSFP 轉接線（交換器至磁碟櫃連接）
+* 2 條 400GbE 電纜，用於交換器 A 和交換器 B 之間的 ISL 連接
+* 用於管理連接的 RJ-45 電纜
+
+
+
+
+| Cisco Nexus 9364D-GX2A（交換器）  a| 
+* 400GbE QSFP-DD 轉 4x100GbE QSFP 轉接線（交換器至磁碟櫃連接）
+* 2 條 400GbE 電纜，用於交換器 A 和交換器 B 之間的 ISL 連接
+* 用於管理連接的 RJ-45 電纜
+
+
+|===
+.下一步是什麼？
+在審查了支援的系統配置和硬體組件之後，link:install-network-reqs.html["查看您的 AFX 2K 儲存系統的網路需求"]。

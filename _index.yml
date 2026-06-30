@@ -13,8 +13,10 @@ indexpage:
       url: "/get-started/ontap-afx-storage.html"
     - title: 快速啟動
       url: "/get-started/quick-start.html"
-    - title: 安裝 AFX 硬體
+    - title: 安裝 AFX 1K 硬體
       url: "/install-setup/install-setup-workflow.html"
+    - title: 安裝 AFX 2K 硬體
+      url: "/install-afx-2k/install-setup-workflow.html"
     - title: 設定 AFX 集群
       url: "/install-setup/cluster-setup.html"
   - title: 叢集管理

@@ -16,30 +16,58 @@ entries:
   url: "/get-started/quick-start.html"
 - title: 安裝您的 AFX 系統
   entries:
-  - title: 安裝工作流程
-    url: "/install-setup/install-setup-workflow.html"
-  - title: 查看硬體需求
-    url: "/install-setup/install-setup-requirements.html"
-  - title: 準備安裝
-    url: "/install-setup/prepare-hardware.html"
-  - title: 安裝硬體
+  - title: AFX 1K
     entries:
-    - title: 安裝開關
-      url: "/install-setup/install-switches.html"
-    - title: 安裝儲存系統和架子
-      url: "/install-setup/deploy-hardware.html"
-  - title: 佈線
+    - title: 安裝工作流程
+      url: "/install-setup/install-setup-workflow.html"
+    - title: 查看硬體需求
+      url: "/install-setup/install-setup-requirements.html"
+    - title: 準備安裝
+      url: "/install-setup/prepare-hardware.html"
+    - title: 安裝硬體
+      entries:
+      - title: 安裝開關
+        url: "/install-setup/install-switches.html"
+      - title: 安裝儲存系統和架子
+        url: "/install-setup/deploy-hardware.html"
+    - title: 佈線
+      entries:
+      - title: 查看支援的配置
+        url: "/install-setup/afx-cable-overview.html"
+      - title: 收集網路資訊
+        url: "/install-setup/install-network-reqs.html"
+      - title: 電纜硬體
+        url: "/install-setup/cable-hardware.html"
+    - title: 打開並配置交換機
+      url: "/install-setup/power-on-configure-switch.html"
+    - title: 啟動系統
+      url: "/install-setup/power-on-hardware.html"
+  - title: AFX 2K
     entries:
-    - title: 查看支援的配置
-      url: "/install-setup/afx-cable-overview.html"
-    - title: 收集網路資訊
-      url: "/install-setup/install-network-reqs.html"
-    - title: 電纜硬體
-      url: "/install-setup/cable-hardware.html"
-  - title: 打開並配置交換機
-    url: "/install-setup/power-on-configure-switch.html"
-  - title: 啟動系統
-    url: "/install-setup/power-on-hardware.html"
+    - title: 安裝工作流程
+      url: "/install-afx-2k/install-setup-workflow.html"
+    - title: 查看硬體需求
+      url: "/install-afx-2k/install-setup-requirements.html"
+    - title: 準備安裝
+      url: "/install-afx-2k/prepare-hardware.html"
+    - title: 安裝硬體
+      entries:
+      - title: 安裝開關
+        url: "/install-afx-2k/install-switches.html"
+      - title: 安裝儲存系統和架子
+        url: "/install-afx-2k/deploy-hardware.html"
+    - title: 佈線
+      entries:
+      - title: 查看支援的配置
+        url: "/install-afx-2k/afx-cable-overview.html"
+      - title: 收集網路資訊
+        url: "/install-afx-2k/install-network-reqs.html"
+      - title: 電纜硬體
+        url: "/install-afx-2k/cable-hardware.html"
+    - title: 打開並配置交換機
+      url: "/install-afx-2k/power-on-configure-switch.html"
+    - title: 啟動系統
+      url: "/install-afx-2k/power-on-hardware.html"
 - title: 設定您的 AFX 系統
   url: "/install-setup/cluster-setup.html"
 - title: 準備管理 AFX

@@ -13,18 +13,14 @@ summary: 要啟動並運行您的 AFX 系統，您需要安裝硬體元件、設
 [role="lead"]
 若要初始啟動並執行您的 AFX 系統，您需要安裝硬體元件、設定叢集，並準備管理叢集和 SVM。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] AI Data Engine（AIDE）是否也會隨 AFX 一起安裝？
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 安裝並設定您的硬體
 [role="quick-margin-para"]
-您需要決定是僅安裝 AFX 還是同時安裝 AFX 和 AI Data Engine。請查看 https://docs.netapp.com/us-en/ontap-afx/get-started/learn-about-aide.html#installation-options["AIDE 安裝選項"]以協助您確定最適合您需求的方案。
+安裝您的 link:../install-setup/install-setup-workflow.html["AFX 1K"] 或 link:../install-afx-2k/install-setup-workflow.html["AFX 2K"] 儲存系統。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 安裝並設定您的硬體
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 設定叢集
 [role="quick-margin-para"]
-安裝您的 link:../install-setup/install-setup-workflow.html["AFX 1K"] 或 link:../install-afx-2k/install-setup-workflow.html["AFX 2K"] 儲存系統。您也可以選擇  https://docs.netapp.com/us-en/ai-data-engine/install-aide-server/aide-mde-server-hardware-requirements.html["安裝 AIDE 第三方伺服器"] 或  https://docs.netapp.com/us-en/ai-data-engine/install-dcn/aide-dcn-hardware-requirements.html["安裝 AIDE NetApp 資料運算節點"]（如果您將 AIDE 作為初始 AFX 1K 設定的一部分）。
+按照簡單快速的步驟使用系統管理器link:../install-setup/cluster-setup.html["設定"]您的 ONTAP 叢集。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 設定叢集
-[role="quick-margin-para"]
-按照簡單快速的步驟使用系統管理器link:../install-setup/cluster-setup.html["設定"]您的 ONTAP 叢集。如果您也要在資料運算節點上安裝 AIDE 和 AFX，請查看 https://docs.netapp.com/us-en/ai-data-engine/install-setup/cluster-setup-afx.html["使用新的 AFX 叢集設定 AIDE"^]以瞭解其他必要的組態。
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] 準備管理您的叢集
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 準備管理您的叢集
 [role="quick-margin-para"]
 在生產環境部署 AFX 之前，必須link:../get-started/prepare-cluster-admin.html["準備"]透過了解管理結構（包括儲存虛擬機器 (SVM)、使用者、角色和管理介面），確保安全、高效和有效的叢集管理。

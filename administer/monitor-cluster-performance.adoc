@@ -15,12 +15,14 @@ summary: 您可以顯示 AFX 叢集效能的進階概覽。
 
 
 
+[[storage-capacity]]
 == 儲存容量
 
 監控儲存使用率，確保您擁有足夠的儲存容量來滿足目前和未來的工作負載需求。
 
 
 
+[[monitor-high-level-cluster-storage-utilization]]
 === 監控高階叢集儲存使用率
 
 在 ONTAP System Manager 中、您可以檢視整個叢集的儲存使用率高階顯示。
@@ -33,6 +35,7 @@ summary: 您可以顯示 AFX 叢集效能的進階概覽。
 
 
 
+[[monitor-storage-availability-zone-capacity-details]]
 === 監控儲存可用區容量詳細資料
 
 從 ONTAP 9.19.1 開始，您可以檢視儲存可用區的容量詳細資料，包括空間臨界值、快照所耗用的空間以及資料精簡。您也可以將空間使用量臨界值設定為您希望 ONTAP 產生警告和嚴重警示的百分比。
@@ -44,6 +47,7 @@ summary: 您可以顯示 AFX 叢集效能的進階概覽。
 
 
 
+[[cluster-performance]]
 == 集群性能
 
 系統管理器提供了 AFX 叢集效能的詳細概述。
@@ -57,6 +61,7 @@ summary: 您可以顯示 AFX 叢集效能的進階概覽。
 
 
 
+[[related-information]]
 == 相關資訊
 
 * link:../administer/additional-ontap-cluster.html["額外的 AFX 叢集管理"]

@@ -15,6 +15,7 @@ summary: 要備份 AFX 系統上的數據，您需要建立快照。您可以手
 
 
 
+[[before-you-begin]]
 == 開始之前
 
 快照是資料的本機唯讀副本，您可以使用它將磁碟區還原到特定時間點。快照可以根據需要手動創建，也可以根據link:policies-schedules.html["快照策略和計劃"]。
@@ -36,6 +37,7 @@ summary: 要備份 AFX 系統上的數據，您需要建立快照。您可以手
 
 
 
+[[create-a-snapshot]]
 == 建立快照
 
 建立磁碟區或一致性群組的快照。
@@ -149,6 +151,7 @@ SnapMirror標籤由遠端目標使用。
 ====
 
 
+[[related-information]]
 == 相關資訊
 
 * https://docs.netapp.com/us-en/ontap/data-protection/create-snapshot-policy-task.html["建立ONTAP快照策略"^]

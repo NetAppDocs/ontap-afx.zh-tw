@@ -1080,7 +1080,6 @@
   <block id="8cc04c4151dd22af84b31cd55d6c5f57" category="list-text">確認列出了新的序號。</block>
   <block id="6b127ae60215df1a5f77bc62deb0fa41" category="list-text">如果未列出序號，請依照NetApp新客戶的說明進行操作。</block>
   <block id="daee797d0bf63a91fe069e1df88d7923" category="paragraph">NetApp新客戶</block>
-  <block id="12dc2a66a130388ec482398caa6ce95b" category="list-text">點擊“立即註冊”，然後建立帳戶。</block>
   <block id="89cc8de091278e0fb0686833ac6a7982" category="list-text">選擇*系統* &gt; *註冊系統*。</block>
   <block id="616ce92e68107b272305803b0da3016e" category="list-text">輸入儲存系統的序號和所需的詳細資訊。</block>
   <block id="2fbc2bdcd9b44345629827ee822cf2cf" category="paragraph">一旦NetApp批准您的註冊，您就可以下載所需的軟體。批准最多需要 24 小時。</block>
@@ -1721,9 +1720,6 @@
   <block id="14aa705a8a71a02fb1b277002e0c52ed" category="paragraph">使用 4x100GbE 分線電纜將控制器上的叢集連接埠、HA 連接埠和儲存連接埠連接到網路交換器 B。叢集和 HA 互連電纜將連接埠 e1b 和 e7b 連接到交換器 B。e1b 連接埠用於 HA 連接，e7b 連接埠用於叢集連接。對於儲存連接，請將連接埠 e10b 和 e11b 連接到交換器 B。</block>
   <block id="8cff5fa6944271f10e636cadf3153077" category="list-text">將下列控制器連接埠連接至網路交換器 B 上的任意非 ISL 連接埠。</block>
   <block id="3e43f7eeca64d5c830b0064870a6156b" category="admonition">在安裝和維護過程中，請務必配戴連接至已驗證接地點的接地腕帶。未採取正確的 ESD 防護措施可能會對控制器節點、儲存架和網路交換器造成永久性損壞。</block>
-  <block id="d9af9d0a822fab56f67da32f96760bcd" category="paragraph">啟動 AFX 1K 儲存系統後，根據您的部署選項完成設定：</block>
-  <block id="9f17a32279457eb3f0ec945352a82e96" category="inline-link-macro">設定 AFX 叢集</block>
-  <block id="65baec5e9f4a78defefb1154f095ae89" category="list-text">對於專用 AFX 1K 儲存系統部署，請前往<block ref="b434a61d8681e909828695f9b932fe31" category="inline-link-macro-rx"></block>。</block>
   <block id="7485a9a2ae4ee9755a52213e23e1172c" category="inline-link">如何從 NetApp 支援網站下載 NLF 授權</block>
   <block id="0d31e45cb458235b1c184c1176df0af6" category="list-text"><block ref="0d31e45cb458235b1c184c1176df0af6" category="inline-link-rx"></block></block>
   <block id="d0e68fc1dba1032a2fa3af9f7e71bfc4" category="list-text">25.08.1 之前的 Grafana Harvest 版本</block>
@@ -1794,12 +1790,6 @@
   <block id="671c5433927bc9dfd6b61da2ab79dd6d" category="list-text">取得運算節點的位址和任何相關的網路組態。</block>
   <block id="4ba7d969d3c09dfd698e8db23d272f9e" category="list-text">如果您要將 AI Data Engine 與 AFX 儲存系統一起安裝，請提供三個運算節點的 IP 位址。</block>
   <block id="9f492f03b9dc61bbcd50dd10c6f65d02" category="list-text">如果您已將 AIDE 整合到 AFX 叢集設定中，請完成額外的 AIDE 設定步驟。身份驗證配置適用於所有 AIDE 部署。使用已授權 AIDE 功能的 NetApp DCN 部署需要獲得許可；第三方伺服器部署專注於中繼資料，無需 AIDE 許可證。如需更多資訊，請參閱<block ref="bd3118f2bb5e86ecaca641a7e2c5d81b" category="inline-link-rx"></block>。</block>
-  <block id="a1ac1e4ef8ad5ef211eee25ab52448af" category="paragraph">如果您要部署具有 AI Data Engine（AIDE）的 AFX 1K，則可以在完成 AFX 系統的安裝後安裝 AIDE 資料運算節點。</block>
-  <block id="79f06cc713b63c00f3f4c906219bbb17" category="inline-link">在第三方伺服器上搭載 AIDE 軟體的 AI Data Engine 需求</block>
-  <block id="6a12977e2cc394f47a7265809fa30061" category="list-text">對於第三方伺服器部署，請參閱<block ref="216082099dd458e387ea1ec05818ffcf" category="inline-link-rx"></block>和<block ref="77329e7d1925c704e553ae44f4833aec" category="inline-link-rx"></block>。</block>
-  <block id="701208c90aa7ca244e696c853da7a08f" category="inline-link">AI Data Engine 對 NetApp 所提供的資料運算節點的需求</block>
-  <block id="1087440b8e57c1c16de3ff366293314d" category="list-text">有關 NetApp DCN 部署，請參閱<block ref="364d48f5ea1b31d0e89302baf07337b8" category="inline-link-rx"></block>。</block>
-  <block id="67add66066f52297e3d254e9771fa694" category="list-text">對於搭載 AI Data Engine（AIDE）的 AFX 1K 部署，請安裝 AIDE 第三方伺服器或 NetApp 提供的資料運算節點：</block>
   <block id="9446a98ad14416153cc4d45ab8b531bf" category="section-title">效能</block>
   <block id="345b766b796f651335c71b9f6b81cfdc" category="paragraph">利用 ONTAP 的常用功能來優化 AFF 儲存系統叢集的效能。</block>
   <block id="61dd3b29ebbda633eaa5595a4948d71f" category="section-title">修改控制自動 QoS 吞吐量上限增加的預設設定</block>
@@ -2056,7 +2046,6 @@
   <block id="1f87cb3b672fcebc0f3e8c027541a0f4" category="list-text">對於 Cisco Nexus 9364D-GX2A 交換器，請使用連接埠 63/64 進行 ISL 連線。如需詳細資訊，請參閱 <block ref="9a6587d5653529e56536e1d546440a92" category="inline-link-macro-rx"></block>。</block>
   <block id="3f09832565123d546de503a179a2a73a" category="list-text">配置交換器以支援 AFX 2K 儲存系統。</block>
   <block id="6643d25175cee9ed135211156448f273" category="inline-link-macro">配置 AFX 儲存系統的交換器</block>
-  <block id="658d597bb59c7324b20aa493f0ff0299" category="list-text">有關配置交換器的更多資訊，請參閱 <block ref="c680c8d03caae4efc1e016b731ff8649" category="inline-link-macro-rx"></block>。</block>
   <block id="708b74e6831efbdefff002e1e0fa8f36" category="inline-link-macro">啟動 AFX 2K 儲存系統</block>
   <block id="bdd33111aa5c5ee954d515d83c1a9731" category="paragraph">配置 AFX 2K 儲存系統的交換器後，<block ref="50a620d565af3ded921cd2d40d21ce59" category="inline-link-macro-rx"></block>。</block>
   <block id="e9cff4d9b0d60850bd0c9246eb98b0bc" category="paragraph">安裝 AFX 2K 儲存系統的機架硬體並安裝控制器節點和儲存架的纜線後，您應該開啟儲存架和控制器節點的電源。</block>
@@ -2077,8 +2066,6 @@
   <block id="30cf20765052250ba29f76c2b9e4fee6" category="list-text">驗證第一台交換器（cs1）和第二台交換器（cs2）之間的 ISL 是否正常運作：</block>
   <block id="a8dce9ba2c375a697682cb30d4bd3f7a" category="paragraph"><block ref="2f9f4462a41014889ceaf0991f774466" prefix="" category="inline-code"></block></block>
   <block id="9217dd0e439535a316153915b1269ee5" category="admonition">由於 Cisco Nexus 9808 交換器是單一交換器，ISL 已中斷；因此，您將在命令輸出中看不到對等體。</block>
-  <block id="e489edfb772eb917fcfdf241301b7148" category="paragraph">啟動 AFX 2K 儲存系統後，根據您的部署選項完成設定：</block>
-  <block id="90a434a515ece3b128a45b7317851ca2" category="list-text">對於專用 AFX 2K 儲存系統部署，請前往<block ref="b434a61d8681e909828695f9b932fe31" category="inline-link-macro-rx"></block>。</block>
   <block id="c324eabd50a9696c22e3b2bbcb852087" category="summary">準備在您的 ONTAP 環境中安裝 AFX 2K 儲存系統，並註冊硬體以存取支援權益。</block>
   <block id="f4aa0fcc2422372f2166e5b045d1f496" category="paragraph">準備安裝您的 AFX 2K 儲存系統，首先要準備好場地，打開包裝箱，將包裝箱內的物品與裝箱單進行核對，然後註冊系統以存取支援權益。</block>
   <block id="4ad7b5c48c502f39bfd8b09fbcca74ad" category="paragraph">若要安裝 AFX 2K 儲存系統，請確保您計劃使用的場地和機櫃或機架符合您的配置規格。</block>
@@ -2097,4 +2084,13 @@
   <block id="fbaadf625a1c5ac027179dc6e2a281b6" category="admonition">如果您的交換器氣流配置為連接埠側進氣（風扇和電源供應器為酒紅色），則交換器的網路連接埠必須朝向機櫃正面，排氣風扇必須朝向機櫃背面。採用此配置時，您必須確保使用足夠長的線纜，以便從機櫃正面的網路連接埠連接到機櫃背面的儲存連接埠。+ 有關這些交換器的更多詳細資訊,請造訪 Cisco 網站:<block ref="5de327010a827538dae114b632be0b56" category="inline-link-rx"></block> 和 <block ref="95c8681536a10cd34cb9abaa027869ff" category="inline-link-rx"></block>。</block>
   <block id="e6b43d44e837c88835a24eed44fe337e" category="sidebar">安裝 AFX 1K 硬體</block>
   <block id="22b501d3873dc125bd1324e3e003ec6c" category="sidebar">安裝 AFX 2K 硬體</block>
+  <block id="7a28d692f2e87fa913c08f153b092553" category="list-text">NVIDIA C6X-DX 和 CX7 （100GbE） 網路卡不支援銅纜和光纖 breakout 連接（纜線）混合使用。您應該只使用銅纜或光纖連接，避免混合不同類型的連接。長時間混用不同類型的連接可能會導致鏈路飽和。</block>
+  <block id="b1372c8bdf7b87f18c9db2e8270dce48" category="paragraph">在連接交換器之前，請確保您擁有與連接類型相符的正確線纜。</block>
+  <block id="f4bbdec8095912d05fc0863b38ab874a" category="inline-link-macro">在 CX6-DX NIC 上使用混合銅纜和光纖分支線連接連接埠時，出現 CRC 連結錯誤</block>
+  <block id="81ee74208c5c71f60d84fb449cb06237" category="admonition">有關混合連線類型的詳細資訊，請參閱 NetApp 知識庫文章<block ref="c262586745798e29d31312374a9bf860" category="inline-link-macro-rx"></block>。</block>
+  <block id="9a459af3fb0538682e15c7e05c266aeb" category="list-text">有關配置交換器的更多資訊，請參閱<block ref="c680c8d03caae4efc1e016b731ff8649" category="inline-link-macro-rx"></block>。</block>
+  <block id="c1153f83175c5dee9b88a5e820d6bfef" category="inline-link-macro">設定 AFX 集群</block>
+  <block id="2a4823fb79409c272c92a0b82e9c3667" category="paragraph">啟動 AFX 2K 儲存系統後，<block ref="2072e5ec3241d0a9ac16c974239f2f84" category="inline-link-macro-rx"></block>。</block>
+  <block id="cb030b87229281c1b5ed398ba50abebb" category="list-text">選擇 *Register Now*，建立帳戶。</block>
+  <block id="28a41904da7057df6bc7ab97f4b94424" category="paragraph">啟動 AFX 1K 儲存系統後，<block ref="2072e5ec3241d0a9ac16c974239f2f84" category="inline-link-macro-rx"></block>。</block>
 </blocks>

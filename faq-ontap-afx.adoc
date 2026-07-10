@@ -18,6 +18,7 @@ summary: 此常見問題解答清單提供了客戶通常對其 AFX 儲存系統
 
 
 
+[[general]]
 == 一般的
 
 .什麼是ONTAP個性？
@@ -50,6 +51,7 @@ AFX 儲存系統於 2025 年 10 月在NetApp Insight大會上發布。AFX 支援
 
 
 
+[[interoperability]]
 == 互通性
 
 .我可以在同一個ONTAP叢集中將 AFX 系統節點與AFF、 ASA或FAS系統節點混合使用嗎？
@@ -68,6 +70,7 @@ AFX 的SnapMirror版本規則與 Unified ONTAP相同。這意味著要從 Unifie
 
 
 
+[[advanced-concepts]]
 == 進階概念
 
 .AFX 儲存系統支援哪些資料協定？

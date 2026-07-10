@@ -25,7 +25,7 @@ summary: 了解如何開啟和設定 AFX 2K 儲存系統的交換器。
 . 打開每個交換器的電源。
 . 配置交換器以支援 AFX 2K 儲存系統。
 +
-** 有關配置交換器的更多資訊，請參閱 link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["配置 AFX 儲存系統的交換器"^]。
+** 有關配置交換器的更多資訊，請參閱link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["配置 AFX 儲存系統的交換器"^]。
 
 
 

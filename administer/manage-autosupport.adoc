@@ -20,6 +20,7 @@ NOTE: 您需要使用叢集管理員帳戶登入系統管理員來管理AutoSupp
 
 
 
+[[test-autosupport-connectivity]]
 == 測試AutoSupport連接
 
 設定叢集後，您應該測試AutoSupport連線以驗證技術支援是否可以接收AutoSupport產生的訊息。
@@ -32,6 +33,7 @@ NOTE: 您需要使用叢集管理員帳戶登入系統管理員來管理AutoSupp
 
 
 
+[[add-autosupport-recipients]]
 == 新增AutoSupport收件人
 
 您可以選擇將內部支援組織的成員新增至接收AutoSupport訊息的電子郵件地址清單。
@@ -54,6 +56,7 @@ NOTE: 您需要使用叢集管理員帳戶登入系統管理員來管理AutoSupp
 
 
 
+[[send-autosupport-data]]
 == 發送AutoSupport數據
 
 如果您的 AFX 系統出現問題，您應該手動傳送AutoSupport資料。這可以顯著減少識別和解決問題所需的時間。
@@ -70,6 +73,7 @@ NOTE: 您需要使用叢集管理員帳戶登入系統管理員來管理AutoSupp
 
 
 
+[[suppress-support-case-generation]]
 == 抑制支持案例生成
 
 如果您正在對 AFX 系統執行升級或維護，您可能想要抑制AutoSupport支援案例的生成，直到升級或維護完成。
@@ -86,6 +90,7 @@ NOTE: 您需要使用叢集管理員帳戶登入系統管理員來管理AutoSupp
 
 
 
+[[resume-support-case-generation]]
 == 恢復支援案例生成
 
 如果您在升級或維護期間抑制了支援案例的生成，則應在升級或維護完成後立即恢復支援案例的生成。
@@ -102,6 +107,7 @@ AutoSupport案例將根據需要為您的 AFX 系統自動產生。
 
 
 
+[[related-information]]
 == 相關資訊
 
 * https://docs.netapp.com/us-en/ontap/system-admin/manage-autosupport-concept.html["了解ONTAP AutoSupport"^]

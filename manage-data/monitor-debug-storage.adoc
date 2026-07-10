@@ -15,6 +15,7 @@ AFX 系統包括幾個選項來監控每個叢集管理的儲存。
 
 
 
+[[display-nas-clients]]
 == 顯示 NAS 用戶端
 
 您可以顯示目前連接到 AFX 叢集的 NFS 和 SMB/CIFS 用戶端清單。
@@ -27,6 +28,7 @@ AFX 系統包括幾個選項來監控每個叢集管理的儲存。
 
 
 
+[[related-information]]
 == 相關資訊
 
 * link:../manage-data/prepare-manage-data.html["準備管理您的 AFX 數據"]

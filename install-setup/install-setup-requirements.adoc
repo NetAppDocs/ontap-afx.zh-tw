@@ -15,6 +15,7 @@ summary: 查看 AFX 1K 儲存控制器和儲存架所需的設備和提升預防
 
 
 
+[[equipment-needed-for-install]]
 == 安裝所需的設備
 
 要安裝 AFX 1K 儲存系統，您需要以下裝置和工具。
@@ -29,12 +30,14 @@ summary: 查看 AFX 1K 儲存控制器和儲存架所需的設備和提升預防
 
 
 
+[[lifting-precautions]]
 == 起重註意事項
 
 AFX 儲存控制器和儲存架很重。抬起和移動這些物品時要小心。
 
 
 
+[[storage-controller-weights]]
 === 儲存控制器權重
 
 移動或抬起 AFX 1K 儲存控制器時請採取必要的預防措施。
@@ -46,6 +49,7 @@ image::../media/drw_a1k_weight_caution_ieops-1698.svg[AFX 1K 抬升警示圖示]
 
 
 
+[[storage-shelf-weights]]
 === 倉儲貨架重量
 
 移動或抬起架子時請採取必要的預防措施。

@@ -15,6 +15,7 @@ summary: 在管理 AFX 資料之前，您應該熟悉主要概念和功能。
 
 
 
+[[terminology-and-options]]
 == 術語和選項
 
 您應該熟悉幾個與 AFX 資料安全相關的術語。
@@ -27,6 +28,7 @@ summary: 在管理 AFX 資料之前，您應該熟悉主要概念和功能。
 
 
 
+[[related-information]]
 == 相關資訊
 
 * link:../administer/additional-ontap-svm.html["額外的 AFX SVM 管理"]

@@ -15,6 +15,7 @@ summary: 您可以管理 AFX 系統上的一致性群組。這可以簡化您的
 
 
 
+[[add-snapshot-data-protection-to-a-consistency-group]]
 == 為一致性群組新增快照資料保護
 
 當您為一致性群組新增快照資料保護時，可以根據預先定義的計畫定期拍攝一致性群組的本機快照。
@@ -59,6 +60,7 @@ summary: 您可以管理 AFX 系統上的一致性群組。這可以簡化您的
 
 
 
+[[related-information]]
 == 相關資訊
 
 * https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["了解ONTAP一致性組"^]

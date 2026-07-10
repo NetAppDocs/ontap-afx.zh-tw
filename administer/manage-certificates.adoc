@@ -15,6 +15,7 @@ summary: 根據您的環境，您需要在管理 AFX 的過程中建立和管理
 
 
 
+[[generate-a-certificate-signing-request]]
 == 產生憑證簽署請求
 
 要開始使用數位證書，您需要產生證書簽名請求 (CSR)。  CSR 用於從憑證授權單位 (CA) 要求簽署的憑證。作為此過程的一部分， ONTAP會建立公鑰/私鑰對並將公鑰包含在 CSR 中。
@@ -33,6 +34,7 @@ summary: 根據您的環境，您需要在管理 AFX 的過程中建立和管理
 
 
 
+[[add-a-trusted-certificate-authority]]
 == 新增受信任的憑證授權單位
 
 ONTAP提供了一組預設的可信任根證書，可用於傳輸層安全性 (TLS) 和其他協定。您可以根據需要新增其他受信任的憑證授權單位。
@@ -50,6 +52,7 @@ ONTAP提供了一組預設的可信任根證書，可用於傳輸層安全性 (T
 
 
 
+[[renew-or-delete-a-trusted-certificate-authority]]
 == 續訂或刪除受信任的憑證授權單位
 
 受信任的憑證授權單位必須每年更新。如果您不想更新過期的證書，您應該將其刪除。
@@ -83,6 +86,7 @@ ONTAP提供了一組預設的可信任根證書，可用於傳輸層安全性 (T
 
 
 
+[[add-a-clientserver-certificate-or-local-certificate-authority]]
 == 新增客戶端/伺服器憑證或本機憑證授權單位
 
 您可以新增用戶端/伺服器憑證或本機憑證授權單位作為啟用安全 Web 服務的一部分。
@@ -99,6 +103,7 @@ ONTAP提供了一組預設的可信任根證書，可用於傳輸層安全性 (T
 
 
 
+[[renew-or-delete-a-clientserver-certificate-or-local-certificate-authorities]]
 == 續訂或刪除客戶端/伺服器憑證或本機憑證授權單位
 
 客戶端/伺服器憑證和本地憑證授權單位必須每年更新。如果您不想更新過期的憑證或本機憑證授權機構，您應該刪除它們。
@@ -130,6 +135,7 @@ ONTAP提供了一組預設的可信任根證書，可用於傳輸層安全性 (T
 
 
 
+[[related-information]]
 == 相關資訊
 
 * https://docs.netapp.com/us-en/ontap/authentication/install-server-certificate-cluster-svm-ssl-server-task.html["在ONTAP中產生並安裝由 CA 簽署的伺服器證書"^]

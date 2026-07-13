@@ -978,9 +978,7 @@
   <block id="c62737cdd3f658b2c080ea393539da49" category="list-text">打開每個交換器的電源。</block>
   <block id="74d427d525eaaf37db5bbbb57657cb0c" category="list-text">配置交換器以支援 AFX 1K 儲存系統。</block>
   <block id="72295557ee935de6dcaaa496e9ffac7b" category="inline-link-macro">設定Cisco Nexus 9332D-GX2B 交換機</block>
-  <block id="ee580ea5ba41decce9294581c1bf8a36" category="list-text">對於Cisco Nexus 9332D-GX2B 交換機，請參閱叢集和儲存交換器文檔<block ref="ebd0953e922f25f223b8dff6a58fb84a" category="inline-link-macro-rx"></block>。</block>
   <block id="1817109031f229042672af151b53e20f" category="inline-link-macro">設定Cisco Nexus 9364D-GX2A 交換機</block>
-  <block id="addfd44612da2038c3e3649fc9c115c5" category="list-text">對於Cisco Nexus 9364D-GX2A 交換機，請參閱叢集和儲存交換器文檔<block ref="d5fe58e0155150b259ce0bf656e34478" category="inline-link-macro-rx"></block>。</block>
   <block id="20dca0630adbb0d8f903778442041063" category="inline-link-macro">開啟 AFX 1K 儲存系統</block>
   <block id="daf056bef029d58c97e3fcabf3ff8cc1" category="paragraph">為 AFX 1K 儲存系統配置交換器後，<block ref="cae83d99a1d1cc2243a2d6bbc5469664" category="inline-link-macro-rx"></block> 。</block>
   <block id="337e9239544f1891a09a6b9c13192533" category="summary">開啟每個機架的電源以分配唯一的機架 ID，開啟 AFX 控制器節點的電源，並固定電源線。</block>
@@ -1995,7 +1993,6 @@
   <block id="5a5c4176551fe6dd6fe6ee11995ce220" category="list-text">對於 Cisco Nexus 9332D-GX2B 交換器，請使用連接埠 31/32 進行 ISL 連線。如需詳細資訊，請參閱 <block ref="2fc588ea5e031befba9fe0b0a6466061" category="inline-link-macro-rx"></block>。</block>
   <block id="1f87cb3b672fcebc0f3e8c027541a0f4" category="list-text">對於 Cisco Nexus 9364D-GX2A 交換器，請使用連接埠 63/64 進行 ISL 連線。如需詳細資訊，請參閱 <block ref="9a6587d5653529e56536e1d546440a92" category="inline-link-macro-rx"></block>。</block>
   <block id="3f09832565123d546de503a179a2a73a" category="list-text">配置交換器以支援 AFX 2K 儲存系統。</block>
-  <block id="6643d25175cee9ed135211156448f273" category="inline-link-macro">配置 AFX 儲存系統的交換器</block>
   <block id="708b74e6831efbdefff002e1e0fa8f36" category="inline-link-macro">啟動 AFX 2K 儲存系統</block>
   <block id="bdd33111aa5c5ee954d515d83c1a9731" category="paragraph">配置 AFX 2K 儲存系統的交換器後，<block ref="50a620d565af3ded921cd2d40d21ce59" category="inline-link-macro-rx"></block>。</block>
   <block id="e9cff4d9b0d60850bd0c9246eb98b0bc" category="paragraph">安裝 AFX 2K 儲存系統的機架硬體並安裝控制器節點和儲存架的纜線後，您應該開啟儲存架和控制器節點的電源。</block>
@@ -2038,7 +2035,6 @@
   <block id="b1372c8bdf7b87f18c9db2e8270dce48" category="paragraph">在連接交換器之前，請確保您擁有與連接類型相符的正確線纜。</block>
   <block id="f4bbdec8095912d05fc0863b38ab874a" category="inline-link-macro">在 CX6-DX NIC 上使用混合銅纜和光纖分支線連接連接埠時，出現 CRC 連結錯誤</block>
   <block id="81ee74208c5c71f60d84fb449cb06237" category="admonition">有關混合連線類型的詳細資訊，請參閱 NetApp 知識庫文章<block ref="c262586745798e29d31312374a9bf860" category="inline-link-macro-rx"></block>。</block>
-  <block id="9a459af3fb0538682e15c7e05c266aeb" category="list-text">有關配置交換器的更多資訊，請參閱<block ref="c680c8d03caae4efc1e016b731ff8649" category="inline-link-macro-rx"></block>。</block>
   <block id="c1153f83175c5dee9b88a5e820d6bfef" category="inline-link-macro">設定 AFX 集群</block>
   <block id="2a4823fb79409c272c92a0b82e9c3667" category="paragraph">啟動 AFX 2K 儲存系統後，<block ref="2072e5ec3241d0a9ac16c974239f2f84" category="inline-link-macro-rx"></block>。</block>
   <block id="cb030b87229281c1b5ed398ba50abebb" category="list-text">選擇 *Register Now*，建立帳戶。</block>
@@ -2050,4 +2046,8 @@
   <block id="373a0502633d2333dd8b952009c2d1ad" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 準備管理您的叢集</block>
   <block id="b6bc9b43cb446eaa57e2615dc37d813a" category="summary">安裝完 AFX 硬體後，即可完成 ONTAP 叢集的設定。此過程包含多個相關的配置階段，您需要依序執行這些階段。</block>
   <block id="79977d403c6d53cd9f671794eeca0ed7" category="paragraph">在設定 ONTAP 叢集之前，您應該查看 AFX 核心需求，以確保您擁有成功完成設定流程所需的所有資訊和資源。</block>
+  <block id="2c45e3fc76dd22d195877278acbafdf3" category="inline-link-macro">配置 Cisco Nexus 9808 交換機</block>
+  <block id="f177c581ed9f9f9a2ade361b69f40000" category="list-text">有關 Cisco Nexus 9808 交換機，請參閱叢集和儲存交換器文件<block ref="fd812bd375b22a989715c699eb7ed44d" category="inline-link-macro-rx"></block>。</block>
+  <block id="414467ebb81a54b0d2bfde0829d9be94" category="list-text">有關 Cisco Nexus 9332D-GX2B 交換器，請參閱叢集和儲存交換器文件<block ref="4267e88712cb2b91d08e1a42358e695f" category="inline-link-macro-rx"></block>。</block>
+  <block id="837d45987b31811e3c4dc00585c6683b" category="list-text">有關 Cisco Nexus 9364D-GX2A 交換器，請參閱叢集和儲存交換器文件<block ref="b235e965e82dd587688a629268d671aa" category="inline-link-macro-rx"></block>。</block>
 </blocks>

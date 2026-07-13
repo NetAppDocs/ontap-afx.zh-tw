@@ -24,8 +24,8 @@ summary: 了解如何啟動和設定 AFX 1K 儲存系統的交換器。
 . 打開每個交換器的電源。
 . 配置交換器以支援 AFX 1K 儲存系統。
 +
-** 對於Cisco Nexus 9332D-GX2B 交換機，請參閱叢集和儲存交換器文檔link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9332d-gx2b/configure-software-overview-9332d-cluster.html["設定Cisco Nexus 9332D-GX2B 交換機"^]。
-** 對於Cisco Nexus 9364D-GX2A 交換機，請參閱叢集和儲存交換器文檔link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9364d-gx2a/configure-software-overview-9364d-cluster.html["設定Cisco Nexus 9364D-GX2A 交換機"^]。
+** 有關 Cisco Nexus 9332D-GX2B 交換器，請參閱叢集和儲存交換器文件link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9332d-gx2b/configure-switch-workflow-9332d.html["設定Cisco Nexus 9332D-GX2B 交換機"^]。
+** 有關 Cisco Nexus 9364D-GX2A 交換器，請參閱叢集和儲存交換器文件link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9364d-gx2a/configure-switch-workflow-9364d.html["設定Cisco Nexus 9364D-GX2A 交換機"^]。
 
 
 

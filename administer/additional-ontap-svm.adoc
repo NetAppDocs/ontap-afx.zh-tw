@@ -93,6 +93,13 @@ CFSR 不支援任何其他 ONTAP 平台（FAS、AFF 或 ASA）或雲端部署，
 
 
 
+[[snapmirror-active-sync-for-nas]]
+=== 適用於 NAS 的 SnapMirror active sync
+
+SnapMirror 主動同步功能可讓業務服務在發生完整站台故障時繼續運作。這項技術使應用程式能夠無縫地容錯移轉至備用複本，無需手動介入或自訂腳本。深入瞭解 https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/protect-nas-task.html["適用於 NAS 的 SnapMirror active sync"^]。
+
+
+
 [[storage-efficiency]]
 == 儲存效率
 
@@ -122,6 +129,13 @@ AFF A1K 系統預設啟用全域重複資料刪除功能，該功能在背景透
 === FPolicy
 
 FPolicy 是一個檔案存取通知框架，用於監控和管理儲存虛擬機器（SVM）上的檔案存取事件。您可以使用 FPolicy 建立策略，根據您定義的條件，定義要監控的檔案操作，並可選擇封鎖這些操作。FPolicy 通常用於安全審計、合規性和資料治理。了解更多 https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-concept.html["ONTAP FPolicy 解決方案"^]。
+
+
+
+[[nfs-over-tls]]
+=== 基於 TLS 的 NFS
+
+從 ONTAP 9.19.1 開始，ONTAP 為本地部署的 NFS over TLS 提供支援，並使用 TLS 1.3 對啟用 NFS 的 SVM 上的傳輸中 NFS 流量加密。此版本還支援可選的基於 LIF 的雙向 TLS 主機驗證，以及匯出原則控制，以拒絕相符用戶端的非 TLS TCP 存取。NFS over TLS 可與現有的 ONTAP NFS 基礎架構配合使用，因此應用程式可以繼續正常使用 NFS，同時 TLS 會對傳輸中的 NFS 流量進行加密。在 ONTAP 9.19.1 中，NFS over TLS 不適用於雲端平台。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/ontap/nfs-admin/enable-nfs-over-tls-task.html["啟用 NFS over TLS"^]。
 
 
 

@@ -29,6 +29,11 @@ summary: 了解 ONTAP 9.19.1 中包含的、可與您的 AFX 儲存系統一起�
 | link:../administer/additional-ontap-svm.html["使用適用於 NAS 的 ONTAP SnapMirror 主動同步進行保護"]  a| 
 SnapMirror active sync 支援在 AFX 叢集（僅限 4 節點）上使用 NFS 和 SMB 在 SVM 層級執行 NAS 工作負載，並且僅在主要叢集上提供讀寫存取。
 
+
+
+| link:../manage-data/create-configure-bucket.html["SnapMirror 雲端支援上限增加至 100 個 S3 儲存桶"]  a| 
+SnapMirror 雲端將支援的 S3 儲存桶數量增加到 100 個。
+
 |===
 
 

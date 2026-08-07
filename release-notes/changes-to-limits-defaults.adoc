@@ -37,6 +37,11 @@ TIP: 您應該查看NetAppHardware Universe和互通性矩陣工具中提供的�
 | 每個 FlexGroup 的 Volume 數  a| 
 FlexGroup 中的最大 Volume 數量已增加至 512 個，節點數為 32 個。這使得 AFX 儲存系統能夠充分發揮其效能功能，以支援更大規模的叢集。
 | ONTAP 9.19.1 
+
+
+| SnapMirror 雲端支援  a| 
+SnapMirror 雲端支援的 S3 儲存桶最大數量已增加至 100 個。這可讓您為工作負載和應用程式建立更多 S3 儲存桶。
+| ONTAP 9.19.1 
 |===
 
 

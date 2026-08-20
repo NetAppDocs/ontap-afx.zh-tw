@@ -17,6 +17,9 @@ summary: 了解ONTAP 9.17.1 中包含的可用於 AFX 儲存系統的新功能�
 了解ONTAP 9.17.1 中包含的可用於 AFX 儲存系統的新功能。
 
 
+NOTE: ONTAP 9.17.1 為 AFX 提供了多項新功能。其中一些是 AFX 特有的，而許多其他功能則源自共享的產品庫。除了查看下文所述的 AFX 功能外，您還應該參考 https://docs.netapp.com/us-en/ontap/release-notes/whats-new-9171.html["ONTAP 9.17.1 的新增功能"^]。
+
+
 
 [[platforms]]
 == 平台

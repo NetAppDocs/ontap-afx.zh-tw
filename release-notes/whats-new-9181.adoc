@@ -21,6 +21,29 @@ NOTE: ONTAP 9.18.1 為 AFX 提供了多項新功能。其中一些是 AFX 特有
 
 
 
+[[security]]
+== 安全
+
+[cols="30%,70%"]
+|===
+| 更新 | 描述 
+
+
+ a| 
+xref:../administer/additional-ontap-cluster.html[附加管理：IPsec 硬體卸載]
+ a| 
+IPsec 硬體卸載支援已擴展至 IPv6。
+
+
+
+ a| 
+xref:../administer/additional-ontap-cluster.html[附加管理員：OpenSSL PQC 演算法]
+ a| 
+ONTAP 支援用於 SSL 的後量子運算加密演算法。這些演算法可提供額外的保護，以抵禦未來潛在的量子運算攻擊，並且在 SSL FIPS 模式停用時可用。
+
+|===
+
+
 [[storage-resource-management-enhancements]]
 == 儲存資源管理增強
 
@@ -31,6 +54,13 @@ NOTE: ONTAP 9.18.1 為 AFX 提供了多項新功能。其中一些是 AFX 特有
 
 | 增強體積放置  a| 
 NetApp AFX 可自動平衡叢集中所有節點上的磁碟區放置位置。在先前的ONTAP版本中，放置演算法是基於叢集中的磁碟區數。無論活動情況如何，每個節點都被分配相同數量的捲。從ONTAP 9.18.1 開始，該演算法得到了增強，可以在放置或移動體資料時考慮節點的性能。這樣可以改善 AFX 叢集中各個節點之間的效能平衡，並大幅降低單一節點過載的可能性。
+
+
+
+ a| 
+xref:../administer/configure-svm.html[支援在 SVM 和磁碟區上設定兩級嵌套的 QoS 原則群組]
+ a| 
+您可以同時為 SVM 和 SVM 下的磁碟區指派 QoS 原則。
 
 |===
 .相關資訊

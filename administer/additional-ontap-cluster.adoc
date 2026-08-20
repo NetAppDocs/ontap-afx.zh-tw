@@ -11,10 +11,10 @@ summary: 除了典型的 AFX 叢集管理之外，您可能還需要根據您的
 
 
 [role="lead"]
-除了典型的 AFX 叢集管理之外，您可能還需要根據您的環境執行其他任務。大多數附加任務都可以使用系統管理員執行，但在某些情況下您可能需要使用 CLI。
+除了典型的 AFX 叢集管理之外，根據您的環境，您可能還需要執行其他任務。大多數附加任務都可以使用 System Manager 完成，但在某些情況下，您可能需要使用命令列介面 （CLI）。本文所述的 ONTAP 功能和管理適用於 AFX 儲存設備系統，以及執行 Unified ONTAP 的 AFF 或 FAS 系統。文中會酌情提供相關 Unified ONTAP 文件的連結。
 
 
-NOTE: 所描述的ONTAP功能和管理對於運行 Unified ONTAP 的AFX 儲存系統和AFF或FAS系統來說是通用的。其中包含相關 Unified ONTAP文件的連結（視情況而定）。
+TIP: 請查看 ONTAP AFX 其他功能和組態的簡要說明。如果您找不到所需的選項，請務必查看底部的連結以取得更多資源。
 
 
 
@@ -140,4 +140,6 @@ OAuth 2.0 是業界標準授權框架，用於使用簽署的存取權杖來限�
 * https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["ONTAP OAuth 2.0 實作概述"^]
 * link:../administer/additional-ontap-svm.html["AFX SVM 的額外管理"]
 * https://docs.netapp.com/us-en/ontap/data-protection/manage-snapmirror-root-volume-replication-concept.html["了解 ONTAP SnapMirror 根 Volume 複寫"^]
+* https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["準備在 ONTAP 網路上使用 IP 安全性"^]
+* https://docs.netapp.com/us-en/ontap/networking/configure_network_security_using_federal_information_processing_standards_fips.html["使用 FIPS 為所有 SSL 連線設定 ONTAP 網路安全性"^]
 

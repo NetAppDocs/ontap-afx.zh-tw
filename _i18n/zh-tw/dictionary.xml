@@ -2109,4 +2109,8 @@
   <block id="8e2c307ef6e54871dce87c1828dc21fd" category="inline-xref-macro">支援在 SVM 和磁碟區上設定兩級嵌套的 QoS 原則群組</block>
   <block id="e08db9e8d24efaf5a7190ce782b11af3" category="paragraph"><block ref="e08db9e8d24efaf5a7190ce782b11af3" category="inline-xref-macro-rx"></block></block>
   <block id="0d42fe34cb867538d9d93ccdd8b15ac7" category="paragraph">您可以同時為 SVM 和 SVM 下的磁碟區指派 QoS 原則。</block>
+  <block id="007a701e91cdfb37201a53977fddd2b4" category="inline-link">啟用 ONTAP 檔案系統分析</block>
+  <block id="05ac85f50d8d37906293d2e2a6c88604" category="list-text"><block ref="05ac85f50d8d37906293d2e2a6c88604" category="inline-link-rx"></block></block>
+  <block id="99a1ee6766885a2da62b660dd8ea16ac" category="paragraph"><block ref="99a1ee6766885a2da62b660dd8ea16ac" category="inline-xref-macro-rx"></block></block>
+  <block id="d71e1a06e0aeac0cc6a7a6eb58601633" category="paragraph">在分配給 NAS 協定的 ONTAP 叢集上，新建的 SVM 上建立的 Volume 預設啟用檔案系統分析 （FSA）。FSA 會在 Volume 建立後立即自動啟動，無需額外組態即可提供立即分析功能。</block>
 </blocks>

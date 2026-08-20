@@ -170,6 +170,10 @@ ARP/AI 支援與 AFX 系統建立 SnapMirror 同步關係的合格主磁碟區�
 執行自動升級前檢查時，錯誤和警告會分別顯示，以協助您輕鬆識別升級前必須解決的問題。
 
 |===
-.相關資訊
+
+
+[[related-information]]
+== 相關資訊
+
 * https://docs.netapp.com/us-en/ontap/release-notes/index.html["ONTAP 9 發布亮點"^]
 

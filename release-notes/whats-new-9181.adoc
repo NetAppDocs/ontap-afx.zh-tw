@@ -63,6 +63,10 @@ xref:../administer/configure-svm.html[支援在 SVM 和磁碟區上設定兩級�
 您可以同時為 SVM 和 SVM 下的磁碟區指派 QoS 原則。
 
 |===
-.相關資訊
+
+
+[[related-information]]
+== 相關資訊
+
 * https://docs.netapp.com/us-en/ontap/release-notes/index.html["ONTAP 9 發布亮點"^]
 

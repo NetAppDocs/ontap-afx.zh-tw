@@ -32,4 +32,5 @@ AFX 系統包括幾個選項來監控每個叢集管理的儲存。
 == 相關資訊
 
 * link:../manage-data/prepare-manage-data.html["準備管理您的 AFX 數據"]
+* https://docs.netapp.com/us-en/ontap/task_nas_file_system_analytics_enable.html["啟用 ONTAP 檔案系統分析"^]
 

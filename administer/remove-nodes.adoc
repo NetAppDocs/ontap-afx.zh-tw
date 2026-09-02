@@ -1,0 +1,205 @@
+---
+sidebar: sidebar 
+permalink: administer/remove-nodes.html 
+keywords: netapp afx, remove node, unjoin, cluster remove-node, evacuate volumes, zero-copy volume move 
+summary: 了解如何從 NetApp AFX 叢集中移除儲存節點，包括 Volume 撤離、LIF 移轉和 HA 合作夥伴取消加入。 
+---
+= 從 AFX 儲存系統叢集移除節點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能需要從 AFX 叢集中移除節點以進行維護或硬體更換。每次只能移除一個節點，移除節點後，也必須移除其 HA 合作夥伴。
+
+.關於此任務
+* 對於 AFX 儲存系統，所有儲存設備都位於單一儲存可用區 （SAZ） 內，叢集中的每個節點都可以存取該 SAZ。因此，當移除某個節點時，無需從該節點複製資料。相反，剩餘節點之間會更新指向該節點上 Volume 的指標。這稱為零複製 Volume 移動 （ZCVM），由於實際上沒有複製或移動任何資料，因此該過程瞬間完成。
++
+[NOTE]
+====
+在移除節點之前，請手動處理 ZCVM 無法移動的任何 Volume。這些 Volume 包括 Volume 複本、離線 Volume、原始加密金鑰已變更或重新產生金鑰的加密 Volume，以及使用 SnapMirror 雲端還原的 Volume。稽核接移 Volume 和根目錄 Volume 會在節點脫離程序期間由 ZCVM 移動。
+
+** 深入瞭解link:https://docs.netapp.com/us-en/ontap/nas-audit/basic-auditing-concept.html["稽核接移 Volume"^]。
+** 深入瞭解link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/rekey-encrypted-volume-task.html["重新加密的 Volume"^]。
+
+
+====
+* 成功將節點從叢集中移除後，將執行下列操作：
++
+** 將該節點標記為不符合資格，且不在 CLAM 法定人數之內。
+** 正常關閉節點，並將所有權移轉至倖存節點。
+** 清除節點上的 RAID 高可用性 （HA） 狀態並將其從叢集資料庫中刪除。
+
+
+
+
+
+
+[[step-1-prepare-to-remove-nodes-from-an-afx-cluster]]
+== 步驟 1：準備從 AFX 叢集移除節點
+
+在從 AFX 叢集中移除節點之前，應驗證叢集是否運作正常，以及要移除的節點上是否沒有資料 LIF。
+
+.步驟
+. 確認叢集運作狀況良好：
++
+[source, cli]
+----
+cluster show
+----
+. 確認要移除的節點線上且運作正常：
++
+[source, cli]
+----
+system node show -node <node> -health -epsilon
+----
+. 檢視節點上的 LIF：
++
+[source, cli]
+----
+network interface show -curr-node <node>
+----
+. 從節點移轉資料 LIF：
++
+[source, cli]
+----
+network interface migrate -vserver <SVM> -lif <LIF> -dest-node <destination_node> -dest-port <destination_port>
+----
++
+對所有資料 LIF 重複此命令。節點上應僅保留叢集 LIF 和節點管理 LIF。
+
+. 確認所有資料 LIF 都已移除，節點上僅保留叢集 LIF 和節點管理 LIF：
++
+[source, cli]
+----
+network interface show -curr-node <node>
+----
+
+
+.接下來是什麼？
+完成準備步驟後，您可以從叢集中移除 HA 配對的第一個節點，然後移除其 HA 合作夥伴。
+
+
+
+[[step-2-unjoin-a-single-node-from-an-afx-cluster]]
+== 步驟 2：將單一節點從 AFX 叢集移除
+
+只有在完成移除節點所需的所有步驟後，才能從 AFX 叢集移除節點。從叢集中移除節點後，也必須移除其 HA 合作夥伴。
+
+.開始之前
+建議您link:manage-autosupport.html["發出 AutoSupport 訊息"]，以通知 NetApp 技術支援您正在從叢集中移除節點。
+
+.步驟
+. 清空節點 Volume：
++
+[source, cli]
+----
+system node evacuate-volumes start -node <node_to_remove>
+----
+. 確認節點 Volume 已全部清空：
++
+[source, cli]
+----
+system node evacuate-volumes show -node <node_to_remove>
+----
++
+請等待*待處理計數*為 0 後再繼續操作。在 Volume 完全清空之前，請勿移動 epsilon 或資格。
+
++
+如有必要，您可以使用  `system node evacuate-volumes abort -node <node>` 命令中止撤離程序。
+
+. 找出持有 epsilon 的節點：
++
+[source, cli]
+----
+cluster show -epsilon true
+----
++
+.. 如果要移除的節點包含 epsilon，則將 epsilon 移到另一個節點：
++
+[source, cli]
+----
+cluster modify -node <surviving_node> -epsilon true
+----
+
+
+. 確定當前主節點：
++
+[source, cli]
+----
+cluster ring show
+----
++
+.. 如果要移除的節點是目前主節點，則將其設為不符合條件：
++
+[source, cli]
+----
+cluster modify -node <node_to_remove> -eligibility false
+----
+
+
+. 顯示剩餘資料 LIF 的主節點：
++
+[source, cli]
+----
+network interface show -home-node <node_to_remove>
+----
+. 將剩餘資料 LIF 的主節點變更為另一個節點：
++
+[source, cli]
+----
+network interface modify -vserver <SVM> -lif <LIF> -home-node <surviving_node>
+----
++
+在離開的節點上保留叢集 LIF 和節點管理 LIF。
+
+. 禁止接管要移除的節點：
++
+[source, cli]
+----
+storage failover modify -node <node_to_remove> -enable-takeover-of false
+----
+. 確認要移除的節點已停用接管：
++
+[source, cli]
+----
+storage failover show
+----
++
+當容錯移轉功能停用時，HA 配對無法進行接管。
+
+. 在存活且健康的節點上，將權限層級設定為進階：
++
+[source, cli]
+----
+privilege set -level advanced
+----
+. 將節點從叢集中移除：
++
+[source, cli]
+----
+cluster remove-node -node <node_to_remove>
+----
++
+確認警告訊息。任務應以 *Node remove succeeded* 結束。
+
+
+
+.下一步是什麼？
+重複上述步驟，從叢集中移除 HA 合作夥伴節點。在移除已脫離節點的 HA 合作夥伴節點之前，您無法移除其他節點。
+
+
+
+[[step-3-optionally-clean-the-removed-hardware]]
+== 步驟 3：（可選）清潔已移除的硬體
+
+如果要重新利用已從叢集中移除的節點，則必須先清除節點組態並初始化所有磁碟，然後才能將其重新加入叢集。
+
+.步驟
+. 開機過程中，出現提示時，按 Ctrl-C 顯示開機功能表。
+. 選擇開機選單選項 *(4) Clean configuration and initialize all disks*。
+
+
+.下一步是什麼？
+您可以使用 `cluster add-node`命令在同一叢集中重複使用 HA 配對。

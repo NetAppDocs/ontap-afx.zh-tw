@@ -2113,4 +2113,55 @@
   <block id="05ac85f50d8d37906293d2e2a6c88604" category="list-text"><block ref="05ac85f50d8d37906293d2e2a6c88604" category="inline-link-rx"></block></block>
   <block id="99a1ee6766885a2da62b660dd8ea16ac" category="paragraph"><block ref="99a1ee6766885a2da62b660dd8ea16ac" category="inline-xref-macro-rx"></block></block>
   <block id="d71e1a06e0aeac0cc6a7a6eb58601633" category="paragraph">在分配給 NAS 協定的 ONTAP 叢集上，新建的 SVM 上建立的 Volume 預設啟用檔案系統分析 （FSA）。FSA 會在 Volume 建立後立即自動啟動，無需額外組態即可提供立即分析功能。</block>
+  <block id="7a5cd40812fc4b3d065db77f8ad471a2" category="summary">了解如何從 NetApp AFX 叢集中移除儲存節點，包括 Volume 撤離、LIF 移轉和 HA 合作夥伴取消加入。</block>
+  <block id="4e5ba73143016dcff33719a396a6a145" category="doc">從 AFX 儲存系統叢集移除節點</block>
+  <block id="6f0c0dcb367b5c75b40798fbe71ce6cf" category="paragraph">您可能需要從 AFX 叢集中移除節點以進行維護或硬體更換。每次只能移除一個節點，移除節點後，也必須移除其 HA 合作夥伴。</block>
+  <block id="4dc248d72f6d53f41520e119f1f1df61" category="list-text">對於 AFX 儲存系統，所有儲存設備都位於單一儲存可用區 （SAZ） 內，叢集中的每個節點都可以存取該 SAZ。因此，當移除某個節點時，無需從該節點複製資料。相反，剩餘節點之間會更新指向該節點上 Volume 的指標。這稱為零複製 Volume 移動 （ZCVM），由於實際上沒有複製或移動任何資料，因此該過程瞬間完成。</block>
+  <block id="2dbbd7a8acfe4ab40ac6e02f5b4365bd" category="paragraph">在移除節點之前，請手動處理 ZCVM 無法移動的任何 Volume。這些 Volume 包括 Volume 複本、離線 Volume、原始加密金鑰已變更或重新產生金鑰的加密 Volume，以及使用 SnapMirror 雲端還原的 Volume。稽核接移 Volume 和根目錄 Volume 會在節點脫離程序期間由 ZCVM 移動。</block>
+  <block id="7b556ab7df79413da0cc234f3e94ae5c" category="inline-link-macro">稽核接移 Volume</block>
+  <block id="b94fbeba18cc08b1ba75cabcbc2e50a0" category="list-text">深入瞭解<block ref="9fec2c3b1c6739fae6e26aee450a7911" category="inline-link-macro-rx"></block>。</block>
+  <block id="791417c8f8a45d10a1481c1cdb8725eb" category="inline-link-macro">重新加密的 Volume</block>
+  <block id="1ddf84f2c214ffe15e58979d29d13e7e" category="list-text">深入瞭解<block ref="c62dc8115ddd949100052ee500f4ed05" category="inline-link-macro-rx"></block>。</block>
+  <block id="03f868c6a771736d2ede498b24db10fd" category="list-text">成功將節點從叢集中移除後，將執行下列操作：</block>
+  <block id="da83a680025062a416e893d926036b59" category="list-text">將該節點標記為不符合資格，且不在 CLAM 法定人數之內。</block>
+  <block id="1d6d051efd8278e7af988bc240035964" category="list-text">正常關閉節點，並將所有權移轉至倖存節點。</block>
+  <block id="81969b995904bbc6ec383d70d109fe78" category="list-text">清除節點上的 RAID 高可用性 （HA） 狀態並將其從叢集資料庫中刪除。</block>
+  <block id="ee564f7d2a41885a7b7c447302897684" category="section-title">步驟 1：準備從 AFX 叢集移除節點</block>
+  <block id="20f6fea895a9042d4cb497b9b561472f" category="paragraph">在從 AFX 叢集中移除節點之前，應驗證叢集是否運作正常，以及要移除的節點上是否沒有資料 LIF。</block>
+  <block id="50ab3243fc412f508feaf2651e35de5a" category="list-text">確認叢集運作狀況良好：</block>
+  <block id="6ed6db99070eb594c7294b2758336a36" category="list-text">確認要移除的節點線上且運作正常：</block>
+  <block id="c8bd62f17e39fb32ef39057543588fff" category="list-text">檢視節點上的 LIF：</block>
+  <block id="b296f30bfe1b8d15961aace982c88ede" category="list-text">從節點移轉資料 LIF：</block>
+  <block id="b7fb269285f339c28cc4295e470228ce" category="paragraph">對所有資料 LIF 重複此命令。節點上應僅保留叢集 LIF 和節點管理 LIF。</block>
+  <block id="67ad2de6e0aebb768d64f688a26f3263" category="list-text">確認所有資料 LIF 都已移除，節點上僅保留叢集 LIF 和節點管理 LIF：</block>
+  <block id="3f297ef15cde0668e93b35f2752fd4fd" category="paragraph-title">接下來是什麼？</block>
+  <block id="af7028a97133d9d6579e0120e4d2ac54" category="paragraph">完成準備步驟後，您可以從叢集中移除 HA 配對的第一個節點，然後移除其 HA 合作夥伴。</block>
+  <block id="129a0f9dbb25cd859dc8156de126758f" category="section-title">步驟 2：將單一節點從 AFX 叢集移除</block>
+  <block id="9e84e50094430ea932ef692f2de2fd8d" category="paragraph">只有在完成移除節點所需的所有步驟後，才能從 AFX 叢集移除節點。從叢集中移除節點後，也必須移除其 HA 合作夥伴。</block>
+  <block id="ff13cd92e9c877582383685ad84e1408" category="inline-link-macro">發出 AutoSupport 訊息</block>
+  <block id="e1e010021551213000f9a5ad8268a504" category="paragraph">建議您<block ref="389d719ba9fa696dc8807adb3c915714" category="inline-link-macro-rx"></block>，以通知 NetApp 技術支援您正在從叢集中移除節點。</block>
+  <block id="61ef46349dc8aeb8c96f3f89d14d2e3b" category="list-text">清空節點 Volume：</block>
+  <block id="4352398a52fe792d0d9bc8cd2e093100" category="list-text">確認節點 Volume 已全部清空：</block>
+  <block id="4fa4b393f4bd68dcb2697caa0d486054" category="paragraph">請等待*待處理計數*為 0 後再繼續操作。在 Volume 完全清空之前，請勿移動 epsilon 或資格。</block>
+  <block id="073a5eccc26b37d386010ab2297fb4ad" category="paragraph">如有必要，您可以使用 <block ref="1800c917431345cdd794d19f800ce56a" prefix=" " category="inline-code"></block> 命令中止撤離程序。</block>
+  <block id="2cca63e4c1d7ec175a21377faff9a6ec" category="list-text">找出持有 epsilon 的節點：</block>
+  <block id="e23022fe3595885bf954a01c22683bad" category="list-text">如果要移除的節點包含 epsilon，則將 epsilon 移到另一個節點：</block>
+  <block id="49e8d819c7a12b23ca983a3bc99e1bdf" category="list-text">確定當前主節點：</block>
+  <block id="14029d6b9a69926c796b630bd649fe4a" category="list-text">如果要移除的節點是目前主節點，則將其設為不符合條件：</block>
+  <block id="7f6abdd99160e3d3527591b98c573c7f" category="list-text">顯示剩餘資料 LIF 的主節點：</block>
+  <block id="b77fc9ce12284fe9cb0ed31c9a1f86d5" category="list-text">將剩餘資料 LIF 的主節點變更為另一個節點：</block>
+  <block id="c9b5aae4621661ad2ffccfee6c9b3874" category="paragraph">在離開的節點上保留叢集 LIF 和節點管理 LIF。</block>
+  <block id="f73e9b92493b90c37101390646ee7ff4" category="list-text">禁止接管要移除的節點：</block>
+  <block id="2f6504307623c74dfa94926c73a36268" category="list-text">確認要移除的節點已停用接管：</block>
+  <block id="398e3c6027c9ad5a579ba201dbdf1422" category="paragraph">當容錯移轉功能停用時，HA 配對無法進行接管。</block>
+  <block id="e66ad8765eff08cc92ad6062c3b5484e" category="list-text">在存活且健康的節點上，將權限層級設定為進階：</block>
+  <block id="8e9c4f7e32d6d0c0b5026f9b1bd4cb0e" category="list-text">將節點從叢集中移除：</block>
+  <block id="248d96fc2d0062d179e38ec920bbc9a6" category="paragraph">確認警告訊息。任務應以 *Node remove succeeded* 結束。</block>
+  <block id="fd7d664fcabce9a7163ddf544905c254" category="paragraph">重複上述步驟，從叢集中移除 HA 合作夥伴節點。在移除已脫離節點的 HA 合作夥伴節點之前，您無法移除其他節點。</block>
+  <block id="ebe7c0cf5ca9d4767514a83c4598b75c" category="section-title">步驟 3：（可選）清潔已移除的硬體</block>
+  <block id="3212383e8d23d729b6cb21418a172111" category="paragraph">如果要重新利用已從叢集中移除的節點，則必須先清除節點組態並初始化所有磁碟，然後才能將其重新加入叢集。</block>
+  <block id="9e870c65221f5c544b31efc1da95daeb" category="list-text">開機過程中，出現提示時，按 Ctrl-C 顯示開機功能表。</block>
+  <block id="5b43d3aa91abf75fd24c44f1341b2f06" category="list-text">選擇開機選單選項 *(4) Clean configuration and initialize all disks*。</block>
+  <block id="e482842fa3fe9110a14b09a7990fc7e3" category="paragraph">您可以使用<block ref="5fc60967dddffb3c388156e897d54aad" prefix=" " category="inline-code"></block>命令在同一叢集中重複使用 HA 配對。</block>
+  <block id="92157b9dae17603751a4d60f0f94bf8c" category="sidebar">從叢集中移除節點</block>
 </blocks>

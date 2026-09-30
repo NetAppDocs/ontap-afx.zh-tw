@@ -1,0 +1,104 @@
+---
+permalink: administer/fabricpool-configure.html 
+sidebar: sidebar 
+keywords: afx, fabricpool, object store, cluster object-store, tiering policy, attach, capacity tier 
+summary: 從高層級來看，在 AFX 儲存系統上設定與啟動 FabricPool 涉及兩個不同層級的流程。首先，您需要在叢集層級為您的資料定義雲端分層。然後，您可以使用數個分層原則之一，在特定 Volume 上啟動分層。 
+---
+= 為 AFX 儲存系統設定 FabricPool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+從高層級來看，在 AFX 儲存系統上設定與啟動 FabricPool 涉及兩個不同層級的流程。首先，您需要在叢集層級為您的資料定義雲端分層。然後，您可以使用數個分層原則之一，在特定 Volume 上啟動分層。
+
+
+
+[[configure-fabricpool-at-the-ontap-cluster-level]]
+== 在 ONTAP 叢集層級設定 FabricPool
+
+您需要定義單一可供整個 ONTAP 叢集存取的物件儲存桶。所有啟用 FabricPool 資料分層的 Volume 都使用同一個儲存桶。
+
+.關於此任務
+與 ONTAP 的兩步驟流程（包括每個彙總的附加）不同，AFX 依賴單一叢集範圍的流程來設定物件存放區，並將所有節點附加到儲存桶。連線能力也會得到確認，並且與物件存放區的關聯是永久的。
+
+雲端分層的組態是使用 System Manager 進行描述，但也提供其他選項。例如，您可以透過 CLI 使用命令 `cluster object-store config create`。如需詳細資訊，請參閱 link:../administer/fabricpool-additional.html["在 AFX 儲存系統上使用 FabricPool 的其他注意事項"]。
+
+.開始之前
+* 檢閱 AFX FabricPool 先決條件。例如，確認叢集位於 9.19.1 層級或更新版本，且未從較早版本升級。如需詳細資訊，請參閱 link:../administer/fabricpool-prepare.html["準備在 AFX 儲存系統上實作 FabricPool"]。
+* 配置物件存放區儲存桶。在 NetApp StorageGRID 或 ONTAP S3 上建立一個容量足以容納您資料的儲存桶。您也可以選擇為物件存放區安裝 CA 憑證，以提供更安全的連線。
+* 建立叢集間 LIF 並驗證與物件存放區的連線。您需要在 AFX 叢集中的每個節點上定義一對叢集間 LIF 以存取物件存放區。驗證所有節點是否可以存取物件存放區端點，以及名稱解析是否正常運作。
+
+
+.步驟
+. 在 System Manager 中，選擇左側導覽窗格中的 *Cloud Tiers* 選單項目。
++
+如果未設定雲端分層，則會顯示空白狀態頁面，其中包含一個「新增」按鈕。
+
+. 選擇 *新增* 以啟動雲端分層建立；將出現一個包含兩個選項的對話方塊。
+. 選擇 StorageGRID 或 ONTAP S3 作為您的供應商。適當的 *新增雲端分層* 表單隨即開啟。
+. 提供所需的物件存放區資訊，包括：
++
+.. 物件存放區名稱（組態識別碼）
+.. 伺服器名稱（物件存放區端點的 FQDN 或 IP 位址）
+.. 容器名稱（儲存桶名稱）
+.. 存取金鑰和秘密金鑰（物件存放區憑證）
+.. 憑證驗證設定（建議：啟用並使用正確的 CA 憑證）
+
+
+. 選擇將承載雲端分層流量的叢集間 LIF。
++
+如果沒有合適的介面，則提供建立新介面的選項。
+
+. 選擇*儲存*。
++
+System Manager 建立叢集層級物件存放區組態，並在驗證網路連線後自動將其附加到叢集中的所有節點。
+
+. 在「雲端分層」頁面卡片上驗證雲端分層詳細資料。
+
+
+.完成後
+確認叢集儀表板的「容量」卡片顯示雲端分層使用情況。請注意，您指派的儲存桶在被識別供 FabricPool 使用之後，即無法重新命名。您可以視需要為個別資料 Volume 啟用分層。
+
+
+
+[[enable-tiering-with-volume-level-policies]]
+== 透過 Volume 層級原則啟用分層
+
+在叢集層級設定 FabricPool 後，您可以透過設定適當的分層原則，為個別的 Volume 啟用分層。一般而言，這些原則在 AFX 中的運作方式與在 ONTAP 中的運作方式相同。
+
+* *Volume 層級分層。*分層是按每個 Volume 啟用的。您可以為每個 Volume 設定不同的分層原則。Volume 的資料可根據該原則移至雲端層。
+* *分層原則。*可以為 Volume 定義四種分層原則，包括：
++
+** `snapshot-only`
+** `auto`
+** `all`
+** `none`
+
+
+* *預設分層原則。*預設原則為 `none`，這表示沒有資料符合移至雲端層的條件。相較之下，在 AFF 和 FAS 系統上，新連接彙總上的 ONTAP Volume 預設為 `snapshot-only`。
+* *原則觸發。*設定 `none`以外的原則，會觸發雲端連線並啟動資料分層。
+* *冷卻期。*冷卻期決定了資料在符合分層條件之前必須保持非作用中狀態多久。使用 CLI 時，通常會使用  `-tiering-minimum-cooling-days` 參數進行設定。自動原則的預設冷卻期為 31 天，而僅快照原則的有效冷卻期約為 2 天。您可以針對每個 Volume 調校此值以符合工作負載。
+* *溫度追蹤。*使用 AFX 時，溫度追蹤是依每個 Volume 執行，而非在彙總層級執行。
+
+
+如需有關 FabricPool 分層原則的詳細資訊，請參閱 https://docs.netapp.com/us-en/ontap/fabricpool/tiering-policies-concept.html["利用 ONTAP FabricPool 原則有效率地分層資料"^]。
+
+
+
+[[activate-volume-level-tiering-and-next-steps]]
+=== 啟動 Volume 層級分層和後續步驟
+
+若要在 Volume 上啟用分層，請在 System Manager 中導覽至 *Volumes* 頁面並選擇 *Edit*，然後選擇 *Cloud Tier Settings*，視需要為每個 Volume 設定分層原則和冷卻期。預設原則為無，因此必須為每個 Volume 明確啟用分層。您可以使用 CLI 中的現有 Volume 命令。
+
+分層開始後，您應該監控分層和容量使用率。同時，驗證 Volume 分層狀態，並觀察效能層和容量層的空間使用。請注意，AFX 系統上已停用非活動資料報告（IDR/AutoIDR），因此您需要採用與 AFF 或 FAS 系統不同的方法來評估可分層/冷資料。
+
+
+
+[[related-information]]
+== 相關資訊
+
+* link:../administer/fabricpool-prepare.html["準備在 AFX 儲存系統上實作 FabricPool"]
+* link:../administer/fabricpool.html["了解適用於 AFX 儲存系統的 FabricPool"]
+

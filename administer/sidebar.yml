@@ -36,6 +36,20 @@ entries:
     url: "/administer/configure-svm.html"
   - title: 遷移 SVM
     url: "/administer/migrate-svm.html"
+- title: 管理叢集資料
+  entries:
+  - title: FabricPool 分層管理
+    entries:
+    - title: 了解 FabricPool
+      url: "/administer/fabricpool.html"
+    - title: 準備實作 FabricPool
+      url: "/administer/fabricpool-prepare.html"
+    - title: 設定 FabricPool
+      url: "/administer/fabricpool-configure.html"
+    - title: 管理 FabricPool
+      url: "/administer/fabricpool-manage.html"
+    - title: 其他考量
+      url: "/administer/fabricpool-additional.html"
 - title: 支援集群
   entries:
   - title: 管理AutoSupport

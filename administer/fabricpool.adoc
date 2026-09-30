@@ -1,0 +1,65 @@
+---
+permalink: administer/fabricpool.html 
+sidebar: sidebar 
+keywords: afx, fabricpool, tiering, data tiering, cloud tier, object store 
+summary: 從 ONTAP 9.19.1 P3 開始，您可以設定 FabricPool 以擴展 AFX 儲存系統的可用容量，同時降低成本並提高效率。 
+---
+= 了解適用於 AFX 儲存系統的 FabricPool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+從 ONTAP 9.19.1 P3 開始，您可以設定 FabricPool 以擴展 AFX 儲存系統的可用容量，同時降低成本並提高效率。
+
+
+
+[[fabricpool-overview]]
+== FabricPool 總覽
+
+FabricPool 是 ONTAP 的一項功能，可根據資料的活動或「溫度」，在高效能本機分層與較低成本的遠端雲端或容量分層之間移動資料。它將頻繁存取的「熱」資料保留在快速的本機 SSD 儲存設備上，同時將極少使用的「冷」資料移至較廉價的物件儲存。FabricPool 在背景自動且通透地運作；它不需要變更應用程式或進行大量的後續管理。當資料移至雲端分層並移回時，相關的 ONTAP 儲存效率功能（例如壓縮與重複資料刪除）將會保留。
+
+搭載 ONTAP 9.19.1 P3 及更新版本的 AFX 儲存系統支援 FabricPool 分層，可將 AFX 叢集容量擴充至本機層級之外，以因應資料繁重的工作負載。儘管 AFX 的 FabricPool 實作導入了一些架構變更，但 ONTAP 功能的核心操作與特性維持不變。
+
+管理員繼續透過每個 Volume 的原則以及最短冷卻期來控制資料分層，最短冷卻期定義了非作用中資料何時符合移動條件。這種原則驅動型模型透過回收昂貴的快閃記憶體容量來提高儲存設備經濟性，並提供邁向混合儲存環境的簡單途徑。它能保持分層資料受到保護且可用，同時將對作用中工作集的效能影響降至最低。
+
+
+
+[[compare-aff-and-fas-with-afx-implementations]]
+== 比較 AFF 和 FAS 與 AFX 實作
+
+儘管 FabricPool 在不同 ONTAP 配置（AFF 和 FAS 系統的統一 ONTAP，以及 AFX 系統的 AFX ONTAP 配置）中的行為非常相似，但分離式 AFX 架構引入了一些差異。以下總結了這兩種實作之間最重要的比較領域。
+
+[cols="1,2,2"]
+|===
+| 區域或操作 | AFF 和 FAS 儲存設備 | AFX 儲存設備 
+
+
+| 物件存放區範圍 | 每個彙總分兩個步驟設定；建立組態，然後附加 | 在叢集層級使用單一命令進行設定；每個叢集定義一個儲存桶 
+
+
+| 預設分層原則 | 預設原則為 `none`；必須明確設定 Volume 原則才能開始分層 | 預設原則為 `none`；必須明確設定 Volume 原則才能開始分層 
+
+
+| 溫度追蹤 | 每 Volume 精細度 | 每 Volume 精細度 
+
+
+| 雲端分層提供者 | StorageGRID、ONTAP S3 和幾個主要的公有雲 | 僅限 StorageGRID 或 ONTAP S3 
+
+
+| 使用 MetroCluster 進行鏡射 | 支援 | 不支援 
+
+
+| Volume 移動 | 標準與最佳化的 Volume 移動 | 零拷貝 Volume 移動 (ZCVM) 不移動容量分層資料 
+|===
+
+
+[[related-information]]
+== 相關資訊
+
+* https://docs.netapp.com/us-en/ontap/concepts/fabricpool-concept.html["FabricPool 基本概念"^]
+* https://docs.netapp.com/us-en/ontap/fabricpool/index.html["了解使用 ONTAP FabricPool 進行資料分層"^]
+* https://docs.netapp.com/us-en/ontap-technical-reports/tiering.html["ONTAP 分層技術報告"^]
+* link:../faq-ontap-afx.html["AFX 儲存系統常見問題解答"]
+

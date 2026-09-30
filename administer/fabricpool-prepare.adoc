@@ -1,0 +1,67 @@
+---
+permalink: administer/fabricpool-prepare.html 
+sidebar: sidebar 
+keywords: afx, fabricpool, requirements, limitations, licensing, prepare, prerequisites, storagegrid, ontap s3 
+summary: 在 AFX 儲存系統上設定 FabricPool 之前，您應該做好準備，熟悉相關要求、限制和所選技術。 
+---
+= 準備在 AFX 儲存系統上實作 FabricPool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 AFX 儲存系統上設定 FabricPool 之前，您應該做好準備，熟悉相關要求、限制和所選技術。
+
+
+
+[[requirements]]
+== 要求
+
+在 AFX 儲存設備上部署 FabricPool 時，最重要的要求包括下列各項：
+
+* *ONTAP 版本。*FabricPool 支援搭配 ONTAP 9.19.1 P3 及更新版本的 AFX 儲存系統。由於儲存設備定址方式的內部變更，此功能不支援從 9.18.1 升級的 AFX 叢集。
+* *物件存放區。*需要 NetApp StorageGRID 或 ONTAP S3 儲存桶。與執行統一 ONTAP 的 AFF 和 FAS 儲存設備一樣，此儲存桶必須已經存在，並且具備足以滿足您資料需求的容量。建議使用 CA 憑證，除非明確停用憑證檢查。
+* *網路連線。*AFX 叢集中的所有節點都必須與物件存放區建立網路連線。這是透過在每個節點上使用一對叢集間 LIF 來實作，這與 AFF 和 FAS 系統相同。
+
+
+AFX 和 ONTAP 的 FabricPool 實作非常相似。請檢閱  https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["使用 ONTAP FabricPool 的要求"^] 以取得更多資訊。
+
+
+
+[[limitations-and-restrictions]]
+== 限制與約束
+
+AFX FabricPool 實作在多個方面比統一 ONTAP 更具限制性。AFX 上的 FabricPool *不支援*下列功能：
+
+* 可用於 ONTAP 的公有雲物件存放區（例如 Amazon S3 和 Google Cloud Storage）在 AFX 中不受支援。僅支援 StorageGRID 和 ONTAP S3。
+* FabricPool 鏡射。
+* 多個物件存放區儲存桶或 Volume 精細度儲存桶附加；每個 AFX 叢集使用單一叢集層級儲存桶。
+* 最佳化的 Volume 搬移、最佳化的 SVM 移轉和最佳化的實體複本切割。
+* SVM 移轉和從 AFF 或 FAS 系統到 AFX 系統的移轉。
+* 非作用中資料報告（IDR/AutoIDR）。
+
+
+
+
+[[licensing]]
+== 授權
+
+使用 AFF 和 FAS 系統時，分層至第三方公有雲物件存放區需要以容量為基礎的 FabricPool 授權，但使用 StorageGRID 或 ONTAP S3 時則不需要額外的授權。由於 AFX 僅支援 StorageGRID 和 ONTAP S3，因此 FabricPool 容量授權對於 AFX FabricPool 並不需要。
+
+
+
+[[intercluster-lifs]]
+== 叢集間 LIFs
+
+叢集間 LIF 是一種用於跨叢集或外部通訊的邏輯網路介面。在 AFF 和 FAS 系統中，FabricPool HA 配對每個配對需要兩個叢集間 LIF 才能連線至雲端分層，而且 NetApp 建議新增額外的叢集間 LIF 以提高彈性。在 AFX 中，叢集間 LIF 也用於與物件存放區通訊。在建立物件存放區組態時，會驗證叢集中所有節點的連線能力。
+
+
+
+[[related-information]]
+== 相關資訊
+
+* https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html["使用 ONTAP FabricPool 的要求"^]
+* https://docs.netapp.com/us-en/ontap/peering/peering-basics-concept.html["ONTAP 對等關係基礎知識"^]
+* https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-share-data-ports-task.html["在共享的資料連接埠上設定 ONTAP 叢集間 LIF"^]
+

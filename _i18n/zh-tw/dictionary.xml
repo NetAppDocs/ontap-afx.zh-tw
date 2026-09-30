@@ -2164,4 +2164,170 @@
   <block id="b2375be1b55171fc0fe7ba669593238f" category="doc">了解 AFX 儲存設備系統的資料安全選項</block>
   <block id="37dd71b6db62e453909fcf1f5be615ed" category="inline-link-macro">AFX 儲存設備系統的 IP 安全性</block>
   <block id="9af24b0bdb566c1fee75a1df0538116b" category="list-text">IPsec 是一種網際網路標準，它為網路端點之間在 IP 層級傳輸的資料提供加密、完整性和驗證。它保護 ONTAP 與用戶端之間的所有 IP 流量，包括 NFS 和 SMB 等更高層級的協定。IPsec 可針對您的資料提供保護，防止惡意重播和中間人攻擊。如需詳細資訊，請參閱 <block ref="54df1974748af2173ffe01e9841e7cb0" category="inline-link-macro-rx"></block>。</block>
+  <block id="36c0c696cc672617c7a91032909fc9dd" category="summary">在 AFX 儲存系統上部署 FabricPool 時，還有幾個額外的考量事項。</block>
+  <block id="68b2f2e9481a98d76eb29e98c469539b" category="doc">在 AFX 儲存系統上使用 FabricPool 的其他注意事項</block>
+  <block id="32921d0648a2e0a63d4a2fab3c0bb1aa" category="section-title">FabricPool 鏡射</block>
+  <block id="38be87aa0a33e73b90e7b8b2cf533204" category="paragraph">FabricPool 鏡射是一種用於分層雲端資料的高可用性組態，透過將第二個物件存放區附加到單一 FabricPool 來建立。設定額外的鏡射後， ONTAP 會將資料同步分層到兩個物件存放區，確保資料在災難或物件存放區停電期間仍然可以存取。由於 AFX 設定單一叢集層級的物件存放區，因此在初始版本中， AFX 不支援 *FabricPool 鏡射。</block>
+  <block id="6d6dd30e9f82364893c3757f057ff11e" category="paragraph">加密功能與 FabricPool 在 AFX 上無需額外組態即可運作。但您應該感知以下事項：</block>
+  <block id="cdcb6b2bbabc73846d6486681a2e1f6d" category="list-text">AFX 支援 NetApp Volume 加密（NVE）；不支援 NetApp 彙總加密（NAE）。</block>
+  <block id="fc85c87a5ada4b4fe0e8748b5415ae70" category="list-text">NVE 對效能分層和容量分層使用相同的金鑰。</block>
+  <block id="0e4acae2d18d8539c63cdf3f533696fb" category="list-text">重新建立金鑰作業會使用新金鑰重寫整個 Volume 的資料，包括雲端分層資料。</block>
+  <block id="dcfcd3be99ed99852cf7a4285f6fe1c5" category="list-text">重新建立金鑰作業和零複製 Volume 移動無法同時執行。</block>
+  <block id="1cf9d0b0f882cf1146bf9379876b211a" category="section-title">備用管理介面</block>
+  <block id="e3ba113dd8c0e5a3ad40ae5de58958ac" category="paragraph">System Manager 是設定與管理 AFX 上的 FabricPool 的主要且建議的管理介面。但您也可以使用命令列介面（CLI）或 REST API 來執行這些工作。</block>
+  <block id="ecde210c403f1f9c60e7b1bbf5a1574b" category="paragraph">AFX CLI 經過重新設計，以支援 FabricPool 遵守叢集重點與缺乏彙總。</block>
+  <block id="ef0c2e4ff59090ebfaefc45ec766529c" category="section-title">叢集層級物件存放區命令</block>
+  <block id="b33a8a32e1dcfff3e2886844c176bd8b" category="paragraph">以下命令（可在<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block>層級使用）用於管理分層資料的物件存放區：</block>
+  <block id="3f5775993b166d6aaaeea20885559bb0" category="list-text">*cluster object-store config create* 定義 StorageGRID 或 ONTAP S3 物件存放區的組態，並自動將其附加至叢集中的所有 flexaggrs。此單一命令取代了統一 ONTAP 中所使用的兩步驟流程（config create + attach）。該操作是冪等的，如果初始附加失敗，可以重新執行。</block>
+  <block id="409950bfdf58b011b74a798176b03e92" category="list-text">*cluster object-store config modify* 修改物件存放區組態屬性。在統一 ONTAP 中可修改的相同屬性（連線設定、認證、憑證選項）也可以在 AFX 中修改。</block>
+  <block id="700e472380c60ff28d8b278716eca3c9" category="list-text">*cluster object-store config rename* 重新命名現有的物件存放區組態。</block>
+  <block id="d0f42758027ae5a9a96933b1f431b1a9" category="list-text">*cluster object-store config show* 顯示目前的物件存放區組態，包括連線詳細資料和附件狀態。</block>
+  <block id="ee13b67e5cf52a5e7718993f0a1f774c" category="list-text">*cluster space show* 顯示叢集層級的空間使用率，包括物件存放區的累計使用量。輸出包括邏輯已使用容量、邏輯參照容量、邏輯未參照容量，以及雲端層的實體已使用空間總計。</block>
+  <block id="4bb047bd8fef3f2053302f03728b6c8b" category="section-title">Volume 層級分層命令（管理員和進階模式）：</block>
+  <block id="c76ae342c20b3e9675fd7e3a57ad67ea" category="paragraph">所有控制分層行為的 ONTAP Volume 建立和修改命令在 AFX 上均完全支援，語法相同。這包括帶有分層相關參數的標準 Volume 建立和 Volume 修改命令，包括：</block>
+  <block id="a7eccb52726bd28c01fb9068943f7f7c" category="list-text">-tiering-policy</block>
+  <block id="55c3d45354eb01d97141bb8bdf021ff1" category="list-text">-tiering-minimum-cooling-days</block>
+  <block id="5d3f204d30c366a50a05951d5b665ffe" category="list-text">-cloud-retrieval-policy</block>
+  <block id="8796fcae0e188d58f86e57aebdd0e1c8" category="list-text">-is-cloud-write-enabled</block>
+  <block id="c4368b4c39826353d0d1ee41b06d1386" category="list-text">-tiering-object-tags</block>
+  <block id="433e50f8ec506e1df46132eea3892209" category="paragraph">Volume 的預設分層原則為無，因此必須為每個 Volume 明確啟用分層。</block>
+  <block id="03cf44954541246aa6f6587f411e097e" category="paragraph">AFX 上的 FabricPool REST API 端點支援叢集層級物件存放區管理和 Volume 層級分層組態。由於叢集層級架構，不支援基於彙總的端點。</block>
+  <block id="bb1a61c7f94bb4ea7a7c87d1dc733847" category="paragraph">支援的端點有多種，包括：</block>
+  <block id="089f077b4591772f837eca154198cab3" category="list-text">GET 和 POST 用於<block ref="924520a1e9cd00ae6286d18c0cafb163" prefix=" " category="inline-code"></block></block>
+  <block id="fef3af77c5b38c677cf614bf789866eb" category="list-text">GET 和 PATCH 適用於<block ref="2e22c326cb25063846823765aa3f96ab" prefix=" " category="inline-code"></block></block>
+  <block id="89f1e9bc99d770b3807502f057526bd3" category="list-text">GET 和 POST 適用於<block ref="3f7ecfe68df8aae32ef20639ae717f55" prefix=" " category="inline-code"></block></block>
+  <block id="ed0971f8d1d1274ade576b513d7f5019" category="list-text">使用下列分層參數對 `/storage/volumes/{uuid} 執行 GET 和 PATCH：</block>
+  <block id="e9946cf6480842a1434c5ffac6c83ef4" category="list-text">tiering.policy</block>
+  <block id="4fa524f8b5d2c0ced2d02cd041929f06" category="list-text">tiering.min_cooling_days</block>
+  <block id="307a0cdc13cfb2d0bf4487257edac38d" category="list-text">tiering.object_tags</block>
+  <block id="0ed47abdb81e7d1aa66cc0ed67baf949" category="list-text">cloud_retrieval_policy</block>
+  <block id="600f1fc6700d47a20de355a4e2e238f8" category="list-text">cloud_write_enabled</block>
+  <block id="8f03ca4c3f1cae7636822bff50b51011" category="paragraph">不支援的端點和參數包括：</block>
+  <block id="082b9a661c623fb6e1887773fa5ddc17" category="list-text">刪除<block ref="2e22c326cb25063846823765aa3f96ab" prefix=" " category="inline-code"></block></block>
+  <block id="df94d73bf03f7a81b37b7fd03a1d5ee4" category="list-text"><block ref="fb758b8dca72d74fd51f4e7f79360c85" prefix="" category="inline-code"></block> Volume 操作</block>
+  <block id="541affca1796d3afcd30064311cb5cc6" category="list-text">所有操作<block ref="40fea6251dd6f5ff3c5409b72c318ff9" prefix=" " category="inline-code"></block></block>
+  <block id="6ed743862fbf7c9ec2137c9a34a68796" category="inline-link">用於管理 FabricPool 資源的 ONTAP 命令</block>
+  <block id="73c68a2c7423fafc132c279632e571e5" category="list-text"><block ref="73c68a2c7423fafc132c279632e571e5" category="inline-link-rx"></block></block>
+  <block id="8a5d40738ed536345857b84b69cef177" category="summary">從高層級來看，在 AFX 儲存系統上設定與啟動 FabricPool 涉及兩個不同層級的流程。首先，您需要在叢集層級為您的資料定義雲端分層。然後，您可以使用數個分層原則之一，在特定 Volume 上啟動分層。</block>
+  <block id="29a23642c2b850d2776d53e5f54f7125" category="doc">為 AFX 儲存系統設定 FabricPool</block>
+  <block id="f76ce37dc91cfe787a3fd895b4380e41" category="section-title">在 ONTAP 叢集層級設定 FabricPool</block>
+  <block id="477d914456b8ab0cca6f69741c21fe47" category="paragraph">您需要定義單一可供整個 ONTAP 叢集存取的物件儲存桶。所有啟用 FabricPool 資料分層的 Volume 都使用同一個儲存桶。</block>
+  <block id="1c8fa6644e5a05a7d831fe5f0ce1f684" category="paragraph">與 ONTAP 的兩步驟流程（包括每個彙總的附加）不同，AFX 依賴單一叢集範圍的流程來設定物件存放區，並將所有節點附加到儲存桶。連線能力也會得到確認，並且與物件存放區的關聯是永久的。</block>
+  <block id="691e68843c304cfde92b34dfcc0a18df" category="paragraph">雲端分層的組態是使用 System Manager 進行描述，但也提供其他選項。例如，您可以透過 CLI 使用命令<block ref="e67758d6f667ad4f9dd7c700bbfa3db2" prefix=" " category="inline-code"></block>。如需詳細資訊，請參閱 <block ref="5da4f80c3cdca1c49dff65bdadf9219e" category="inline-link-macro-rx"></block>。</block>
+  <block id="22b94eaedb7f4527b48fc38e9a27cf0a" category="inline-link-macro">準備在 AFX 儲存系統上實作 FabricPool</block>
+  <block id="4ac19ca276f8ced5f995a9d60058a96b" category="list-text">檢閱 AFX FabricPool 先決條件。例如，確認叢集位於 9.19.1 層級或更新版本，且未從較早版本升級。如需詳細資訊，請參閱 <block ref="a6eb2fd98b5837a1b5cfe24c21a54be8" category="inline-link-macro-rx"></block>。</block>
+  <block id="a9a717c3c8c4be6ab0c66bc5bbe2be11" category="list-text">配置物件存放區儲存桶。在 NetApp StorageGRID 或 ONTAP S3 上建立一個容量足以容納您資料的儲存桶。您也可以選擇為物件存放區安裝 CA 憑證，以提供更安全的連線。</block>
+  <block id="2ec2b914293a3deaa3470c83330aeb93" category="list-text">建立叢集間 LIF 並驗證與物件存放區的連線。您需要在 AFX 叢集中的每個節點上定義一對叢集間 LIF 以存取物件存放區。驗證所有節點是否可以存取物件存放區端點，以及名稱解析是否正常運作。</block>
+  <block id="b4d48e119ae3fe88feae3f09f5811772" category="list-text">在 System Manager 中，選擇左側導覽窗格中的 *Cloud Tiers* 選單項目。</block>
+  <block id="0c465595787778ac9a93f7b6a5323da6" category="paragraph">如果未設定雲端分層，則會顯示空白狀態頁面，其中包含一個「新增」按鈕。</block>
+  <block id="438c314a575bdb56bd91eb9d26c15fbd" category="list-text">選擇 *新增* 以啟動雲端分層建立；將出現一個包含兩個選項的對話方塊。</block>
+  <block id="a07c1f28115d9c48befa493786c8d6db" category="list-text">選擇 StorageGRID 或 ONTAP S3 作為您的供應商。適當的 *新增雲端分層* 表單隨即開啟。</block>
+  <block id="f2b51276f4458f051e75583031d2daee" category="list-text">提供所需的物件存放區資訊，包括：</block>
+  <block id="be5cdd3269eeb0aa6f6ad16e90a0ceb9" category="list-text">物件存放區名稱（組態識別碼）</block>
+  <block id="496f533343d55c0dcc7ea739d9e3939a" category="list-text">伺服器名稱（物件存放區端點的 FQDN 或 IP 位址）</block>
+  <block id="833b3926afecfa6b5c1925063b650783" category="list-text">容器名稱（儲存桶名稱）</block>
+  <block id="01ff242bdfd4d00936bfb72b4e70611f" category="list-text">存取金鑰和秘密金鑰（物件存放區憑證）</block>
+  <block id="e4628be599b568438b0aa60226eecb24" category="list-text">憑證驗證設定（建議：啟用並使用正確的 CA 憑證）</block>
+  <block id="bf5a04edc23039691c881ab2a851a866" category="list-text">選擇將承載雲端分層流量的叢集間 LIF。</block>
+  <block id="a27b9e4d7fe946025163923bb610f47d" category="paragraph">如果沒有合適的介面，則提供建立新介面的選項。</block>
+  <block id="b0432bdfe23fa846502db266b3a65ac1" category="paragraph">System Manager 建立叢集層級物件存放區組態，並在驗證網路連線後自動將其附加到叢集中的所有節點。</block>
+  <block id="78ca32808e8e65a9bc23907a14c59c4c" category="list-text">在「雲端分層」頁面卡片上驗證雲端分層詳細資料。</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">完成後</block>
+  <block id="a33e59c6a413e908c040ea166539e28c" category="paragraph">確認叢集儀表板的「容量」卡片顯示雲端分層使用情況。請注意，您指派的儲存桶在被識別供 FabricPool 使用之後，即無法重新命名。您可以視需要為個別資料 Volume 啟用分層。</block>
+  <block id="b530eb06f31de7c37257f5677442c9d6" category="section-title">透過 Volume 層級原則啟用分層</block>
+  <block id="d11c5b040fff15926785782704aca2ba" category="paragraph">在叢集層級設定 FabricPool 後，您可以透過設定適當的分層原則，為個別的 Volume 啟用分層。一般而言，這些原則在 AFX 中的運作方式與在 ONTAP 中的運作方式相同。</block>
+  <block id="8ca260b75fb3857f827d6fd0b61081e5" category="list-text">*Volume 層級分層。*分層是按每個 Volume 啟用的。您可以為每個 Volume 設定不同的分層原則。Volume 的資料可根據該原則移至雲端層。</block>
+  <block id="31760c5cc0f267f1a499e18a218d3bad" category="list-text">*分層原則。*可以為 Volume 定義四種分層原則，包括：</block>
+  <block id="b7db1a351f5dfc71ba4e26a5bb1b009d" category="list-text"><block ref="8805d416ce540c5f2df34af5b18d742b" prefix="" category="inline-code"></block></block>
+  <block id="4b8389540f787ab175fd035495faa505" category="list-text"><block ref="9df22f196a33acd0b372fe502de51211" prefix="" category="inline-code"></block></block>
+  <block id="8a608645da754a8fe766ffb5924b5e1b" category="list-text"><block ref="a181a603769c1f98ad927e7367c7aa51" prefix="" category="inline-code"></block></block>
+  <block id="56d058c51fcd79545706c62569ba5a19" category="list-text"><block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix="" category="inline-code"></block></block>
+  <block id="dce8b52069a0bf38b329cc4a971c0097" category="list-text">*預設分層原則。*預設原則為<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block>，這表示沒有資料符合移至雲端層的條件。相較之下，在 AFF 和 FAS 系統上，新連接彙總上的 ONTAP Volume 預設為<block ref="8805d416ce540c5f2df34af5b18d742b" prefix=" " category="inline-code"></block>。</block>
+  <block id="71d660929bc49fd03aacab469d4f2213" category="list-text">*原則觸發。*設定<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block>以外的原則，會觸發雲端連線並啟動資料分層。</block>
+  <block id="4e9c497f91ac9fe03bda6036e797893d" category="list-text">*冷卻期。*冷卻期決定了資料在符合分層條件之前必須保持非作用中狀態多久。使用 CLI 時，通常會使用 <block ref="55c3d45354eb01d97141bb8bdf021ff1" prefix=" " category="inline-code"></block> 參數進行設定。自動原則的預設冷卻期為 31 天，而僅快照原則的有效冷卻期約為 2 天。您可以針對每個 Volume 調校此值以符合工作負載。</block>
+  <block id="10345225ac4708bc0dfe6f035bd5135f" category="list-text">*溫度追蹤。*使用 AFX 時，溫度追蹤是依每個 Volume 執行，而非在彙總層級執行。</block>
+  <block id="59cd389ca54a6337be785984e17dc727" category="inline-link">利用 ONTAP FabricPool 原則有效率地分層資料</block>
+  <block id="5f062cc40c9c2b8737567a9103cc8521" category="paragraph">如需有關 FabricPool 分層原則的詳細資訊，請參閱<block ref="0cb43e5e347e999a1bccf7dccd9de434" category="inline-link-rx"></block>。</block>
+  <block id="9bf2246d2552d9e8ff07524d5f9387a1" category="section-title">啟動 Volume 層級分層和後續步驟</block>
+  <block id="1a2e9e660be413b7c6c5a1f6d9fe898d" category="paragraph">若要在 Volume 上啟用分層，請在 System Manager 中導覽至 *Volumes* 頁面並選擇 *Edit*，然後選擇 *Cloud Tier Settings*，視需要為每個 Volume 設定分層原則和冷卻期。預設原則為無，因此必須為每個 Volume 明確啟用分層。您可以使用 CLI 中的現有 Volume 命令。</block>
+  <block id="6a360d9e36eacc40e9b4fe4ce2b2b9db" category="paragraph">分層開始後，您應該監控分層和容量使用率。同時，驗證 Volume 分層狀態，並觀察效能層和容量層的空間使用。請注意，AFX 系統上已停用非活動資料報告（IDR/AutoIDR），因此您需要採用與 AFF 或 FAS 系統不同的方法來評估可分層/冷資料。</block>
+  <block id="a6eb2fd98b5837a1b5cfe24c21a54be8" category="list-text"><block ref="a6eb2fd98b5837a1b5cfe24c21a54be8" category="inline-link-macro-rx"></block></block>
+  <block id="d3b86214377e3d53daec331c7e268b53" category="inline-link-macro">了解適用於 AFX 儲存系統的 FabricPool</block>
+  <block id="83d70fe4c62dfc6b7f3c45feb3d59f7d" category="list-text"><block ref="83d70fe4c62dfc6b7f3c45feb3d59f7d" category="inline-link-macro-rx"></block></block>
+  <block id="3b0eb66e0f0e8cba4e043c8e34e14529" category="summary">AFX 系統上的 FabricPool 後續管理與 AFF 和 FAS 系統類似。您需要監控空間使用率、管理 Volume，並調整分層原則。AFX 環境有一些值得注意的新增項目，包括節點參加或離開 AFX 叢集時的行為。</block>
+  <block id="faf03e0bf28c1e0e34fc51a753672f8a" category="doc">管理 AFX 儲存系統的 FabricPool</block>
+  <block id="000b4b7ad7af8f7897fdcdb2bb984545" category="section-title">監控空間並管理 Volume</block>
+  <block id="fb772ddd95665be255df3485c0eea669" category="paragraph">AFX 用於監控容量層和效能層使用情況以及進行日常 Volume 管理的流程通常與 ONTAP 相同。請注意，AFX 中的空間報告考慮了其分散式架構。容量層空間資訊透過叢集層級和可用區報告提供，而不是透過管理員可見的彙總提供。</block>
+  <block id="dae3f04cfa05af411b66518aa5bbaeb5" category="section-title">節點參加和節點退出</block>
+  <block id="c3bed1230651867e07cda2846ad33843" category="paragraph">AFX 系統上的節點操作是 FabricPool 感知的，這與 ONTAP 有很大不同。請注意以下行為：</block>
+  <block id="d0c69bc54e278cfeda6f5b7c95bfaa26" category="list-text">*節點參加。*當節點參加 AFX 叢集且叢集物件存放區組態已存在時，會自動觸發物件存放區附加操作。如果附加失敗，節點參加操作也會失敗。</block>
+  <block id="31d6d2726aa557100ecd6d2956abe466" category="list-text">*節點退出。*當節點退出或從叢集中移除時，資料會被標記為「已失效」。相關的 Volume 會使用 ZCVM 進行重新定位。已失效物件的中繼檔案會被保留，以便其雲端物件仍可存取並可進行垃圾收集。</block>
+  <block id="fe6c586998b990896f483dbc3ec1673f" category="inline-link">管理 FabricPool</block>
+  <block id="c01ff608529dd5327e507018f5b90493" category="list-text"><block ref="c01ff608529dd5327e507018f5b90493" category="inline-link-rx"></block></block>
+  <block id="9e92caa9b806d380742bb01fc9a842ee" category="list-text"><block ref="9e92caa9b806d380742bb01fc9a842ee" category="inline-link-macro-rx"></block></block>
+  <block id="06d543aad5fbf42be7211fff409c940e" category="summary">在 AFX 儲存系統上設定 FabricPool 之前，您應該做好準備，熟悉相關要求、限制和所選技術。</block>
+  <block id="4f8089a5088aca33393a35978b0e9cbe" category="paragraph">在 AFX 儲存設備上部署 FabricPool 時，最重要的要求包括下列各項：</block>
+  <block id="c07d060d13609f3b89369fb46286679c" category="list-text">*ONTAP 版本。*FabricPool 支援搭配 ONTAP 9.19.1 P3 及更新版本的 AFX 儲存系統。由於儲存設備定址方式的內部變更，此功能不支援從 9.18.1 升級的 AFX 叢集。</block>
+  <block id="d04c54a54c13e3a8acfbe80892131e2c" category="list-text">*物件存放區。*需要 NetApp StorageGRID 或 ONTAP S3 儲存桶。與執行統一 ONTAP 的 AFF 和 FAS 儲存設備一樣，此儲存桶必須已經存在，並且具備足以滿足您資料需求的容量。建議使用 CA 憑證，除非明確停用憑證檢查。</block>
+  <block id="28324a6982f0abfa719e277114015d6e" category="list-text">*網路連線。*AFX 叢集中的所有節點都必須與物件存放區建立網路連線。這是透過在每個節點上使用一對叢集間 LIF 來實作，這與 AFF 和 FAS 系統相同。</block>
+  <block id="4ded46815ec7cfe0bdcbe56113109b18" category="inline-link">使用 ONTAP FabricPool 的要求</block>
+  <block id="9c55f8aa4b0418da27642d66bd9f5a3b" category="paragraph">AFX 和 ONTAP 的 FabricPool 實作非常相似。請檢閱 <block ref="128a0c8e5208475feea91f1d0d39dbd0" category="inline-link-rx"></block> 以取得更多資訊。</block>
+  <block id="951aab35be376f0a0ed00832cae9acce" category="section-title">限制與約束</block>
+  <block id="d45f3c2bf0116d72110d5aebefc83693" category="paragraph">AFX FabricPool 實作在多個方面比統一 ONTAP 更具限制性。AFX 上的 FabricPool *不支援*下列功能：</block>
+  <block id="0a33a6df9b06cfd5285e707ab30cf4f1" category="list-text">可用於 ONTAP 的公有雲物件存放區（例如 Amazon S3 和 Google Cloud Storage）在 AFX 中不受支援。僅支援 StorageGRID 和 ONTAP S3。</block>
+  <block id="6bbd863d505652d98080235a1a5d7daa" category="list-text">FabricPool 鏡射。</block>
+  <block id="47a4fb70d8b782b84ccc36fafe0b65eb" category="list-text">多個物件存放區儲存桶或 Volume 精細度儲存桶附加；每個 AFX 叢集使用單一叢集層級儲存桶。</block>
+  <block id="d4f9dbdd910b3de43456435262714185" category="list-text">最佳化的 Volume 搬移、最佳化的 SVM 移轉和最佳化的實體複本切割。</block>
+  <block id="48fe42d5394496af03f3395977f13a00" category="list-text">SVM 移轉和從 AFF 或 FAS 系統到 AFX 系統的移轉。</block>
+  <block id="71dd786832f94051f0eaa4216edf1580" category="list-text">非作用中資料報告（IDR/AutoIDR）。</block>
+  <block id="a0950ec7d864df41f996f57deb48f672" category="paragraph">使用 AFF 和 FAS 系統時，分層至第三方公有雲物件存放區需要以容量為基礎的 FabricPool 授權，但使用 StorageGRID 或 ONTAP S3 時則不需要額外的授權。由於 AFX 僅支援 StorageGRID 和 ONTAP S3，因此 FabricPool 容量授權對於 AFX FabricPool 並不需要。</block>
+  <block id="7178ee2dceac9cd462bc40d9fd33245c" category="section-title">叢集間 LIFs</block>
+  <block id="e334077f7bb4f665a77a3c02c57b9e28" category="paragraph">叢集間 LIF 是一種用於跨叢集或外部通訊的邏輯網路介面。在 AFF 和 FAS 系統中，FabricPool HA 配對每個配對需要兩個叢集間 LIF 才能連線至雲端分層，而且 NetApp 建議新增額外的叢集間 LIF 以提高彈性。在 AFX 中，叢集間 LIF 也用於與物件存放區通訊。在建立物件存放區組態時，會驗證叢集中所有節點的連線能力。</block>
+  <block id="53913658f99be38116a6034c406e12b5" category="list-text"><block ref="53913658f99be38116a6034c406e12b5" category="inline-link-rx"></block></block>
+  <block id="065c34032610d311bfd3657f136f2e26" category="inline-link">ONTAP 對等關係基礎知識</block>
+  <block id="462e57d423f95476d9155603442e6a82" category="list-text"><block ref="462e57d423f95476d9155603442e6a82" category="inline-link-rx"></block></block>
+  <block id="9a172a221d677f136b93a0c04c1dc48a" category="inline-link">在共享的資料連接埠上設定 ONTAP 叢集間 LIF</block>
+  <block id="11dc3b62d6da6bd017df683f0fb09f98" category="list-text"><block ref="11dc3b62d6da6bd017df683f0fb09f98" category="inline-link-rx"></block></block>
+  <block id="a5c6d13ea9b851eb6cb01c046b44dc09" category="summary">從 ONTAP 9.19.1 P3 開始，您可以設定 FabricPool 以擴展 AFX 儲存系統的可用容量，同時降低成本並提高效率。</block>
+  <block id="9fe343788d08130f46e418bb81928479" category="section-title">FabricPool 總覽</block>
+  <block id="ceaadcb8c520d3e7feb910abd1d71330" category="paragraph">FabricPool 是 ONTAP 的一項功能，可根據資料的活動或「溫度」，在高效能本機分層與較低成本的遠端雲端或容量分層之間移動資料。它將頻繁存取的「熱」資料保留在快速的本機 SSD 儲存設備上，同時將極少使用的「冷」資料移至較廉價的物件儲存。FabricPool 在背景自動且通透地運作；它不需要變更應用程式或進行大量的後續管理。當資料移至雲端分層並移回時，相關的 ONTAP 儲存效率功能（例如壓縮與重複資料刪除）將會保留。</block>
+  <block id="5550e4a60c5a40b4e1ad5d483a297a4c" category="paragraph">搭載 ONTAP 9.19.1 P3 及更新版本的 AFX 儲存系統支援 FabricPool 分層，可將 AFX 叢集容量擴充至本機層級之外，以因應資料繁重的工作負載。儘管 AFX 的 FabricPool 實作導入了一些架構變更，但 ONTAP 功能的核心操作與特性維持不變。</block>
+  <block id="7ec25a926b5b84366c2340453ac9f3ea" category="paragraph">管理員繼續透過每個 Volume 的原則以及最短冷卻期來控制資料分層，最短冷卻期定義了非作用中資料何時符合移動條件。這種原則驅動型模型透過回收昂貴的快閃記憶體容量來提高儲存設備經濟性，並提供邁向混合儲存環境的簡單途徑。它能保持分層資料受到保護且可用，同時將對作用中工作集的效能影響降至最低。</block>
+  <block id="39452eba83734216cfdb4e7f34130611" category="section-title">比較 AFF 和 FAS 與 AFX 實作</block>
+  <block id="a12641493ca806da294fcd0336e03fe2" category="paragraph">儘管 FabricPool 在不同 ONTAP 配置（AFF 和 FAS 系統的統一 ONTAP，以及 AFX 系統的 AFX ONTAP 配置）中的行為非常相似，但分離式 AFX 架構引入了一些差異。以下總結了這兩種實作之間最重要的比較領域。</block>
+  <block id="8d5997846e8f86e51acd682548a95aab" category="cell">區域或操作</block>
+  <block id="b40d6a1a2de02d83542f4039c3433e48" category="cell">AFF 和 FAS 儲存設備</block>
+  <block id="1f3bccae9ec6e70af4750a6ab35399ea" category="cell">AFX 儲存設備</block>
+  <block id="28a9ff4f236cbca167ba3a3702ed19de" category="cell">物件存放區範圍</block>
+  <block id="17857f79a52a61ef52bb888e51ed3f46" category="cell">每個彙總分兩個步驟設定；建立組態，然後附加</block>
+  <block id="3c8ae231f1522612c4001d8d19663cb2" category="cell">在叢集層級使用單一命令進行設定；每個叢集定義一個儲存桶</block>
+  <block id="6fb6850c966cd386e070d6b4fe33da60" category="cell">預設分層原則</block>
+  <block id="73a3a446b9ad39c30fc39b006c651c51" category="cell">預設原則為<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block>；必須明確設定 Volume 原則才能開始分層</block>
+  <block id="3daeebad041e5bfd6f3201fcdec79710" category="cell">溫度追蹤</block>
+  <block id="2a3317e03d44d341504d96b0c12b490a" category="cell">每 Volume 精細度</block>
+  <block id="7868204f5e206dceb3273bea4608f30a" category="cell">雲端分層提供者</block>
+  <block id="42585093541e213f2b79b96101aaaa5c" category="cell">StorageGRID、ONTAP S3 和幾個主要的公有雲</block>
+  <block id="8bf89d4d57b893396a6bfda952b806a0" category="cell">僅限 StorageGRID 或 ONTAP S3</block>
+  <block id="92ef3738de9a4f7e190599dcd8472124" category="cell">使用 MetroCluster 進行鏡射</block>
+  <block id="eaa4dc5078017a5c5bebf383ab6f5124" category="cell">支援</block>
+  <block id="aa7f77e663b832d5b0e544c5511e680c" category="cell">不支援</block>
+  <block id="23b3156b957d1491a47bbeaa0d98afc8" category="cell">Volume 移動</block>
+  <block id="cc707c916a696bb2ca2dfe461b264f31" category="cell">標準與最佳化的 Volume 移動</block>
+  <block id="568a24bb03a09fbcb425602857f398cc" category="cell">零拷貝 Volume 移動 (ZCVM) 不移動容量分層資料</block>
+  <block id="18e1d990949517f36865ef994af4780c" category="inline-link">FabricPool 基本概念</block>
+  <block id="ee5c4f33403089d1cb3fac231c75ea23" category="list-text"><block ref="ee5c4f33403089d1cb3fac231c75ea23" category="inline-link-rx"></block></block>
+  <block id="a1a5b1419016c899ee8206658634b838" category="inline-link">了解使用 ONTAP FabricPool 進行資料分層</block>
+  <block id="e60857e7baf180bf7f6eee1d60fe034e" category="list-text"><block ref="e60857e7baf180bf7f6eee1d60fe034e" category="inline-link-rx"></block></block>
+  <block id="9275ca01303e940379de8282ad4b40a3" category="inline-link">ONTAP 分層技術報告</block>
+  <block id="1b6bcb9dffc862927fbf35df8119574d" category="list-text"><block ref="1b6bcb9dffc862927fbf35df8119574d" category="inline-link-rx"></block></block>
+  <block id="e8f9498350aa21865a8e83a88de6a889" category="paragraph-title">AFX 是否支援 FabricPool？</block>
+  <block id="94bd5f205aa476b9ffb298ed4ae57698" category="paragraph">是的。從 ONTAP 9.19.1 P3 開始，AFX 儲存系統支援 FabricPool 將資料分層至容量物件儲存。AFX 實作與 ONTAP 在架構上有幾個差異。例如，雲端分層是附加至整個叢集（或 SAZ），而非個別彙總；而且只能使用 ONTAP S3 或 StorageGRID 儲存桶。如需詳細資訊，請參閱 <block ref="dde2254b9e458ecae8b03e2a8b01a7ef" category="inline-link-macro-rx"></block>。</block>
+  <block id="8a4d2cf09ee805145425a9c9a50479f9" category="cell"><block ref="8a4d2cf09ee805145425a9c9a50479f9" category="inline-link-macro-rx"></block></block>
+  <block id="7e8213474819c05fba2da0767bba628f" category="paragraph">FabricPool 是 ONTAP 的一項功能，可根據資料的活動，在高效能本機分層和低成本的遠端雲端或容量分層之間移動資料。從 ONTAP 9.19.1 P3 開始，FabricPool 已擴充至 AFX 儲存系統。它可實現更大的資料規模，以支援資料密集型工作負載。儘管 AFX 實作引進了幾項架構變更，但 ONTAP 功能的核心特性維持不變。</block>
+  <block id="4d1dea91c95564bd60ade3a0184d292b" category="sidebar">管理叢集資料</block>
+  <block id="6b84642664b0d7a75d932397df49f779" category="sidebar">FabricPool 分層管理</block>
+  <block id="4cb8e8aa7b8cfad0a37845e662bd451e" category="sidebar">了解 FabricPool</block>
+  <block id="9cc7e1b7216fc9da25559b80381f9ca5" category="sidebar">準備實作 FabricPool</block>
+  <block id="6a917ac3c4ad1cc61d8259a608f2ae4e" category="sidebar">設定 FabricPool</block>
+  <block id="015f8c34f52b6ef8a3361958660f5e88" category="sidebar">其他考量</block>
 </blocks>

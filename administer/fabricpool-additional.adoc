@@ -1,0 +1,114 @@
+---
+permalink: administer/fabricpool-additional.html 
+sidebar: sidebar 
+keywords: afx, fabricpool, mirrors, commands, cli, encryption, nve 
+summary: 在 AFX 儲存系統上部署 FabricPool 時，還有幾個額外的考量事項。 
+---
+= 在 AFX 儲存系統上使用 FabricPool 的其他注意事項
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 AFX 儲存系統上部署 FabricPool 時，還有幾個額外的考量事項。
+
+
+
+[[fabricpool-mirrors]]
+== FabricPool 鏡射
+
+FabricPool 鏡射是一種用於分層雲端資料的高可用性組態，透過將第二個物件存放區附加到單一 FabricPool 來建立。設定額外的鏡射後， ONTAP 會將資料同步分層到兩個物件存放區，確保資料在災難或物件存放區停電期間仍然可以存取。由於 AFX 設定單一叢集層級的物件存放區，因此在初始版本中， AFX 不支援 *FabricPool 鏡射。
+
+
+
+[[encryption]]
+== 加密
+
+加密功能與 FabricPool 在 AFX 上無需額外組態即可運作。但您應該感知以下事項：
+
+* AFX 支援 NetApp Volume 加密（NVE）；不支援 NetApp 彙總加密（NAE）。
+* NVE 對效能分層和容量分層使用相同的金鑰。
+* 重新建立金鑰作業會使用新金鑰重寫整個 Volume 的資料，包括雲端分層資料。
+* 重新建立金鑰作業和零複製 Volume 移動無法同時執行。
+
+
+
+
+[[alternative-administrative-interfaces]]
+== 備用管理介面
+
+System Manager 是設定與管理 AFX 上的 FabricPool 的主要且建議的管理介面。但您也可以使用命令列介面（CLI）或 REST API 來執行這些工作。
+
+
+
+[[command-line-interface]]
+=== 命令列介面
+
+AFX CLI 經過重新設計，以支援 FabricPool 遵守叢集重點與缺乏彙總。
+
+
+
+==== 叢集層級物件存放區命令
+
+以下命令（可在 `admin`層級使用）用於管理分層資料的物件存放區：
+
+* *cluster object-store config create* 定義 StorageGRID 或 ONTAP S3 物件存放區的組態，並自動將其附加至叢集中的所有 flexaggrs。此單一命令取代了統一 ONTAP 中所使用的兩步驟流程（config create + attach）。該操作是冪等的，如果初始附加失敗，可以重新執行。
+* *cluster object-store config modify* 修改物件存放區組態屬性。在統一 ONTAP 中可修改的相同屬性（連線設定、認證、憑證選項）也可以在 AFX 中修改。
+* *cluster object-store config rename* 重新命名現有的物件存放區組態。
+* *cluster object-store config show* 顯示目前的物件存放區組態，包括連線詳細資料和附件狀態。
+* *cluster space show* 顯示叢集層級的空間使用率，包括物件存放區的累計使用量。輸出包括邏輯已使用容量、邏輯參照容量、邏輯未參照容量，以及雲端層的實體已使用空間總計。
+
+
+
+
+==== Volume 層級分層命令（管理員和進階模式）：
+
+所有控制分層行為的 ONTAP Volume 建立和修改命令在 AFX 上均完全支援，語法相同。這包括帶有分層相關參數的標準 Volume 建立和 Volume 修改命令，包括：
+
+* -tiering-policy
+* -tiering-minimum-cooling-days
+* -cloud-retrieval-policy
+* -is-cloud-write-enabled
+* -tiering-object-tags
+
+
+Volume 的預設分層原則為無，因此必須為每個 Volume 明確啟用分層。
+
+
+
+[[rest-api]]
+=== REST API
+
+AFX 上的 FabricPool REST API 端點支援叢集層級物件存放區管理和 Volume 層級分層組態。由於叢集層級架構，不支援基於彙總的端點。
+
+支援的端點有多種，包括：
+
+* GET 和 POST 用於 `/cloud/targets`
+* GET 和 PATCH 適用於 `/cloud/targets/{uuid}`
+* GET 和 POST 適用於 `/storage/volumes`
+* 使用下列分層參數對 `/storage/volumes/{uuid} 執行 GET 和 PATCH：
++
+** tiering.policy
+** tiering.min_cooling_days
+** tiering.object_tags
+** cloud_retrieval_policy
+** cloud_write_enabled
+
+
+
+
+不支援的端點和參數包括：
+
+* 刪除 `/cloud/targets/{uuid}`
+* `tiering.supported parameter` Volume 操作
+* 所有操作 `/storage/aggregates/{aggregate.uuid}/cloud-stores`
+
+
+
+
+[[related-information]]
+== 相關資訊
+
+* https://docs.netapp.com/us-en/ontap/fabricpool/commands-manage-aggregates-reference.html["用於管理 FabricPool 資源的 ONTAP 命令"^]
+

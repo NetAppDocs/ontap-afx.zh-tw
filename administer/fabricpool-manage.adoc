@@ -1,0 +1,41 @@
+---
+permalink: administer/fabricpool-manage.html 
+sidebar: sidebar 
+keywords: afx, oam, fabricpool, manage, monitor, space, tiering policy, zcvm, volume move, node join, node unjoin, flexaggr 
+summary: AFX 系統上的 FabricPool 後續管理與 AFF 和 FAS 系統類似。您需要監控空間使用率、管理 Volume，並調整分層原則。AFX 環境有一些值得注意的新增項目，包括節點參加或離開 AFX 叢集時的行為。 
+---
+= 管理 AFX 儲存系統的 FabricPool
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AFX 系統上的 FabricPool 後續管理與 AFF 和 FAS 系統類似。您需要監控空間使用率、管理 Volume，並調整分層原則。AFX 環境有一些值得注意的新增項目，包括節點參加或離開 AFX 叢集時的行為。
+
+
+
+[[monitor-space-and-manage-volumes]]
+== 監控空間並管理 Volume
+
+AFX 用於監控容量層和效能層使用情況以及進行日常 Volume 管理的流程通常與 ONTAP 相同。請注意，AFX 中的空間報告考慮了其分散式架構。容量層空間資訊透過叢集層級和可用區報告提供，而不是透過管理員可見的彙總提供。
+
+
+
+[[node-join-and-node-unjoin]]
+== 節點參加和節點退出
+
+AFX 系統上的節點操作是 FabricPool 感知的，這與 ONTAP 有很大不同。請注意以下行為：
+
+* *節點參加。*當節點參加 AFX 叢集且叢集物件存放區組態已存在時，會自動觸發物件存放區附加操作。如果附加失敗，節點參加操作也會失敗。
+* *節點退出。*當節點退出或從叢集中移除時，資料會被標記為「已失效」。相關的 Volume 會使用 ZCVM 進行重新定位。已失效物件的中繼檔案會被保留，以便其雲端物件仍可存取並可進行垃圾收集。
+
+
+
+
+[[related-information]]
+== 相關資訊
+
+* https://docs.netapp.com/us-en/ontap/fabricpool/determine-data-inactive-reporting-task.html["管理 FabricPool"^]
+* link:../administer/expand-cluster.html["擴展 AFX 儲存系統集群"]
+

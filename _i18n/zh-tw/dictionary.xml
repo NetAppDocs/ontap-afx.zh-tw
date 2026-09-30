@@ -1149,7 +1149,6 @@
   <block id="c57ebf896522e61d2fb2936af391a342" category="inline-link-macro">準備管理您的 AFX 數據</block>
   <block id="5546f6d8bc3d0dd5a40c20c4d749d48e" category="list-text"><block ref="5546f6d8bc3d0dd5a40c20c4d749d48e" category="inline-link-macro-rx"></block></block>
   <block id="264c7a25568ab93610cc395140359eb4" category="summary">在管理 AFX 資料之前，您應該熟悉基本概念和功能。</block>
-  <block id="bfd961e2a1e35548010fea792ecda5e4" category="doc">準備管理您的 AFX 儲存系統數據</block>
   <block id="4e5fb30db16cab1af452750211083830" category="section-title">術語和選項</block>
   <block id="91818c76048499823f8f320043c66890" category="paragraph">您應該熟悉幾個與 AFX 儲存相關的術語。</block>
   <block id="045efe415c2e22ca0585f899f658f875" category="list-text">FlexVolume</block>
@@ -2302,7 +2301,6 @@
   <block id="17857f79a52a61ef52bb888e51ed3f46" category="cell">每個彙總分兩個步驟設定；建立組態，然後附加</block>
   <block id="3c8ae231f1522612c4001d8d19663cb2" category="cell">在叢集層級使用單一命令進行設定；每個叢集定義一個儲存桶</block>
   <block id="6fb6850c966cd386e070d6b4fe33da60" category="cell">預設分層原則</block>
-  <block id="73a3a446b9ad39c30fc39b006c651c51" category="cell">預設原則為<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block>；必須明確設定 Volume 原則才能開始分層</block>
   <block id="3daeebad041e5bfd6f3201fcdec79710" category="cell">溫度追蹤</block>
   <block id="2a3317e03d44d341504d96b0c12b490a" category="cell">每 Volume 精細度</block>
   <block id="7868204f5e206dceb3273bea4608f30a" category="cell">雲端分層提供者</block>
@@ -2330,4 +2328,8 @@
   <block id="9cc7e1b7216fc9da25559b80381f9ca5" category="sidebar">準備實作 FabricPool</block>
   <block id="6a917ac3c4ad1cc61d8259a608f2ae4e" category="sidebar">設定 FabricPool</block>
   <block id="015f8c34f52b6ef8a3361958660f5e88" category="sidebar">其他考量</block>
+  <block id="e51fa2d9b995b22d963aa0c409e58a35" category="cell">預設原則為<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block>，但啟用 FabricPool 的集合體除外，其預設為<block ref="c322d3de29d2b0c5e2e011dad5e77df2" prefix=" " category="inline-code"></block></block>
+  <block id="e23d29d70657da965822a4e0ec8f546b" category="cell">預設原則是<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block></block>
+  <block id="5933d9a0441d1f9543a9286674ef11b5" category="doc">AFX S3 儲存桶管理選項</block>
+  <block id="b8efc14136159d215438d8120125f40e" category="doc">了解如何管理 AFX 儲存系統資料</block>
 </blocks>

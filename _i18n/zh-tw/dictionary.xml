@@ -1316,7 +1316,6 @@
   <block id="e2bf3258a6bd916a9b75ab07319e2aa4" category="list-text">分層一致性組是在ONTAP 9.16.1 中引入的，並可與 AFX 一起使用。透過分層結構，可以將一個或多個一致性組配置為父級下的子級。這些分層群組可讓您將單獨的快照策略套用至子一致性群組，並透過複製父群組將所有子群組的快照作為單一單元複製到遠端叢集。</block>
   <block id="85fdd77d0274be7a2ed2bdefd292e18c" category="list-text">SnapLock是ONTAP 的一項功能，可讓您透過將檔案移至一次寫入多次讀取 (WORM) 狀態來保護檔案。這可以防止在指定的保留期內進行修改或刪除。創建的SnapLock磁碟區在基於保留創建後不能從非SnapLock磁碟區轉換。</block>
   <block id="f5ec2b2f45cf6729ee766559c7aa50f1" category="summary">快照複製是將 AFX 系統上的一致性群組複製到地理位置較遠的位置的過程。初始複製之後，一致性組的變更將根據複製策略複製到遠端位置。複製的一致性組可用於災難復原或資料遷移。</block>
-  <block id="1fb9148e9e8349d6e785a8abe0e5fdba" category="doc">管理 AFX 儲存系統上的快照複製</block>
   <block id="a7ee55059187c77f0db0f1191da3e6c8" category="paragraph">若要設定快照複製，您需要在 AFX 儲存系統和遠端位置之間建立複製關係。複製關係由複製策略控制。在叢集設定期間建立複製所有快照的預設策略。您可以使用預設策略，也可以選擇建立新策略。</block>
   <block id="bb35c8e1197f3cb1f834baa178f51fdd" category="section-title">步驟 1：建立叢集對等關係</block>
   <block id="256483a2b5ed8710e7c8fdf9ce515426" category="paragraph">在透過將資料複製到遠端叢集來保護資料之前，您需要在本機和遠端叢集之間建立叢集對等關係。</block>
@@ -2332,4 +2331,5 @@
   <block id="e23d29d70657da965822a4e0ec8f546b" category="cell">預設原則是<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block></block>
   <block id="5933d9a0441d1f9543a9286674ef11b5" category="doc">AFX S3 儲存桶管理選項</block>
   <block id="b8efc14136159d215438d8120125f40e" category="doc">了解如何管理 AFX 儲存系統資料</block>
+  <block id="f71f016f7ff1ffe09fcc0bb6c3f2c337" category="doc">AFX 儲存設備系統的 Snapshot 快照技術複寫工作流程</block>
 </blocks>

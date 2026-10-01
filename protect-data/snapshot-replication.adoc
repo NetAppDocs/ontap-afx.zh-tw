@@ -4,7 +4,7 @@ permalink: protect-data/snapshot-replication.html
 keywords: afx, afx system, manage replication, manage snapshot replication 
 summary: 快照複製是將 AFX 系統上的一致性群組複製到地理位置較遠的位置的過程。初始複製之後，一致性組的變更將根據複製策略複製到遠端位置。複製的一致性組可用於災難復原或資料遷移。 
 ---
-= 管理 AFX 儲存系統上的快照複製
+= AFX 儲存設備系統的 Snapshot 快照技術複寫工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

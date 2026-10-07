@@ -2332,4 +2332,5 @@
   <block id="5933d9a0441d1f9543a9286674ef11b5" category="doc">AFX S3 儲存桶管理選項</block>
   <block id="b8efc14136159d215438d8120125f40e" category="doc">了解如何管理 AFX 儲存系統資料</block>
   <block id="f71f016f7ff1ffe09fcc0bb6c3f2c337" category="doc">AFX 儲存設備系統的 Snapshot 快照技術複寫工作流程</block>
+  <block id="320808ffdec6f54122d23d5939b758f2" category="admonition">AFX 不支援在單一儲存設備機櫃內使用混合尺寸的磁碟機。同一機櫃內的所有磁碟機必須尺寸相同。如需 AFX 儲存系統組態的完整相容性資訊，請參閱<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>。</block>
 </blocks>

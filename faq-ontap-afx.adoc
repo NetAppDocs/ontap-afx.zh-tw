@@ -117,3 +117,6 @@ NetApp AFX 可自動平衡叢集中所有節點上的磁碟區放置位置。從
 
 .AFX 是否支援 FabricPool？
 是的。從 ONTAP 9.19.1 P3 開始，AFX 儲存系統支援 FabricPool 將資料分層至容量物件儲存。AFX 實作與 ONTAP 在架構上有幾個差異。例如，雲端分層是附加至整個叢集（或 SAZ），而非個別彙總；而且只能使用 ONTAP S3 或 StorageGRID 儲存桶。如需詳細資訊，請參閱 link:./administer/fabricpool.html["了解適用於 AFX 儲存系統的 FabricPool"]。
+
+.我的 AFX 儲存設備機櫃可以使用不同容量的磁碟機嗎？
+不。AFX 不支援在單一儲存設備機櫃內使用混合大小的磁碟機。機櫃內的所有磁碟機大小必須相同。如需 AFX 儲存系統組態的完整相容性資訊，請參閱 https://hwu.netapp.com/["NetAppHardware Universe"^]。

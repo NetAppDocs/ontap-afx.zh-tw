@@ -2333,4 +2333,6 @@
   <block id="b8efc14136159d215438d8120125f40e" category="doc">了解如何管理 AFX 儲存系統資料</block>
   <block id="f71f016f7ff1ffe09fcc0bb6c3f2c337" category="doc">AFX 儲存設備系統的 Snapshot 快照技術複寫工作流程</block>
   <block id="320808ffdec6f54122d23d5939b758f2" category="admonition">AFX 不支援在單一儲存設備機櫃內使用混合尺寸的磁碟機。同一機櫃內的所有磁碟機必須尺寸相同。如需 AFX 儲存系統組態的完整相容性資訊，請參閱<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>。</block>
+  <block id="df0a5fa7367c040e26263e7f6bd5d3bb" category="paragraph-title">我的 AFX 儲存設備機櫃可以使用不同容量的磁碟機嗎？</block>
+  <block id="a5ca85d705ee24e667c1206bd5c112b4" category="paragraph">不。AFX 不支援在單一儲存設備機櫃內使用混合大小的磁碟機。機櫃內的所有磁碟機大小必須相同。如需 AFX 儲存系統組態的完整相容性資訊，請參閱<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block>。</block>
 </blocks>

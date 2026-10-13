@@ -1392,7 +1392,6 @@
   <block id="51048cf34d4c82d7ae92b4e8b33ccc35" category="inline-link">ONTAP 9 發布亮點</block>
   <block id="858426bc9cba92152de24f66ed20c19b" category="list-text"><block ref="858426bc9cba92152de24f66ed20c19b" category="inline-link-rx"></block></block>
   <block id="a94bc3cecb41ed2607e30e4137f48423" category="summary">AFX REST API 參考包含有關所有 API 呼叫的詳細資訊。該文件在開發自動化應用程式時很有用。</block>
-  <block id="9d9d25e0255ab68716120450f05905de" category="doc">AFX 儲存系統的 REST API 參考</block>
   <block id="21ffe7e5e1175fdf48a61fcd9c71ff47" category="list-text">AFX 叢集管理 LIF 的 IP 位址或 FQDN</block>
   <block id="33eb1e63e3f6eb080297d3d1813fb0fc" category="list-text">叢集管理員帳戶的憑證</block>
   <block id="1aaa22d05f688af827774a38c8cc4a4f" category="list-text">將您的 Web 瀏覽器連接到叢集管理 IP 位址或網域名稱：</block>
@@ -1403,7 +1402,6 @@
   <block id="8162203e3ec38c896e5f6d688115d731" category="inline-link">ONTAP REST API 參考</block>
   <block id="99ec9f1726a6519eae656fd574344d13" category="list-text"><block ref="99ec9f1726a6519eae656fd574344d13" category="inline-link-rx"></block></block>
   <block id="1b145f28c9e1e4044efc92e3e1567780" category="summary">您可以發出簡單的 curl 命令來開始使用 AFX REST API 並確認其可用性。</block>
-  <block id="82c5461d1a57f884eb846ca365801e17" category="doc">您的第一個 AFX 儲存系統 REST API 呼叫</block>
   <block id="7013ac323311e3dab810263b1d637a84" category="paragraph">除了在本機工作站上提供 curl 實用程式之外，您還需要以下內容：</block>
   <block id="e57ddd021ae925c610e301862e495d93" category="list-text">AFX 系統叢集管理 LIF 的 IP 位址或 FQDN</block>
   <block id="6c62a36f8e262347f2ba79452265a020" category="list-text">有權存取ONTAP REST API 的帳戶的ONTAP憑證</block>
@@ -2335,4 +2333,6 @@
   <block id="320808ffdec6f54122d23d5939b758f2" category="admonition">AFX 不支援在單一儲存設備機櫃內使用混合尺寸的磁碟機。同一機櫃內的所有磁碟機必須尺寸相同。如需 AFX 儲存系統組態的完整相容性資訊，請參閱<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>。</block>
   <block id="df0a5fa7367c040e26263e7f6bd5d3bb" category="paragraph-title">我的 AFX 儲存設備機櫃可以使用不同容量的磁碟機嗎？</block>
   <block id="a5ca85d705ee24e667c1206bd5c112b4" category="paragraph">不。AFX 不支援在單一儲存設備機櫃內使用混合大小的磁碟機。機櫃內的所有磁碟機大小必須相同。如需 AFX 儲存系統組態的完整相容性資訊，請參閱<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block>。</block>
+  <block id="147085887c747ae25d5c898682fdb3b2" category="doc">存取 AFX 儲存系統的 REST API 文件</block>
+  <block id="e0bb0202db2abc666440192da58b5166" category="doc">首次呼叫 AFX 儲存系統 REST API</block>
 </blocks>

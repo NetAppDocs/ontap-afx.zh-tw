@@ -4,7 +4,7 @@ permalink: rest/api-reference.html
 keywords: afx, afx system, rest api, rest api reference, swagger 
 summary: AFX REST API 參考包含有關所有 API 呼叫的詳細資訊。該文件在開發自動化應用程式時很有用。 
 ---
-= AFX 儲存系統的 REST API 參考
+= 存取 AFX 儲存系統的 REST API 文件
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

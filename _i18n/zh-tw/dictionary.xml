@@ -555,7 +555,6 @@
   <block id="515a19ff656ef4e9a76499b11053c88b" category="paragraph">每個節點都可以看到 SAZ 中的所有儲存。當儲存架新增至叢集時， ONTAP會自動新增磁碟。</block>
   <block id="0dffaaac24629ec57e41901c2c49b5e9" category="paragraph">AFX 包含一項稱為自動拓撲管理 (ATM) 的功能，可回應系統和使用者物件的不平衡。 ATM 的主要目標是平衡 AFX 叢集中的磁碟區。當偵測到不平衡時，會觸發內部作業以在活動節點之間均勻分佈資料。使用 ZCVM 重新分配數據，只需複製和更新物件元數據。</block>
   <block id="1bce74755c5e5305616eddc17873d185" category="summary">NetApp AFX 系統運行客製化的ONTAP特性，它與在AFF和FAS儲存上運行的ONTAP特性（稱為統一ONTAP ）不同。您應該了解 AFX 系統與FAS和AFF系統有何相似之處和不同之處。這提供了寶貴的視角，並且在您的環境中部署 AFX 時會很有幫助。</block>
-  <block id="9f2c66d4e6da8c9b288f3ecdc75c974a" category="doc">將 AFX 儲存系統與AFF和FAS系統進行比較</block>
   <block id="99d6ed6b3347c27373da6da2f7b952a7" category="section-title">配置差異</block>
   <block id="00ee6ecb3fb7eed883369282913b6d76" category="paragraph">AFX 配置與AFF和FAS系統在某些方面有所不同。</block>
   <block id="51d20ad0622a1bf32203f0fd69eff8ee" category="list-text">高級容量平衡</block>
@@ -577,8 +576,6 @@
   <block id="863a16df67e2ceabb787910e2b537e42" category="list-text">不再需要聚合管理命令</block>
   <block id="f716c6e3202ed7d92fc8348d46cf91c0" category="inline-link-macro">AFX系統特性</block>
   <block id="ddd733c8c3891b4ecfcd87a0c6163694" category="list-text"><block ref="ddd733c8c3891b4ecfcd87a0c6163694" category="inline-link-macro-rx"></block></block>
-  <block id="82a5887f8adb06bd19d86cf8996f4769" category="inline-link-macro">AFX 架構細節</block>
-  <block id="ce3c74e16eea034f818cc30b0eea56e3" category="list-text"><block ref="ce3c74e16eea034f818cc30b0eea56e3" category="inline-link-macro-rx"></block></block>
   <block id="fc123d34fbcca975f8c6b4bcc69de12b" category="summary">NetApp AFX 儲存系統基於下一代儲存架構，將ONTAP儲存模型發展為分解的高效能 NAS 解決方案。  AFX 採用先進的技術和處理技巧來支援文件和物件工作負載，從而提供極高的效能。</block>
   <block id="eb945734dba0e6e93fb79ddc0d55d4bf" category="doc">了解 AFX 儲存系統</block>
   <block id="b03a11c36ac9c614434dc119668e67f2" category="section-title">典型的應用程式工作負載</block>
@@ -674,12 +671,10 @@
   <block id="67901f429b628d99fcc5a2d234be3c16" category="list-text"><block ref="67901f429b628d99fcc5a2d234be3c16" category="inline-link-rx"></block></block>
   <block id="be295ac553513eb5e74d13f03267efb7" category="inline-link">了解如何使用ONTAP CLI 進行叢集管理</block>
   <block id="b1ca62b8e216e4c4af0bae762b5c33bf" category="list-text"><block ref="b1ca62b8e216e4c4af0bae762b5c33bf" category="inline-link-rx"></block></block>
-  <block id="22735d3e264cefb0543000862e7f0904" category="doc">快速啟動設定 AFX 儲存系統</block>
   <block id="d5158c215f75d40b3dc3a9efd519b60a" category="inline-link-macro">設定</block>
   <block id="0ee63ccea22773b7b711a299adc32792" category="inline-link-macro">準備</block>
   <block id="862b23ef0c9f5a6e409d8a2a17fe80e2" category="paragraph">在生產環境部署 AFX 之前，必須<block ref="8b4d8002fc8012c25c048b6e7a24771f" category="inline-link-macro-rx"></block>透過了解管理結構（包括儲存虛擬機器 (SVM)、使用者、角色和管理介面），確保安全、高效和有效的叢集管理。</block>
   <block id="0a6e83c5c4575b7e80d6da08f9735aa2" category="summary">AFX 架構由多個硬體和軟體元件組成。這些系統組件被組織成不同的類別。</block>
-  <block id="5f22b34c52ed9e5684053416c7412701" category="doc">AFX儲存系統架構細節</block>
   <block id="ff33f3d250bf1c214d487036a93cec89" category="section-title">實體組件</block>
   <block id="bcd4325c773021c3146f76c78bf5c14d" category="paragraph">首次開始使用 AFX 時，首先從資料中心安裝的實體元件的高階視圖開始會很有幫助。</block>
   <block id="96e16c6817f708a3a1c07d37d2e0d140" category="section-title">控制節點</block>
@@ -1602,7 +1597,6 @@
   <block id="d66c3d45d2bb8165afc4400849d5ef66" category="section-title">附加限制</block>
   <block id="110352dfc6688e1ab1d9271ac5a2552b" category="paragraph">在遷移 SVM 之前，您還應該考慮一些其他限制。</block>
   <block id="937992c5285f166aa01c3633fc6cb85b" category="list-text">AFX 儲存系統不支援NetApp MetroCluster 。這為SVM的遷移帶來了限制。您無法將 AFX SVM 移轉到配置為使用MetroCluster 的AFF或FAS系統（或任何執行 Unified ONTAP特性的NetApp系統）或從 AFF 或 FAS 系統遷移。雖然不支援這些遷移方案，但 AFX 預檢查也沒有明確阻止它們，因此您需要小心不要嘗試這些方案。</block>
-  <block id="372a3016fd08d93f2bfe7c10abae9936" category="list-text"><block ref="372a3016fd08d93f2bfe7c10abae9936" category="inline-link-macro-rx"></block></block>
   <block id="f090951c6f34b76fa7499153d4fd51be" category="sidebar">維護硬體</block>
   <block id="e54c3f54834f8c71fc8b62702e6e49d6" category="paragraph-title">AFX集群中資料是如何分配的？</block>
   <block id="8d32ce02a0e3a054354be2b6938e411d" category="paragraph">分配資料時，可以將其放置在 SAZ 中的任何磁碟上。資料一旦放置完畢，就無需再移動。根據底層資料建立卷，並將其指派給特定節點。 AFX 可以移動交易量，通常是作為平衡過程的一部分。這會影響哪個節點的NVRAM將寫入作業提交到磁碟。卷遷移會改變磁碟區的擁有節點，但資料本身可以保持不變。</block>
@@ -2335,4 +2329,9 @@
   <block id="a5ca85d705ee24e667c1206bd5c112b4" category="paragraph">不。AFX 不支援在單一儲存設備機櫃內使用混合大小的磁碟機。機櫃內的所有磁碟機大小必須相同。如需 AFX 儲存系統組態的完整相容性資訊，請參閱<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block>。</block>
   <block id="147085887c747ae25d5c898682fdb3b2" category="doc">存取 AFX 儲存系統的 REST API 文件</block>
   <block id="e0bb0202db2abc666440192da58b5166" category="doc">首次呼叫 AFX 儲存系統 REST API</block>
+  <block id="9686282a3986f63a25dad9e06d5246cd" category="inline-link-macro">AFX 與 AFF 和 FAS 儲存系統的差異</block>
+  <block id="33b4dc9eb5421a6b2e47c0f3945d1458" category="list-text"><block ref="33b4dc9eb5421a6b2e47c0f3945d1458" category="inline-link-macro-rx"></block></block>
+  <block id="bfa05672c85840c82ceb3de90233d9fc" category="inline-link-macro">AFX 儲存系統架構</block>
+  <block id="a061b4886dc8395b711334fbef7bb048" category="list-text"><block ref="a061b4886dc8395b711334fbef7bb048" category="inline-link-macro-rx"></block></block>
+  <block id="cffcf217d120cb1a72a68c2a76dd120c" category="doc">AFX 儲存系統快速入門</block>
 </blocks>

@@ -4,7 +4,7 @@ permalink: get-started/quick-start.html
 keywords: afx, afx system, quick start 
 summary: 要啟動並運行您的 AFX 系統，您需要安裝硬體元件、設定叢集，並準備管理叢集和 SVM。 
 ---
-= 快速啟動設定 AFX 儲存系統
+= AFX 儲存系統快速入門
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -100,6 +100,6 @@ MetroCluster:: AFX 儲存系統不支援NetApp MetroCluster 。這為SVM的遷�
 == 相關資訊
 
 * https://docs.netapp.com/us-en/ontap/svm-migrate/index.html["ONTAP SVM 資料移動性"^]
-* link:../get-started/compare-unified-ontap.html["將 AFX 儲存系統與AFF和FAS系統進行比較"]
+* link:../get-started/compare-unified-ontap.html["AFX 與 AFF 和 FAS 儲存系統的差異"]
 * link:../faq-ontap-afx.html["AFX 儲存系統常見問題解答"]
 

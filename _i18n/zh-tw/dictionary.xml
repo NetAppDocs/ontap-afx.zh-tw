@@ -1556,7 +1556,6 @@
   <block id="43d14ed81363c455618b5103ece599d4" category="paragraph-title">AFX 儲存系統何時上市？AFX 支援的最早ONTAP版本是什麼？</block>
   <block id="7f24225fb2bbf5b324522918a991d678" category="paragraph">AFX 儲存系統於 2025 年 10 月在NetApp Insight大會上發布。AFX 支援ONTAP 9.17.1 及更高版本。請聯絡您的NetApp銷售代表以了解更多詳細資訊。</block>
   <block id="3c9f430479263b3b25ec8e84988d27be" category="paragraph-title">我可以將FlexCache與 AFX 系統叢集一起使用嗎？</block>
-  <block id="d53231824f8827127654628ac3883d6c" category="paragraph">是的。AFX 儲存系統支援FlexCache與運作 Unified ONTAP特性的AFF或FAS系統之間的通訊。唯一的限制是 AFX 不支援具有回寫模式的FlexCache 。</block>
   <block id="f580013220a8ab44a2f9b864e7f6425a" category="paragraph-title">如果我想將AFF或FAS系統（運行統一ONTAP個性）與 AFX 系統一起用於SnapMirror或FlexCache，我需要哪個ONTAP版本？</block>
   <block id="4d4bcd00dec0ee009c6a6c831d33fda4" category="inline-link">NetApp AFX</block>
   <block id="7eee2dae65b99dd9a2020ea7343b8b68" category="list-text"><block ref="7eee2dae65b99dd9a2020ea7343b8b68" category="inline-link-rx"></block></block>
@@ -2334,4 +2333,5 @@
   <block id="bfa05672c85840c82ceb3de90233d9fc" category="inline-link-macro">AFX 儲存系統架構</block>
   <block id="a061b4886dc8395b711334fbef7bb048" category="list-text"><block ref="a061b4886dc8395b711334fbef7bb048" category="inline-link-macro-rx"></block></block>
   <block id="cffcf217d120cb1a72a68c2a76dd120c" category="doc">AFX 儲存系統快速入門</block>
+  <block id="eaea4e2a08bd5c2b6c418b3299505e0f" category="paragraph">是。AFX 儲存設備系統支援與執行統一 ONTAP 特性的 AFF 或 FAS 系統之間的雙向 FlexCache®。但是，當同一 Volume 啟用 FlexGroup Advanced Capacity Balancing 時，您無法使用 FlexCache® 回寫。ACB 預設為每個 Volume 啟用，因此您必須先停用它（使用選項<block ref="decee3a1bb405f7a75c75230927c0fdc" prefix=" " category="inline-code"></block>），才能啟用 FlexCache® 回寫。統一 ONTAP 也存在相同的限制。</block>
 </blocks>
